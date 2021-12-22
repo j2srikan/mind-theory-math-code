@@ -1,0 +1,58 @@
+#+title: Mind Theory Math Code
+
+* Overview
+  This respository is for a class being offered for the first time in Jan - March 2022 at the University of Waterloo. Anyone finding anything here that is of interest to them is welcome to puruse and reuse, but I will probably ignore any issues or pull request that are not from enrolled students. I would however love to hear from people who have thoughts on the issues raised below or have material they would like to make me aware of that I might use in further developing the course. 
+
+  
+* What is the course about?
+
+The course uses readings, discussion, and group programming exercises
+to explore what it is that makes something "cognitive", what makes an
+account of behavioral facts a "theory"? How might the use of neural
+data support the development of a cognitive theory? Can we use these
+insights to develop formal mathematical accounts that lead to
+programmatic simulations that emphasize key model features rather than
+computational efficiency?
+
+Essentially the course is a chance for me to collaborate with students
+and explore a number topics that interest or puzzle me. As I look at
+the field that lives at the intersection of cognitive computational
+neuroscience I wonder why do we have so few theories? Do people think
+their metaphorical accounts /are/ theories or do they have different
+goals? For that matter, what exactly is a theory? So in the course we
+explore what it means for something to be a theory and what it is that
+really we are trying to explain: what makes something "cognitive?"
+
+If you are smart and lucky enough to come up with something that could
+be a theory you don't get to rest on your laurels. To make that
+insight scientifically useful you have to convert it into an
+equivalent mathematical form. That is the way others can evaluate if
+your theory does the work you want it to do and that you claim it
+does. In my experience the domains of math that are useful for this
+translation are not taught to the union of neuroscience, psychology,
+engineering, and computer science graduate students that end up in the
+intersection of cognitive computational neuroscience. Further, math is
+taught to students in these areas with just getting things done
+mindset. I think that is a mistake. I try emphasize abstraction as a mathematical feature key to theoretical framings and then I mount my personal hobby horse: category theory.
+
+I advance in the course the position that theories should do more then
+explain available data. But how can we know that? As a first step you
+simulate circumstances for which no known results are available and
+you look for whether they make intuitive sense while waiting for
+subsequent experimental testing. To do that you have to code your
+theory and run your code. This activity, translating your theory's
+mathematical form and to code, should not be viewed as separate from
+the rest of your theoretical enterprise. The translation from the
+mathematical statement to a coded form is another opportunity to try
+and understand better ourselves what it is we want to say. We should
+chose the language we code in based on our knowledge of language
+paradigms. Our code should be part of our explanation. Our code and
+the language it is written in should be adapted to better allow us,
+and everyone else who reads it, to understand what we are saying. We
+can get the "correct" output from any of a number of programming
+languages. We don't want the code to be a black box. We want the code
+to be part of our theoretical statement. So, in the course we look at,
+and play with, a variety of programming languages in an effort to come
+to some shared agreement on their pros and cons. We can learn from this
+which one best matches our particular modeling and theoretical
+goals for a particular project.
