@@ -1,0 +1,213 @@
+* University of Waterloo 
+
+Department of Psychology 
+
+PSYCH670
+
+Mind-Theory-Math-Code
+
+Winter 2022
+
+Class Hours Wednesday 9:00 - 11:50
+
+Classroom: PAS 4032 (but initially ZOOM).
+
+* Instructor Information
+   :PROPERTIES:
+   :CUSTOM_ID: instructor-and-t.a.-information
+   :END:
+Instructor: Britt Anderson
+
+Office: PAS 4039 or E7 6328
+
+Office Phone: x43056 (but I am rarely there to answer or get messages)
+
+Office Hours: By Arrangement (email is best; if you send me an email please check your own for a reply)
+
+Email: britt@uwaterloo.ca
+
+* Course Description
+   :PROPERTIES:
+   :CUSTOM_ID: course-description
+   :END:
+
+** Short Version
+The course uses readings, discussion, and group programming exercises
+to explore what it is that makes something "cognitive", what makes an
+account of behavioral facts a "theory", how the invocation of neural
+data supports this effort, and how to use these insights to develop
+formal mathematical accounts that lead to programmatic simulations
+that emphasize key model features rather than computational
+efficiency.
+
+** Longer Version
+Psychology and Neuroscience are data rich and theory poor. The
+abundance of the former often masks the poverty of the latter and
+leads to a feeling of progress that is much more apparent than real.
+Compare the key questions from the late 1800s that experimental
+psychology was founded to answer and you will see they are no
+different from today's questions. To improve this situation we have to
+think about what exactly is the domain of study and what we want from
+a "theoretical" account. Theoretical neuroscience involves
+constructing /explanations/ for cognitive and neural data that are
+/computational/. To make theories scientifically useful we have to
+understand how to progress from our specific informal accounts to
+abstract formal accounts. Explanations do more than explain why what
+was observed was observed. They also "explain" the, currently,
+unobserved. The language for the formal, abstract expression of theory
+is math, but a math that may not be what we learned in our stats or
+applied linear algebra courses. Math for theory building often
+involves domains not well represented in our applied curriculum, such
+as what is computable, and even when the domains are the same theory
+building typically relies on abstraction as a key feature. If we have
+done the above well, developed clearly what we wish to explain,
+offered an explanation, and translated that into math, then we have to
+find a way to examine the implications of that account for things not
+yet observed. That is the role for simulation, which frequently
+depends on writing a computer program. Often that project is conceived
+of as a separate activity from theory elaboration. The course will
+examine that practice by exploring whether particular choices of
+programming language or programming paradigms might augment the
+transparency of a theoretical account and aid in the examination of a
+theory's explanatory content. The trajectory is
+mind->theory->math->code (MTMC)
+
+The course meets once a week and relies on the students to do a significant amount of outside reading and group work.
+
+** Course Goals and Learning Outcomes
+   :PROPERTIES:
+   :CUSTOM_ID: course-goals-and-learning-outcomes
+   :END:
+The ultimate goal is to give graduate students the tools and perspectives that will allow them to develop theories and not just "model" data. This ultimate goal is more than this course can provide so the practical goal is to undertake through readings, discussions, and exercises a wide survey of tools and techniques in the area of computational theory of mind and an introduction to relevant, but less taught (at least to Psychology, CS, Neuroscience, and Engineering students) areas of mathematics. In addition, a variety of programming exercises and program language exposure will be deployed to learn how those choices impact the power and clarity of our theories. 
+
+*** Specific Goals
+**** Describe what makes a theory a "theory"?
+  
+   - Are there special considerations for psychological or neuroscientific theories?
+   - Is contemporary (computational) neuroscience doing a good job of meeting this goal?
+
+**** Understand what specifically is implied by the term "computational" when applied to mental and neurological theories. 
+
+**** Survey Areas of Maths Useful for Goals 1 and 2 above focusing on the idea of /abstraction./
+
+   - Know and be able to briefly describe /models of computation/ and their relation to computational mental models
+     - Lambda Calculus
+     - Turing Machines
+   - Know what a /category/ is mathematically, and be able to give an example of how this " mathematical language for making analogies precise" could be applied to a neural or psychological topic.
+   - Define the term /algebra/ and apply that definition to some area of neuroscience or psychology. 
+   - Understand what a /vector space/ is formally and categorically and be able to argue whether that is a better tool for modelling then vectors and matrices as treated in linear algebra.
+   - Explain how /manifolds/ and /geodesics/ apply to neural data such as neural firing rates and psychological data such as face templates.
+   - Optional topics (mostly depending on time): information geometry; bifurcation analysis of differential equations; tensors and riemannian metrics; alternatives to measure theory and crisp sets for the quantification of human uncertainty.
+     
+**** Describe briefly the different approaches and paradigms used in programming language design such as:
+   - lazy evaluation
+   - static and dependent typing
+   - functional programming
+   - logic programming
+   - probabilistic programming
+   - compiled and interpreted languages
+   - recursive functions
+
+**** Compare the theoretical and practical benefits of specific programming languages from the above families for implementing algorithms in the areas of math highlighted in goal 3. 
+
+** Required Text
+   :PROPERTIES:
+   :CUSTOM_ID: required-text
+   :END:
+
+   There is no required text. Readings will be assigned and provided as either links or pdfs via Learn
+
+
+** Course Requirements and Assessment
+   :PROPERTIES:
+   :CUSTOM_ID: course-requirements-and-assessment
+   :END:
+Course grades will be an amalgam of participation (which really just means showing up and working at the material), in-class/take-home exercises and a final student presentation. 
+
+I don't really care about grades, but the University does, and so do some of the scholarship and fellowships you apply for. Therefore, I need to have some way to stratify you. In a small class like this I can basically do this based on my interactions with you. Have you read the material? Do your contributions to discussion reflect having thought about the material? Do you engage with the in-class exercises? The final project will be the one easiest for me to give a number to. I expect everyone in this class to get a high grade, because you are a highly self-selected group. You don't have to solve some great open problem or write a new work to define the field. Just do a solid professional job on the final project and all will be fine.
+
+It is my hope that the final projects will be something that can be shared in class. They are an opportunity to put to use the skills and knowledge developed in the course and shared with your peers. You should pick some example paper or tool and offer a theoretical critique of it. You should then state or explain the formal, mathematical restatement, and write up at least a minimal, toy, version of this idea as a computer program that generates some sort of output for relevant input. Put less emphasis on dazzling with graphics, and more on just getting things to work and in being very clear in both your written language and coded formulation. You will need to submit a paper (and code), but I hope time will permit you to also make a presentation walking us through your problem and your approach. 
+
+
+* Course Outline
+   :PROPERTIES:
+   :CUSTOM_ID: course-outline
+   :END:
+Notes on readings.
+
+| *Week* | *Date* | *Topic*                                        | *Readings Due*   |
+|--------+--------+------------------------------------------------+------------------|
+|      1 | Jan 5  | Overview/Groups/What makes something "mental?" |                  |
+|      2 | Jan 12 | Discussions over Theory Making                 | Week 2 readings  |
+|      3 | Jan 19 | The Nature of Computation                      | Week 3 readings  |
+|      4 | Jan 26 | Turing Machines/Lambda Calculus                | Week 4 readings  |
+|      5 | Feb 3  | Programming Languages                          | Week 8 readings  |
+|      6 | Feb 10 | Basics of Category Theory                      | Week 5 readings  |
+|      7 | Feb 17 | Vector Spaces                                  | Week 6 readings  |
+|      8 | Feb 23 | Reading Week - No Class                        | Week 7 readings  |
+|      9 | Mar 2  | Manifolds and Metrics                          | Week 9 readings  |
+|     10 | Mar 9  | Critiquing Contemporary Modelling Paradigms    | Week 10 readings |
+|     11 | Mar 16 | TBD (depends on how efficient we are)          | Week 11 readings |
+|     12 | Mar 23 | Group Work Time to Prepare for Presentations   | Week 12 readings |
+|     13 | Mar 30 | Student Presentations                          | Student Supplied |
+
+* Attendance Policy
+   :PROPERTIES:
+   :CUSTOM_ID: attendance-policy
+   :END:
+It is my goal to make the class one you will want to attend, but will decide if you want to come or can come. There is no explicit penalty for missing class, but you will be on your own to arrange to find out what you missed, and of course to the degree your absence impacts your ability to participate there will be some consequence.
+
+
+** Syllabus Boilerplate on Integrity and Accomodation
+*** Academic Integrity
+    :PROPERTIES:
+    :CUSTOM_ID: academic-integrity
+    :END:
+/*\\
+Academic Integrity:*/ In order to maintain a culture of academic
+integrity, members of the University of Waterloo are expected to promote
+honesty, trust, fairness, respect and responsibility.
+
+/*\\
+Discipline:*/ A student is expected to know what constitutes academic
+integrity, to avoid committing academic offences, and to take
+responsibility for his/her actions. A student who is unsure whether an
+action constitutes an offence, or who needs help in learning how to
+avoid offences (e.g., plagiarism, cheating) or about “rules” for group
+work/collaboration should seek guidance from the course professor,
+academic advisor, or the Undergraduate Associate Dean. When misconduct
+has been found to have occurred, disciplinary penalties will be imposed
+under Policy 71 -- Student Discipline. For information on categories of
+offenses and types of penalties, students should refer to
+[[https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-71][Policy
+71 - Student Discipline]].
+
+/*\\
+Grievance:*/ A student who believes that a decision affecting some
+aspect of his/her university life has been unfair or unreasonable may
+have grounds for initiating a grievance. Read
+[[https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-70][Policy
+70 - Student Petitions and Grievances, Section 4]].
+
+/*\\
+Appeals:*/ A student may appeal the finding and/or penalty in a decision
+made under Policy 70 - Student Petitions and Grievances (other than
+regarding a petition) or Policy 71 - Student Discipline if a ground for
+an appeal can be established. Read
+[[https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-72][Policy
+72 - Student Appeals]].
+
+
+*** Accommodation for Students with Disabilities
+    :PROPERTIES:
+    :CUSTOM_ID: accommodation-for-students-with-disabilities
+    :END:
+/*\\
+Note for students with disabilities:*/ The
+[[https://uwaterloo.ca/disability-services/][AccessAbility Services
+office]], located in Needles Hall Room 1132, collaborates with all
+academic departments to arrange appropriate accommodations for students
+with disabilities without compromising the academic integrity of the
+curriculum. If you require academic accommodations to lessen the impact
+of your disability, please register with the AS office at the beginning
+of each academic term.
