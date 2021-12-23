@@ -1,13 +1,16 @@
 #+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
+#+csl-style: ./j-neurosci.csl
+
+
 #+Title: First Day
 #+Author: Britt Anderson
 #+Date: Dec 22, 2021
 
 * Outline
 ** Where and When
-   - Time
-   - Room No.
-   - Zoom meeting code and password
+   - Time 14:30 - 17:20
+   - Room No. PAS 4032
+   - Zoom meeting code and password (will be shared differently to avoid zoom bombing)
 ** Who am I and who are you?
 A short round table giving your name, program, and general research area.
 ** What do I think this course is about?
@@ -15,24 +18,26 @@ A short round table giving your name, program, and general research area.
 *** A summary statement of my ambitions for the course.
 *** Another round table where you tell me what you want to get out of the course.
 ** First Question: What is cognition?
-   Ideally everyone will have read before class. If not, that is okay, because you will now each be assigned one of the essays to re-read. After a short break for this we will reconvene for our discussion. If you don't have a strong personal opinion on the topic you can choose to advocate for (or against) the position of the person whose essay you just read. 
+   Ideally everyone will have read before class [[cite:&bayne19_what_is_cognit]] . If not, that is okay, because you will now each be assigned one of the essays to re-read. After a short break for this we will reconvene for our discussion. If you don't have a strong personal opinion on the topic you can choose to advocate for (or against) the position of the person whose essay you just read. 
 ** Am I researching cognition?
    In light of the above we will each have a chance to think about and discuss our current thinking about what it is that we are doing, and how well it fits under the heading of "cognition."
-** Looking Ahead
+** Looking Ahead: Preparing for the coming weeks
 *** Programming Languages
-A big part of our course, I hope, is the discovery through play of the different pros and cons of [[cite:&clark08_differ_effec_insul_ventr_prefr,;&jennings_atten_review]] several of the popular programming paradigms. Our emphasis will be on trying to see if particular paradigms match well with particular theoretical ideas or mathematical areas. We are not going to become experts or even particularly competent in any of these languages, but we should build some familiarity with the approaches, their trade-offs, and some practical knowledge of where we could go next if we wanted to delve into this more seriously. I had two ideas for how we can do this, and I want your input on deciding which one we should pursue.
+A big part of our course, I hope, is the discovery through play of the different pros and cons of several of the popular programming paradigms. Our emphasis will be on trying to see if particular paradigms match well with particular theoretical ideas or mathematical areas. We are not going to become experts, or even particularly competent, in any of these languages, but we should build some familiarity with the approaches, their trade-offs, and some practical knowledge of where we could go next if we wanted to delve into this more seriously. I had two ideas for how we can do this, and I want your input on deciding which one we should pursue.
 1. We all work on the same language and rotate that from week to week.
-2. We individually or in pairs pick a particular language (each different) and we try to stick with that throughout the term. Thus, we gain deeper experience with multiple paradigms for discussion and comparison. Each group can make add to our repository a cheatsheet with hints on how to get started, useful tutorial links, and pros/cons that come up over the term.
+2. We individually or in pairs pick a particular language (each different) and we try to stick with that throughout the term. Thus, we gain deeper experience with multiple paradigms for discussion and comparison. Each group can make add to our repository a cheat sheet with hints on how to get started, useful tutorial links, and pros/cons that come up over the term.
 3. To achieve this you will need to spend some time googling around about possible languages and paradigms to see if there are any that appeal to you in particular. Nothing too in-depth. Just some idle clicking around and skimming websites. That is your one of your "homeworks" this week. To get you started here is a list of programming language names, paradigms and keywords.
 **** Programming Language Prompts
 - Homoiconicity :: Imagine a program that re-writes itself while it is running. This is the idea of code as data. The prototypical examples of this are the *lisps* (note the plural). Specific examples include /Common Lisp/, /Racket/, and /Guile Scheme/. Does any of this seemed well matched to thinking? Is the mind software that can re-write itself?
 - Interpreted/Compiled :: Converting a program you write to something the machine understands can happen line by line while it runs or all at a bunch. The former may be more dynamic, while the latter may lead to much more efficient implementations. An interesting twist on this idea is a language that compiles itself "just in time" and depending on what kind of data it is processing may optimize itself. It knows how to add, but may choose a different implementation depending on whether it is adding numbers, vectors, or two character strings together. /Julia/
 - Lazy Evaluation :: How is it we can conceive of infinity when we can never actually count that high? Most computer languages use strict evaluation. If you write something the computer figures out what needs to go in that slot right away. Not /Haskell/ it is *lazy* by default. It does not bother computing something until it needs it. Want a list of numbers beginning with 0 and increasing by 1? ~[0,1 ..]~. No problem. As long as you don't ask for the entire list Haskell can give you any finite portion you need. Is that how we think? Describe the manner in which to generate the necessary data, but don't try to do so until needed. Is thought *lazy* by default?
-- Logic Programming :: Good old fashion AI and much early cognitive science conceived of thought as formal symbol manipulations. There are computer languages, e.g. /Prolog/, that are designed to make programming an exercise in logic. You can prove things. Some other languages take the idea of formal verifcation and proof assistance to much deeper levels: /Agda/, /Coq/ and /Lean/ are examples. 
-- Types :: Most of us have heard of Russell's paradox: you have a barber who shaves everyone who does not shave themself. Does the barber shave himself? One of the way avoid this paradox is to use a theory of types. This has been implemented in programming languages. Many langugages are dynamically typed, but some are statically typed (once an integer always an integer). And in some languages the types themselves can have dependencies. /Haskell/ is a popular statically typed language (/Ocaml/ is another), but many see the future in *dependent types*. /Idris/ is an example of what is currently a research language that uses dependent types. 
-- Probabilistic Programming :: We hear a lot about how the brain is "Bayesian." Whether or not that is true we certainly can learn that there are probabilities in the world and some things are more likely than others. We seem to be able to compute and reason about stochastic events. Neurons themselves are stochastic. Just because there is depolarization at the soma does not mean there will transmitter released at the axon termini. Maybe a computing language that was designed to facilitate the statement and solving of programs probabilitically would be a good choice for mental theories and mental modeling?  Useful libraries and packages exist for this inside of some of the languages already mentioned: /Pyro.ai/ (Python based), /Turing.jl/ (Julia based), or /webppl/ (based on javascript).
+- Logic Programming :: Good old fashion AI and much early cognitive science conceived of thought as formal symbol manipulations. There are computer languages, e.g. /Prolog/, that are designed to make programming an exercise in logic. You can prove things. Some other languages take the idea of formal verification and proof assistance to much deeper levels: /Agda/, /Coq/ and /Lean/ are examples. 
+- Types :: Most of us have heard of Russell's paradox: you have a barber who shaves everyone who does not shave themselves. Does the barber shave himself? One of the ways to avoid this paradox is to use a theory of types. This has been implemented in programming languages. Many languages are dynamically typed, but some are statically typed (once an integer always an integer). And in some languages the types themselves can have dependencies. /Haskell/ is a popular statically typed language (/Ocaml/ is another), but many see the future in *dependent types*. /Idris/ is an example of what is currently a research language that uses dependent types. 
+- Probabilistic Programming :: We hear a lot about how the brain is "Bayesian." Whether or not that is true we certainly can learn that there are probabilities in the world and some things are more likely than others. We seem to be able to compute and reason about stochastic events. Neurons themselves are stochastic. Just because there is depolarization at the soma does not mean there will transmitter released at the axon termini. Maybe a computing language that was designed to facilitate the statement and solving of programs probabilistically would be a good choice for mental theories and mental modeling?  Useful libraries and packages exist for this inside of some of the languages already mentioned: /Pyro.ai/ (Python based), /Turing.jl/ (Julia based), or /webppl/ (based on javascript).
 
-* Companion Documents
-These are other readings and references that may be useful for class discussions or exercises.
+* Companion Documents and Optional Readings
+
+Paul Thagard [[citeyear:emeritus UWloo &thagard20_cognit_scien]] wrote the entry on Cognitive Science for the Stanford Encyclopedia of Philosophy. 
+
 * References
 [[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
