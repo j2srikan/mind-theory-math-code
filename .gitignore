@@ -17,3 +17,6 @@
 *.wx32fsl
 *.org~
 *~
+*.bbl
+*.tex
+*.synctex
