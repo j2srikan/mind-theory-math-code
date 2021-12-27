@@ -1,4 +1,8 @@
-* University of Waterloo 
+#+Title: Psych 670 Mind-Theory-Math-Code
+#+Author: Britt Anderson PhD & MD
+#+date: Winter 2022
+
+* Summary
 
 Department of Psychology 
 
@@ -10,7 +14,7 @@ Winter 2022
 
 Class Hours Wednesday 9:00 - 11:50
 
-Classroom: PAS 4032 (but initially ZOOM).
+Classroom: PAS 4032 (but initially ZOOM). The meeting code and password are provided in an announcement on our LEARN page. Please do not share to decrease the risk of zoom-bombing. 
 
 * Instructor Information
    :PROPERTIES:
@@ -78,7 +82,7 @@ The course meets once a week and relies on the students to do a significant amou
    :PROPERTIES:
    :CUSTOM_ID: course-goals-and-learning-outcomes
    :END:
-The ultimate goal is to give graduate students the tools and perspectives that will allow them to develop theories and not just "model" data. This ultimate goal is more than this course can provide so the practical goal is to undertake through readings, discussions, and exercises a wide survey of tools and techniques in the area of computational theory of mind and an introduction to relevant, but less taught (at least to Psychology, CS, Neuroscience, and Engineering students) areas of mathematics. In addition, a variety of programming exercises and program language exposure will be deployed to learn how those choices impact the power and clarity of our theories. 
+The ultimate goal is to give graduate students the tools and perspectives that will allow them to develop theories and not just "model" data. This ultimate goal is more than this course can provide so the practical goal is to undertake through readings, discussions, and exercises as a wide survey of tools and techniques in the area of computational theory of mind and an introduction to relevant, but less taught (at least to Psychology, CS, Neuroscience, and Engineering students) areas of mathematics. In addition, a variety of programming exercises and program language exposure will be deployed to learn how those choices impact the power and clarity of our theories. 
 
 *** Specific Goals
 **** Describe what makes a theory a "theory"?
@@ -93,7 +97,7 @@ The ultimate goal is to give graduate students the tools and perspectives that w
    - Know and be able to briefly describe /models of computation/ and their relation to computational mental models
      - Lambda Calculus
      - Turing Machines
-   - Know what a /category/ is mathematically, and be able to give an example of how this " mathematical language for making analogies precise" could be applied to a neural or psychological topic.
+   - Know what a /category/ is mathematically, and be able to give an example of how this "mathematical language for making analogies precise" could be applied to a neural or psychological topic.
    - Define the term /algebra/ and apply that definition to some area of neuroscience or psychology. 
    - Understand what a /vector space/ is formally and categorically and be able to argue whether that is a better tool for modelling then vectors and matrices as treated in linear algebra.
    - Explain how /manifolds/ and /geodesics/ apply to neural data such as neural firing rates and psychological data such as face templates.
@@ -135,27 +139,34 @@ It is my hope that the final projects will be something that can be shared in cl
    :END:
 Notes on readings.
 
-| *Week* | *Date* | *Topic*                                        | *Readings Due*   |
-|--------+--------+------------------------------------------------+------------------|
-|      1 | Jan 5  | Overview/Groups/What makes something "mental?" |                  |
-|      2 | Jan 12 | Discussions over Theory Making                 | Week 2 readings  |
-|      3 | Jan 19 | The Nature of Computation                      | Week 3 readings  |
-|      4 | Jan 26 | Turing Machines/Lambda Calculus                | Week 4 readings  |
-|      5 | Feb 3  | Programming Languages                          | Week 8 readings  |
-|      6 | Feb 10 | Basics of Category Theory                      | Week 5 readings  |
-|      7 | Feb 17 | Vector Spaces                                  | Week 6 readings  |
-|      8 | Feb 23 | Reading Week - No Class                        | Week 7 readings  |
-|      9 | Mar 2  | Manifolds and Metrics                          | Week 9 readings  |
-|     10 | Mar 9  | Critiquing Contemporary Modelling Paradigms    | Week 10 readings |
-|     11 | Mar 16 | TBD (depends on how efficient we are)          | Week 11 readings |
-|     12 | Mar 23 | Group Work Time to Prepare for Presentations   | Week 12 readings |
-|     13 | Mar 30 | Student Presentations                          | Student Supplied |
+
+| *Week* | *Date* | *Topic*                      |
+|--------+--------+------------------------------|
+|      1 | Jan 5  | Overview/Groups/What         |
+|        |        | makes something "mental?"    |
+|      2 | Jan 12 | Discussions over             |
+|        |        | Theory Making                |
+|      3 | Jan 19 | The Nature of Computation    |
+|      4 | Jan 26 | Turing Machines &            |
+|        |        | Lambda Calculus              |
+|      5 | Feb 3  | Programming Languages        |
+|      6 | Feb 10 | Basics of Category Theory    |
+|      8 | Feb 23 | *Reading Week - No Class*    |
+|      9 | Mar 2  | Manifolds and Metrics        |
+|     10 | Mar 9  | Critiquing Contemporary      |
+|        |        | Modelling Paradigms          |
+|     11 | Mar 16 | TBD (depends on how          |
+|        |        | efficient we are)            |
+|     12 | Mar 23 | Group Work Time              |
+|        |        | to Prepare for Presentations |
+|     13 | Mar 30 | Student Presentations        |
+
 
 * Attendance Policy
    :PROPERTIES:
    :CUSTOM_ID: attendance-policy
    :END:
-It is my goal to make the class one you will want to attend, but will decide if you want to come or can come. There is no explicit penalty for missing class, but you will be on your own to arrange to find out what you missed, and of course to the degree your absence impacts your ability to participate there will be some consequence.
+It is my goal to make the class one you will want to attend, but you will decide if you want to come or can come. There is no explicit penalty for missing class, but you will be on your own to arrange to find out what you missed, and of course to the degree your absence impacts your ability to participate there will be some consequence.
 
 
 ** Syllabus Boilerplate on Integrity and Accomodation
