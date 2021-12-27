@@ -1,0 +1,18 @@
+#+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
+#+csl-style: ./j-neurosci.csl
+
+
+#+Title: Model Day
+#+Author: Britt Anderson
+#+Date: Dec 24, 2021
+
+* Outline
+
+* Companion and Optional Readings
+
+[[https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002017][Not Just a Theory—The Utility of Mathematical Models in Evolutionary Biology]]
+
+[[https://econtent.hogrefe.com/doi/pdf/10.1027/1864-9335/a000425][How to translate a verbal theory into a formal model]]
+
+* References
+[[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]

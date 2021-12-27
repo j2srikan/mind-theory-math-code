@@ -1,0 +1,14 @@
+#+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
+#+csl-style: ./j-neurosci.csl
+
+
+#+Title: X Day
+#+Author: Britt Anderson
+#+Date: Dec 24, 2021
+
+* Outline
+
+* Companion and Optional Readings
+
+* References
+[[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
