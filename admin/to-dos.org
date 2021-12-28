@@ -1,0 +1,4 @@
+* To-dos
+
+[[file:~/gitRepos/mind-theory-math-code/teach/mind.org::*Make class discussion questions and outlines for \[\[file:~/gitRepos/mind-theory-math-code/imports/computational-mind-book.org::*Chapter 20 Representation\]\[Chapter 20 Representation\]\] then insert the file here.][Make class discussion questions and outlines for Chapter 20 Representation then insert the file here.]]
+
