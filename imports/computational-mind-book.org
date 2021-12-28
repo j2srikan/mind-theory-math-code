@@ -55,7 +55,47 @@ We are looking to touch on the adherence to all the right syntactic rules withou
 This is generally some form of Gödel's Incompleteness results (see for a famous example [[https://en.wikipedia.org/wiki/The_Emperor%27s_New_Mind][Penrose's book]]).
 *** Explanatory Lack
 * Chapter 20 Representation
-  Many aspects of modeling come down to representation, and many modelers and neurobiologists talk about patterns of neuronal firing representing some aspect of the world. Often the practical intent is to signal that there is a correlation between the neuronal pattern on the one hand and the presence of the world content on the other. However, that is not what is meant by representation in the philosophical or theoretical sense. This chapter by William Ramsey talks a lot about what a /structural/ or S representation is and what the challenges are to them. A good chapter if class discussion begins to get hung up on this point.
+** What are representations?
+   Egan suggests a key aspect of modeling comes down to selecting a representation.
+
+   :class_question:    Does a pattern of neuronal firing that is statistically associated with some external stimulus or some internal feeling "represent" that stimulus or that feeling? Can neurons ever be said to "represent?"
+
+   There is distinction between /vehicle/ and /content/.
+
+   In the deductive-nomological ideas of scientific explanation (to come) there is the deductive component that is determinate, and the nomological that gives the character of a law that provides the basis for a certain thing being a certain way. It seems like assertions about representations are in a sense their own mini-theory for minds.
+
+   :class_question: why should representations allow for the possibility of "/getting it wrong/."
+
+   Naturalism and mechanism are other common aspects. The idea is that we don't want to let belief somehow sneak into our definition of what belief is. We want to avoid question begging, and naturalism allows that.
+
+   I have a little trouble with what a tracking theory is, but I think it is basically the idea that your belief about whether something is or is not the case  corresponds to when it is, or is not, actually the case. Thus, if your mental states "track" some neuronal firing pattern then we can talk about those neurons' firings being representations of your mental state.
+
+   :class_question: what separates the information-theoretic theories from the tracking theories? Can you explain the problem Egan outlines for this family of theories?
+
+   Structural similarity theories can be suggested by the idea that a map (a cartographic object) represents some location. They are similar. You can relate clearly and unambiguously changes in map locations to world locations. This talks of maps, structure, domains and so on will come up again in category theory. That would seem a productive language for this talk of structural similarity representation.
+
+   :class_question: what is the critique behind "isomorphisms are cheap"?
+
+
+   :class_question: In light of Egan's argument to this point do we agree or disagree with the claim that place cells in the hippocampus represent locations?
+
+   I found intriguing her observation that "computational theorists ... typically look to an organism's behavior and to the environment in which the behavior is normally deployed when they assign representational content ..." Doesn't that ignore the whole level psychologists are interested in, and what actually makes all this hard? That is accounting for feelings and subjectivity? The stuff that psychology was invented for in the first place? Thus, perhaps we should have some sympathy towards the phenomenal intentionalists?
+
+   Noting all these problems Egan develops a "Deflationary Account of Content." The first component is the "function theoretic", e.g. an internal integrator to track eye position or movement. To explain something you appeal to, or even identify it with, a well characterized mathematical function. It separates ("prescinds") the mechanism from both the enviroment and the cognitive capacity. The content is determined by the mathematical function.
+
+   This leads to her four components i) the FT ii) the algorithm for computing it iii) the representational structures the algorithms maintains and iv) the computational processes carried out over these structures. And a v)th component that is the ecological constraint about why this computation is useful in this environment. 
+
+   :class_question: any early ideas how this maps on to our thinking about math and code and particular computer languages?
+
+   :class_question: what is a [[https://en.wikipedia.org/wiki/Homomorphism][homomorphism]]? Egan mentions it.
+
+   :class_question: doesn't this leave out the cognitive part of a computational cognitive theory? How is this accounted for by the /intentional gloss/.
+
+   "Explanatory purpose resolves indeterminacy." This sentence might be one of the key insights.
+
+   :class_question: what makes the theory deflationary?
+
+many modelers and neurobiologists talk about patterns of neuronal firing representing some aspect of the world. Often the practical intent is to signal that there is a correlation between the neuronal pattern on the one hand and the presence of the world content on the other. However, that is not what is meant by representation in the philosophical or theoretical sense. This chapter by William Ramsey talks a lot about what a /structural/ or S representation is and what the challenges are to them. A good chapter if class discussion begins to get hung up on this point.
 * Chapter 21 Computational Explanations and Neural Coding
 Emphasizes that for neurons to represent things the neuronal pattern must play a role in the system separate from what it signals to us as observers.
 ** Principles
