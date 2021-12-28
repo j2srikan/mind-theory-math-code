@@ -1,0 +1,30 @@
+#+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
+#+csl-style: ../admin/cambridge-university-press-numeric.csl
+
+
+#+Title: Mind
+#+Author: Britt Anderson
+#+Date: Jan 2022
+
+* Précis
+  Our continuing discussion of what constitutes "mind," and more specifically what is a computational theory of mind, and how does it benefit, if at all, from a reliance on neural implementations of brains?
+
+  
+* Where were we?
+
+** Comments on the computing languages
+   - Ideas about the different languages?
+   - Who likes what? Do we have any groups naturally emerging?
+   - Shall I just randomly assign?
+   - Rotate weekly or concentrate across term?
+
+** Further thoughts on the article: What is cognition?
+
+** Discussions of Readings
+
+* TODO Make class discussion questions and outlines for [[file:~/gitRepos/mind-theory-math-code/imports/computational-mind-book.org::*Chapter 20 Representation][Chapter 20 Representation]] then insert the file here. 
+
+* Companion and Optional Readings
+
+* References
+[[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
