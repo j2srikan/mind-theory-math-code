@@ -1,5 +1,5 @@
 #+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
-#+csl-style: ./j-neurosci.csl
+#+csl-style: ./cambridge-university-press-numeric.csl
 
 
 #+Title: X Day
