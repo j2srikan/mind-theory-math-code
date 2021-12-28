@@ -1,0 +1,68 @@
+#+Title: The Routledge Handbook of the Computational Mind
+#+Author: Britt Anderson
+
+* Chapter 8 Classic Computational Models (CCM)
+:PROPERTIES:
+:chapter-author: Richard Samuels
+:END:
+
+** Core Characteristics
+*** Symbolic
+Symbols are /representations/ (that is they can stand-in and take the place of that which they are said to represent) and belong to a /system/. Think language. A system not only specifies the dictionary of what symbols are permissible, but what is their definition. They also provide the rules for their usage; think grammar.
+
+:class_question:
+What in the computer language that you are working with matches this symbol component of the CCM? Is it a /natural/ component of your language?
+:END:
+
+*** Algorithmic
+While the above symbol grammar describes the legality of symbol constructions, the algorithmic rules specify additional rules of combinations: how to transform inputs to outputs. Think mappings.
+
+:class_question:
+Can you think of a good mathematical metaphor or example for this /algorithmic/ aspect of CCMs?
+:END:
+
+*** Formal
+Algorithms are understood in terms of syntax not semantics. Symbol manipulations follows rules that are mediated by the rules of symbol transformation, not the meaning of what it is the symbols are supposed to represent. Think formal logic. Think the rules of multiplication. These only depend on the symbols representing numbers not whether a numeric symbol means 3 or 5. 
+
+*** Interpretable
+Although all the above rests of formal symbol manipulation, the symbols do have semantic associations and we should be able to interpret the results semantically. 
+:class_question:
+Human memory is finite. The tape of a Turing machine is infinite. Does that mean that human memory cannot be classically computationally modeled?
+:END:
+
+:class_question:
+How does this characterization of the classical computation model match up with [[http://hdl.handle.net/1721.1/5782][Marr's levels]]? How many levels did Marr propose?
+:END:
+
+** Virtues
+1. Lead to testable predictions.
+2. May be useful even if they are conceptually wrong (that is the mind is not a CCM). For example, electrical circuit theory may be useful for modeling neurons even if neurons are not /just/ electrical circuits.
+3. Avoids underspecification.
+4. Avoids vacuity.
+5. Address "how" questions.
+6. Address "how-possibly" questions.
+7. Handle _productivity_ and _systematicity_.
+8. Seems to fit well the need for variables and quantifications.
+** Challenges
+*** A priori philosophical objections.
+Searle's Chinese Room argument says that even when the "right" computations are performed, the predicted cognitive consequences do not appear, therefore CCM's are insufficient for cognition.
+:class_question:
+How does this map onto the hierarchy of [[*Core Characteristics][core characteristics]] specified above?
+
+We are looking to touch on the adherence to all the right syntactic rules without the emergence of semantic content. The man can translate Chinese without speaking Chinese. 
+:END:
+*** Mathematical Objections
+This is generally some form of Gödel's Incompleteness results (see for a famous example [[https://en.wikipedia.org/wiki/The_Emperor%27s_New_Mind][Penrose's book]]).
+*** Explanatory Lack
+* Chapter 20 Representation
+  Many aspects of modeling come down to representation, and many modelers and neurobiologists talk about patterns of neuronal firing representing some aspect of the world. Often the practical intent is to signal that there is a correlation between the neuronal pattern on the one hand and the presence of the world content on the other. However, that is not what is meant by representation in the philosophical or theoretical sense. This chapter by William Ramsey talks a lot about what a /structural/ or S representation is and what the challenges are to them. A good chapter if class discussion begins to get hung up on this point.
+* Chapter 21 Computational Explanations and Neural Coding
+Emphasizes that for neurons to represent things the neuronal pattern must play a role in the system separate from what it signals to us as observers.
+** Principles
+- Correlation :: certain kinds of content associated to certain neural patterns
+- Proportionality :: increased neural strength : increased signal strength
+- Decodability :: very important here to distinguish what the system does from what the scientist running the experiment does.
+** The Critique of Divisive Normalization (Canonical Computations)
+Argues that the Heeger and Caradini claims are misleading. This is in fact a model of neural processes that does not in any way sanction a discussion of semantic content. Picking the example of saturating V1 responses with increasing stimulus contrast and independent of stimulus orientation, the chapter author (Cao) argues this "describes" the neural relations between input stimulus contrast and neuronal firing patterns. She also argues that this is all in the service of preserving the signal, however that is a content-free process and thus divorced from cognition which is all about transformation of the signal. Models of cognition are not about /reproduction/, but about /transformation/. Divisive normalization optimizes the non-semantic features of a signal. She has a nice section starting on p 291 for what an honest model would look like. 
+  
+
