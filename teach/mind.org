@@ -18,11 +18,9 @@
    - Shall I just randomly assign?
    - Rotate weekly or concentrate across term?
 
-** Further thoughts on the article: What is cognition?
+* Further thoughts on the article: What is cognition?
 
-** Discussions of Readings
-
-* TODO Make class discussion questions and outlines for [[file:~/gitRepos/mind-theory-math-code/imports/computational-mind-book.org::*Chapter 20 Representation][Chapter 20 Representation]] then insert the file here. 
+* [[file:~/gitRepos/mind-theory-math-code/imports/computational-mind-book.html][Discussions of Readings in CCM]]
 
 * Companion and Optional Readings
 
