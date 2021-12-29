@@ -1,7 +1,12 @@
 #+Title: The Routledge Handbook of the Computational Mind
 #+Author: Britt Anderson
+#+options: ^:nil
+#+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
+#+csl-style: ../admin/cambridge-university-press-numeric.csl
 
-* Chapter 8 Classic Computational Models (CCM)
+
+
+* Chapter 8 Classic Computational Models (CCM) [[cite:&samuels19_class_comput_model]]
 :PROPERTIES:
 :chapter-author: Richard Samuels
 :END:
@@ -54,7 +59,7 @@ We are looking to touch on the adherence to all the right syntactic rules withou
 *** Mathematical Objections
 This is generally some form of Gödel's Incompleteness results (see for a famous example [[https://en.wikipedia.org/wiki/The_Emperor%27s_New_Mind][Penrose's book]]).
 *** Explanatory Lack
-* Chapter 20 Representation
+* Chapter 18 The Nature and Function of Content in Computational Models [[cite:&egan19_natur_funct_conten_comput_model]]
 ** What are representations?
    Egan suggests a key aspect of modeling comes down to selecting a representation.
 
@@ -96,13 +101,41 @@ This is generally some form of Gödel's Incompleteness results (see for a famous
    :class_question: what makes the theory deflationary?
 
 many modelers and neurobiologists talk about patterns of neuronal firing representing some aspect of the world. Often the practical intent is to signal that there is a correlation between the neuronal pattern on the one hand and the presence of the world content on the other. However, that is not what is meant by representation in the philosophical or theoretical sense. This chapter by William Ramsey talks a lot about what a /structural/ or S representation is and what the challenges are to them. A good chapter if class discussion begins to get hung up on this point.
-* Chapter 21 Computational Explanations and Neural Coding
-Emphasizes that for neurons to represent things the neuronal pattern must play a role in the system separate from what it signals to us as observers.
-** Principles
+* Chapter 21 Computational Explanations and Neural Coding [[cite:&cao19_comput]]
+  While computers are important to contemporary brain science it is the commitment the idea of the brain as a computer that is /computationalism/. Why does she refer to brain and not mind? Doesn't computationalism apply to mental models?
+
+  In fact she suggests that /representation/ is largely irrelevant for neuroscience, but key for psychology, and thus computationalism in neuroscience is irrelvant for computational models of cognition.
+** Computation in Neuroscience
+   Often just taken as a given if you regard the brain as an information processing machine.
+
+   :class_question: elaborate the idea that neural activity can be non-informational.
+
+   :class_question: explain the idea that talk of computation in neuroscience is often "cheap" and not "semantic".[fn:1]
+
+   #+Begin_quote
+   ... any content we find in the system is playin a genuine representational role ...
+   #+End_quote
+
+   :class_question: what is a genuine representational role?
+*** Principles
 - Correlation :: certain kinds of content associated to certain neural patterns
-- Proportionality :: increased neural strength : increased signal strength
+- Proportionality :: increased neural strength : increased signal strength, and a strong presumption that magnitude is related to external observer ascribed /importance/.
 - Decodability :: very important here to distinguish what the system does from what the scientist running the experiment does.
-** The Critique of Divisive Normalization (Canonical Computations)
-Argues that the Heeger and Caradini claims are misleading. This is in fact a model of neural processes that does not in any way sanction a discussion of semantic content. Picking the example of saturating V1 responses with increasing stimulus contrast and independent of stimulus orientation, the chapter author (Cao) argues this "describes" the neural relations between input stimulus contrast and neuronal firing patterns. She also argues that this is all in the service of preserving the signal, however that is a content-free process and thus divorced from cognition which is all about transformation of the signal. Models of cognition are not about /reproduction/, but about /transformation/. Divisive normalization optimizes the non-semantic features of a signal. She has a nice section starting on p 291 for what an honest model would look like. 
+  :class_question: walk us through the example of a neuron's response to a high contrast sub-optimal stimulus and a low contrast optimal one. Why is the same number of spikes a problem for attributing content to neuron's spike patterns?
+  :class_question: why the continuing focus of so many of the authors on /mis-representation/?
+*** Computation as Modeling
+    A use of computation for taxonomy or empirical convenience is fine, but one should be honest that one is using it for these practical reasons, and not to then infer grander implications. For example,
+**** The Critique of Divisive Normalization (Canonical Computations)
+Heeger and Caradini [[cite:&carandini11_normal_as_canon_neural_comput]] claim that divisive normalization connects neurons to higher level functions. But Cao maintains that in fact they cite only examples of neural effects, and that in fact there is no semantic content to this theory of canonical correlation. Picking the example of saturating V1 responses with increasing stimulus contrast and independent of stimulus orientation, the chapter author (Cao) argues this "describes" the neural relations between input stimulus contrast and neuronal firing patterns. This is about preserving the signal. Cognition is about *transforming* it.
+
+     :class_question: explain the statement "[signal processing] is /insensitive/ to content."
+     
+Models of cognition are not about /reproduction/, but about /transformation/. Divisive normalization optimizes the non-semantic features of a signal. She has a nice section starting on p 291 for what an honest model would look like. 
   
+* Footnotes
+
+[fn:1] A nice article with an example of "semantic" is by Shea [[cite:&shea13_natur_repres_conten]].
+
+* References
+[[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
 
