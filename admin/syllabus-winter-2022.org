@@ -140,26 +140,28 @@ It is my hope that the final projects will be something that can be shared in cl
 Notes on readings.
 
 
-| *Week* | *Date* | *Topic*                      |
-|--------+--------+------------------------------|
-|      1 | Jan 5  | Overview/Groups/What         |
-|        |        | makes something "mental?"    |
-|      2 | Jan 12 | Discussions over             |
-|        |        | Theory Making                |
-|      3 | Jan 19 | The Nature of Computation    |
-|      4 | Jan 26 | Turing Machines &            |
-|        |        | Lambda Calculus              |
-|      5 | Feb 3  | Programming Languages        |
-|      6 | Feb 10 | Basics of Category Theory    |
-|      8 | Feb 23 | *Reading Week - No Class*    |
-|      9 | Mar 2  | Manifolds and Metrics        |
-|     10 | Mar 9  | Critiquing Contemporary      |
-|        |        | Modelling Paradigms          |
-|     11 | Mar 16 | TBD (depends on how          |
-|        |        | efficient we are)            |
-|     12 | Mar 23 | Group Work Time              |
-|        |        | to Prepare for Presentations |
-|     13 | Mar 30 | Student Presentations        |
+| *Week* | *Date* | *Topic*                       |
+|--------+--------+-------------------------------|
+|      1 | Jan 5  | Overview/Groups/What          |
+|        |        | makes something "mental?"     |
+|      2 | Jan 12 | Discussing Computational Mind |
+|      3 | Jan 19 | Discussing What is a theory?  |
+|      4 | Jan 26 | The Nature of Computation     |
+|        |        | Turing Machines &             |
+|        |        | Lambda Calculus               |
+|      5 | Feb 2  | Programming Languages         |
+|      6 | Feb 9  | Basics of Category Theory     |
+|      7 | Feb 16 | Category Theory 2             |
+|      8 | Feb 22 | *Reading Week - No Class*     |
+|      9 | Mar 2  | Manifolds and Metrics         |
+|     10 | Mar 9  | Critiquing Contemporary       |
+|        |        | Modelling Paradigms           |
+|     11 | Mar 16 | TBD (depends on how           |
+|        |        | efficient we are)             |
+|     12 | Mar 23 | Group Work Time               |
+|        |        | to Prepare for Presentations  |
+|     13 | Mar 30 | Student Presentations         |
+
 
 
 * Attendance Policy
