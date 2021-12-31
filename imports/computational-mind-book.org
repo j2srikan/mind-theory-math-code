@@ -1,9 +1,10 @@
+#+begin_comment
 #+Title: The Routledge Handbook of the Computational Mind
 #+Author: Britt Anderson
 #+options: ^:nil
 #+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
 #+csl-style: ../admin/cambridge-university-press-numeric.csl
-
+#+end_comment
 
 
 * Chapter 8 Classic Computational Models (CCM) [[cite:&samuels19_class_comput_model]]
@@ -136,6 +137,4 @@ Models of cognition are not about /reproduction/, but about /transformation/. Di
 
 [fn:1] A nice article with an example of "semantic" is by Shea [[cite:&shea13_natur_repres_conten]].
 
-* References
-[[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
 

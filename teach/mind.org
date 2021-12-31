@@ -1,10 +1,9 @@
-#+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
-#+csl-style: ../admin/cambridge-university-press-numeric.csl
-
-
 #+Title: Mind
 #+Author: Britt Anderson
 #+Date: Jan 2022
+#+options: ^:nil
+#+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
+#+csl-style: ../admin/cambridge-university-press-numeric.csl
 
 * Précis
   Our continuing discussion of what constitutes "mind," and more specifically what is a computational theory of mind, and how does it benefit, if at all, from a reliance on neural implementations of brains?
@@ -20,7 +19,8 @@
 
 * Further thoughts on the article: What is cognition?
 
-* [[file:~/gitRepos/mind-theory-math-code/imports/computational-mind-book.html][Discussions of Readings in CCM]]
+* Computational Mind
+  #+include: "../imports/computational-mind-book.org"
 
 * Companion and Optional Readings
 
