@@ -1,10 +1,10 @@
-#+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
-#+csl-style: ./cambridge-university-press-numeric.csl
-
-
 #+Title: X Day
 #+Author: Britt Anderson
 #+Date: Dec 24, 2021
+#+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
+#+csl-style: ./cambridge-university-press-numeric.csl
+#+options: ^:nil
+
 
 * Outline
 
