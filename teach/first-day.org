@@ -1,16 +1,15 @@
 #+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
 #+csl-style: ../admin/cambridge-university-press-numeric.csl
-
-
+#+options: toc:nil ^:nil
 #+Title: First Day
 #+Author: Britt Anderson
-#+Date: Dec 22, 2021
+#+Date: Winter 2022
 
 * Outline
 ** Where and When
    - Time 14:30 - 17:20
    - Room No. PAS 4032
-   - Zoom meeting code and password (will be shared differently to avoid zoom bombing)
+   - Zoom meeting code and password (will be shared separately to avoid zoom bombing)
 ** Who am I and who are you?
 A short round table giving your name, program, and general research area.
 ** What do I think this course is about?
