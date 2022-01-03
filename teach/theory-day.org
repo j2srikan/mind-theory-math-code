@@ -3,7 +3,7 @@
 #+Date: Winter 2022
 #+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
 #+csl-style: ../admin/cambridge-university-press-numeric.csl
-#+options: ^:nil d:nil
+#+options: ^:nil d:nil toc:nil
 
 
 * Looking Back and Looking Forward
@@ -33,46 +33,36 @@ What makes some ideas about how the mind and brain work into a /theory/? Is it p
 If we have a sense of what it means for something to be cognitive or mental, some conception of what it means to have models and theories, and a working agreement regarding the role of computation in this project, what is needed to express a theory computationally. Is a formula the right approach? Do we need analysis or can we simply achieve the same benefits via simulation. Must we be able to construct examples or is it enough to infer them logically?
 
 ** Preliminaries
-   [[cite:&sep-structure-scientific-theories]]
+   This is a very long entry in the Stanford Encyclopedia. Maybe it isn't really rightly regarded as "preliminary" [[cite:&sep-structure-scientific-theories]]. However, even if one only looks at the introductory material and not the full entry there is a clear delineation of the syntactic, semantic, and pragmatic accounts of scientific theory. Those are useful notions to have in mind when considering:
 
-** Discussion Questions Theory
+*** Discussion Questions Theory
 1. Is falsifiability a useful attribute for a theory?
 2. Is explanation a necessary characteristic for a true theory to have?
 3. What is the relation between a model and a theory?
 
 * Suppes [[cite:&suppes67_what]]
-
-When reading a pithy article like this it can be hard to decide where to begin. The following questions are to help us get started in the class discussion, and hopefully to help you in your reading and thinking about the topic, but they are not meant to be proscriptive. We can take our discussion anywhere we agree to. 
-
+  Suppes was a towering figure in psychology and statistics especially as related to measurment. Here he gives a decidedly mathematical take on what it means for something to be a theory, but he does include the idea that it is to be useful, and that real world practice may fall short of the idealized goal. I thought it would be a good article for framing our discussion as it gives an example of combing mathematical formality with practical ends. Read it with an eye on the questions below. You may find it advisable to read the questions below first, think about them a bit, and then read the Suppes paper. The goal is not to become an expert in Suppes, but to have enough of the basics to come to grips with what a theory is, or at least what it should aspire to be.
+  
 ** What is a theory?
-  Is a question unlike "what is a rational number" or "what is a nectarine?"
+Is it a question like "what is a rational number" or "what is a nectarine?"
 
-*** When you reach the end ask yourself if you feel his use of the term theory is what you mean (or those in your discipline mean) by theory?
+** Is Suppes' use of the term "theory" what you or those in your discipline mean by theory?
 
-** What are the components of a scientific theory according to the standard sketch?
+** What are the components of a scientific theory according to the standard sketch? Do you agree? Something missing? Too much assumed?
 
-*** Do you agree? Something missing? Too much assumed?
+** How does Suppes' characterization align with neuroscience and psychology use of the term "theory?"
 
-*** How does this characterization align with your favorite neurological or psychological "theory?"
-
-** How does "the standard sketch" fit with the Deductive Nomological model?
-
+** How does "the standard sketch" fit with the [[https://plato.stanford.edu/entries/scientific-explanation/#DNMode][Deductive Nomological]] model?
 
 ** What is meant when Suppes says that the first part of the theory sketch is to be understood in purely syntactic terms?
 
-** Suppes distinguishes theories and models of theories. What is the latter and how does it differ from the former?
-
-See  https://plato.stanford.edu/entries/model-theory/#main-text
+** Suppes distinguishes theories and [[https://plato.stanford.edu/entries/model-theory/#main-text][models of theories]]. What is the latter and how does it differ from the former?
 
 ** At the bottom of page 58 into the top of 59 he mentions _algebras_ and _isomorphisms_. Can we get a generally satisfactory idea of what these terms mean here?
 
-** On page 59 he discusses the reduction of psychology to physiology...
+** On page 59 he discusses the reduction of psychology to physiology. The discussion makes use of the idea of a [[https://en.wikipedia.org/wiki/Representation_theorem][representation theorem]]. What is that? Do you agree that psychology could be satisfactorily viewed as reduced to physiology if there were an /isomorphism/ such as Suppes posits?
 
-  ... this discussion makes use of the idea of a [[https://en.wikipedia.org/wiki/Representation_theorem][representation theorem]] (what is that), but do we agree that we would be satisfied that psychology was reducible to physiology if the isomorphism he posits was in fact established?
-
-  Why can't we reverse the direction of the isomorphism and claim that physiology is reducible to psychology?
-
-  To foreshadow future discussions, look for these ideas of "same structure" and "isomorphism" in our section on category theory and particularly how it might relate to the concept of /functor/.
+** Why can't we reverse the direction of the isomorphism and claim that physiology is reducible to psychology? [fn:2]
 
 ** Let's discuss a bit his sentence: "The concrete experience that scientists label an experiment cannot itself be connected to a theory in any complete sense."
 
@@ -82,11 +72,12 @@ See  https://plato.stanford.edu/entries/model-theory/#main-text
 
 * Companion and Optional Readings
 
-Two recent articles advocating for more theory and more formal models in psychology [[cite:&rooij21_theor_befor_test;&guest21_how_comput_model_can_force]] .
+Two recent articles advocating for more theory and more formal models in psychology [[cite:&rooij21_theor_befor_test;&guest21_how_comput_model_can_force]]. These are also useful readings for thinking about the role of theory in psychology and neuroscience and whether formal, mathematical models should be a part of their construction.
 
 * References
 [[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
 
 * Footnotes
+[fn:2] To foreshadow future discussions, look for these ideas of "same structure" and "isomorphism" in our section on category theory and particularly how it might relate to the concept of /functor/. 
 
 [fn:1] It is quite reasonable that an empirical scientist might not care. If we are interested in clinical practice we want to know whether a particular anti-epileptic drug does or doesn not stop seizures. To develop a new AED we might need to learn quite a lot about neural physiology. And all we need to learn agnostic on questions of minds, qualia, or the computability of thought. My introduction is not meant to place one activity above another, but to emphasize that one should understand one's task first at this general level: what is its purpose, what are the assumptions upon which it rests, what are the critical terms and data assumed in the area? Then one can judge whether a particular experiment or model serves its intended intellectual purpose. Of course, one can deviate from this idealized approach in all sorts of ways and still have a successful career. One just won't leave any important intellectual residue behind. 
