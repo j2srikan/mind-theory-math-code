@@ -1,0 +1,32 @@
+#+Title: Abstraction and Cognitive Neuroscience Modeling
+
+  #+begin_quote
+  The purpose of abstraction is not to be vague, but to create a new semantic level in which one can be absolutely precise. --- Edsger Dijkstra
+  #+end_quote
+
+
+
+* Target Reading: Computing With Cognitive States
+
+* Citation
+  [[http://arxiv.org/abs/2111.06969v1][Computing with Cognitive States on Arxiv.org]]
+
+  
+* Question:
+  1. What is the meaning of the word algebra here?
+
+  2. Is this paper describing a theory (in the way we talked about it earlier)?
+     
+  3. How does the brain figure into the theory here?
+
+  4. How does the development of ideas here relate to the mind - theory - math - code trajectory I proposed as useful?
+
+  5. What language would be a good one for coding up this model?
+
+  6. What critiques do you have of this model specifically (as opposed to the general outline that we just discussed)?
+
+  7. What would be gained by making a model of this with spiking elements?
+
+  
+
+

@@ -1,0 +1,92 @@
+#+Title: mind → *THEORY* → math → code
+#+Author: Britt Anderson
+#+Date: Winter 2022
+#+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
+#+csl-style: ../admin/cambridge-university-press-numeric.csl
+#+options: ^:nil d:nil
+
+
+* Looking Back and Looking Forward
+What I have wanted to accomplish so far is to get us thinking about research more generally. We may have our pre-occupations of the moment: how to get the eye tracker to calibrate; what is the right list of words to have a participant read; what should I specifiy for the geometric distribution of calcium channels along some dendrite in some neuron of some nucleus of my model?
+
+It is too easy to lose sight of the larger aspiration: to develop an understanding of the human mind. It is too easy to lose the thread that connects our pre-occupation of the moment with our fundamental goal. In fact, we may never have established that relation at all. We may have stepped into a project or inherited some facet of a research program and never had the time to reflect on this larger purpose, where our work fits into it, or even /whether/ our work fits into it. Our fascination is spawned in our youth by talk of consciousness and our adult days are consumed with writing R code to test linear mixed-effects models of reaction time for the classification of the pronounceability of pseudo-words. Does one have anything to do with the other?
+
+To answer that we must know what we mean by mind and cognition. Is the mind computational? Can cognition be characterized as a collection of mechanisms? Reasonable questions for the computational modeler and philosopher, but what about the empirical scientist? If they want their work to contribute to answering these questions then obviously yes, they should wrestle with these things too [fn:1]. 
+
+Having committed to wrestling with the nature of the problem we are prepared to offer solutions. Now we must wrestle with what constitutes a solution. Making observations and determining that 'A' often follows 'B' is data. That we have plenty of. What we want is to understand *why* 'A' often follows 'B'. How do we move past observation? /What is a theory/?
+
+* Is There a Theory Problem in Psychology or Neuroscience
+:class_exercise:
+Some small group discussion, and then larger reconvened discussion on this preliminary point. Are we theory poor in psychology and neuroscience?
+
+Can each group give an example of a good scientific theory in psychology and another one for neuroscience?
+:END:
+
+** Some opinions
+1. "Desperately seeking theory" [[cite:&whiteman13_pryin]]
+2. "Does neuroscience need a Newton?" [[cite:&scicurioius12_does_neuros_need_newton]]
+3. "we dream of a psychology focusing on theoretically solid, explanation-based accounts"  [[cite:&borghi19_theor_explan_psych]]
+
+* What is a theory?
+What makes some ideas about how the mind and brain work into a /theory/? Is it pragmatics, that is utility? And utility for what? Getting nearer to the truth? Can we use _explanation_ to characterize what is a theory? Does explanatory power _necessarily_ benefit when we convert descriptive language to theoretical language? Is "computation" orthogonal to theory construction or must theories deserving the term admit computational expression?  Does computational expression make a theory more useful, more robust, more explanatory?
+
+If we have a sense of what it means for something to be cognitive or mental, some conception of what it means to have models and theories, and a working agreement regarding the role of computation in this project, what is needed to express a theory computationally. Is a formula the right approach? Do we need analysis or can we simply achieve the same benefits via simulation. Must we be able to construct examples or is it enough to infer them logically?
+
+** Preliminaries
+   [[cite:&sep-structure-scientific-theories]]
+
+** Discussion Questions Theory
+1. Is falsifiability a useful attribute for a theory?
+2. Is explanation a necessary characteristic for a true theory to have?
+3. What is the relation between a model and a theory?
+
+* Suppes [[cite:&suppes67_what]]
+
+When reading a pithy article like this it can be hard to decide where to begin. The following questions are to help us get started in the class discussion, and hopefully to help you in your reading and thinking about the topic, but they are not meant to be proscriptive. We can take our discussion anywhere we agree to. 
+
+** What is a theory?
+  Is a question unlike "what is a rational number" or "what is a nectarine?"
+
+*** When you reach the end ask yourself if you feel his use of the term theory is what you mean (or those in your discipline mean) by theory?
+
+** What are the components of a scientific theory according to the standard sketch?
+
+*** Do you agree? Something missing? Too much assumed?
+
+*** How does this characterization align with your favorite neurological or psychological "theory?"
+
+** How does "the standard sketch" fit with the Deductive Nomological model?
+
+
+** What is meant when Suppes says that the first part of the theory sketch is to be understood in purely syntactic terms?
+
+** Suppes distinguishes theories and models of theories. What is the latter and how does it differ from the former?
+
+See  https://plato.stanford.edu/entries/model-theory/#main-text
+
+** At the bottom of page 58 into the top of 59 he mentions _algebras_ and _isomorphisms_. Can we get a generally satisfactory idea of what these terms mean here?
+
+** On page 59 he discusses the reduction of psychology to physiology...
+
+  ... this discussion makes use of the idea of a [[https://en.wikipedia.org/wiki/Representation_theorem][representation theorem]] (what is that), but do we agree that we would be satisfied that psychology was reducible to physiology if the isomorphism he posits was in fact established?
+
+  Why can't we reverse the direction of the isomorphism and claim that physiology is reducible to psychology?
+
+  To foreshadow future discussions, look for these ideas of "same structure" and "isomorphism" in our section on category theory and particularly how it might relate to the concept of /functor/.
+
+** Let's discuss a bit his sentence: "The concrete experience that scientists label an experiment cannot itself be connected to a theory in any complete sense."
+
+** On p 64 he writes: " ... we are no longer concerned directly to establish their truth or falsity, but to evaluate their /usefulness/..." Do you agree?
+
+** If you want to [[https://link.springer.com/book/10.1007/978-94-017-2300-8][read more]] by Suppes.
+
+* Companion and Optional Readings
+
+Two recent articles advocating for more theory and more formal models in psychology [[cite:&rooij21_theor_befor_test;&guest21_how_comput_model_can_force]] .
+
+* References
+[[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
+
+* Footnotes
+
+[fn:1] It is quite reasonable that an empirical scientist might not care. If we are interested in clinical practice we want to know whether a particular anti-epileptic drug does or doesn not stop seizures. To develop a new AED we might need to learn quite a lot about neural physiology. And all we need to learn agnostic on questions of minds, qualia, or the computability of thought. My introduction is not meant to place one activity above another, but to emphasize that one should understand one's task first at this general level: what is its purpose, what are the assumptions upon which it rests, what are the critical terms and data assumed in the area? Then one can judge whether a particular experiment or model serves its intended intellectual purpose. Of course, one can deviate from this idealized approach in all sorts of ways and still have a successful career. One just won't leave any important intellectual residue behind. 

@@ -1,0 +1,76 @@
+*** Preliminaries
+
+**** Turing Machines
+[[http://www.turingarchive.org/browse.php/B/12][Turing machines]] are quite simple implements. While one can build a physical Turning machine, the more usual sense of the term is for a hypothetical computer that is comprised of
+     - a finite alphabet
+     - a finite set of states
+     - the capacity to read and write to a single location in memory, and the ability to adjust to the memory location immediately left or right or to make no move at all, and
+     - a set of instructions (or "machine table") that translates the combination of the current state and the current symbol to a new state and one of the acceptable actions.
+
+It is an interesting fact that anything that can be computed by recursive functions or the lambda calculus can also be recruited by a Turing machine. It is an accepted, but unproven, nay given its informal phrasing not even provable, conjecture that anything that is effectively computable is computable by a Turing machine.
+
+If you believe that the mind expresses or implements a computation then you are asserting that the mind could be implemented by a suitable specification as a Turing machine.
+
+/Is that what you mean when you say you believe in the computational theory of mind?/
+
+/Are Turing machines digital?/ Is this an important distinction? Does this mean that analog computations are omitted? Would an analog paradigm be a better match to modeling mental activity?
+
+**** AI
+
+Weather simulators do not rain. Flight simulators do not fly. So, why believe a cognitive simulator thinks? If you want to explain how the mind or brain works is this parallel enough? Are simulations explanations or demonstrations?
+
+*** Classical Computational Theory of Mind
+
+The mind in many ways, in the important ways, it like a Turing machine, and the things we want to model (or emulate) are very much like the things a Turing machine does.
+
+One objection to the computer metaphor of the brain is that it is obviously wrong. Computers are programmable and the mind/brain is not. Of course, that is not what the proponents of a computational theory of mind mean, so it is perhaps best to avoide the mind as computer metaphor, and stick with the more clumsy name.
+
+/What are the implications of the mind as Turing machine for implementation?/ Doesn't this mean that if the mind is a Turing machine (not /like/ a Turing machine, but actually a Turing machine - and if you hold that the mind is a computational machine then given that all that can be effectively computed is computable by a suitably specificed Turing machine; that is what logic requires you accept) then any functionally equivalent computational system, regardless of its hardware (i.e. it could be vacumn tubes or the population of China) would be a mind.
+
+*** Functionalism
+Mental states serve a functional role in a cognitive system. They relate to the sensory input, motor output and to /each other./
+
+The original implementation of this idea is the probabilistic automaton. Does this device generate the sort of systematicity we see in cognition? That knowing pRq necessitates knowing qRp for some set of relations R and atoms p,q, ...?
+
+If functionalism (or at least machine functionalism) put the emphasis on the machine states subsequent theories such as representationalism and Fodor's Language of Thought emphasize the symbols.
+
+If this is what you think is meant by a computational theory of mind, what would modeling of it look like?
+
+You would have to specify the symbols, the operations over symbols, and the mechanical rules that govern the application of operations. Is that what your current models do or might do?
+
+*** Neural Networks
+
+Is neural network modeling non-symbolic? Must symbols have representational properties?
+
+Are neural networks really models or are they merely bridges to show how the real models might be implemented in neural like systems?
+
+Do Turing equivalent notions of computing and mind miss out on learning? Such models might capture the system at one point in time, but do they reflect its evolution? Is this perhaps something better captured by current neural network approaches with their emphasis on learning algorithms?
+
+Are current computational neuroscience models, with their emphasis on connected neural like elements just derivatives or offshoots of traditional neural networks? Does this have implications for theories of mind?
+
+What is the difference between "neural computation" and "abstract computation?"
+
+Computational Neuroscience sacrifices multiple relizability. Do we care? Will we ever be able to build a theory of mind if all we use are the tools of computational neuroscience. 
+
+** Non-computational theories of mind
+
+*** Logical Behaviorism
+Mental states are predispositions to behave.
+
+*** Type-Identity Theory
+Mental states are brain states.
+
+Since our brains are different from time to time (synaptic weights change; cells die (and a few born)) does that mean we never have the same mental states? Since no two people have the same brain does that mean no two people ever have the same mental states? And if you feel this is true, but that the differences are trivial how do you draw the line? What is the nature of the commonality that you are modeling? This is the problem of /multiple realizability./ Functionalism is offered as a solution to this problem. 
+
+** The role of biology in evaluating /computational/ theories of mind
+
+** Critiques of the Computational Theory of Mind
+
+It is trivial. Any sufficiently complex physical system (such as the molecules comprising the wall behind me) can be shown to be isomorphic to the formal structure of /any/ program. 
+
+Temporality. We could implement the same Turing machine with levers and pulleys, or vacumn tube, or transistors. The speed with which this machine works will be very different. All this is neglected by current computational theory. Is current computational theory wrong then because it misses this temporal aspect?
+
+Turing machines are discrete, finite state machines. Time and thought operates in continuous time. Are models of the former inappropriate for the latter?
+The organization of this entry follows:
+
+https://seop.illc.uva.nl/entries/computational-mind/

@@ -1,0 +1,36 @@
+#+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
+#+csl-style: ../admin/cambridge-university-press-numeric.csl
+#+options: toc:nil ^:nil
+#+Title: What to Read And When
+* Motivation
+  I am desperately trying to avoid this becoming me droning on for a couple of hours. I really wanted the class to be a time to come together, share, discuss, argue, collaborate. In order for that to work, especially as we are trapped in this remote delivery system for at least a few weeks you will have to *read* the readings in advance. 
+* What to Read and When
+  I will try to keep an updated list here of the basic readings here. You will also find them in the "org" files that are part of the github repo for the course, and you should regard those files as the canonical ones. These here are just for convenience. Some additional readings (optional or companion) will also be found in the org files, but may not be listed here.
+
+  This list will be updated as the course progresses and I come to better estimate our pace. It may also be that you have readings that we want to add to the lists. You can do this yourself with a [[https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request][pull-request]]. There are a lot of online sources for this. That link points you to the github source documentation.
+
+
+* Readings for
+
+** Jan 6th
+ [[https://doi.org/10.1016/j.cub.2019.05.044][What is cognition]]
+** Jan 13th
+        [[https://plato.stanford.edu/archives/fall2020/entries/computationaomputational Mind][Computational Mind SEP]] (evenyone)
+	 [[http://dx.doi.org/10.4324/9781315643670-9][Samuels]] or [[http://dx.doi.org/10.4324/9781315643670-19][Egan]] or [[http://dx.doi.org/10.4324/9781315643670-22][Cao]] 
+** Jan 20th
+- [[https://suppes-corpus.stanford.edu/sites/g/files/sbiybj7316/f/what_is_a_scientific_theory_84.pdf][Suppes]] (everyone)
+- At least one of:
+  [[https://doi.org/10.1177/1745691620970604][Rooij]]
+  [[https://doi.org/10.1177/1745691620970585][Guest]]
+- Optional:
+  [[https://plato.stanford.edu/entries/model-theory/#main-text][Model Theory]]
+  [[https://plato.stanford.edu/archives/spr2021/entries/structure-scientific-theories][Scientific Theories]]
+  [[https://www.nsf.gov/discoveries/disc_summ.jsp?cntn_id=128239&WT.mc_id=USNSF_1][Desperate for theory]]
+  [[https://blogs.scientificamerican.com/scicurious-brain/does-neuroscience-need-a-newton/][Need a Newton]]
+  [[http://dx.doi.org/10.3389/fpsyg.2019.00958][Theories and explanations in psychology]]
+** Projects (obviously optional)
+   - Emergent information (a way to look at information theory constructs from a perspective suggested to have something to do with consciousness).
+     [[http://arxiv.org/abs/2104.13368v1][Emergent Information]]
+     [[https://github.com/ei-research-group/deep-ei][Tutorial Links on Github]]
+     [[https://github.com/jkbren/einet][Python Implementation]]
+     

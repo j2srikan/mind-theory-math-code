@@ -1,0 +1,12 @@
+#+Title: Topology
+
+* Sources
+
+** Books
+   1. [[file:~/Nextcloud/Documents/math/topology-geometry/computationalTopology.pdf][Computational Topology (pdf)]]. [[https://www.maths.ed.ac.uk/~v1ranick/papers/edelcomp.pdf][On-line (pdf)]]
+      A book with some fairly short chapters that covers the basics and gives some algorithmic examples and exercises that can be coded up.
+   2. [[https://link.springer.com/content/pdf/10.1007%2F978-3-319-71507-0.pdf][Topological Data Analysis for Scientific Visualization]] (pdf)
+      Covers some of the practical aspects of using topology ideas for analysis and visualization.
+      [[file:~/Nextcloud/Documents/math/topology-geometry/2017_Book_TopologicalDataAnalysisForScie.pdf][My copy]].
+** Code
+   [[https://ds4m.github.io/site/#chapter-10-resources/][Code]] for the topological data analysis chapter of [[file:~/Nextcloud/Documents/math/topology-geometry/data-science-for-mathematicians.pdf][Data Science for Mathematicians]]. 

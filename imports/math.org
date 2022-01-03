@@ -1,0 +1,128 @@
+#+Title: mind-theory-*MATH*-code
+
+* Prologue
+  
+* Computability
+  Theoretical Neuroscience (TN) is (incorrectly in my opinion) often seen as largely synonymous with computational neuroscience. Even if not synonymous there is a great deal they have in common and a great deal of the content of computatinal neuroscience that is contained in TN or is supportive of TN, for example by enabling simulations on a digital computer.
+
+  Would we better off considering analog computers? But then wouldn't we be presuming that real numbers are critical to our mental calculations. Is that justified? Preferable?[fn:1]
+
+  Today the digital rules. The slogan of mind as software and the brain as hardware is apt. Neuromorphic chips take inspiration from biology. Brains compute with spikes. Maybe chips should too,  but advantages seem to be efficiencies, not true gains in computational achievements. Is what is computable by an architecture of transistors also computable by spikes and vice versa?
+
+  This leads to the question of what is computable? Our simulations are often complex and large. What are we buying with the complex implementations? Is is just the benefit of achieving a result in a shorter time. Are we able to do something fundamentally different? The answer is (probably) no.
+
+** Models of Computation
+
+   [[https://www.cs.virginia.edu/~njb2b/cstheory/s2020/files/slides/church-turing-thesis.pdf][Lecture notes]] (pdf) on the computable
+
+   [[http://www.people.cs.uchicago.edu/~soare/History/handbook.pdf][History and concept of computability (pdf)]]. ([[soare.pdf][local copy]])
+   
+*** Turing Machines
+    Often come up as a model that is sufficient to compute anything. But what are they really? The [[https://en.wikipedia.org/wiki/Busy_beaver][Busy Beaver]] Game (cards) that are in [[file:rado.pdf][rado]] might make a good practical introduction. Then could also be used as a simple programming exercise. 
+
+    A pretty clear description on [[https://en.wikipedia.org/wiki/Turing_machine][wikipedia]].
+
+*** Lambda Calculus
+    For many people the TM formalism is not very pretty and it makes it harder to see how to do things or to prove things. The lambda calculus has a nicer more algebraic feel. The reason it exists at all is that people are computing things (think long division). That is clearly a mathematical activity, and it would be nice if we had a rigorous way to describe what it means to compute something. The lambda calculus is one way (and a way equivalent to all others) for formalizing what it means to compute something. Having established that let's you move forward with trying to establish facts about computing.
+
+    As machines that could replicate the steps of computation were being invented at about the time these theories of /human/ computation were being developed was convenient, and it naturally led to people trying to develop formalisms for their machine computations that elaborated or relied on the formal models being specified by mathematicians. McCarthy was a mathematician and you will often hear that LISP owes a lot to the lambda calculus.
+
+    The untyped lambda calculus was followed by the typed lambda calculus, which is directly related to programming language theory for all the contemporary statically typed languages such as Haskell and OCAML.
+
+    If you feel that human brains (and not just human beings) are computational then these abstract formal descriptions might provide the right language for expresssing your truths about thinking. But is it necessary that you know about them or care about them to actually do cognitive or neuroscience modeling?
+
+**** Some Lambda Calculus from cite:stark90_mathem_found_lisp
+
+The λ of lambda calculus doesn't really mean anything. It just signals that you have a lambda expression. To have the lambda calculus you need to specify your algebra. What are the rules for reducing things (i.e. your computations), what are the allowed symbols, and what things mean.
+
+*Terms* are either simple variables ($x$ or $y$) or composite terms ($\lambda~v~t_1$). Having two terms next to each other ($(~t_1~t_2)$) means "apply" $t_1$ to $t_2$. The meaning of a term like $\lambda~v~t_1$ is value returned by lambda abstraction. The meaning part is described by formulas such as $t_1~\rightarrow~t_2$.
+
+That is basically it in a nutshell, but the devil is in the details, and there are other features of the lambda calculus that you need to know to actually use it:
+- Beta reduction
+
+- Beta abstraction
+
+- Alpha conversion
+
+- Eta reduction $\lambda \mbox{name}.(\mbox{expression}~\mbox{name}) = \mbox{expression}$ To see this just apply the original to an argument.
+
+- Normal Form
+
+The chapter cited in the head line give some of these details and also describes the /Church-Rosser/ theorem that says if a formula has a normal form it has only one normal form.
+
+The way this all relates to the halting problem (which is what Turing was working on when he conceived his machine) is that the computation of a term /halts/ when it reaches its normal form. 
+
+7.2 of citep:stark90_mathem_found_lisp shows how to use this sort of formalism to establish some simple logical primitives like AND and OR.
+
+Another textbook citep:michaelson89_lambd that uses the lambda calculus to get an eye on functional programming
+
+Some ideas from that book:
+
+The lambda calculus is the system for manipulating λ expressions.
+
+λ expressions are either a "name" | "function" | "application"
+
+Names name expressions, functions introduce an abstraction, applications specialize abstractions.
+
+Names are sequences of characters.
+
+Functions have the form λ <name> . <body>
+
+Note the "dot". This separates the name from the body of expressions that it names.
+
+<body> is also an expression (note the recursion that is built in).
+
+/application/ has the form of <function expression> <argument expression>
+
+Note that both are expressions (everything is an expression). They are simply placed in proximity. An example $\lambda~x.x\hspace{1.5em}\lambda~a.\lambda~b.b$ . Interesting to note that functions can be arguments too. The intent here is that application provides an expression for the name.
+
+***** Classroom Exercises and Discussion
+1. Write the lambda expression for the identity function? What is the identity function?
+   :answer:
+$$\lambda~x.x$$
+:END:
+2. Apply the identity function to itself.
+3. What is the identity function in the programming language of your group?
+:answer:
+#+begin_src lisp :eval never :exports code
+  (lambda (x) x)
+#+end_src
+1. An interesting lambda expression is the so-called /self-application/ expression: $\lambda~s . (s~s)$.
+   a. apply this to the identity.
+   b. apply the identity to the self-application
+   c. apply the self-application to itself. What is its termination status?
+
+
+Additional terminology:
+- bound variables ::
+-  :: 
+  
+    Some exercises from [[file:raymond_m._smullyan-to_mock_a_mockingbird_and_other_logic_puzzles__including__an_amazing_adventure_in_combinatory_logic-knopf_1985.pdf][Smullyan]] (mockingbird p 74). 
+
+    A really nice [[http://cs.rpi.edu/academics/courses/spring10/proglang/handouts/LambdaCalculus.pdf][resource]] (pdf) ([[file:LambdaCalculus.pdf][my downloaded working copy]]). 
+
+    [[http://bach.ai/lambda-calculus-for-absolute-dummies/][lambda calculus for dummies]]
+
+***** 
+
+*** Recursive Functions
+    Seems to feed pretty well into the use of programming languages to express what is expressible.
+
+    
+** Are they all the same?
+
+   Yes. So even when we want to make statements about what can be learned or known should we not have more comfort with these sorts for formal languages for expressing what it is that can be computed?
+   
+** Are they all that can be computed?
+   
+** Implications for Brains and Cognitive Theories
+
+* Footnotes
+
+[fn:1] Do real numbers exist?
+     #+begin_quote
+     Die ganzen Zahlen hat der liebe Gott gemacht, alles andere ist Menschenwerk - Kronecker
+     #+end_quote
+     Given our brains are finite, can we just consider /infinity/, as Gauss did, as a sort of way of talking? Do we need the reals for theoretical neuroscience? Are they "[[https://www.math.nyu.edu/faculty/edwardsh/athens.pdf][necessary]]?"
+     
+

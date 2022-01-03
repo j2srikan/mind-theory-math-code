@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-01-01 Sat 08:23 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>mind → *THEORY* → math → code</title>
+<meta name="author" content="Britt Anderson" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">mind → <b>THEORY</b> → math → code</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgd788432">1. Looking Back and Looking Forward</a></li>
+<li><a href="#orgfbb0aa7">2. Is There a Theory Problem in Psychology or Neuroscience</a>
+<ul>
+<li><a href="#orgdc452a6">2.1. Some opinions</a></li>
+</ul>
+</li>
+<li><a href="#orgb70e90f">3. What is a theory?</a>
+<ul>
+<li><a href="#org11cdceb">3.1. Discussion Questions Theory</a></li>
+</ul>
+</li>
+<li><a href="#org793c3ac">4. Suppes [<a href="#citeproc_bib_item_4">4</a>]</a>
+<ul>
+<li><a href="#org6331787">4.1. What is a theory?</a>
+<ul>
+<li><a href="#org8387d54">4.1.1. When you reach the end ask yourself if you feel his use of the term theory is what you mean (or those in your discipline mean) by theory?</a></li>
+</ul>
+</li>
+<li><a href="#org1c311e8">4.2. What are the components of a scientific theory according to the standard sketch?</a>
+<ul>
+<li><a href="#orgb383e4c">4.2.1. Do you agree? Something missing? Too much assumed?</a></li>
+<li><a href="#orgd747146">4.2.2. How does this characterization align with your favorite neurological or psychological "theory?"</a></li>
+</ul>
+</li>
+<li><a href="#org50c7532">4.3. How does "the standard sketch" fit with the Deductive Nomological model?</a></li>
+<li><a href="#orga4ad851">4.4. What is meant when Suppes says that the first part of the theory sketch is to be understood in purely syntactic terms?</a></li>
+<li><a href="#org4ee6fde">4.5. Suppes distinguishes theories and models of theories. What is the latter and how does it differ from the former?</a></li>
+<li><a href="#org69f5584">4.6. At the bottom of page 58 into the top of 59 he mentions <span class="underline">algebras</span> and <span class="underline">isomorphisms</span>. Can we get a generally satisfactory idea of what these terms mean here?</a></li>
+<li><a href="#org40ac4c6">4.7. On page 59 he discusses the reduction of psychology to physiology&#x2026;</a></li>
+<li><a href="#org6627dd1">4.8. Let's discuss a bit his sentence: "The concrete experience that scientists label an experiment cannot itself be connected to a theory in any complete sense."</a></li>
+<li><a href="#org8fe31d7">4.9. On p 64 he writes: " &#x2026; we are no longer concerned directly to establish their truth or falsity, but to evaluate their <i>usefulness</i>&#x2026;" Do you agree?</a></li>
+<li><a href="#org7c61e7e">4.10. If you want to read more by Suppes.</a></li>
+</ul>
+</li>
+<li><a href="#org245ff35">5. Companion and Optional Readings</a></li>
+<li><a href="#org7c93a03">6. References</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgd788432" class="outline-2">
+<h2 id="orgd788432"><span class="section-number-2">1.</span> Looking Back and Looking Forward</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+What I have wanted to accomplish so far is to get us thinking about research more generally. We may have our pre-occupations of the moment: how to get the eye tracker to calibrate; what is the right list of words to have a participant read; what should I specifiy for the geometric distribution of calcium channels along some dendrite in some neuron of some nucleus of my model?
+</p>
+
+<p>
+It is too easy to lose sight of the larger aspiration: to develop an understanding of the human mind. It is too easy to lose the thread that connects our pre-occupation of the moment with our fundamental goal. In fact, we may never have established that relation at all. We may have stepped into a project or inherited some facet of a research program and never had the time to reflect on this larger purpose, where our work fits into it, or even <i>whether</i> our work fits into it. Our fascination is spawned in our youth by talk of consciousness and our adult days are consumed with writing R code to test linear mixed-effects models of reaction time for the classification of the pronounceability of pseudo-words. Does one have anything to do with the other?
+</p>
+
+<p>
+To answer that we must know what we mean by mind and cognition. Is the mind computational? Can cognition be characterized as a collection of mechanisms? Reasonable questions for the computational modeler and philosopher, but what about the empirical scientist? If they want their work to contribute to answering these questions then obviously yes, they should wrestle with these things too <sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>. 
+</p>
+
+<p>
+Having committed to wrestling with the nature of the problem we are prepared to offer solutions. Now we must wrestle with what constitutes a solution. Making observations and determining that 'A' often follows 'B' is data. That we have plenty of. What we want is to understand <b>why</b> 'A' often follows 'B'. How do we move past observation? <i>What is a theory</i>?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfbb0aa7" class="outline-2">
+<h2 id="orgfbb0aa7"><span class="section-number-2">2.</span> Is There a Theory Problem in Psychology or Neuroscience</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+
+<div id="outline-container-orgdc452a6" class="outline-3">
+<h3 id="orgdc452a6"><span class="section-number-3">2.1.</span> Some opinions</h3>
+<div class="outline-text-3" id="text-2-1">
+<ol class="org-ol">
+<li>"Desperately seeking theory" [<a href="#citeproc_bib_item_1">1</a>]</li>
+<li>"Does neuroscience need a Newton?" [<a href="#citeproc_bib_item_2">2</a>]</li>
+<li>"we dream of a psychology focusing on theoretically solid, explanation-based accounts"  [<a href="#citeproc_bib_item_3">3</a>]</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb70e90f" class="outline-2">
+<h2 id="orgb70e90f"><span class="section-number-2">3.</span> What is a theory?</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+What makes some ideas about how the mind and brain work into a <i>theory</i>? Is it pragmatics, that is utility? And utility for what? Getting nearer to the truth? Can we use <span class="underline">explanation</span> to characterize what is a theory? Does explanatory power <span class="underline">necessarily</span> benefit when we convert descriptive language to theoretical language? Is "computation" orthogonal to theory construction or must theories deserving the term admit computational expression?  Does computational expression make a theory more useful, more robust, more explanatory?
+</p>
+
+<p>
+If we have a sense of what it means for something to be cognitive or mental, some conception of what it means to have models and theories, and a working agreement regarding the role of computation in this project, what is needed to express a theory computationally. Is a formula the right approach? Do we need analysis or can we simply achieve the same benefits via simulation. Must we be able to construct examples or is it enough to infer them logically?
+</p>
+</div>
+
+<div id="outline-container-org11cdceb" class="outline-3">
+<h3 id="org11cdceb"><span class="section-number-3">3.1.</span> Discussion Questions Theory</h3>
+<div class="outline-text-3" id="text-3-1">
+<ol class="org-ol">
+<li>Is falsifiability a useful attribute for a theory?</li>
+<li>Is explanation a necessary characteristic for a true theory to have?</li>
+<li>What is the relation between a model and a theory?</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org793c3ac" class="outline-2">
+<h2 id="org793c3ac"><span class="section-number-2">4.</span> Suppes [<a href="#citeproc_bib_item_4">4</a>]</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+When reading a pithy article like this it can be hard to decide where to begin. The following questions are to help us get started in the class discussion, and hopefully to help you in your reading and thinking about the topic, but they are not meant to be proscriptive. We can take our discussion anywhere we agree to. 
+</p>
+</div>
+
+<div id="outline-container-org6331787" class="outline-3">
+<h3 id="org6331787"><span class="section-number-3">4.1.</span> What is a theory?</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Is a question unlike "what is a rational number" or "what is a nectarine?"
+</p>
+</div>
+
+<div id="outline-container-org8387d54" class="outline-4">
+<h4 id="org8387d54"><span class="section-number-4">4.1.1.</span> When you reach the end ask yourself if you feel his use of the term theory is what you mean (or those in your discipline mean) by theory?</h4>
+</div>
+</div>
+
+<div id="outline-container-org1c311e8" class="outline-3">
+<h3 id="org1c311e8"><span class="section-number-3">4.2.</span> What are the components of a scientific theory according to the standard sketch?</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-orgb383e4c" class="outline-4">
+<h4 id="orgb383e4c"><span class="section-number-4">4.2.1.</span> Do you agree? Something missing? Too much assumed?</h4>
+</div>
+
+<div id="outline-container-orgd747146" class="outline-4">
+<h4 id="orgd747146"><span class="section-number-4">4.2.2.</span> How does this characterization align with your favorite neurological or psychological "theory?"</h4>
+</div>
+</div>
+
+<div id="outline-container-org50c7532" class="outline-3">
+<h3 id="org50c7532"><span class="section-number-3">4.3.</span> How does "the standard sketch" fit with the Deductive Nomological model?</h3>
+</div>
+
+
+<div id="outline-container-orga4ad851" class="outline-3">
+<h3 id="orga4ad851"><span class="section-number-3">4.4.</span> What is meant when Suppes says that the first part of the theory sketch is to be understood in purely syntactic terms?</h3>
+</div>
+
+<div id="outline-container-org4ee6fde" class="outline-3">
+<h3 id="org4ee6fde"><span class="section-number-3">4.5.</span> Suppes distinguishes theories and models of theories. What is the latter and how does it differ from the former?</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+See  <a href="https://plato.stanford.edu/entries/model-theory/#main-text">https://plato.stanford.edu/entries/model-theory/#main-text</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org69f5584" class="outline-3">
+<h3 id="org69f5584"><span class="section-number-3">4.6.</span> At the bottom of page 58 into the top of 59 he mentions <span class="underline">algebras</span> and <span class="underline">isomorphisms</span>. Can we get a generally satisfactory idea of what these terms mean here?</h3>
+</div>
+
+<div id="outline-container-org40ac4c6" class="outline-3">
+<h3 id="org40ac4c6"><span class="section-number-3">4.7.</span> On page 59 he discusses the reduction of psychology to physiology&#x2026;</h3>
+<div class="outline-text-3" id="text-4-7">
+<p>
+&#x2026; this discussion makes use of the idea of a <a href="https://en.wikipedia.org/wiki/Representation_theorem">representation theorem</a> (what is that), but do we agree that we would be satisfied that psychology was reducible to physiology if the isomorphism he posits was in fact established?
+</p>
+
+<p>
+Why can't we reverse the direction of the isomorphism and claim that physiology is reducible to psychology?
+</p>
+
+<p>
+To foreshadow future discussions, look for these ideas of "same structure" and "isomorphism" in our section on category theory and particularly how it might relate to the concept of <i>functor</i>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6627dd1" class="outline-3">
+<h3 id="org6627dd1"><span class="section-number-3">4.8.</span> Let's discuss a bit his sentence: "The concrete experience that scientists label an experiment cannot itself be connected to a theory in any complete sense."</h3>
+</div>
+
+<div id="outline-container-org8fe31d7" class="outline-3">
+<h3 id="org8fe31d7"><span class="section-number-3">4.9.</span> On p 64 he writes: " &#x2026; we are no longer concerned directly to establish their truth or falsity, but to evaluate their <i>usefulness</i>&#x2026;" Do you agree?</h3>
+</div>
+
+<div id="outline-container-org7c61e7e" class="outline-3">
+<h3 id="org7c61e7e"><span class="section-number-3">4.10.</span> If you want to <a href="https://link.springer.com/book/10.1007/978-94-017-2300-8">read more</a> by Suppes.</h3>
+</div>
+</div>
+
+<div id="outline-container-org245ff35" class="outline-2">
+<h2 id="org245ff35"><span class="section-number-2">5.</span> Companion and Optional Readings</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Two recent articles advocating for more theory and more formal models in psychology [<a href="#citeproc_bib_item_5">5</a>–<a href="#citeproc_bib_item_6">6</a>] .
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7c93a03" class="outline-2">
+<h2 id="org7c93a03"><span class="section-number-2">6.</span> References</h2>
+<div class="outline-text-2" id="text-6">
+<div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>
+    <div class="csl-left-margin">1.</div><div class="csl-right-inline">L. Whiteman &#38; A. Deift, Prying open the black box of the brain. (2013). <a href="https://www.nsf.gov/discoveries/disc_summ.jsp?cntn_id=128239&WT.mc_id=USNSF_1">https://www.nsf.gov/discoveries/disc_summ.jsp?cntn_id=128239&#38;WT.mc_id=USNSF_1</a> (accessed December 31, 2021).</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>
+    <div class="csl-left-margin">2.</div><div class="csl-right-inline">Scicurioius, Does neuroscience need a newton. (2012). <a href="https://blogs.scientificamerican.com/scicurious-brain/does-neuroscience-need-a-newton/">https://blogs.scientificamerican.com/scicurious-brain/does-neuroscience-need-a-newton/</a> (accessed December 31, 2021).</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_3"></a>
+    <div class="csl-left-margin">3.</div><div class="csl-right-inline">A. M. Borghi &#38; C. Fini, Theories and explanations in psychology. <i>Frontiers in psychology</i>, <b>10</b> (2019) nil. <a href="https://doi.org/10.3389/fpsyg.2019.00958">https://doi.org/10.3389/fpsyg.2019.00958</a>.</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_4"></a>
+    <div class="csl-left-margin">4.</div><div class="csl-right-inline">P. Suppes, <a href="https://suppes-corpus.stanford.edu/sites/g/files/sbiybj7316/f/what_is_a_scientific_theory_84.pdf">What is a scientific theory?</a> In S. Morgenbesser,ed., <i>Philosophy of science today</i> (New York: Basic Books; Basic Books, 1967), pp. 55–67.</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_5"></a>
+    <div class="csl-left-margin">5.</div><div class="csl-right-inline">I. van Rooij &#38; G. Baggio, Theory before the test: How to build high-verisimilitude explanatory theories in psychological science. <i>Perspectives on Psychological Science</i>, (2021) 174569162097060. <a href="https://doi.org/10.1177/1745691620970604">https://doi.org/10.1177/1745691620970604</a>.</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_6"></a>
+    <div class="csl-left-margin">6.</div><div class="csl-right-inline">O. Guest &#38; A. E. Martin, How computational modeling can force theory building in psychological science. <i>Perspectives on Psychological Science</i>, (2021) 174569162097058. <a href="https://doi.org/10.1177/1745691620970585">https://doi.org/10.1177/1745691620970585</a>.</div>
+  </div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+It is quite reasonable that an empirical scientist might not care. If we are interested in clinical practice we want to know whether a particular anti-epileptic drug does or doesn not stop seizures. To develop a new AED we might need to learn quite a lot about neural physiology. And all we need to learn agnostic on questions of minds, qualia, or the computability of thought. My introduction is not meant to place one activity above another, but to emphasize that one should understand one's task first at this general level: what is its purpose, what are the assumptions upon which it rests, what are the critical terms and data assumed in the area? Then one can judge whether a particular experiment or model serves its intended intellectual purpose. Of course, one can deviate from this idealized approach in all sorts of ways and still have a successful career. One just won't leave any important intellectual residue behind. 
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="date">Date: Winter 2022</p>
+<p class="author">Author: Britt Anderson</p>
+<p class="date">Created: 2022-01-01 Sat 08:23</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

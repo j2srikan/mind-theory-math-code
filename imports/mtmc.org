@@ -1,0 +1,144 @@
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+options: author:t broken-links:nil c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+options: timestamp:t title:t toc:t todo:t |:t
+#+title: Mind→Theory→Math→Code
+#+date: <2021-12-08 Wed>
+#+author: Britt Anderson
+#+email: britt@uwaterloo.ca
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 27.2 (Org mode 9.4.6)
+#+cite_export:
+
+* Introduction
+
+/What can we think?/ This course is devoted to an extended consideration of this single question.
+
+I am concerned with this question's abstract aspects: What do we mean by think? What criteria must a response meet to be considered a candidate "answer"?
+
+I am concerned with this question's practical aspects: what should an answer look like to be clear and unambigous? Are they domains of mathematics that are well matched to particular claims and programming language choices that enhance understanding of the claims while at the same time providing evidence of their adequacy?
+
+These concerns lead me to structure the course around four topics: mind, theory, math, code. I think about these topics via a series of questions.
+
+** Mind
+What content falls under the heading mental or mind? What makes an "idea" of how things work a "model" and do "models" require "theories." The words are in quotes, because there is a lot to pick apart in terms of what we mean by those words.
+
+If you are interested in /cognitive science/ do you need to care about neuroscience. Are there necessary concerns that connect neuroscience to cognitive science. Simply put: do our ideas about how cognition works *need* to be based on models of the brain? Even if cognitive models do not have to be brain based are they helped (or maybe even hurt) when they do so?
+
+In short, to evaluate a computational cognitive model you have to have an idea of what it is you are modeling; in this context that means cognition or mind. Once that is done you have to wrestle with what it means for something to be a model, and I assert that for a model to be scientifically useful it has to have theoretical commitments. This leads to questions about what it means for something to be a theory?
+
+*** Discussion Questions: Mind
+1. What is the difference between something being mental and something being cognitive?
+2. Are models of brains necessary for models of minds?
+3. Does a model of mind (or of some mental process) necessarily have to deal with consciousness?
+
+** Theory
+What makes some ideas about how the mind and brain work into a /theory/? Is it pragmatics, is it utility? And utility for what? Getting nearer to the truth? Can we use _explanation_ to characterize what is a theory? Does explanatory power _necessarily_ benefit when we convert descriptive language to theoretical language? Is "computation" orthogonal to theory construction or must theories deserving the term admit computational expression?  Does computational expression make a theory more useful, more robust, more explanatory?
+
+If we have a sense of what it means for something to be cognitive or mental, some conception of what it means to have models and theories, and a working agreement regarding the role of computation in this project, what is needed to express a theory computationally. Is a formula the right approach? Do we need analysis or can we simply achieve the same benefits via simulation. Must we be able to construct examples or is it enough to infer them logically?
+
+*** Discussion Questions Theory
+1. Is falsifiability a useful attribute for a theory?
+2. Is explanation a necessary characteristic for a true theory to have?
+3. What is the relation between a model and a theory?
+
+** Math
+   The right language for expressing theories of mind is mathematical. The analogies of mind most current are those of "computer" and "information processing." There is a well developed mathematics of computation. To consider its aptness we need to consider both what we mean by a computational theory of mind, and what the mathematical theories of computation are. Both need to be considered to evaluate their fitness as explanatory models of cognition. The fitness of mathematical models of computation for advancing theories of cognition demonstrates the potential of this approach and we can consider additional areas of mathematics that may not 
+*** Math and Computation
+
+Curricula in the applied sciences (e.g. psychology and engineering) emphasize the math that is useful for crunching numbers, not the math that is useful for expressing abstract ideas clearly. But the questions of theoretical neuroscience and cognitive science are by their nature abstract. If the suggestion is accepted that the progress from the mental (via the neural) to model and theory (via computation) is a productive one, then it follows that math will be required at every stage even if only for its ability to succinctly and unambigoulously describe the relationship. It does not follow that the math useful for crunching numbers will be the same math that is useful for abstraction. Even if it were the case that the domains currently taught (say beginning calculus and linear algebra) were amenable to such it does not follow that they are the only such areas of math that might prove useful, or that learning them from a perspective of numerical application would lead to an ability to also use them for expressing abstract ideas. 
+
+In the quest for a mathematical background for expressing neuro and cognitive theories abstractly and clearly there are some preliminary questions: What, if anything, is the difference between a mathematical model and a computational one? What is this thing "abstraction"? Do we try to achieve it, or do we get it inevitably when we hew from mind to brain to theory?
+
+Once those questions are decided are there particular areas of math that may be important to know about for expressing (computational) cognitive neuroscience models and which we are not consistently taught?
+
+There is a well developed theories of computation in math. There is no clear expression of what it means for something to be "effectively" computable. To understand the implications of a theory of mind or brain being computational we should know a bit about what the mathematician takes to be a theory of computation. These terms show up frequently in discussions of AI and minds, but they are often used as slogans, and many of us don't know the basics.
+
+What are some theories of computation, and how do they work? We will focus on a couple here:
+   1. Turing Machines
+   2. The λ-calculus
+
+
+   
+**** Discussion Questions Computation
+1. What are we missing if we omit "computation" and just talk about cognitive science or cognitive neuroscience?
+2. What is the difference in meaning if we order the words "[[https://www.sciencedirect.com/science/article/abs/pii/S0022249611000368][computational cognitive neuroscience]]" or "[[https://2021.ccneuro.org/about.php][cognitive computational neuroscience]]"?
+
+*** Mathematical Abstraction
+
+If we accept the important role of abstraction in theory then we ought to know about some of the tools mathematicians have for abstractions, and we can then practice thinking abstractly by reconsidering some areas of math that we think we know well from this perspective. We might also want to see an example of the language mathematicans may use for abstracting across their own subdisciplines.
+
+A good example of a domain of math that applied scientists learn about concretely but rarely use abstractly is linear algebra: vectors and matrices.
+
+A good example of the language used for expressing abstract relationships in mathematics is category theory: the domain that specializes in making analogies precise. 
+
+**** Discussion Questions Abstraction
+
+1. Which is more abstract: a theory of mind or a theory of the brain? Or is the distinction between the mental and the neural orthogonal to questions of abstraction?
+2. What are the benefits of abstraction applied to computional neuroscience and modeling?
+3. Do we need a new vocabulary or new tools to support abstraction in the computational cognitive neuroscience modeling space?
+4. Neural firing rates can be viewed as vectors. Each number is one component of a vector whose dimension is determined by the number of neurons from which we are recording. Are their benefits to thinking more abstractly about this space of neuronal firing rates as a vector spaces above and beyond what concrete benefits we get by being able to use the computational tools of applied linear algebra?
+
+
+
+*** Dynamic Mathematics
+People are not rocks. They act. They change their positions. They change their minds. The mathematics of dynamics is something we are taught in our practical curriculum where there is typically a requirement to understand some of the basics of what a derivative is and what a differential equation is. We may even be given a few tools for helping us to analytically solve them, but we are not as often given a glimpse into how to use them as abstractions to help us see the common dynamic behavior at play in apparently heterogeneous scenarios. 
+
+The mathematics of differential equations captured by the /phase spaces/ and the /bifurcations/ there observed may provide new insights into the dynamics of behavioral and neural data. 
+
+**** Discussion Questions Dynamics and DEs
+1. What is emergence?
+2. Is there a feature of differential equations or their dynamic behavior that can be described as emergent?
+3. Are there neural or mental phenomena that could thusly be well captured?
+
+*** Geometry
+
+People move position and people change their minds. We are not only interested in someone's velocity, but where they end up: Cleveland or Conservative? And often we are not only interested in their destinations, but their trajectories. How should we describe such motions, whether in actual space, in conceptual spaces, or in the space of neuronal firing rate vectors?
+
+1. Manifolds and Metrics (Riemannian or otherwise)
+2. Information Geometry
+
+**** Discussion Questions Geometry
+1. Can we measure ideas?
+2. What is the /shortest/ path between an image of a fish and an image of a man?
+3. How do we transit from our current beliefs about the future starting only with our past observations?
+
+
+** Code
+
+How can you tell if your abstractions are the right ones? At some point don't you need to return to data and things you can observe? What is the best way (or merely the most convenient way) to effect this conversion from mathematical formulation to observable instances? This is the domain of computer simulation. After translating your idea into theory and finding the proper mathematical expression you need to convert that formulation to a program, code, that you can run and that will produce data for you to assess. That assessment may be a comparison to known observations or to predict patterns of data that will be found in experiments yet to be performed.
+
+But asprirations are not enough. Just because we want to translate from math to code doesn't mean we can. Are there any guarantees about what we can do when expressing math as programs (or vice versa). How do programs and proofs relate?
+
+And while proofs are well and good, we often want to see the constructions that emerge from our theoretical foundations. And this makes the translation of math to code a fundamentally practical activity. We should aks if certain programming languages facilitate particular aspects of the process. Do different programming languages or programming paradigms particularly benefit:
+
+- The elaboration of ideas,
+- the implementation of models,
+- the rigor of demonstration,
+- the efficiency of simulation,
+- or the clarity of expression? 
+
+
+1. Curry-Howard-Lambeck Correspondence
+   Types as Propositions. Proofs as Programs. All living in a Cartesian Closed Category.
+2. Languages and Their Features
+   - Julia :: Just-in-time compilation
+   - Haskell :: Lazy evaluation.
+   - Common Lisp :: Homoiconicity.
+   - Prolog :: Logic programming.
+   - Idris :: Dependent Types.
+   - Pyro.ai/Turing.jl/etc :: Probabilistic programming.
+    
+   
+*** Discussion Questions Code
+1. Is this analogy of translating ideas into code itself a good theory? Do we do our thinking via simulation and sampling? Are different cognitive domains just using different DSLs?
+2. Types are at the heart of many modern programming language efforts, and they have their roots in philosophical paradoxes (Russell and Set Theory). But is this just all about pragmatics that should interest the computer scientist, but has little benefit for the cognitive and neuro-sciences?
+ Are there particular faces of the [[https://en.wikipedia.org/wiki/Lambda_cube][lambda cube]] that better match the needs of a cognitive theorist?
+3. Types are often used to give compile time guarantees. Does that make them irrelevant here? What does compiling mean when thinking about "thinking?"
+4. Good old fashion AI (GOFAI) was fundametally symbolic. Do languages that facilitate proofs better match better this approach? Should we be modeling minds with theorem provers?
+5. The slogan of Common Lisp is code as data. Code as data permits metaprogramming. Code that writes code, and systems that can change themselves while running. Do "macros" have a cognitive counterpart. Is the mind (or brain) a mechanism that updates itself while running and thus the LISP(s) are the right languages to use for making the march from idea to model to math to code more seamless?
+6. No one will ever count to infinity, but we can reason about it. Can you code an infinite number? Can you write code that arguably has a notion of infinity? Some programming languages allow for the coding of infinite length lists via lazy evaluation. The original lambda calculus is "lazy." Are the brain and mind lazy in this sense? If so, maybe a lazy by default language is the right one to use for modeling.  
+   
