@@ -12,6 +12,10 @@
 ** Gradient Based Learning
    1. Lens and Category Theory for Insight and Code [[cite:&cruttwell21_categ_found_gradien_based_learn]]
 
+
+** Consciousness   
+[[https://psyarxiv.com/3y8at/download?format=pdf][Multilayer networks as embodied consciousness interactions. A formal model approach (pdf).]] 
+
 * Companion and Optional Readings
   [[cite:&fong18_seven_sketc_compos]]
 
