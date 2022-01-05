@@ -6,4 +6,4 @@
 * Second Meeting
 1. The main file for this class will be [[file:teach/mind.org]]. Note this file imports another file. You will see their combination if you look at [[file:teach/mind.html]], but if you are looking for the raw files you will also have to checkout [[file:imports/computational-mind-book.org]].
 2. We will be discussing articles that can be found on learn and that come from the Handbook of the Computational Mind. Groups were arranged in class on <2022-01-05 Wed>.
-3. 
+
