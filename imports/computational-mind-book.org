@@ -101,9 +101,9 @@ This is generally some form of Gödel's Incompleteness results (see for a famous
 
    :class_question: what makes the theory deflationary?
 
-many modelers and neurobiologists talk about patterns of neuronal firing representing some aspect of the world. Often the practical intent is to signal that there is a correlation between the neuronal pattern on the one hand and the presence of the world content on the other. However, that is not what is meant by representation in the philosophical or theoretical sense. This chapter by William Ramsey talks a lot about what a /structural/ or S representation is and what the challenges are to them. A good chapter if class discussion begins to get hung up on this point.
+Many modelers and neurobiologists talk about patterns of neuronal firing representing some aspect of the world. Often the practical intent is to signal that there is a correlation between the neuronal pattern on the one hand and the presence of the world content on the other. However, that is not what is meant by representation in the philosophical or theoretical sense. The chapter by William Ramsey (not assigned, but in the book) talks a lot about what a /structural/ or S representation is and what the challenges are to them. A good chapter if class discussion begins to emphasize this point.
 * Chapter 21 Computational Explanations and Neural Coding [[cite:&cao19_comput]]
-  While computers are important to contemporary brain science it is the commitment the idea of the brain as a computer that is /computationalism/. Why does she refer to brain and not mind? Doesn't computationalism apply to mental models?
+  While computers are important to contemporary brain science it is the commitment to the idea of the brain as a computer that is /computationalism/. Why does she refer to brain and not mind? Doesn't computationalism apply to mental models?
 
   In fact she suggests that /representation/ is largely irrelevant for neuroscience, but key for psychology, and thus computationalism in neuroscience is irrelvant for computational models of cognition.
 ** Computation in Neuroscience
@@ -114,7 +114,7 @@ many modelers and neurobiologists talk about patterns of neuronal firing represe
    :class_question: explain the idea that talk of computation in neuroscience is often "cheap" and not "semantic".[fn:1]
 
    #+Begin_quote
-   ... any content we find in the system is playin a genuine representational role ...
+   ... any content we find in the system is playing a genuine representational role ...
    #+End_quote
 
    :class_question: what is a genuine representational role?
