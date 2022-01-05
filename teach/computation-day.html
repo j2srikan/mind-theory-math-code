@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-01-04 Tue 20:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Computing Theory Day</title>
+<meta name="author" content="Britt Anderson" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Computing Theory Day</h1>
+
+<div id="outline-container-orgd3b0506" class="outline-2">
+<h2 id="orgd3b0506"><span class="section-number-2">1.</span> Rewind</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+We want to make practical progress in deepening our understanding of cognition. I have advanced the claim that to do that we must better understand <a href="first-day.html">what we mean by "mind"</a>, <a href="theory-day.html">what it is we should expect from a theory</a>, and what it means to stack our theory on some version of the <a href="mind.html">computational mind</a>. I have suggested that the succes of that effort hinges on our developing a greater familiarity with some mathematics and more practice in translating ideas via math into code. So far, we have not done the latter steps. Today marks our first steps in this formal direction by considering computation in more detail and from mathematical and programming language perspectives. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5032601" class="outline-2">
+<h2 id="org5032601"><span class="section-number-2">2.</span> Computing in Minds and Computers</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Questions to keep in mind for this section
+</p>
+
+<ol class="org-ol">
+<li>What are some more detailed metaphors of the computational mind account?</li>
+<li>How do they make contact with mathematical formalisms for computation.</li>
+<li>What are alternative non-computational accounts of mind</li>
+<li>What are some challenging questions for computational theories of mind?</li>
+</ol>
+</div>
+
+
+<div id="outline-container-orgdabd15c" class="outline-3">
+<h3 id="orgdabd15c"><span class="section-number-3">2.1.</span> Classical Computational Theory of Mind</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+The mind in all important ways is like a Turing machine. The things we want to model (or emulate) are very much like the things a Turing machine does.
+</p>
+</div>
+
+<div id="outline-container-org8fffc0f" class="outline-4">
+<h4 id="org8fffc0f"><span class="section-number-4">2.1.1.</span> What is a Turing machine? Some Background and Details</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+<a href="http://www.turingarchive.org/browse.php/B/12">Turing machines</a> are quite simple implements. While one can build a physical Turning machine, the more usual sense of the term is for a hypothetical computer that is comprised of
+</p>
+<ul class="org-ul">
+<li>a finite alphabet</li>
+<li>a finite set of states</li>
+<li>the capacity to read and write to a single location in memory, and the ability to adjust to the memory location immediately left or right or to make no move at all, and</li>
+<li>a set of instructions (or "machine table") that translates the combination of the current state and the current symbol to a new state and one of the acceptable actions.</li>
+</ul>
+
+<p>
+Other models of computation are the <i>lambda calculus</i>  and the <i>theory of recursive functions</i>. We will come to those shortly. It is an interesting fact that anything that can be computed by any one of those three can be computed by the other two. It is an accepted, but unproven, conjecture that therefore anything that is effectively computable is computable by a Turing machine. Doesn't this mean that if you accept the computational mind hypothesis you must accept that the mind is able to be simulated by a Turing Machine? And as a consequence that minds are <i>multiply realizable</i>?
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org8dd8d59"></a>Is that above what you mean when you say you believe in the computational theory of mind?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_discussion">class_discussion</span></span><br /></li>
+
+<li><a id="org7802cad"></a>Are Turing machines <i>digital</i>?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_discussion">class_discussion</span></span><br />
+<div class="outline-text-5" id="text-2-1-1-2">
+<p>
+Is this an important distinction? Does this mean that analog computations are omitted? Would an analog paradigm be a better match to modeling mental activity?
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org25e9673" class="outline-4">
+<h4 id="org25e9673"><span class="section-number-4">2.1.2.</span> Programming a Turing Machine: the Busy Beaver&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_exercise">class_exercise</span></span></h4>
+<div class="outline-text-4" id="text-2-1-2">
+<p>
+<i>We may or may not have time to do this in class. If we feel that would be too much pressure we can schedule our review of code and our discussion of the various programming language pros and cons to the next session. We can have a shorter class to free time up to work on this in groups.</i>
+</p>
+
+<p>
+Use your programming language to write a Busy Beaver Turing Machine. If you have already done this in the past please refrain from helping your team too much, and if you don't know what it is, don't do an internet search for the time-being.
+</p>
+
+<p>
+The following is the Wikipedia description:
+</p>
+<blockquote>
+<p>
+
+</p>
+
+<p>
+   The machine has n "operational" states plus a Halt state, where n is a positive integer, and one of the n states is distinguished as the starting state. (Typically, the states are labelled by 1, 2, &#x2026;, n, with state 1 as the starting state, or by A, B, C, &#x2026;, with state A as the starting state.)
+The machine uses a single two-way infinite (or unbounded) tape.
+The tape alphabet is {0, 1}, with 0 serving as the blank symbol.
+The machine's transition function takes two inputs:
+</p>
+
+<p>
+the current non-Halt state,
+the symbol in the current tape cell,
+</p>
+
+<p>
+and produces three outputs:
+</p>
+
+<p>
+a symbol to write over the symbol in the current tape cell (it may be the same symbol as the symbol overwritten),
+a direction to move (left or right; that is, shift to the tape cell one place to the left or right of the current cell), and
+a state to transition into (which may be the Halt state).
+</p>
+
+<p>
+   There are thus (4n + 4)2n n-state Turing machines meeting this definition because the general form of the formula is (symbols × directions × (states + 1))(symbols × states).
+The transition function may be seen as a finite table of 5-tuples, each of the form
+    (current state, current symbol, symbol to write, direction of shift, next state).
+</p>
+
+<p>
+"Running" the machine consists of starting in the starting state, with the current tape cell being any cell of a blank (all-0) tape, and then iterating the transition function until the Halt state is entered (if ever). If, and only if, the machine eventually halts, then the number of 1s finally remaining on the tape is called the machine's score.
+</p>
+
+<p>
+The n-state busy beaver (BB-n) game is a contest to find such an n-state Turing machine having the largest possible score — the largest number of 1s on its tape after halting. A machine that attains the largest possible score among all n-state Turing machines is called an n-state busy beaver, and a machine whose score is merely the highest so far attained (perhaps not the largest possible) is called a champion n-state machine.
+</p>
+</blockquote>
+</div>
+
+
+<ol class="org-ol">
+<li><a id="org4685f12"></a>Exercises<br />
+<div class="outline-text-5" id="text-2-1-2-1">
+<p>
+<span class="underline">Busy Beaver Warm-up</span>
+</p>
+
+<p>
+Here are the rules for n=2. Create this Turing Machine using your group's programming language.
+</p>
+
+<p>
+a0 -&gt; b1r
+</p>
+
+<p>
+a1 -&gt; b1l
+</p>
+
+<p>
+b0 -&gt; a1l
+</p>
+
+<p>
+b1 -&gt; h1r
+</p>
+</div>
+
+
+<ol class="org-ol">
+<li><a id="org2016eca"></a>My Code (see "<a href="https://en.wikipedia.org/wiki/Eating_your_own_dog_food">dogfooding</a>")<br />
+<div class="outline-text-6" id="text-2-1-2-1-1">
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listing 1: </span>Importing Necessary Library "Trivia"</label><pre class="src src-lisp">(ql:quickload <span style="color: #8b2252;">"trivia"</span>)
+</pre>
+</div>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listing 2: </span>Creating a Structure to hold the features of a Turing machine</label><pre class="src src-lisp">(<span style="color: #a020f0;">defstruct</span> <span style="color: #228b22;">turing-machine</span> state tape head-location)  
+</pre>
+</div>
+
+<p>
+My idea was to see if making the code explicitly reflect the written description would be easy in lisp and whether that would help me write the code to implement it since I might be more easily able to follow the textual description directly.
+</p>
+
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listing 3: </span>Moving the tape under the head</label><pre class="src src-lisp">(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">move-left</span> (tm)
+  (<span style="color: #a020f0;">let</span> ((loc (turing-machine-head-location tm))
+        (lst (turing-machine-tape tm)))
+    (<span style="color: #a020f0;">if</span> (= loc 0)
+        (setf (turing-machine-tape tm) (cons 0 lst))
+        (setf (turing-machine-head-location tm) (- loc 1)))))
+(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">move-right</span> (tm)
+  (<span style="color: #a020f0;">let</span> ((loc (turing-machine-head-location tm))
+        (lst (turing-machine-tape tm)))
+    (<span style="color: #a020f0;">when</span> (= (+ loc 1) (length lst))
+      (setf (turing-machine-tape tm) (append lst (list 0))))
+    (setf (turing-machine-head-location tm) (+ loc 1))))
+
+(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">move</span> (tm dir)
+  (<span style="color: #a020f0;">cond</span> 
+    ((eq dir 'left)
+     (move-left tm))
+    ((eq dir 'right)
+     (move-right tm))))
+</pre>
+</div>
+
+<p>
+Used separate functions for moving tape right or left, and then a generic <code>move</code> function that simply picks which one to call. Trying to encapsulate my logic in small functions. 
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listing 4: </span>Testing Equality of Turing Machines</label><pre class="src src-lisp">(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">equal-sv</span> (tm s v)
+  (and (eql (turing-machine-state tm) s)
+       (= (elt (turing-machine-tape tm) (turing-machine-head-location tm)) v)))
+</pre>
+</div>
+
+<p>
+I had to define a function for comparing states and values. Some computing languages have a way to overload functions or to invoke particular methods based on the type of values being compared. That might have made the expression of this comparison more natural than what I had to do here. Lisp has a notion of types and generics, but I am not currently advanced enough to program those quickly so I did it this way first, with the idea that I can refine this later on if it is deemed worth the time and effort. 
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listing 5: </span>Defining the Rules</label><pre class="src src-lisp">(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">rule</span> (tm) <span style="color: #b22222;">;;</span><span style="color: #b22222;">state value</span>
+  (<span style="color: #a020f0;">cond</span>
+    ((equal-sv tm 'a 0)
+     (setf (turing-machine-state tm) 'b)
+     (setf (elt (turing-machine-tape tm) (turing-machine-head-location tm)) 1)
+     (move tm 'right))
+    ((equal-sv tm 'a 1)
+     (setf (turing-machine-state tm) 'b)
+     (setf (elt (turing-machine-tape tm) (turing-machine-head-location tm)) 1)
+     (move tm 'left))
+    ((equal-sv tm 'b 0)
+     (setf (turing-machine-state tm) 'a)
+     (setf (elt (turing-machine-tape tm) (turing-machine-head-location tm)) 1)
+     (move tm 'left))
+    ((equal-sv tm 'b 1)
+     (setf (turing-machine-state tm) 'h)
+     (setf (elt (turing-machine-tape tm) (turing-machine-head-location tm)) 1)
+     (move tm 'right))))
+</pre>
+</div>
+
+<p>
+Each Turing machine is a <i>particular</i> choice of rules (and some other things). This function <code>rule</code> is named a bit generically for what it is, which is a specific choice of algorithm. It compares the current state of the machine and value on the tape to each of the rules and then implements the update based on which rule matches. This way of writing the rules would not scale very well, but the similar structure of all the cases suggests that this could be made more concise, but at the expense of obscuring what is happening.
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listing 6: </span>Running our Turing machine</label><pre class="src src-lisp">(<span style="color: #a020f0;">defparameter</span> <span style="color: #a0522d;">*initial-state*</span> (make-turing-machine <span style="color: #483d8b;">:state</span> 'a <span style="color: #483d8b;">:tape</span> (list 0) <span style="color: #483d8b;">:head-location</span> 0))
+(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">pp-tm</span> (tm)
+  (format t <span style="color: #8b2252;">"~&amp;state:~a, tape: ~a, head: ~a"</span> (turing-machine-state tm) (turing-machine-tape tm) (turing-machine-head-location tm)))
+
+(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">bb</span> (tm)
+ (<span style="color: #a020f0;">progn</span>
+   (pp-tm tm)
+   (<span style="color: #a020f0;">do</span> ()
+    ((eql (turing-machine-state tm) 'h))
+     (rule tm)
+     (pp-tm tm))))
+</pre>
+</div>
+
+<p>
+We declare an initial state. All Turing machines start in a state. The <code>pp-tm</code> function is a minimal <i>pretty printer</i>. Pretty printers are functions that take a complicated structure and render it in a human readable form that makes it easier for the human user to see what is going on or get essential information displayed.
+</p>
+
+<p>
+The <code>do</code> clause of the program is essentially a loop. It has a termination condition that it checks for (which is when the machine is in the halting state). Unless that is met it just keeps following its rules, updating states, and letting us see the results via its pretty printer. 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-lisp">(bb *initial-state*)
+</pre>
+</div>
+
+<p>
+<b>A run of my Turing Machine</b>
+</p>
+<pre class="example" id="org4ed9114">
+state:A, tape: (0), head: 0
+state:B, tape: (1 0), head: 1
+state:A, tape: (1 1), head: 0
+state:B, tape: (0 1 1), head: 0
+state:A, tape: (0 1 1 1), head: 0
+state:B, tape: (1 1 1 1), head: 1
+state:H, tape: (1 1 1 1), head: 2
+</pre>
+
+
+<p>
+<span class="underline">Busy Beaver Competition</span>
+</p>
+
+<p>
+Try to come up with a version or rules for n=5 and we will run your programs against each other in class. The current chanmpion produces 4098 ones over about 50 million steps. Don't try and break the record. We are learning about Turing machines and how to write code the implements mathematical and theoretical ideas for the elucidation of cognition. Spending too much time perfecting your Busy Beaver implementation misses the point.  
+</p>
+</div>
+</li>
+
+
+<li><a id="org0581205"></a>A tutorial article with examples and a nice visualization<br />
+<div class="outline-text-6" id="text-2-1-2-1-2">
+<p>
+If you are having a little trouble getting started then this <a href="https://catonmat.net/busy-beaver">article</a> might help.
+</p>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org1c1dbfa"></a>Why the <a href="https://en.wikipedia.org/wiki/Busy_beaver">Busy Beaver</a>?<br />
+<div class="outline-text-5" id="text-2-1-2-2">
+<p>
+Because the solution to this problem is <a href="#sec:noncomputable"><b>uncomputable</b></a>. What does it mean that we are solving this with our computers and our own reasoning, but that the problem itself is impossible to solve? Does that present any hurdle at all for using the Turing Machine as a model of mind?
+</p>
+
+<p>
+One objection to the computer metaphor of the brain is that it is obviously wrong. Computers are programmable and the mind/brain is not. Of course, that is not what the proponents of a computational theory of mind mean, so it is perhaps best to avoide the mind as computer metaphor, and stick with the more clumsy name.
+</p>
+
+<p>
+<i>What are the implications of the mind as Turing machine for implementation?</i> Doesn't this mean that if the mind is a Turing machine (not <i>like</i> a Turing machine, but actually a Turing machine - and if you hold that the mind is a computational machine then given that all that can be effectively computed is computable by a suitably specificed Turing machine; that is what logic requires you accept) then any functionally equivalent computational system, regardless of its hardware (i.e. it could be vacumn tubes or the population of China) would be a mind.
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org6e1139d" class="outline-3">
+<h3 id="org6e1139d"><span class="section-number-3">2.2.</span> Functionalism [<a href="#citeproc_bib_item_1">1</a>]</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+You don't need to think about mental states in terms of what they are as "things". Think about them in terms of what they "do". You might compare this ideas of subjects and verbs or to objects and arrows in a <a href="category-day.html">category</a>. Mental states serve a functional role in a cognitive system. They relate to the sensory input, motor output and to <i>each other.</i>
+</p>
+
+<p>
+There is an appearl to the mathematical notion of a function, but the term function here is more inspired by the idea of asking what the function of something is? What is the function of raising interest rates? Raising interest rates leads to less borrowing and less spending. Having the mental state of X leads to Y is a functionalist account.
+</p>
+
+<p>
+There is more than one kind of functionalism. The one closest to our Turing machine is probably <i>machine state</i> functionalism. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf88050b" class="outline-3">
+<h3 id="orgf88050b"><span class="section-number-3">2.3.</span> And there are others</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+I could greatly expand here, but I risk making this a philosophy course instead of an emphasis on mathematical tools and their programmatic translation. I will pause for now.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org01a0e48" class="outline-3">
+<h3 id="org01a0e48"><span class="section-number-3">2.4.</span> A couple of troubling questions for the computational account of mind</h3>
+<div class="outline-text-3" id="text-2-4">
+<ol class="org-ol">
+<li>It is a trivial account. Any sufficiently complex physical system (such as the molecules comprising the wall behind me or the brain) can be shown to be <i>isomorphic</i> to the formal structure of <i>any</i> program. If you view the mind as a program than you might as well say that you and the wall behind you share the same thoughts.</li>
+
+<li>There is no room for the time scale to matter and there is an intuition that it should. We could implement a Turing machine with water wheels, levers &amp; pulleys, vacumn tubes, or transistors. The speed with which the resulting machine computes will be very different, but they will all perform the same computation. Do we think that a model of mind that is blind to time scale can possibly be right?</li>
+
+<li>Discrete or continuous. Turing machines are <b>discrete</b>, <b>finite</b> state machines. Time and thought operate in continuous time (don't they)?. Are discrete models that move forward in time in discontinuous steps capable of modeling us who live in and think in the world of continuous time?</li>
+
+<li>Computations might model something without explaining it. Weather simulators predict rain, but they don't themselves actually rain. Flight simulators do not fly. Even if a computer program simulated a mind it does not mean it would be thinking. Does the simulations, explanation or demonstration distinction bother you?</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orge4ae5b4" class="outline-3">
+<h3 id="orge4ae5b4"><span class="section-number-3">2.5.</span> Some Non-computational theories of mind</h3>
+<div class="outline-text-3" id="text-2-5">
+</div>
+<div id="outline-container-org9d58417" class="outline-4">
+<h4 id="org9d58417"><span class="section-number-4">2.5.1.</span> Logical Behaviorism</h4>
+<div class="outline-text-4" id="text-2-5-1">
+<p>
+Mental states are predispositions to behave. There is no internal state corresponding to belief that is mental. Belief is only a predisposition to behave in a certain way in a certain context.  We characterize people by what they are likely to do without ascribing to them associated mental states. The person who first developed this idea, Gilbert Ryle, asserts that being a mentalist is incompatible with being a realist (that is it makes you a dualist). Logical behaviorism  does not seem to be much in vogue now, but it is another take on the important issues [<a href="#citeproc_bib_item_2">2</a>].
+</p>
+</div>
+</div>
+
+<div id="outline-container-org99c6d33" class="outline-4">
+<h4 id="org99c6d33"><span class="section-number-4">2.5.2.</span> Type-Identity Theory</h4>
+<div class="outline-text-4" id="text-2-5-2">
+<p>
+Mental states are just brain states.
+</p>
+
+<p>
+Since our brains are different from time to time (synaptic weights change; cells die (and a few born)) does that mean we never have the same mental state twice?
+</p>
+
+<p>
+Since no two people have the same brain does that mean no two people ever have the same mental states?
+</p>
+
+<p>
+If you feel this is true, but that the differences are trivial, how do you decide where to draw the line?
+</p>
+
+<p>
+If you program a computational neuroscience model what are you modeling since each mental state is going to be distinct of each brain state?
+</p>
+
+<p>
+Does this bind you to a particular take on the question of <i>multiple realizability</i>? 
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgf4e0099" class="outline-2">
+<h2 id="orgf4e0099"><span class="section-number-2">3.</span> Alternatives to the Turing Machine</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org3412bda" class="outline-3">
+<h3 id="org3412bda"><span class="section-number-3">3.1.</span> Models of Computation</h3>
+</div>
+
+
+<div id="outline-container-orgb2f87fb" class="outline-3">
+<h3 id="orgb2f87fb"><span class="section-number-3">3.2.</span> Lambda Calculus</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+The lambda calculus was developed as a theory of functions, but it has turned into a favorite tool of functional programmers and theoretical computer scientists to describe their languges, and even as a basis for developing their programming languages. John McCarthy invented Lisp as a theoretical exercise for working on the theory of computable functions. He felt the Turing machine to be too mechanical and too awkward for this work, and wanted a better tool, a better metaphor. He adopted the lambda of the lambda calculus and the <code>eval</code> function to take in lisp programs and execute them. Late one of his <a href="https://en.wikipedia.org/wiki/Steve_Russell_(computer_scientist)">collaborators</a> observed that it was relatively straightforward to implement this as a real programming language. A bit more of the history is <a href="https://lwn.net/Articles/778550/">here</a>. But in order to try and learn a bit of the lambda calculus I will make reference to a concise summary [See Chap 2 in <a href="#citeproc_bib_item_3">3</a>] and then give us some exercises we can play with.
+</p>
+
+<p>
+The untyped lambda calculus was followed by the typed lambda calculus, which is directly related to programming language theory for all the contemporary statically typed languages such as Haskell and OCAML.
+</p>
+</div>
+
+<div id="outline-container-orgd621907" class="outline-4">
+<h4 id="orgd621907"><span class="section-number-4">3.2.1.</span> If you feel that &#x2026;&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_discussion">class_discussion</span></span></h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+human brains (and not just human beings) are computational then these abstract formal descriptions might provide the right language for expresssing your truths about thinking. But is it necessary that you know about them or care about them to actually do cognitive or neuroscience modeling?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd129471" class="outline-4">
+<h4 id="orgd129471"><span class="section-number-4">3.2.2.</span> Some Lambda Calculus details from [<a href="#citeproc_bib_item_4">4</a>]</h4>
+<div class="outline-text-4" id="text-3-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="org65268f9"></a>Why a "lambda" (λ)?<br />
+<div class="outline-text-5" id="text-3-2-2-1">
+<p>
+The λ of lambda calculus doesn't really mean anything. It just signals that you have a lambda expression. It creation as the symbol was an accident of notation and the limits of older typewriters.
+</p>
+</div>
+</li>
+
+<li><a id="orgd870c9e"></a>There is not just one lambda calculus<br />
+<div class="outline-text-5" id="text-3-2-2-2">
+<p>
+To have the lambda calculus you need to specify your algebra. What are the rules for reducing things (i.e. your computations), what are the allowed symbols, and what do things mean? A "lambda calculus" is a way of handling "lambda expressions."
+</p>
+</div>
+</li>
+
+<li><a id="orge3a6555"></a>Some of the details<br />
+<div class="outline-text-5" id="text-3-2-2-3">
+<p>
+<b>Terms</b> are either simple variables (\(x\) or \(y\)) or composite terms (\(\lambda~v~t_1\)). Having two terms next to each other (\((~t_1~t_2)\)) means "apply" \(t_1\) to \(t_2\). The meaning of a term like \(\lambda~v~t_1\) is value returned by lambda abstraction. The meaning part is described by formulas such as \(t_1~\rightarrow~t_2\).
+</p>
+
+<p>
+That is the tl;dr version, but there are essential details for actually using it.
+</p>
+
+<p>
+Some "axioms" you supply (or that Alonzo Church did).
+</p>
+
+<ul class="org-ul">
+<li>Beta reduction</li>
+
+<li>Beta abstraction</li>
+
+<li>Alpha conversion</li>
+
+<li>Eta reduction</li>
+
+<li>Normal Form</li>
+</ul>
+
+<p>
+The equivalent of the halting problem for the Turing machine is the reaching of a <i>normal form</i> in the  lambda calculus.
+</p>
+
+<p>
+Functions have the form λ &lt;name&gt; . &lt;body&gt;
+</p>
+
+<p>
+Note the "dot". This separates the name from the body of expressions that it names.
+</p>
+
+<p>
+&lt;body&gt; is also an expression (note the recursion that is built in).
+</p>
+
+<p>
+I am worried about this being too dry, so I figure it may be better to give you the online texts [<a href="#citeproc_bib_item_3">3</a>–<a href="#citeproc_bib_item_4">4</a>] and then we can tackle some simple examples as exercises.
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org7771b40"></a>Classroom Exercises and Discussion<br />
+<div class="outline-text-6" id="text-3-2-2-3-1">
+<ol class="org-ol">
+<li>Write the lambda expression for the identity function? What is the identity function?</li>
+<li>Apply the identity function to itself.</li>
+<li><p>
+What is the identity function in the programming language of your group?
+</p>
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listing 7: </span>An example in Common Lisp</label><pre class="src src-lisp">(identity 10)
+</pre>
+</div>
+
+<pre class="example">
+10
+</pre>
+
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listing 8: </span>Writing it as a lambda</label><pre class="src src-lisp">(funcall (<span style="color: #a020f0;">lambda</span> (x) x) 10)
+</pre>
+</div></li>
+<li>An interesting lambda expression is the so-called <i>self-application</i> expression: \(\lambda~s . (s~s)\). Just do these with pencil and paper (or on the Zoom whiteboard). 
+<ol class="org-ol">
+<li>apply this to the identity.</li>
+<li>apply the identity to the self-application</li>
+<li>apply the self-application to itself. What is its termination status?</li>
+</ol></li>
+</ol>
+</div>
+</li>
+
+
+<li><a id="org741e634"></a>Write your own homework<br />
+<div class="outline-text-6" id="text-3-2-2-3-2">
+<p>
+The idea here is to figure out a good, concise, tractable practical project we can do to use the different computing languages to solidify our knowledge of how formal computing theory informs (or maybe doesn't inform) practical attempts to implement cognitive models that implicitly adhere to a computation theory of mind.
+</p>
+
+
+<p>
+IAMHERE
+</p>
+
+<p>
+Maybe this exercise on conditionals would be good? Use the lambdas to compute some simple truth tables?
+<a href="https://www.diderot.one/courses/56/books/275/chapter/3210">https://www.diderot.one/courses/56/books/275/chapter/3210</a>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-lisp">(<span style="color: #a020f0;">defparameter</span> <span style="color: #a0522d;">myt</span> (<span style="color: #a020f0;">lambda</span> (x) (<span style="color: #a020f0;">lambda</span> (y) x)))
+(<span style="color: #a020f0;">defparameter</span> <span style="color: #a0522d;">myf</span> (<span style="color: #a020f0;">lambda</span> (x) (<span style="color: #a020f0;">lambda</span> (y) y)))
+
+(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">mytfun</span> (x1 y1) ((<span style="color: #a020f0;">lambda</span> (x) (<span style="color: #a020f0;">lambda</span> (y) x) x1) y1))
+(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">myffun</span> (x1 y1) ((<span style="color: #a020f0;">lambda</span> (x) (<span style="color: #a020f0;">lambda</span> (y) x) y1) x1))
+
+(and (mytfun 1 0) (myffun 1 0))
+(or  (mytfun 1 0) (myffun 1 0))
+
+<span style="color: #b22222;">; </span><span style="color: #b22222;">write xor with these primitive functions?</span>
+</pre>
+</div>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-orgf4bd282" class="outline-3">
+<h3 id="orgf4bd282"><span class="section-number-3">3.3.</span> Recursive Function Theory (Kleene)</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+Something for another day. 
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec:noncomputable" class="outline-3">
+<h3 id="sec:noncomputable"><span class="section-number-3">3.4.</span> Non-computable</h3>
+<div class="outline-text-3" id="text-sec:noncomputable">
+</div>
+
+<div id="outline-container-org4e970fb" class="outline-4">
+<h4 id="org4e970fb"><span class="section-number-4">3.4.1.</span> The Busy Beaver Problem is non-computable</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<p>
+The busy beaver problem is to compute the maximum number of 1's that a Turing machine can write before halting with the number of states equal to n. This <a href="https://jeremykun.com/2012/02/08/busy-beavers-and-the-quest-for-big-numbers/">webpage</a> includes the proof of the non-computability of the busy beaver problem. It uses contradiction, and like most proof relying on contradiction I find it head warping, but there it is. 
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7a6944a" class="outline-2">
+<h2 id="org7a6944a"><span class="section-number-2">4.</span> Companion and Optional Readings</h2>
+<div class="outline-text-2" id="text-4">
+<ol class="org-ol">
+<li><i>An Introduction to Functional Programming Through the Lambda Calculus</i> [<a href="#citeproc_bib_item_3">3</a>]</li>
+<li><i>Functionalism</i> in SEP [<a href="#citeproc_bib_item_1">1</a>]</li>
+<li>The original beaver paper as a proof of a simple non-computable function <a href="https://pdos.csail.mit.edu/~rsc/rado62beaver.pdf">(pdf)</a>.</li>
+<li>Comprehensive <a href="https://www.cs.virginia.edu/~njb2b/cstheory/s2020/files/slides/church-turing-thesis.pdf">on line slides</a> (pdf) from a course on the theory of computing.</li>
+<li>A detailed and more traditionally written up <a href="http://www.people.cs.uchicago.edu/~soare/History/handbook.pdf">history of the concept of computability (pdf)</a>.</li>
+<li>An accessible <a href="http://bach.ai/lambda-calculus-for-absolute-dummies/">blog</a> article called <span class="underline">Lambda Calculus for Absolute Dummies</span></li>
+<li>Another nice online <a href="http://cs.rpi.edu/academics/courses/spring10/proglang/handouts/LambdaCalculus.pdf">resource</a> (pdf)</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgc75bf8b" class="outline-2">
+<h2 id="orgc75bf8b"><span class="section-number-2">5.</span> References</h2>
+<div class="outline-text-2" id="text-5">
+<div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>
+    <div class="csl-left-margin">1.</div><div class="csl-right-inline">J. Levin, Functionalism. In E.N. Zalta,ed., <i>The Stanford encyclopedia of philosophy</i>, Winter 2021, (https://plato.stanford.edu/archives/win2021/entries/functionalism/; Metaphysics Research Lab, Stanford University, 2021).</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>
+    <div class="csl-left-margin">2.</div><div class="csl-right-inline">M. Schütte, Behaviorism, logical. <i>Encyclopedia of neuroscience</i>, (n.d.) 372-375. <a href="https://doi.org/10.1007/978-3-540-29678-2_596">https://doi.org/10.1007/978-3-540-29678-2_596</a>.</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_3"></a>
+    <div class="csl-left-margin">3.</div></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_4"></a>
+    <div class="csl-left-margin">4.</div><div class="csl-right-inline">W. R. Stark, Mathematical foundations for lisp. <i>Lisp, lore, and logic</i>, (1990) 200-215. <a href="https://doi.org/10.1007/978-1-4613-8931-6_7">https://doi.org/10.1007/978-1-4613-8931-6_7</a>.</div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: Winter 2022</p>
+<p class="author">Author: Britt Anderson</p>
+<p class="date">Created: 2022-01-04 Tue 20:30</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
