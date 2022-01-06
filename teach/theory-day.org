@@ -74,6 +74,13 @@ Is it a question like "what is a rational number" or "what is a nectarine?"
 
 Two recent articles advocating for more theory and more formal models in psychology [[cite:&rooij21_theor_befor_test;&guest21_how_comput_model_can_force]]. These are also useful readings for thinking about the role of theory in psychology and neuroscience and whether formal, mathematical models should be a part of their construction.
 
+The article [[*\[\[https://www.jstor.org/stable/pdf/2393788.pdf?refreqid=excelsior%3Ac41e16772ba91564597e9aafaa59c1a9\]\[What Theory is Not\]\] (pdf)][What Theory is Not (pdf)]] is a nice application of the above. It looks at practice in the field or organizational psychology, but its critiques are pertinent to computational neuroscience too. We might want to see how we think our current favorite articles measure up against these ideas. 
+
+** Some useful SEP entries
+*** [[https://plato.stanford.edu/entries/structure-scientific-theories/#SynSemPraVieBas][The Structure of Scientific Theories]] (not Kuhn)
+*** [[https://plato.stanford.edu/entries/scientific-explanation/][Scientific Explanation]]
+*** [[https://plato.stanford.edu/entries/model-theory/][Model Theory]]
+
 * References
 [[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
 

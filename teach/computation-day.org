@@ -9,6 +9,14 @@
   We want to make practical progress in deepening our understanding of cognition. I have advanced the claim that to do that we must better understand [[file:first-day.org][what we mean by "mind"]], [[file:theory-day.org][what it is we should expect from a theory]], and what it means to stack our theory on some version of the [[file:mind.org][computational mind]]. I have suggested that the succes of that effort hinges on our developing a greater familiarity with some mathematics and more practice in translating ideas via math into code. So far, we have not done the latter steps. Today marks our first steps in this formal direction by considering computation in more detail and from mathematical and programming language perspectives. 
 
 * Computing in Minds and Computers
+:answers:
+One definition of computable is that there is a Turing Machine that computes it and halts. The problem is that one cannot decide in advance whether the description of a Turing Machine describes a machine that halts. 
+:END:
+
+
+Motivating questions:
+  1. Is there anything a human can think that a computer cannot compute?
+  2. What does it mean for a function to be "computable"?
 
 Questions to keep in mind for this section
 
@@ -368,8 +376,26 @@ Something for another day.
   2. /Functionalism/ in SEP [[cite:&levin21_funct]]
   3. The original beaver paper as a proof of a simple non-computable function [[https://pdos.csail.mit.edu/~rsc/rado62beaver.pdf][(pdf)]].
   4. Comprehensive [[https://www.cs.virginia.edu/~njb2b/cstheory/s2020/files/slides/church-turing-thesis.pdf][on line slides]] (pdf) from a course on the theory of computing.
-  5. A detailed and more traditionally written up [[http://www.people.cs.uchicago.edu/~soare/History/handbook.pdf][history of the concept of computability (pdf)]].
+  5. A detailed and more traditionally written up [[http://www.people.cs.uchicago.edu/~soare/History/handbook.pdf][history of the concept of computability (pdf)]]. It is over 30 pages long, but readable. It does deal with technical material, but is mostly prose, and tries to tie it to history, usage, and contemporary interpretations. A really good read if you have the time and interest. 
   6. An accessible [[http://bach.ai/lambda-calculus-for-absolute-dummies/][blog]] article called _Lambda Calculus for Absolute Dummies_
   7. Another nice online [[http://cs.rpi.edu/academics/courses/spring10/proglang/handouts/LambdaCalculus.pdf][resource]] (pdf)
 * References
 [[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
+
+* A bit of detail about lambda calculus notation
+
+λ expressions are either a "name" | "function" | "application"
+
+Names name expressions, functions introduce an abstraction, applications specialize abstractions.
+
+Names are sequences of characters.
+
+Functions have the form λ <name> . <body>
+
+Note the "dot". This separates the name from the body of expressions that it names.
+
+<body> is also an expression (note the recursion that is built in).
+
+/application/ has the form of <function expression> <argument expression>
+
+Note that both are expressions (everything is an expression). They are simply placed in proximity. An example $\lambda~x.x\hspace{1.5em}\lambda~a.\lambda~b.b$ . Interesting to note that functions can be arguments too. The intent here is that application provides an expression for the name.
