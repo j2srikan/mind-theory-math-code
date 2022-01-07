@@ -1,4 +1,9 @@
+#+Author: Britt Anderson
+#+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
+#+csl-style: ./cambridge-university-press-numeric.csl
+#+options: ^:nil
 #+Title: Abstraction and Cognitive Neuroscience Modeling
+#+Date: Winter 2022
 
   #+begin_quote
   The purpose of abstraction is not to be vague, but to create a new semantic level in which one can be absolutely precise. --- Edsger Dijkstra
@@ -10,6 +15,7 @@
 
 * Citation
   [[http://arxiv.org/abs/2111.06969v1][Computing with Cognitive States on Arxiv.org]]
+  A more detailed study of computational models of memory [[cite:&howard22_formal_model_memor_based_tempor_varyin_repres]]
 
   
 * Question:
@@ -29,4 +35,7 @@
 
   
 
+
+* References
+[[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
 
