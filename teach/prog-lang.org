@@ -1,0 +1,32 @@
+#+Title: Programming Language Day
+#+Author: Britt Anderson
+#+Date: Winter 2022
+#+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
+#+csl-style: ./cambridge-university-press-numeric.csl
+#+options: ^:nil
+
+
+* Purpose
+  To compare our first impressions with some of the available programming languages and how we feel they match up to the tasks of,
+  - developing a model of mind
+  - creating a computational theory
+  - serving as a target for translating math to something that can be simulated.
+
+* Motivating Questions for using /Code/
+1. Is this analogy of translating ideas into code itself a good way to express a theory?
+2. Do we (human beings) do our thinking via simulation and sampling?
+3. Do different cognitive domains use different /domain specific languages/ (DSL)?
+4. Types are at the heart of many modern programming language efforts. Their origin story has its roots in philosophical paradoxes (Russell and Set Theory [[cite:&irvine21_russel_parad]]). But so what? Have types just become a pragmatic tool to prevent bugs in code, or is this idea of types /theoretically/ relevant for cognitive and neuro-sciences?
+5. Are there particular faces of the [[https://en.wikipedia.org/wiki/Lambda_cube][lambda cube]] that better match the needs of a cognitive theorist?
+6. Types are often used to give compile time guarantees. Does that make them irrelevant here? What does compiling mean when thinking about "thinking?"
+7. Good old fashion AI (GOFAI) was fundametally symbolic [[cite:&mira08_symbol_versus_connec]]. Do languages that facilitate proofs better match better this approach? Should we be modeling minds with theorem provers?
+8. The slogan of Common Lisp is code as data. Code as data permits metaprogramming. Code that writes code, and systems that can change themselves while running. Do "macros" (http://www.paulgraham.com/onlisp.html) have a cognitive counterpart.
+9. Is the mind (or brain) a mechanism that updates itself while running and thus the LISP(s) are the right languages to use for making the march from idea to model to math to code more seamless?
+10. No one will ever count to infinity, but we can reason about it. Can you code an infinite number? Can you write code that arguably has a notion of infinity? Some programming languages allow for the coding of infinite length lists via lazy evaluation. The original lambda calculus is "lazy." Are the brain and mind lazy in this sense? If so, maybe a lazy by default language is the right one to use for modeling.
+11. Are there other aspects of the programming language world that are well adapted, or even necessary, for a well developed functioning cognitive model and theory?
+
+
+* Companion and Optional Readings
+
+* References
+[[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
