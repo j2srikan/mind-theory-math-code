@@ -12,6 +12,17 @@
 
 * Quickie start to file
 
+* Discussion Questions Geometry
+1. Can we measure ideas?
+2. What is the /shortest/ path between an image of a fish and an image of a man?
+3. How do we transit from our current beliefs about the future starting only with our past observations?
+
+
+* Discussion Questions Dynamics and DEs
+1. What is emergence?
+2. Is there a feature of differential equations or their dynamic behavior that can be described as emergent?
+3. Are there neural or mental phenomena that could thusly be well captured?
+
 ** Articles
 An introductory [[http://www.faculty.sfasu.edu/judsontw/ode/html-snapshot/firstlook01.html][website]].
 

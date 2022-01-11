@@ -15,6 +15,11 @@ To answer that we must know what we mean by mind and cognition. Is the mind comp
 
 Having committed to wrestling with the nature of the problem we are prepared to offer solutions. Now we must wrestle with what constitutes a solution. Making observations and determining that 'A' often follows 'B' is data. That we have plenty of. What we want is to understand *why* 'A' often follows 'B'. How do we move past observation? /What is a theory/?
 
+* Discussion Questions Theory
+1. Is falsifiability a useful attribute for a theory?
+2. Is explanation a necessary characteristic for a true theory to have?
+3. What is the relation between a model and a theory?
+
 * Is There a Theory Problem in Psychology or Neuroscience
 :class_exercise:
 Some small group discussion, and then larger reconvened discussion on this preliminary point. Are we theory poor in psychology and neuroscience?

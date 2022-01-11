@@ -19,6 +19,16 @@
 
 * Further thoughts on the article: What is cognition?
 
+
+* Discussion Questions to keep in /Mind/
+1. What is the difference between something being mental and something being cognitive?
+2. Are models of brains necessary for models of minds?
+3. Does a model of mind (or of some mental process) necessarily have to deal with consciousness?
+
+* Discussion Questions Computation
+1. What are we missing if we omit "computation" and just talk about cognitive science or cognitive neuroscience?
+2. What is the difference in meaning if we order the words "[[https://www.sciencedirect.com/science/article/abs/pii/S0022249611000368][computational cognitive neuroscience]]" or "[[https://2021.ccneuro.org/about.php][cognitive computational neuroscience]]"?
+
 * Computational Mind
   #+include: "../imports/computational-mind-book.org"
 
