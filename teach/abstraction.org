@@ -9,6 +9,13 @@
   The purpose of abstraction is not to be vague, but to create a new semantic level in which one can be absolutely precise. --- Edsger Dijkstra
   #+end_quote
 
+* Discussion Questions Abstraction
+
+1. Is the only acceptable fate of a theory of mind to be reduced to a theory of the brain?
+2. Can we relate neural and mental constructs currently? Clearly? Concisely? Unambigously?
+3. Do we need a new vocabulary or new tools?
+4. If we think about expressing the population of neuronal firing rates as a vector do we derive any benefits from invoking "vector spaces?"
+
 
 
 * Target Reading: Computing With Cognitive States
