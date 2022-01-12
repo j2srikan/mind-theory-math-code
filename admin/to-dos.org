@@ -1,2 +1,2 @@
 * To-dos
-Go through [[file:~/gitRepos/mind-theory-math-code/imports/outline.org]] and move discussion questions into correct "day" files. <2022-01-06 Thu>
+
