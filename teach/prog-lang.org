@@ -28,5 +28,7 @@
 
 * Companion and Optional Readings
 
+
+
 * References
 [[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
