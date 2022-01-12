@@ -30,6 +30,8 @@
 1. What are we missing if we omit "computation" and just talk about cognitive science or cognitive neuroscience?
 2. What is the difference in meaning if we order the words "[[https://www.sciencedirect.com/science/article/abs/pii/S0022249611000368][computational cognitive neuroscience]]" or "[[https://2021.ccneuro.org/about.php][cognitive computational neuroscience]]"?
 
+* Breakout Rooms for Jigsaw Sharing of Read Articles
+
 * Computational Mind
   #+include: "../imports/computational-mind-book.org"
 
