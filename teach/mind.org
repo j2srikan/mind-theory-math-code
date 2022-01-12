@@ -8,6 +8,8 @@
 * Précis
   Our continuing discussion of what constitutes "mind," and more specifically what is a computational theory of mind, and how does it benefit, if at all, from a reliance on neural implementations of brains?
 
+* Getting github (small group activity)
+
   
 * Where were we?
 
@@ -18,7 +20,6 @@
    - Rotate weekly or concentrate across term?
 
 * Further thoughts on the article: What is cognition?
-
 
 * Discussion Questions to keep in /Mind/
 1. What is the difference between something being mental and something being cognitive?
