@@ -1,13 +1,13 @@
 #+Title: Roadmap for Psych670 Winter 2022
 
-* First Meeting <2022-01-05 Wed>
+* First Module <2022-01-05 Wed>
 1. Start with File [[file:teach/first-day.org]]. 
 2. And also check out the [[file:admin/syllabus-winter-2022.org][syllabus]].
 3. This was my original [[file:admin/mtmc.org]["summary" file]]. A blend of aspiration, outline, and summary of topics. There might be some useful discussion questions here, or just a way to reorient yourself if you feel you are getting lost in the weeds. 
-* Second Meeting <2022-01-12 Wed>
+* Second Module <2022-01-12 Wed>
 1. The main file for this class will be [[file:teach/mind.org]]. Note this file imports another file. You will see their combination if you look at [[file:teach/mind.html]], but if you are looking for the raw files you will also have to checkout [[file:imports/computational-mind-book.org]].
 2. We will be discussing articles that can be found on learn and that come from the Handbook of the Computational Mind. Groups were arranged in class on <2022-01-05 Wed>. *These should be read /before/ class*.
-* Third Meeting <2022-01-19 Wed>
+* Third Module <2022-01-19 Wed>
 1. The main file for this class will be [[file:teach/theory-day.org]].
 2. Things to read *before* class.
    There are three short opinion pieces [[file:teach/theory-day.org::*Some opinions][here.]] Give them a skim with the goal of priming your thinking for whether you agree or disagree that there is a problem with theories in psychology and neuroscience.
@@ -15,7 +15,11 @@
    This is *optional*. At [[file:teach/theory-day.org::*Companion and Optional Readings][Companion and Optional Readings]] you will find links to two recent articles that tackle the idea of formal models and theory in psychology (much more so than neuroscience). I think these are great to read, but as I want you to read Suppes (see below). I am making these optional. If you have the time, great. If not, try to get to them later.
 
    [[file:teach/theory-day.org::*Suppes \[\[cite:&suppes67_what\]\]][This]] is important since I plan to base a lot of my discussion around it. Suppes, 1967, What is a scientific theory.
-* Fourth Meeting <2022-01-26 Wed>
+* TODO Fourth Module <2022-01-26 Wed>
 1. The main file for this day will be [[file:teach/computation-day.org]]
-* Fifth Meeting  <2022-02-02 Wed>
+2. Programming exercise will be the Busy Beaver
+* TODO Fifth Module  <2022-02-02 Wed> 
+1. Will be our first occassion to discuss the abstract pros/cons of the various programming options chosen. There will be a guide written for this. 
+* TODO Sixth Module  <2022-02-09 Wed>
 1. The main file for this day will be [[file:teach/abstraction.org]]
+2. There will be a major programming exercise organized around this. 
