@@ -1,10 +1,7 @@
 * To-dos
 
-** Add guide for programming lang discussion [[file:~/gitRepos/mind-theory-math-code/roadmap.org::*Fifth Module <2022-02-02 Wed>][Fifth Module <2022-02-02 Wed>]]. 
-
 ** Write programming exercise for [[file:~/gitRepos/mind-theory-math-code/roadmap.org::*Sixth Module <2022-02-09 Wed>][Sixth Module <2022-02-09 Wed>]].
 
-** Dropbox and instructions for the busy beaver exercise. [[file:~/gitRepos/mind-theory-math-code/roadmap.org::*Fourth Module <2022-01-26 Wed>][Fourth Module <2022-01-26 Wed>]]
 
-** Add learn dropbox for git repo cloning screenshot.
+
 
