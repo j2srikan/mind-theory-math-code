@@ -15,11 +15,12 @@
    This is *optional*. At [[file:teach/theory-day.org::*Companion and Optional Readings][Companion and Optional Readings]] you will find links to two recent articles that tackle the idea of formal models and theory in psychology (much more so than neuroscience). I think these are great to read, but as I want you to read Suppes (see below). I am making these optional. If you have the time, great. If not, try to get to them later.
 
    [[file:teach/theory-day.org::*Suppes \[\[cite:&suppes67_what\]\]][This]] is important since I plan to base a lot of my discussion around it. Suppes, 1967, What is a scientific theory.
-* TODO Fourth Module <2022-01-26 Wed>
+* Fourth Module <2022-01-25 Tue>
 1. The main file for this day will be [[file:teach/computation-day.org]]
 2. Programming exercise will be the Busy Beaver
-* TODO Fifth Module  <2022-02-02 Wed> 
-1. Will be our first occassion to discuss the abstract pros/cons of the various programming options chosen. There will be a guide written for this. 
+* Fifth Module <2022-02-02 Wed> 
+1. The main file for this day is:  [[file:teach/prog-lang.org]]
+2. Will be our first occassion to discuss the abstract pros/cons of the various programming options chosen. A [[file:imports/prog-lang-disc-guide.org][guide]] is available to prepare for this preliminary discussion and gives some details on the accompanying exercise.
 * TODO Sixth Module  <2022-02-09 Wed>
 1. The main file for this day will be [[file:teach/abstraction.org]]
 2. There will be a major programming exercise organized around this. 
