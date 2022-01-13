@@ -1,0 +1,26 @@
+#+Title: Programming Language Discussion Guide
+#+Date: Winter 2022
+#+options: toc:nil
+
+* Overview
+A short guide to help you organize your thoughts for our first, preliminary, programming language discussion.
+
+There will be two components: practical and theoretical.
+
+* Practical
+Tell us how to install your language and the basics of making a hello world (or some similarly simple program that is a better match to your language) that we could use to test our installation and rudimentary understanding of the syntax.
+
+If there is any additional useful practical information we should have to help us get started please share that as well.
+
+* Theoretical
+Remind us of what is supposed to be different about your language from the more standard or practical languages we see people using for business applications.
+
+Give us some small, maybe almost trivial, toy example of the unique or key feature of your language.
+
+* Examples
+  Provide us a short handout written in a suitable "mark-up" format [fn:2] for the practical information that also includes a properly formatted source code block for the theoretical example. Provide a separate source code file [fn:1]for the theoretical example. If we follow your practical instructions for installing the language we should be able to run the code in the source file. These files *must* be included in the github repo. Thus each group will have to do a ~pull request~. Please place your files in the appropriate [[file:~/gitRepos/mind-theory-math-code/code/prog-lang-prelim/][subdirectory]].
+
+* Footnotes
+[fn:2] A mark-up format is a way to write a simple plain text file that has deploys some simple conventions that allows the plain text file to be easily read and understood in its plain form, but that also facilitates using programs to export that plain text file to other common file formats such as html (web page) or pdf (portable document format). Examples would include markdown, asciidoc, and restructured text. I am using org mode. More full featured markup languages would include LaTeX. Any one of these markdown formats would be fine for the instructional material. Pick whichever one your group prefers. Many of these formats will have a preferred exporter, but =pandoc= is a popular general purpose document exporter and converter. 
+
+[fn:1] A "source code file" is a plain text file written in the programming language that can be compiled or interpreted. For example, in python this would be a ~file.py~. I could then run that file by executing ~python file.py~. 
