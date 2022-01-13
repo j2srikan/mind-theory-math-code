@@ -12,6 +12,8 @@
   - creating a computational theory
   - serving as a target for translating math to something that can be simulated.
 
+  The only thing that will be required at this point is to present the basics of installation and a toy example of what the source looks like. However, these are the questions we have in mind, and we can take a first stab at them today, and return to them again later in the course when we have more experience and covered more mathematical topics. 
+    
 * Motivating Questions for using /Code/
 1. Is this analogy of translating ideas into code itself a good way to express a theory?
 2. Do we (human beings) do our thinking via simulation and sampling?
