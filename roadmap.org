@@ -18,8 +18,9 @@
 3. Before class next week *submit* the github repo dropbox item. 
 * Fourth Module <2022-02-02 Wed> 
 1. The main file for this day is:  [[file:teach/prog-lang.org]]
-2. Will be our first occassion to discuss the abstract pros/cons of the various programming options chosen. A [[file:imports/prog-lang-disc-guide.org][guide]] is available to prepare for this preliminary discussion and gives some details on the accompanying exercise.
-3. Prior to next week you will want to read http://arxiv.org/abs/2111.06969v1.
+2. Prior to this class make sure to put your groups thoughts on github in the proper folder and to signal this by taking the quiz on Learn. The submission (to be discussed in class; ask if not clear) should be the first impressions about installation and any other general, early opinions. 
+3. Will be our first occassion to discuss the abstract pros/cons of the various programming options chosen. A [[file:imports/prog-lang-disc-guide.org][guide]] is available to prepare for this preliminary discussion and gives some details on the accompanying exercise.
+4. Prior to next week you will want to read http://arxiv.org/abs/2111.06969v1.
 * Fifth Module <2022-01-25 Tue>
 1. The main file for this day will be [[file:teach/computation-day.org]]
 2. Programming exercise will be the Busy Beaver
