@@ -20,12 +20,12 @@ Having committed to wrestling with the nature of the problem we are prepared to 
 2. Is explanation a necessary characteristic for a true theory to have?
 3. What is the relation between a model and a theory?
 
-* Is There a Theory Problem in Psychology or Neuroscience
-:class_exercise:
-Some small group discussion, and then larger reconvened discussion on this preliminary point. Are we theory poor in psychology and neuroscience?
+* Is There a Theory Problem in Psychology or Neuroscience :class_exercise:
+Some small group discussion, followed by general discussion.
 
-Can each group give an example of a good scientific theory in psychology and another one for neuroscience?
-:END:
+Each group and student should be prepared to express a preliminary opinion on,
+1. The question of whether we theory poor in psychology and neuroscience?
+2. And to give examples of a good scientific theory from the domains of psychology and neuroscience?
 
 ** Some opinions
 1. "Desperately seeking theory" [[cite:&whiteman13_pryin]]
