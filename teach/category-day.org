@@ -8,8 +8,11 @@
 
 * Outline
 
+** Coding Abstraction
+   Begin with a review of the programming experience reports for the abstraction and memory exercise. 
+
   
-** Gradient Based Learning
+** gradient Based Learning
    1. Lens and Category Theory for Insight and Code [[cite:&cruttwell21_categ_found_gradien_based_learn]]
 
 
