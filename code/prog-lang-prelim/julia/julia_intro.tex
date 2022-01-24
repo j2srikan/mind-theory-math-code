@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+%\usepackage{hyperref}
+\usepackage{xurl}
+\usepackage{fancyvrb}
+
+\title{Getting started with Julia - PSYCH 670}
+\author{Peter DiBerardino \and Jatheesh Srikantharajah}
+\begin{document}
+\maketitle
+
+\section{Practical}
+Installation is pretty simple. Go to \url{https://julialang.org/downloads/} and follow the instructions for your operating system.
+
+Like other languages, a Julia console can be opened in your computer's terminal (use command \verb_Julia_). Or you can write script in your favourite text editor and run the entire file from your terminal. For example, if your document is named \verb_test.jl_, your can run it in your terminal with the command \verb_julia test.jl_. You can even pass parameters to this document via \verb_julia test.jl arg1 arg2..._. These parameters will be set in the global environment, and can be accessed through \verb_ARGS_.
+
+Junolab \url{https://junolab.org/} is a more complex IDE designed for Julia.
+
+Here is a simple ``Hello World'' program. It will also print any arguments passed the file called from the terminal.
+\begin{verbatim}
+print("Hello World")
+print(ARGS)
+
+\end{verbatim}
+
+\section{Theoretical}
+
+Julia superficially looks similar to Python, but differs in some important syntax (e.g. string concatenation) and theoretical design. For example, Julia was written with the goal of making the gap between math and code smaller. Consider how simple it is to write a function that multiplies each element in a list by 2:
+
+\begin{verbatim}
+f(x) = [p = p * 2 for p in x]
+f([1,2,3])
+\end{verbatim}
+This example is from
+\url{https://towardsdatascience.com/julias-most-awesome-features-be51f798f140}.
+
+
+This document was written with \LaTeX. See the accompanying source-code \verb+julia_intro.tex+ and the sample Julia script document \verb+julia_intro.js+.
+
+
+
+\end{document}
