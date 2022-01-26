@@ -57,6 +57,22 @@
 (defun bind-memories (a b)
   (mapcar 'not-xor a b))
 
+(defun rand-0/1-p (p) (if (< (random 1.0) p) 1 0))
 
-;;(defun bundle-memories)
+(defun bundle-slot (a b &optional (p 0.5))
+  (trivia:match (list a b)
+    ('(1 1) 1)
+    ('(1 0) (rand-0/1-p p))
+    ('(0 1) (rand-0/1-p p))
+    ('(0 0) 0)))
 
+(defun bundle-memories (a b &optional (p 0.5))
+  (mapcar (lambda (x y) (bundle-slot x y p)) a b))
+
+(defun mk-rand-mem (dimension &optional (p 0.5))
+  (do ((i 0 (+ 1 i))
+       (outlist ()))
+      ((> i dimension) outlist)
+    (setq outlist
+	  (cons (rand-0/1-p p) outlist)))
+  )
