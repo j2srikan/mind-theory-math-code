@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-01-17 Mon 08:57 -->
+<!-- 2022-01-26 Wed 06:42 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Abstraction and Cognitive Neuroscience Modeling</title>
@@ -203,8 +203,8 @@ The purpose of abstraction is not to be vague, but to create a new semantic leve
 </p>
 </blockquote>
 
-<div id="outline-container-org96b7243" class="outline-2">
-<h2 id="org96b7243"><span class="section-number-2">1.</span> Some Motivating Thoughts and a Brief Resumé</h2>
+<div id="outline-container-org235ec5f" class="outline-2">
+<h2 id="org235ec5f"><span class="section-number-2">1.</span> Some Motivating Thoughts and a Brief Resumé</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 We want a model of mind and we think that its form should be computational. We have reviewed what we mean by mind, and by computation, and what we mean by a computational mind. Next we dissected what it means for something to be a theory so that the account we offer can be scientifically useful.
@@ -228,8 +228,8 @@ Our introduction to the thinking about how it is that mathematicians think about
 </div>
 </div>
 
-<div id="outline-container-orgeb8a831" class="outline-2">
-<h2 id="orgeb8a831"><span class="section-number-2">2.</span> Warm-up Questions</h2>
+<div id="outline-container-orge94ad41" class="outline-2">
+<h2 id="orge94ad41"><span class="section-number-2">2.</span> Warm-up Questions</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Ask yourself:
@@ -251,8 +251,8 @@ This is meant to be a concrete example of <i>abstraction</i>. We are introduced 
 </div>
 </div>
 
-<div id="outline-container-org3fbb05e" class="outline-2">
-<h2 id="org3fbb05e"><span class="section-number-2">3.</span> Target Reading: Computing With Cognitive States</h2>
+<div id="outline-container-org3408f22" class="outline-2">
+<h2 id="org3408f22"><span class="section-number-2">3.</span> Target Reading: Computing With Cognitive States</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 There is not a mathematics of abstraction. Modern mathematics is largely the practice of abstraction; a pursuit of new semantic levels above those that came before that allow precise talk for collections and highlight their similarities from this new higher perspective.
@@ -263,25 +263,28 @@ To practice thinking about abstraction, to give an example of it, and to examine
 </p>
 </div>
 
-<div id="outline-container-org13dab23" class="outline-3">
-<h3 id="org13dab23"><span class="section-number-3">3.1.</span> Activity&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_activity">class_activity</span></span></h3>
+<div id="outline-container-org8b8c0b4" class="outline-3">
+<h3 id="org8b8c0b4"><span class="section-number-3">3.1.</span> Activity&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_activity">class_activity</span></span></h3>
 <div class="outline-text-3" id="text-3-1">
 </div>
-<div id="outline-container-org0b98def" class="outline-4">
-<h4 id="org0b98def"><span class="section-number-4">3.1.1.</span> Reading</h4>
+<div id="outline-container-org107f532" class="outline-4">
+<h4 id="org107f532"><span class="section-number-4">3.1.1.</span> Reading</h4>
 <div class="outline-text-4" id="text-3-1-1">
 <p>
-Make sure you read before class our target article [<a href="#citeproc_bib_item_1">1</a>].
+Make sure you read before class our target article [<a href="#citeproc_bib_item_1">1</a>]. We will be talking about this article and implementing the model it describes.
 </p>
 </div>
 </div>
-</div>
-</div>
-<div id="outline-container-org98b9498" class="outline-2">
-<h2 id="org98b9498"><span class="section-number-2">4.</span> Question:</h2>
-<div class="outline-text-2" id="text-4">
+
+<div id="outline-container-orgcf20191" class="outline-4">
+<h4 id="orgcf20191"><span class="section-number-4">3.1.2.</span> Questions From the Reading:</h4>
+<div class="outline-text-4" id="text-3-1-2">
 <ol class="org-ol">
 <li>What is the meaning of the word algebra here?</li>
+
+<li>What is a "metric?"</li>
+
+<li>Why does Reiman describe cosine similarity (and what is that) as local and his measure of similarity as global? Why might you want to chose one or the other?</li>
 
 <li>Is this paper describing a theory (in the way we talked about it earlier)?</li>
 
@@ -298,14 +301,36 @@ Make sure you read before class our target article [<a href="#citeproc_bib_item_
 </div>
 </div>
 
+<div id="outline-container-org5403140" class="outline-4">
+<h4 id="org5403140"><span class="section-number-4">3.1.3.</span> Programming Activity From the Reading:</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<p>
+This is an assignment that we will review and talk about at the start of next class session. You have the rest of today and until next class to work on it in your groups.
+</p>
+
+<p>
+Create as much code as you can that implements your understanding of the model described. If you have the time you can also add some code for doing simple simulations of the model in operation and plotting the results.
+</p>
+
+<p>
+To get credit for this assignment you will need to place a message in the dropbox on Learn reporting that you have initiated a pull request to the course github repo. Your code should go in the appropriate sub-directory of <code>mind-theory-math-code/code/computing-with-cog-states</code>. Your sub-directory in the github repo should also include a short prose report of your main impressions on trying to implement this model using your test language. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org146e947" class="outline-4">
+<h4 id="org146e947"><span class="section-number-4">3.1.4.</span> Working comments</h4>
+<div class="outline-text-4" id="text-3-1-4">
+</div>
+</div>
+</div>
+</div>
 
 
 
-
-
-<div id="outline-container-orgae34994" class="outline-2">
-<h2 id="orgae34994"><span class="section-number-2">5.</span> Optional Additional Readings</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-org08da5ab" class="outline-2">
+<h2 id="org08da5ab"><span class="section-number-2">4.</span> Optional Additional Readings</h2>
+<div class="outline-text-2" id="text-4">
 <p>
 A more detailed study of computational models of memory [<a href="#citeproc_bib_item_2">2</a>]
 </p>
@@ -314,9 +339,9 @@ A more detailed study of computational models of memory [<a href="#citeproc_bib_
 
 
 
-<div id="outline-container-orge178c3c" class="outline-2">
-<h2 id="orge178c3c"><span class="section-number-2">6.</span> References</h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-org60189df" class="outline-2">
+<h2 id="org60189df"><span class="section-number-2">5.</span> References</h2>
+<div class="outline-text-2" id="text-5">
 <div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>
     <div class="csl-left-margin">1.</div><div class="csl-right-inline">S. Reimann, <a href="http://arxiv.org/abs/2111.06969v1">Computing with cognitive states</a>. <i>Corr</i>, (2021).</div>
@@ -345,7 +370,7 @@ These too might be thought of abstractly as spike trains or vectors of neural fi
 <div id="postamble" class="status">
 <p class="date">Date: Winter 2022</p>
 <p class="author">Author: Britt Anderson</p>
-<p class="date">Created: 2022-01-17 Mon 08:57</p>
+<p class="date">Created: 2022-01-26 Wed 06:42</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

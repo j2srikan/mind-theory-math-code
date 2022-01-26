@@ -1,7 +1,7 @@
 #+Author: Britt Anderson
 #+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
 #+csl-style: ../admin/cambridge-university-press-numeric.csl
-#+options: ^:nil toc:nil
+#+options: ^:nil toc:nil d:nil
 #+Title: Abstraction and Cognitive Neuroscience Modeling
 #+Date: Winter 2022
 
@@ -74,6 +74,10 @@ Create as much code as you can that implements your understanding of the model d
 
 To get credit for this assignment you will need to place a message in the dropbox on Learn reporting that you have initiated a pull request to the course github repo. Your code should go in the appropriate sub-directory of ~mind-theory-math-code/code/computing-with-cog-states~. Your sub-directory in the github repo should also include a short prose report of your main impressions on trying to implement this model using your test language. 
 
+*** Working comments
+:working-comments:
+Does his measure of similarity scale well with dimensionality?
+:END:
 
 
 
