@@ -1,9 +1,10 @@
 #+Title: Programming Language Day
 #+Author: Britt Anderson
 #+Date: Winter 2022
-#+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
-#+csl-style: ./cambridge-university-press-numeric.csl
-#+options: ^:nil
+#+bibliography:~/gitRepos/masterBib/bayatt.bib
+#+csl-style: ../admin/cambridge-university-press-numeric.csl
+#+options: ^:nil toc:nil d:nil
+
 
 
 * Purpose

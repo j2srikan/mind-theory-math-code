@@ -50,17 +50,21 @@ Ask yourself:
 *** Questions From the Reading:
   1. What is the meaning of the word algebra here?
 
-  2. Is this paper describing a theory (in the way we talked about it earlier)?
+  2. What is a "metric?"
+
+  3. Why does Reiman describe cosine similarity (and what is that) as local and his measure of similarity as global? Why might you want to chose one or the other?
+
+  4. Is this paper describing a theory (in the way we talked about it earlier)?
      
-  3. How does the brain figure into the theory here?
+  5. How does the brain figure into the theory here?
 
-  4. How does the development of ideas here relate to the mind - theory - math - code trajectory I proposed as useful?
+  6. How does the development of ideas here relate to the mind - theory - math - code trajectory I proposed as useful?
 
-  5. What language would be a good one for coding up this model?
+  7. What language would be a good one for coding up this model?
 
-  6. What critiques do you have of this model specifically (as opposed to the general outline that we just discussed)?
+  8. What critiques do you have of this model specifically (as opposed to the general outline that we just discussed)?
 
-  7. What would be gained by making a model of this with spiking elements?
+  9. What would be gained by making a model of this with spiking elements?
 
 *** Programming Activity From the Reading:
 
