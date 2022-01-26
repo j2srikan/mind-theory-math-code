@@ -187,6 +187,15 @@ The ~do~ clause of the program is essentially a loop. It has a termination condi
   (bb *initial-state*)
 #+end_src
 
+#+RESULTS:
+: state:A, tape: (0), head: 0
+: state:B, tape: (1 0), head: 1
+: state:A, tape: (1 1), head: 0
+: state:B, tape: (0 1 1), head: 0
+: state:A, tape: (0 1 1 1), head: 0
+: state:B, tape: (1 1 1 1), head: 1
+: state:H, tape: (1 1 1 1), head: 2
+
 *A run of my Turing Machine*
 #+begin_example
 state:A, tape: (0), head: 0
@@ -333,9 +342,6 @@ I am worried about this being too dry, so I figure it may be better to give you 
 
 ***** Write your own homework
 The idea here is to figure out a good, concise, tractable practical project we can do to use the different computing languages to solidify our knowledge of how formal computing theory informs (or maybe doesn't inform) practical attempts to implement cognitive models that implicitly adhere to a computation theory of mind.
-
-
-IAMHERE
 
 Maybe this exercise on conditionals would be good? Use the lambdas to compute some simple truth tables?
 https://www.diderot.one/courses/56/books/275/chapter/3210

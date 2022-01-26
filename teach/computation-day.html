@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-01-25 Tue 19:47 -->
+<!-- 2022-01-25 Tue 20:27 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Computing Theory Day</title>
@@ -219,8 +219,8 @@
 <div id="content" class="content">
 <h1 class="title">Computing Theory Day</h1>
 
-<div id="outline-container-orgfa4896e" class="outline-2">
-<h2 id="orgfa4896e"><span class="section-number-2">1.</span> Rewind</h2>
+<div id="outline-container-org539c9bb" class="outline-2">
+<h2 id="org539c9bb"><span class="section-number-2">1.</span> Rewind</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 We want to make practical progress in deepening our understanding of cognition. I have advanced the claim that to do that we must better understand <a href="first-day.html">what we mean by "mind"</a>, <a href="theory-day.html">what it is we should expect from a theory</a>, and what it means to stack our theory on some version of the <a href="mind.html">computational mind</a>. I have suggested that the succes of that effort hinges on our developing a greater familiarity with some mathematics and more practice in translating ideas via math into code. So far, we have not done the latter steps. Today marks our first steps in this formal direction by considering computation in more detail and from mathematical and programming language perspectives. 
@@ -228,8 +228,8 @@ We want to make practical progress in deepening our understanding of cognition. 
 </div>
 </div>
 
-<div id="outline-container-org35162bb" class="outline-2">
-<h2 id="org35162bb"><span class="section-number-2">2.</span> Computing in Minds and Computers</h2>
+<div id="outline-container-org24fafe0" class="outline-2">
+<h2 id="org24fafe0"><span class="section-number-2">2.</span> Computing in Minds and Computers</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Motivating questions:
@@ -252,16 +252,16 @@ Questions to keep in mind for this section
 </div>
 
 
-<div id="outline-container-org1f79ce1" class="outline-3">
-<h3 id="org1f79ce1"><span class="section-number-3">2.1.</span> Classical Computational Theory of Mind</h3>
+<div id="outline-container-org7c142da" class="outline-3">
+<h3 id="org7c142da"><span class="section-number-3">2.1.</span> Classical Computational Theory of Mind</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 The mind in all important ways is like a Turing machine. The things we want to model (or emulate) are very much like the things a Turing machine does.
 </p>
 </div>
 
-<div id="outline-container-org823e6c2" class="outline-4">
-<h4 id="org823e6c2"><span class="section-number-4">2.1.1.</span> What is a Turing machine? Some Background and Details</h4>
+<div id="outline-container-org048ace0" class="outline-4">
+<h4 id="org048ace0"><span class="section-number-4">2.1.1.</span> What is a Turing machine? Some Background and Details</h4>
 <div class="outline-text-4" id="text-2-1-1">
 <p>
 <a href="http://www.turingarchive.org/browse.php/B/12">Turing machines</a> are quite simple implements. While one can build a physical Turning machine, the more usual sense of the term is for a hypothetical computer that is comprised of
@@ -279,9 +279,9 @@ Other models of computation are the <i>lambda calculus</i>  and the <i>theory of
 </div>
 
 <ol class="org-ol">
-<li><a id="orgecb9548"></a>Is that above what you mean when you say you believe in the computational theory of mind?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_discussion">class_discussion</span></span><br /></li>
+<li><a id="org1003b76"></a>Is that above what you mean when you say you believe in the computational theory of mind?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_discussion">class_discussion</span></span><br /></li>
 
-<li><a id="org0b244e2"></a>Are Turing machines <i>digital</i>?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_discussion">class_discussion</span></span><br />
+<li><a id="org5958af3"></a>Are Turing machines <i>digital</i>?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_discussion">class_discussion</span></span><br />
 <div class="outline-text-5" id="text-2-1-1-2">
 <p>
 Is this an important distinction? Does this mean that analog computations are omitted? Would an analog paradigm be a better match to modeling mental activity?
@@ -291,8 +291,8 @@ Is this an important distinction? Does this mean that analog computations are om
 </ol>
 </div>
 
-<div id="outline-container-orgaf073d2" class="outline-4">
-<h4 id="orgaf073d2"><span class="section-number-4">2.1.2.</span> Programming a Turing Machine: the Busy Beaver&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_exercise">class_exercise</span></span></h4>
+<div id="outline-container-org4f24459" class="outline-4">
+<h4 id="org4f24459"><span class="section-number-4">2.1.2.</span> Programming a Turing Machine: the Busy Beaver&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_exercise">class_exercise</span></span></h4>
 <div class="outline-text-4" id="text-2-1-2">
 <p>
 <i>We may or may not have time to do this in class. If we feel that would be too much pressure we can schedule our review of code and our discussion of the various programming language pros and cons to the next session. We can have a shorter class to free time up to work on this in groups.</i>
@@ -350,7 +350,7 @@ The n-state busy beaver (BB-n) game is a contest to find such an n-state Turing 
 
 
 <ol class="org-ol">
-<li><a id="orgcca8b8f"></a>Exercises<br />
+<li><a id="org7b5532e"></a>Exercises<br />
 <div class="outline-text-5" id="text-2-1-2-1">
 <p>
 <span class="underline">Busy Beaver Warm-up</span>
@@ -379,7 +379,7 @@ b1 -&gt; h1r
 
 
 <ol class="org-ol">
-<li><a id="orgd73512b"></a>My Code (see "<a href="https://en.wikipedia.org/wiki/Eating_your_own_dog_food">dogfooding</a>")<br />
+<li><a id="org511aeb2"></a>My Code (see "<a href="https://en.wikipedia.org/wiki/Eating_your_own_dog_food">dogfooding</a>")<br />
 <div class="outline-text-6" id="text-2-1-2-1-1">
 <div class="org-src-container">
 <label class="org-src-name"><span class="listing-number">Listing 1: </span>Importing Necessary Library "Trivia"</label><pre class="src src-lisp">(ql:quickload <span style="color: #8b2252;">"trivia"</span>)
@@ -491,7 +491,7 @@ The <code>do</code> clause of the program is essentially a loop. It has a termin
 <p>
 <b>A run of my Turing Machine</b>
 </p>
-<pre class="example" id="org6d749b1">
+<pre class="example" id="orge307a06">
 state:A, tape: (0), head: 0
 state:B, tape: (1 0), head: 1
 state:A, tape: (1 1), head: 0
@@ -513,7 +513,7 @@ Try to come up with a version or rules for n=5 and we will run your programs aga
 </li>
 
 
-<li><a id="orga5aa132"></a>A tutorial article with examples and a nice visualization<br />
+<li><a id="orgb6bb09d"></a>A tutorial article with examples and a nice visualization<br />
 <div class="outline-text-6" id="text-2-1-2-1-2">
 <p>
 If you are having a little trouble getting started then this <a href="https://catonmat.net/busy-beaver">article</a> might help.
@@ -522,7 +522,7 @@ If you are having a little trouble getting started then this <a href="https://ca
 </li>
 </ol>
 </li>
-<li><a id="org9213c8f"></a>Why the <a href="https://en.wikipedia.org/wiki/Busy_beaver">Busy Beaver</a>?<br />
+<li><a id="orgb24d717"></a>Why the <a href="https://en.wikipedia.org/wiki/Busy_beaver">Busy Beaver</a>?<br />
 <div class="outline-text-5" id="text-2-1-2-2">
 <p>
 Because the solution to this problem is <a href="#sec:noncomputable"><b>uncomputable</b></a>. What does it mean that we are solving this with our computers and our own reasoning, but that the problem itself is impossible to solve? Does that present any hurdle at all for using the Turing Machine as a model of mind?
@@ -541,8 +541,8 @@ One objection to the computer metaphor of the brain is that it is obviously wron
 </div>
 </div>
 
-<div id="outline-container-orgeb533b3" class="outline-3">
-<h3 id="orgeb533b3"><span class="section-number-3">2.2.</span> Functionalism [<a href="#citeproc_bib_item_1">1</a>]</h3>
+<div id="outline-container-orge50e198" class="outline-3">
+<h3 id="orge50e198"><span class="section-number-3">2.2.</span> Functionalism [<a href="#citeproc_bib_item_1">1</a>]</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 You don't need to think about mental states in terms of what they are as "things". Think about them in terms of what they "do". You might compare this ideas of subjects and verbs or to objects and arrows in a <a href="category-day.html">category</a>. Mental states serve a functional role in a cognitive system. They relate to the sensory input, motor output and to <i>each other.</i>
@@ -558,8 +558,8 @@ There is more than one kind of functionalism. The one closest to our Turing mach
 </div>
 </div>
 
-<div id="outline-container-orgc85ec40" class="outline-3">
-<h3 id="orgc85ec40"><span class="section-number-3">2.3.</span> And there are others</h3>
+<div id="outline-container-org6751598" class="outline-3">
+<h3 id="org6751598"><span class="section-number-3">2.3.</span> And there are others</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 I could greatly expand here, but I risk making this a philosophy course instead of an emphasis on mathematical tools and their programmatic translation. I will pause for now.
@@ -567,8 +567,8 @@ I could greatly expand here, but I risk making this a philosophy course instead 
 </div>
 </div>
 
-<div id="outline-container-org4c3698f" class="outline-3">
-<h3 id="org4c3698f"><span class="section-number-3">2.4.</span> A couple of troubling questions for the computational account of mind</h3>
+<div id="outline-container-orgd3fe738" class="outline-3">
+<h3 id="orgd3fe738"><span class="section-number-3">2.4.</span> A couple of troubling questions for the computational account of mind</h3>
 <div class="outline-text-3" id="text-2-4">
 <ol class="org-ol">
 <li>It is a trivial account. Any sufficiently complex physical system (such as the molecules comprising the wall behind me or the brain) can be shown to be <i>isomorphic</i> to the formal structure of <i>any</i> program. If you view the mind as a program than you might as well say that you and the wall behind you share the same thoughts.</li>
@@ -582,12 +582,12 @@ I could greatly expand here, but I risk making this a philosophy course instead 
 </div>
 </div>
 
-<div id="outline-container-org25e8e17" class="outline-3">
-<h3 id="org25e8e17"><span class="section-number-3">2.5.</span> Some Non-computational theories of mind</h3>
+<div id="outline-container-orgcbc403d" class="outline-3">
+<h3 id="orgcbc403d"><span class="section-number-3">2.5.</span> Some Non-computational theories of mind</h3>
 <div class="outline-text-3" id="text-2-5">
 </div>
-<div id="outline-container-org200ca14" class="outline-4">
-<h4 id="org200ca14"><span class="section-number-4">2.5.1.</span> Logical Behaviorism</h4>
+<div id="outline-container-orgad729cf" class="outline-4">
+<h4 id="orgad729cf"><span class="section-number-4">2.5.1.</span> Logical Behaviorism</h4>
 <div class="outline-text-4" id="text-2-5-1">
 <p>
 Mental states are predispositions to behave. There is no internal state corresponding to belief that is mental. Belief is only a predisposition to behave in a certain way in a certain context.  We characterize people by what they are likely to do without ascribing to them associated mental states. The person who first developed this idea, Gilbert Ryle, asserts that being a mentalist is incompatible with being a realist (that is it makes you a dualist). Logical behaviorism  does not seem to be much in vogue now, but it is another take on the important issues [<a href="#citeproc_bib_item_2">2</a>].
@@ -595,8 +595,8 @@ Mental states are predispositions to behave. There is no internal state correspo
 </div>
 </div>
 
-<div id="outline-container-orgf0e3457" class="outline-4">
-<h4 id="orgf0e3457"><span class="section-number-4">2.5.2.</span> Type-Identity Theory</h4>
+<div id="outline-container-org9eb23d2" class="outline-4">
+<h4 id="org9eb23d2"><span class="section-number-4">2.5.2.</span> Type-Identity Theory</h4>
 <div class="outline-text-4" id="text-2-5-2">
 <p>
 Mental states are just brain states.
@@ -627,17 +627,17 @@ Does this bind you to a particular take on the question of <i>multiple realizabi
 </div>
 
 
-<div id="outline-container-org689fe49" class="outline-2">
-<h2 id="org689fe49"><span class="section-number-2">3.</span> Alternatives to the Turing Machine</h2>
+<div id="outline-container-orga361c88" class="outline-2">
+<h2 id="orga361c88"><span class="section-number-2">3.</span> Alternatives to the Turing Machine</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org97744db" class="outline-3">
-<h3 id="org97744db"><span class="section-number-3">3.1.</span> Models of Computation</h3>
+<div id="outline-container-org53dedf5" class="outline-3">
+<h3 id="org53dedf5"><span class="section-number-3">3.1.</span> Models of Computation</h3>
 </div>
 
 
-<div id="outline-container-orgf1c7480" class="outline-3">
-<h3 id="orgf1c7480"><span class="section-number-3">3.2.</span> Lambda Calculus</h3>
+<div id="outline-container-org6c65f3f" class="outline-3">
+<h3 id="org6c65f3f"><span class="section-number-3">3.2.</span> Lambda Calculus</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 The lambda calculus was developed as a theory of functions, but it has turned into a favorite tool of functional programmers and theoretical computer scientists to describe their languges, and even as a basis for developing their programming languages. John McCarthy invented Lisp as a theoretical exercise for working on the theory of computable functions. He felt the Turing machine to be too mechanical and too awkward for this work, and wanted a better tool, a better metaphor. He adopted the lambda of the lambda calculus and the <code>eval</code> function to take in lisp programs and execute them. Late one of his <a href="https://en.wikipedia.org/wiki/Steve_Russell_(computer_scientist)">collaborators</a> observed that it was relatively straightforward to implement this as a real programming language. A bit more of the history is <a href="https://lwn.net/Articles/778550/">here</a>. But in order to try and learn a bit of the lambda calculus I will make reference to a concise summary [See Chap 2 in <a href="#citeproc_bib_item_3">3</a>] and then give us some exercises we can play with.
@@ -648,8 +648,8 @@ The untyped lambda calculus was followed by the typed lambda calculus, which is 
 </p>
 </div>
 
-<div id="outline-container-org833b473" class="outline-4">
-<h4 id="org833b473"><span class="section-number-4">3.2.1.</span> If you feel that &#x2026;&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_discussion">class_discussion</span></span></h4>
+<div id="outline-container-org7e0cbd3" class="outline-4">
+<h4 id="org7e0cbd3"><span class="section-number-4">3.2.1.</span> If you feel that &#x2026;&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_discussion">class_discussion</span></span></h4>
 <div class="outline-text-4" id="text-3-2-1">
 <p>
 human brains (and not just human beings) are computational then these abstract formal descriptions might provide the right language for expresssing your truths about thinking. But is it necessary that you know about them or care about them to actually do cognitive or neuroscience modeling?
@@ -657,12 +657,12 @@ human brains (and not just human beings) are computational then these abstract f
 </div>
 </div>
 
-<div id="outline-container-org4ab1697" class="outline-4">
-<h4 id="org4ab1697"><span class="section-number-4">3.2.2.</span> Some Lambda Calculus details from [<a href="#citeproc_bib_item_4">4</a>]</h4>
+<div id="outline-container-org5f89241" class="outline-4">
+<h4 id="org5f89241"><span class="section-number-4">3.2.2.</span> Some Lambda Calculus details from [<a href="#citeproc_bib_item_4">4</a>]</h4>
 <div class="outline-text-4" id="text-3-2-2">
 </div>
 <ol class="org-ol">
-<li><a id="org690bf19"></a>Why a "lambda" (λ)?<br />
+<li><a id="org718f25f"></a>Why a "lambda" (λ)?<br />
 <div class="outline-text-5" id="text-3-2-2-1">
 <p>
 The λ of lambda calculus doesn't really mean anything. It just signals that you have a lambda expression. It creation as the symbol was an accident of notation and the limits of older typewriters.
@@ -670,7 +670,7 @@ The λ of lambda calculus doesn't really mean anything. It just signals that you
 </div>
 </li>
 
-<li><a id="org9adf96e"></a>There is not just one lambda calculus<br />
+<li><a id="orgef3dce5"></a>There is not just one lambda calculus<br />
 <div class="outline-text-5" id="text-3-2-2-2">
 <p>
 To have the lambda calculus you need to specify your algebra. What are the rules for reducing things (i.e. your computations), what are the allowed symbols, and what do things mean? A "lambda calculus" is a way of handling "lambda expressions."
@@ -678,7 +678,7 @@ To have the lambda calculus you need to specify your algebra. What are the rules
 </div>
 </li>
 
-<li><a id="org7c67a4c"></a>Some of the details<br />
+<li><a id="orgd4a9d47"></a>Some of the details<br />
 <div class="outline-text-5" id="text-3-2-2-3">
 <p>
 <b>Terms</b> are either simple variables (\(x\) or \(y\)) or composite terms (\(\lambda~v~t_1\)). Having two terms next to each other (\((~t_1~t_2)\)) means "apply" \(t_1\) to \(t_2\). The meaning of a term like \(\lambda~v~t_1\) is value returned by lambda abstraction. The meaning part is described by formulas such as \(t_1~\rightarrow~t_2\).
@@ -726,7 +726,7 @@ I am worried about this being too dry, so I figure it may be better to give you 
 </div>
 
 <ol class="org-ol">
-<li><a id="orgf5175e7"></a>Classroom Exercises and Discussion<br />
+<li><a id="orgd888a4b"></a>Classroom Exercises and Discussion<br />
 <div class="outline-text-6" id="text-3-2-2-3-1">
 <ol class="org-ol">
 <li>Write the lambda expression for the identity function? What is the identity function?</li>
@@ -759,15 +759,10 @@ What is the identity function in the programming language of your group?
 </li>
 
 
-<li><a id="orgfec6d1d"></a>Write your own homework<br />
+<li><a id="orgb651578"></a>Write your own homework<br />
 <div class="outline-text-6" id="text-3-2-2-3-2">
 <p>
 The idea here is to figure out a good, concise, tractable practical project we can do to use the different computing languages to solidify our knowledge of how formal computing theory informs (or maybe doesn't inform) practical attempts to implement cognitive models that implicitly adhere to a computation theory of mind.
-</p>
-
-
-<p>
-IAMHERE
 </p>
 
 <p>
@@ -799,8 +794,8 @@ Maybe this exercise on conditionals would be good? Use the lambdas to compute so
 
 
 
-<div id="outline-container-org612fbb1" class="outline-3">
-<h3 id="org612fbb1"><span class="section-number-3">3.3.</span> Recursive Function Theory (Kleene)</h3>
+<div id="outline-container-org702fbed" class="outline-3">
+<h3 id="org702fbed"><span class="section-number-3">3.3.</span> Recursive Function Theory (Kleene)</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 Something for another day. 
@@ -814,8 +809,8 @@ Something for another day.
 <div class="outline-text-3" id="text-sec:noncomputable">
 </div>
 
-<div id="outline-container-org0e2986e" class="outline-4">
-<h4 id="org0e2986e"><span class="section-number-4">3.4.1.</span> The Busy Beaver Problem is non-computable</h4>
+<div id="outline-container-org9408705" class="outline-4">
+<h4 id="org9408705"><span class="section-number-4">3.4.1.</span> The Busy Beaver Problem is non-computable</h4>
 <div class="outline-text-4" id="text-3-4-1">
 <p>
 The busy beaver problem is to compute the maximum number of 1's that a Turing machine can write before halting with the number of states equal to n. This <a href="https://jeremykun.com/2012/02/08/busy-beavers-and-the-quest-for-big-numbers/">webpage</a> includes the proof of the non-computability of the busy beaver problem. It uses contradiction, and like most proof relying on contradiction I find it head warping, but there it is. 
@@ -825,8 +820,8 @@ The busy beaver problem is to compute the maximum number of 1's that a Turing ma
 </div>
 </div>
 
-<div id="outline-container-org1501634" class="outline-2">
-<h2 id="org1501634"><span class="section-number-2">4.</span> Companion and Optional Readings</h2>
+<div id="outline-container-org183fb5e" class="outline-2">
+<h2 id="org183fb5e"><span class="section-number-2">4.</span> Companion and Optional Readings</h2>
 <div class="outline-text-2" id="text-4">
 <ol class="org-ol">
 <li><i>An Introduction to Functional Programming Through the Lambda Calculus</i> [<a href="#citeproc_bib_item_3">3</a>]</li>
@@ -839,8 +834,8 @@ The busy beaver problem is to compute the maximum number of 1's that a Turing ma
 </ol>
 </div>
 </div>
-<div id="outline-container-org3bbf4fb" class="outline-2">
-<h2 id="org3bbf4fb"><span class="section-number-2">5.</span> References</h2>
+<div id="outline-container-org8accecc" class="outline-2">
+<h2 id="org8accecc"><span class="section-number-2">5.</span> References</h2>
 <div class="outline-text-2" id="text-5">
 <div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>
@@ -859,8 +854,8 @@ The busy beaver problem is to compute the maximum number of 1's that a Turing ma
 </div>
 
 
-<div id="outline-container-orga47925b" class="outline-2">
-<h2 id="orga47925b"><span class="section-number-2">6.</span> A bit of detail about lambda calculus notation</h2>
+<div id="outline-container-org84e11fe" class="outline-2">
+<h2 id="org84e11fe"><span class="section-number-2">6.</span> A bit of detail about lambda calculus notation</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 λ expressions are either a "name" | "function" | "application"
@@ -899,7 +894,7 @@ Note that both are expressions (everything is an expression). They are simply pl
 <div id="postamble" class="status">
 <p class="date">Date: Winter 2022</p>
 <p class="author">Author: Britt Anderson</p>
-<p class="date">Created: 2022-01-25 Tue 19:47</p>
+<p class="date">Created: 2022-01-25 Tue 20:27</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
