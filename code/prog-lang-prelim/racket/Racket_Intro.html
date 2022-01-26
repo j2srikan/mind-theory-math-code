@@ -1,0 +1,26 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Racket_Intro</title><style></style></head><body id="preview">
+<h1 class="code-line" data-line-start=0 data-line-end=1><a id="Intro_0"></a>Intro</h1>
+<p class="has-line-data" data-line-start="2" data-line-end="3">Racket is a functional programming language descended from Lisp and Scheme. Noted for its elegance and power, Racket closely follows mathematical algorithms. Some tutorials we came across stressed learning about recursion and functional style. We are interested in exploring how these characteristics and points of emphasis may be relevant to the issue of whether Racket is a useful tool for neural modeling.</p>
+<h1 class="code-line" data-line-start=4 data-line-end=5><a id="Practical_4"></a>Practical</h1>
+<p class="has-line-data" data-line-start="6" data-line-end="7"><strong>Install Racket</strong></p>
+<p class="has-line-data" data-line-start="8" data-line-end="9">Open the website <a href="https://racket-lang.org">Racket</a> and click on the download button at the top right. Then choose the Racket version that suits your operating system.</p>
+<p class="has-line-data" data-line-start="10" data-line-end="11">After downloading, you may see a number of different application icons, but just remember that Racket’s main tools are:</p>
+<p class="has-line-data" data-line-start="12" data-line-end="13">Racket, the core compiler, interpreter, and run-time system;</p>
+<p class="has-line-data" data-line-start="14" data-line-end="15">DrRacket, the programming environment; and,</p>
+<p class="has-line-data" data-line-start="16" data-line-end="17">Raco, a command-line tool for executing Racket commands that install packages, build libraries, and more.</p>
+<p class="has-line-data" data-line-start="18" data-line-end="19">A guide to using Racket is available at: <a href="https://docs.racket-lang.org/guide/intro.html">RacketGuide</a></p>
+<p class="has-line-data" data-line-start="20" data-line-end="21">DrRacket is a programming environment in which one can create their own art, games, compilers, interpreters, and more.</p>
+<p class="has-line-data" data-line-start="22" data-line-end="23"><strong>Our First Program in IDE DrRacket</strong></p>
+<p class="has-line-data" data-line-start="24" data-line-end="25">DrRacket is an IDE suitable for many proper languages and variants of Racket. It requires that one specify the language they are using. If we want to use Racket, we can type</p>
+<p class="has-line-data" data-line-start="26" data-line-end="27">#lang racket</p>
+<p class="has-line-data" data-line-start="28" data-line-end="29">in DrRacket’s top text box, and then click the “Run” button above the text area. We can define our functions in the top text box, and use them later in the bottom text box, which will display the outputs. We could think of this as working as a kind of calculator. See greeting.rxt for a demonstration of how to print “hello world!” using Racket.</p>
+<h1 class="code-line" data-line-start=30 data-line-end=31><a id="Theoretical_30"></a>Theoretical</h1>
+<p class="has-line-data" data-line-start="32" data-line-end="33">During this course, we will be exploring the idea of code as data through Racket. Utilized in the context of theoretical neuroscience, we will evaluate how this maps on to the idea of the mind as software that rewrites itself.</p>
+<p class="has-line-data" data-line-start="34" data-line-end="35">In Racket, everything is a function, and everything returns a value. Every function call is written in brackets. Following the “( ” will be an operator. This operator could be either built in operators or any function you defined yourself. Then following the operator, you give this function some variables.</p>
+<p class="has-line-data" data-line-start="36" data-line-end="37">For example, consider “+” the built in operator. We have:</p>
+<p class="has-line-data" data-line-start="38" data-line-end="39">3+7</p>
+<p class="has-line-data" data-line-start="40" data-line-end="41">This will be coded as</p>
+<p class="has-line-data" data-line-start="42" data-line-end="43"><code>(+ 3 7)</code></p>
+<p class="has-line-data" data-line-start="44" data-line-end="45">in Racket.</p>
+<p class="has-line-data" data-line-start="46" data-line-end="47">Racket also facilitates the coding of functions within functions, as demonstrated in our example, twice.rxt. In this example, twice is a function that can take two inputs. One is a function F and another is a variable that is the parameter for F. The result of twice is ‘do whatever the input function is twice on the input variable.’</p>
+</body></html>
