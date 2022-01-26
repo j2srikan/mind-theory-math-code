@@ -16,16 +16,18 @@
 
    [[file:teach/theory-day.org::*Suppes \[\[cite:&suppes67_what\]\]][This]] is important since I plan to base a lot of my discussion around it. Suppes, 1967, What is a scientific theory.
 3. Before class next week *submit* the github repo dropbox item. 
-* Fourth Module <2022-02-02 Wed> 
-1. The main file for this module is:  [[file:teach/prog-lang.org]]
-2. Prior to this class make sure to put your groups thoughts on github in the proper folder and to signal this by taking the quiz on Learn. The submission (to be discussed in class; ask if not clear) should be the first impressions about installation and any other general, early opinions. 
-3. Will be our first occassion to discuss the abstract pros/cons of the various programming options chosen. A [[file:imports/prog-lang-disc-guide.org][guide]] is available to prepare for this preliminary discussion and gives some details on the accompanying exercise.
-4. Prior to next week you will want to read http://arxiv.org/abs/2111.06969v1.
-* Fifth Module <2022-01-25 Tue>
-1. The main file for this day will be [[file:teach/computation-day.org]]
-2. Programming exercise will be the Busy Beaver
+* Fourth Module <2022-01-26 Wed> 
+1. Talk about coming back to campus to meet in person - what does everyone think?
+2. The main file for this module is:  [[file:teach/prog-lang.org]]
+3. Prior to this class make sure to put your groups thoughts on github in the proper folder and to signal this by taking the quiz on Learn. The submission (to be discussed in class; ask if not clear) should be the first impressions about installation and any other general, early opinions. 
+4. Will be our first occasion to discuss the abstract pros/cons of the various programming options chosen. A [[file:imports/prog-lang-disc-guide.org][guide]] is available to prepare for this preliminary discussion and gives some details on the accompanying exercise.
+* Fifth Module <2022-01-26 Wed>--<2022-02-02 Wed>
+1. I need to come up with a good concise reading for this exercise, but I don't  have one yet. You can see the handout for several readings that are available to skim for your preparation. I hope the discussion we did on the computational mind prepares us for this. 
+2. The main file for this day will be [[file:teach/computation-day.org]]
+3. Programming exercise will be the Busy Beaver
 * Sixth Module  <2022-02-09 Wed>
-1. The main file for this day will be [[file:teach/abstraction.org]]
-2. There will be a major programming exercise organized around this that will use the last part of class and the coming week. We will have a discussion about abstraction and some of the points raised in the [[http://arxiv.org/abs/2111.06969v1][reading]] during the class session.
+1. Prior to this module you will want to read http://arxiv.org/abs/2111.06969v1.
+2. The main file for this day will be [[file:teach/abstraction.org]]
+3. There will be a major programming exercise organized around this that will use the last part of class and the coming week. We will have a discussion about abstraction and some of the points raised in the [[http://arxiv.org/abs/2111.06969v1][reading]] during the class session.
 * TODO Seventh Module
 1. The main file for this module will be [[file:teach/category-day.org]].
