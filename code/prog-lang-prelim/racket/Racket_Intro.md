@@ -1,3 +1,4 @@
+## Chris Longley, Sixuan Chen
 # Intro
 
 Racket is a functional programming language descended from Lisp and Scheme. Noted for its elegance and power, Racket closely follows mathematical algorithms. Some tutorials we came across stressed learning about recursion and functional style. We are interested in exploring how these characteristics and points of emphasis may be relevant to the issue of whether Racket is a useful tool for neural modeling. 
