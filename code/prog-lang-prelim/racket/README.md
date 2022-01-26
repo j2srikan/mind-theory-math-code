@@ -27,7 +27,7 @@ DrRacket is an IDE suitable for many proper languages and variants of Racket. It
  
 #lang racket
  
-in DrRacket’s top text box, and then click the “Run” button above the text area. We can define our functions in the top text box, and use them later in the bottom text box, which will display the outputs. We could think of this as working as a kind of calculator. See greeting.rxt for a demonstration of how to print "hello world!" using Racket.
+in DrRacket’s top text box, and then click the “Run” button above the text area. We can define our functions in the top text box, and use them later in the bottom text box, which will display the outputs. We could think of this as working as a kind of calculator. See greeting.rkt for a demonstration of how to print "hello world!" using Racket.
 
 # Theoretical
 
@@ -45,6 +45,6 @@ This will be coded as
 
 in Racket. 
 
-Racket also facilitates the coding of functions within functions, as demonstrated in our example, twice.rxt. In this example, twice is a function that can take two inputs. One is a function F and another is a variable that is the parameter for F. The result of twice is ‘do whatever the input function is twice on the input variable.’
+Racket also facilitates the coding of functions within functions, as demonstrated in our example, twice.rkt. In this example, twice is a function that can take two inputs. One is a function F and another is a variable that is the parameter for F. The result of twice is ‘do whatever the input function is twice on the input variable.’
 
 
