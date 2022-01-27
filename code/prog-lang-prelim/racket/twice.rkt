@@ -1,7 +1,7 @@
 #lang racket
 
-(define (twice function v)
-  (function (function v)))
+(define (twice f v)
+  (f (f v)))
 
 
 (define (divide v)
