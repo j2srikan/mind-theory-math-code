@@ -19,10 +19,11 @@ RULES_5 = {
 }
 
 class TuringMachine:
-    def __init__(self):
+    def __init__(self, rules):
         self.state = 'a'
         self.tape = [0]
         self.head = 0
+        self.rules = rules
 
     def move(self, direction):
         if direction == 'l':
@@ -37,7 +38,7 @@ class TuringMachine:
         
     def act(self):
         current_output = self.tape[self.head]
-        next_rule = RULES_5[self.state][current_output]
+        next_rule = self.rules[self.state][current_output]
         self.state = next_rule[0]
         self.tape[self.head] = next_rule[1]
         self.move(next_rule[2])
@@ -49,5 +50,5 @@ class TuringMachine:
                 break
             self.act()
 
-tm = TuringMachine()
+tm = TuringMachine(RULES_5)
 tm.run()
