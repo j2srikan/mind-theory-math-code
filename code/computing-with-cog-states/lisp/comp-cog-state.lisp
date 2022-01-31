@@ -3,6 +3,7 @@
 
 (ql:quickload "alexandria")
 (ql:quickload "trivia")
+
 (defpackage computing-with-cognitive-states
   (:use cl)
   (:nicknames :cwcs)
@@ -20,12 +21,12 @@
 ;;; This leads to a small number for nearby and a big number from many
 ;;; different slots
 
-(defun d-between (dist dimension)
-  (do ((my-d (- dist 1) (- my-d 1))
-       (my-dimension (- dimension 1) (- my-dimension 1))
-       (accum (/ dist dimension) (* accum (/ my-d my-dimension))))
-      ((equal my-d 1))
-    (print (format t "my is ~a and my accum is ~a~%" my-d accum))))
+;; (defun d-between (dist dimension)
+;;   (do ((my-d (- dist 1) (- my-d 1))
+;;        (my-dimension (- dimension 1) (- my-dimension 1))
+;;        (accum (/ dist dimension) (* accum (/ my-d my-dimension))))
+;;       ((equal my-d 1))
+;;     (print (format t "my is ~a and my accum is ~a~%" my-d accum))))
 
 (defun sum-denom (dimension dist)
   (do ((counter 1 (+ 1 counter))
@@ -44,7 +45,7 @@
 (defun d-between (dimension dist)
   (/ (sum-num dist) (sum-denom dimension dist) )) 
 
-(defun similarity (dimension dist &optional (kappa 1.0))
+(defun similarity (dimension dist &key (kappa 200.0))
   (exp (* -1.0 kappa (d-between dimension dist))))
 
 (defun not-xor (a b)
@@ -74,5 +75,4 @@
        (outlist ()))
       ((> i dimension) outlist)
     (setq outlist
-	  (cons (rand-0/1-p p) outlist)))
-  )
+	  (cons (rand-0/1-p p) outlist))))

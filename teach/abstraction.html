@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-01-17 Mon 08:57 -->
+<!-- 2022-01-31 Mon 09:55 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Abstraction and Cognitive Neuroscience Modeling</title>
@@ -193,6 +193,27 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
 </style>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content" class="content">
@@ -203,8 +224,8 @@ The purpose of abstraction is not to be vague, but to create a new semantic leve
 </p>
 </blockquote>
 
-<div id="outline-container-org96b7243" class="outline-2">
-<h2 id="org96b7243"><span class="section-number-2">1.</span> Some Motivating Thoughts and a Brief Resumé</h2>
+<div id="outline-container-org420cd7f" class="outline-2">
+<h2 id="org420cd7f"><span class="section-number-2">1.</span> Some Motivating Thoughts and a Brief Resumé</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 We want a model of mind and we think that its form should be computational. We have reviewed what we mean by mind, and by computation, and what we mean by a computational mind. Next we dissected what it means for something to be a theory so that the account we offer can be scientifically useful.
@@ -228,16 +249,15 @@ Our introduction to the thinking about how it is that mathematicians think about
 </div>
 </div>
 
-<div id="outline-container-orgeb8a831" class="outline-2">
-<h2 id="orgeb8a831"><span class="section-number-2">2.</span> Warm-up Questions</h2>
+<div id="outline-container-org3b8f695" class="outline-2">
+<h2 id="org3b8f695"><span class="section-number-2">2.</span> Warm-up Questions</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Ask yourself:
 </p>
 
 <ol class="org-ol">
-<li>Is the only acceptable fate of a theory of mind to be reduced to a theory of the brain?
-Can we think <i>abstractly</i> about mental operations and their transformations without ever needing to reduce the mental to the neural?</li>
+<li>Can we think <i>abstractly</i> about mental operations and their transformations without ever needing to reduce the mental to the neural?</li>
 
 <li>Can we relate neural and mental constructs currently? Clearly? Concisely? Unambiguously?
 In <i><a href="category-day.html">category theory</a></i> there is the notion of a <i>functor</i>. Can we <i>abstractly</i> conceive of a realm of mental objects that interact via some sort of connection, and a different "world" of neural objects <sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup> with links between them, and specify a <i>functorial</i> connection that relates the abstracts objects and linkages of our mental and neural categories? Do we gain by so doing?</li>
@@ -245,67 +265,96 @@ In <i><a href="category-day.html">category theory</a></i> there is the notion of
 <li>Do we need a new vocabulary or new tools?
 If we are open to the idea of <i>abstraction</i> as a powerful tool for our theoretical entreprise do we need a new language for its expression?</li>
 
-<li>If we think about expressing the population of neuronal firing rates as a vector do we derive any benefits from invoking "vector spaces?"
-This is meant to be a concrete example of <i>abstraction</i>. We are introduced to vectors by comparing them to arrows. Entities with size and direction (magnitude and orientation). Given a set of <i>basis</i> vectors we can imagine all the possible vectors we could construct from those elements by combining them and growing or shrinking them. Imagine that we construct that <i>vector space</i>. Now instead of thinking of indivdual vectors can we instead think of vector spaces? That is an example of abstraction? Does it help our theoretical goals or un-necessarily complicate the activity? What do we gain and what do we lose?</li>
+<li>What does abstraction offer if we think we have a more concrete example in mind?
+For example, if we think about expressing the population of neuronal firing rates as a vector do we derive any benefits from invoking "vector spaces?" If we abstract from vectors to vector spaces does it help our theoretical goals or un-necessarily complicate the activity?</li>
 </ol>
 </div>
 </div>
 
-<div id="outline-container-org3fbb05e" class="outline-2">
-<h2 id="org3fbb05e"><span class="section-number-2">3.</span> Target Reading: Computing With Cognitive States</h2>
+<div id="outline-container-org72d236a" class="outline-2">
+<h2 id="org72d236a"><span class="section-number-2">3.</span> Target Reading: Computing With Cognitive States</h2>
 <div class="outline-text-2" id="text-3">
 <p>
-There is not a mathematics of abstraction. Modern mathematics is largely the practice of abstraction; a pursuit of new semantic levels above those that came before that allow precise talk for collections and highlight their similarities from this new higher perspective.
-</p>
-
-<p>
-To practice thinking about abstraction, to give an example of it, and to examine how well it contributes to our goal of facilitating computational expressions via programs I have selected a recent article talking about computing with cognitive states. We can discuss whether the model of memory here is a good one or not, but more critical will be our assessment of how the practice of abstraction helps or hinders. We will practice abstraction in our assessment: judging the success not by the specific concrete model of memory, but by the abstract framing as cognitive states and an algebra.
+There is not a mathematics of abstraction. Modern mathematics is abstraction; a pursuit of new semantic levels above those that came before and that allow precise talk. To practice thinking about abstraction, to give an example of it, and to examine how well it contributes to our goal of facilitating computational expressions via programs, I have selected a recent article talking about computing with cognitive states. We can discuss concretely whether the model of memory here is a good one or not, but more critical to our project will be our assessment of how the practice of abstraction helps or hinders the modelling process. We will practice abstraction in our assessment: we will judge the success not by the specific concrete model of memory, but by the abstract framing as cognitive states and an algebra.
 </p>
 </div>
 
-<div id="outline-container-org13dab23" class="outline-3">
-<h3 id="org13dab23"><span class="section-number-3">3.1.</span> Activity&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_activity">class_activity</span></span></h3>
+<div id="outline-container-org720a1cd" class="outline-3">
+<h3 id="org720a1cd"><span class="section-number-3">3.1.</span> Activity&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_activity">class_activity</span></span></h3>
 <div class="outline-text-3" id="text-3-1">
 </div>
-<div id="outline-container-org0b98def" class="outline-4">
-<h4 id="org0b98def"><span class="section-number-4">3.1.1.</span> Reading</h4>
+<div id="outline-container-org7c1a01b" class="outline-4">
+<h4 id="org7c1a01b"><span class="section-number-4">3.1.1.</span> Reading</h4>
 <div class="outline-text-4" id="text-3-1-1">
 <p>
-Make sure you read before class our target article [<a href="#citeproc_bib_item_1">1</a>].
+Make sure you read before class our target article [<a href="#citeproc_bib_item_1">1</a>]. We will be talking about this article and implementing the model it describes.
 </p>
 </div>
 </div>
+
+<div id="outline-container-org5c6e884" class="outline-4">
+<h4 id="org5c6e884"><span class="section-number-4">3.1.2.</span> Questions From the Reading:</h4>
+<div class="outline-text-4" id="text-3-1-2">
 </div>
-</div>
-<div id="outline-container-org98b9498" class="outline-2">
-<h2 id="org98b9498"><span class="section-number-2">4.</span> Question:</h2>
-<div class="outline-text-2" id="text-4">
+<ol class="org-ol">
+<li><a id="orgf78326a"></a>Higher Level (Abstract) Issues<br />
+<div class="outline-text-5" id="text-3-1-2-1">
 <ol class="org-ol">
 <li>What is the meaning of the word algebra here?</li>
-
+<li>What is a "metric?"</li>
+<li>Why does Reiman describe cosine similarity (and what is that) as local and his measure of similarity as global? Why might you want to chose one or the other?</li>
 <li>Is this paper describing a theory (in the way we talked about it earlier)?</li>
-
 <li>How does the brain figure into the theory here?</li>
-
 <li>How does the development of ideas here relate to the mind - theory - math - code trajectory I proposed as useful?</li>
-
-<li>What language would be a good one for coding up this model?</li>
-
+<li>What programming languages would be a good ones for coding up this model?</li>
 <li>What critiques do you have of this model specifically (as opposed to the general outline that we just discussed)?</li>
-
 <li>What would be gained by making a model of this with spiking elements?</li>
 </ol>
 </div>
+</li>
+<li><a id="orgc18e40e"></a>Lower Level (Concrete or Implementation) Issues<br />
+<div class="outline-text-5" id="text-3-1-2-2">
+<ol class="org-ol">
+<li>What is the concrete target of Reimann's model?</li>
+<li>The "state-space" is \[ \mathbb{X} = \left(\mathbb{X}^{N}_{q},d\right).\]
+What do each of the symbols mean? What would their counterparts be in code?</li>
+<li>The "similarity" is \[ S(d) := e^{- \kappa F_\mathbb{X}(d)}.\]
+What does each one of these mean? Why does this measure "similarity?" Does anyone see a problem? <sup><a id="fnr.3" class="footref" href="#fn.3" role="doc-backlink">3</a></sup></li>
+<li>Describe in words the binding and bundline operations.</li>
+<li>Formally, in symbols, what is the "algebra" of computing with cognitive states?</li>
+<li>Discuss in words how you might implement the two operations.</li>
+<li>What do the \(\mathbf{L}\) and \(\mathbf{R}\) represent?</li>
+<li>Describe an implementation of the distance metric. First <b>coding challenge</b>: implement the distance metric in code.</li>
+<li>Explain what figure 4 represents.</li>
+<li>Second <b>coding challenge</b>: implement all the basic elements necessary to reproduce, at least in principle, the types of plots appearing in the later parts of the paper where he examines the model's implications and compares it to empirical results.</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org4d75108" class="outline-4">
+<h4 id="org4d75108"><span class="section-number-4">3.1.3.</span> Programming Activity From the Reading:</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<p>
+This is an assignment that we will review and talk about at the start of next class session. You have the rest of today and until next class to work on it in your groups.
+</p>
+
+<p>
+Create as much code as you can that implements your understanding of the model described. If you have the time you can also add some code for doing simple simulations of the model in operation and plotting the results.
+</p>
+
+<p>
+To get credit for this assignment you will need to place a message in the dropbox on Learn reporting that you have initiated a pull request to the course github repo. Your code should go in the appropriate sub-directory of <code>mind-theory-math-code/code/computing-with-cog-states</code>. Your sub-directory in the github repo should also include a short prose report of your main impressions on trying to implement this model using your test language. 
+</p>
+</div>
+</div>
+</div>
 </div>
 
 
-
-
-
-
-<div id="outline-container-orgae34994" class="outline-2">
-<h2 id="orgae34994"><span class="section-number-2">5.</span> Optional Additional Readings</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-org08ad24e" class="outline-2">
+<h2 id="org08ad24e"><span class="section-number-2">4.</span> Optional Additional Readings</h2>
+<div class="outline-text-2" id="text-4">
 <p>
 A more detailed study of computational models of memory [<a href="#citeproc_bib_item_2">2</a>]
 </p>
@@ -313,10 +362,9 @@ A more detailed study of computational models of memory [<a href="#citeproc_bib_
 </div>
 
 
-
-<div id="outline-container-orge178c3c" class="outline-2">
-<h2 id="orge178c3c"><span class="section-number-2">6.</span> References</h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-org3912c14" class="outline-2">
+<h2 id="org3912c14"><span class="section-number-2">5.</span> References</h2>
+<div class="outline-text-2" id="text-5">
 <div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>
     <div class="csl-left-margin">1.</div><div class="csl-right-inline">S. Reimann, <a href="http://arxiv.org/abs/2111.06969v1">Computing with cognitive states</a>. <i>Corr</i>, (2021).</div>
@@ -339,13 +387,17 @@ The <a href="https://en.wikipedia.org/wiki/Edsger_W._Dijkstra">theoretical compu
 These too might be thought of abstractly as spike trains or vectors of neural firing rates.  
 </p></div></div>
 
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+What about as the dimension of the space grows? 
+</p></div></div>
+
 
 </div>
 </div></div>
 <div id="postamble" class="status">
 <p class="date">Date: Winter 2022</p>
 <p class="author">Author: Britt Anderson</p>
-<p class="date">Created: 2022-01-17 Mon 08:57</p>
+<p class="date">Created: 2022-01-31 Mon 09:55</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

@@ -1,7 +1,7 @@
 #+Author: Britt Anderson
 #+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
 #+csl-style: ../admin/cambridge-university-press-numeric.csl
-#+options: ^:nil toc:nil
+#+options: ^:nil toc:nil d:nil
 #+Title: Abstraction and Cognitive Neuroscience Modeling
 #+Date: Winter 2022
 
@@ -25,8 +25,7 @@ Our introduction to the thinking about how it is that mathematicians think about
 
 Ask yourself:
 
-1. Is the only acceptable fate of a theory of mind to be reduced to a theory of the brain?
-   Can we think /abstractly/ about mental operations and their transformations without ever needing to reduce the mental to the neural?
+1. Can we think /abstractly/ about mental operations and their transformations without ever needing to reduce the mental to the neural?
 
 2. Can we relate neural and mental constructs currently? Clearly? Concisely? Unambiguously?
    In /[[file:category-day.org][category theory]]/ there is the notion of a /functor/. Can we /abstractly/ conceive of a realm of mental objects that interact via some sort of connection, and a different "world" of neural objects [fn:2] with links between them, and specify a /functorial/ connection that relates the abstracts objects and linkages of our mental and neural categories? Do we gain by so doing?
@@ -34,13 +33,11 @@ Ask yourself:
 3. Do we need a new vocabulary or new tools?
    If we are open to the idea of /abstraction/ as a powerful tool for our theoretical entreprise do we need a new language for its expression?
 
-4. If we think about expressing the population of neuronal firing rates as a vector do we derive any benefits from invoking "vector spaces?"
-   This is meant to be a concrete example of /abstraction/. We are introduced to vectors by comparing them to arrows. Entities with size and direction (magnitude and orientation). Given a set of /basis/ vectors we can imagine all the possible vectors we could construct from those elements by combining them and growing or shrinking them. Imagine that we construct that /vector space/. Now instead of thinking of indivdual vectors can we instead think of vector spaces? That is an example of abstraction? Does it help our theoretical goals or un-necessarily complicate the activity? What do we gain and what do we lose?
+4. What does abstraction offer if we think we have a more concrete example in mind?
+   For example, if we think about expressing the population of neuronal firing rates as a vector do we derive any benefits from invoking "vector spaces?" If we abstract from vectors to vector spaces does it help our theoretical goals or un-necessarily complicate the activity? 
 
 * Target Reading: Computing With Cognitive States
-  There is not a mathematics of abstraction. Modern mathematics is largely the practice of abstraction; a pursuit of new semantic levels above those that came before that allow precise talk for collections and highlight their similarities from this new higher perspective.
-
-  To practice thinking about abstraction, to give an example of it, and to examine how well it contributes to our goal of facilitating computational expressions via programs I have selected a recent article talking about computing with cognitive states. We can discuss whether the model of memory here is a good one or not, but more critical will be our assessment of how the practice of abstraction helps or hinders. We will practice abstraction in our assessment: judging the success not by the specific concrete model of memory, but by the abstract framing as cognitive states and an algebra.
+  There is not a mathematics of abstraction. Modern mathematics is abstraction; a pursuit of new semantic levels above those that came before and that allow precise talk. To practice thinking about abstraction, to give an example of it, and to examine how well it contributes to our goal of facilitating computational expressions via programs, I have selected a recent article talking about computing with cognitive states. We can discuss concretely whether the model of memory here is a good one or not, but more critical to our project will be our assessment of how the practice of abstraction helps or hinders the modelling process. We will practice abstraction in our assessment: we will judge the success not by the specific concrete model of memory, but by the abstract framing as cognitive states and an algebra.
   
 ** Activity :class_activity:
 
@@ -48,24 +45,30 @@ Ask yourself:
     Make sure you read before class our target article [[cite:&reimann21_comput_with_cognit_states]]. We will be talking about this article and implementing the model it describes.
     
 *** Questions From the Reading:
+
+**** Higher Level (Abstract) Issues
   1. What is the meaning of the word algebra here?
-
   2. What is a "metric?"
-
   3. Why does Reiman describe cosine similarity (and what is that) as local and his measure of similarity as global? Why might you want to chose one or the other?
-
   4. Is this paper describing a theory (in the way we talked about it earlier)?
-     
   5. How does the brain figure into the theory here?
-
   6. How does the development of ideas here relate to the mind - theory - math - code trajectory I proposed as useful?
-
-  7. What language would be a good one for coding up this model?
-
+  7. What programming languages would be a good ones for coding up this model?
   8. What critiques do you have of this model specifically (as opposed to the general outline that we just discussed)?
-
   9. What would be gained by making a model of this with spiking elements?
-
+**** Lower Level (Concrete or Implementation) Issues
+  1. What is the concrete target of Reimann's model?
+  2. The "state-space" is $$ \mathbb{X} = \left(\mathbb{X}^{N}_{q},d\right).$$
+     What do each of the symbols mean? What would their counterparts be in code?
+  3. The "similarity" is $$ S(d) := e^{- \kappa F_\mathbb{X}(d)}.$$
+     What does each one of these mean? Why does this measure "similarity?" Does anyone see a problem? [fn:3]
+  4. Describe in words the binding and bundline operations.
+  5. Formally, in symbols, what is the "algebra" of computing with cognitive states?
+  6. Discuss in words how you might implement the two operations.
+  7. What do the $\mathbf{L}$ and $\mathbf{R}$ represent?
+  8. Describe an implementation of the distance metric. First *coding challenge*: implement the distance metric in code.
+  9. Explain what figure 4 represents.
+  10. Second *coding challenge*: implement all the basic elements necessary to reproduce, at least in principle, the types of plots appearing in the later parts of the paper where he examines the model's implications and compares it to empirical results. 
 *** Programming Activity From the Reading:
 
 This is an assignment that we will review and talk about at the start of next class session. You have the rest of today and until next class to work on it in your groups.
@@ -75,18 +78,17 @@ Create as much code as you can that implements your understanding of the model d
 To get credit for this assignment you will need to place a message in the dropbox on Learn reporting that you have initiated a pull request to the course github repo. Your code should go in the appropriate sub-directory of ~mind-theory-math-code/code/computing-with-cog-states~. Your sub-directory in the github repo should also include a short prose report of your main impressions on trying to implement this model using your test language. 
 
 
-
-
 * Optional Additional Readings
 
 A more detailed study of computational models of memory [[cite:&howard22_formal_model_memor_based_tempor_varyin_repres]]
-
 
 
 * References
 [[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
 
 * Footnotes
+
+[fn:3] What about as the dimension of the space grows? 
 [fn:2] These too might be thought of abstractly as spike trains or vectors of neural firing rates.  
 
 [fn:1] The [[https://en.wikipedia.org/wiki/Edsger_W._Dijkstra][theoretical computer scientist]] who did most of his computer science work with a fountain pen.  
