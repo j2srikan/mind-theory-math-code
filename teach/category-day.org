@@ -1,17 +1,65 @@
 #+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
-#+csl-style: ./j-neurosci.csl
-
+#+csl-style: ../admin/cambridge-university-press-numeric.csl
+#+options: ^:nil d:nil
+#+latex: \usepackage{amsmath}
 
 #+Title: Category Theory Day
 #+Author: Britt Anderson
 #+Date: Dec 24, 2021
 
-* Outline
-
-** Coding Abstraction
+* Coding Abstraction
    Begin with a review of the programming experience reports for the abstraction and memory exercise. 
 
-  
+* Category Theory
+
+** Setting the Scene
+   We can review the steps in our journey: what is that we want to explain? - mind; what constitutes an explanation? - theory; what is the route to generality of our ideas? - abstraction; how do we simultaneously achieve abstraction and rigor? - mathematics; and now, what is the mathematics for making analogies precise? - category theory.
+
+* A Question of Meaning
+  Does anyone who understands the meaning of the sentence "John loves Mary." also understand the meaning of the sentence "Mary loves John."? Why?[fn:2]
+   
+* What is Category Theory
+
+** Arrows and Objects
+
+  "Category theory is founded upon the abstraction of the arrow, $f:a\rightarrow b$".
+
+  You read this as there is an /arrow/[fn:1] that has the name $f$. It connects an /object/ named $a$ to an object named $b$. 
+  -- [[cite:&rydeheard88_comput]]
+
+  For a particular category the objects all qualify as having a certain /structure./ Once that is established one *abstracts* away from the internals of the objects and focuses on their transportation by arrows.
+
+** Building Intuition
+:two-possibilities:
+I was thinking of two sets. One contains the words presented, and another the set of all possible finite strings of phonemes. Then the participants is the arrow connecting the former to a subset of the latter.
+
+Another possibility might to consider a pairing of pronouncable words and finite length phoneme strings. One object would contain as elements all these matchings. Another object would list the participants and there would be one arrow that mapped from participants to pairs of words and pronounciations.
+
+Another possibility would be one object as the set of *all* finite length character strings. Another the set of *all* finite length strings of phonemes. Arrows would connect the former to the latter. There would be another object that would have two elements (lets call them true and false) and we could have all possible arrows from the set of words to our two element set, one of which would match up with our intuition of whether or not the word was pronouncable. We could also have a set of integers and maps that connect that to words. Then experiments might be arrows from this set of integers to the words, and another arrow to our two element set (one of which is we interpret as whether or not it was show in our experiment). A participant in our experiment would be some /composition/ of arrows for selecting the right map from integers to the proper experimental ordering subset of pronouncable words and the phonetic pronounciation.
+
+But are any of these categories?
+:END:
+
+   Imagine a single word reading aloud task. One pronounceable word at a time is presented on a computer screen while an experimental participant reads them aloud. Their reading is transcribed to a phonetic representation.
+
+   1. Tell me the objects.
+   2. Tell me the arrows.
+   3. What role does the participant play in your construction?
+      
+** Rules
+*** Identity
+    For every /object/ $a \in \text{ of a category } A$ there is an arrow $id_a: a \to a$ that changes nothing. 
+
+    But recall we don't want to focus on the objects, but the arrows, so we can also view $id$ as the arrow that leaves the effects of arrows unaltered, or
+    $$ \forall f: a \to b \text{ it holds that } f \circ id_a = f = id_b \circ f$$
+**** Check your understanding
+Why did I have to write $id_b$ above?
+
+IAMHERE
+*** Composition
+
+*** Associativity
+
 ** gradient Based Learning
    1. Lens and Category Theory for Insight and Code [[cite:&cruttwell21_categ_found_gradien_based_learn]]
 
@@ -22,5 +70,14 @@
 * Companion and Optional Readings
   [[cite:&fong18_seven_sketc_compos]]
 
+** Some History /Recommend this be skipped on a first encounter/
+
+
+
 * References
 [[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
+
+* Footnotes
+[fn:2] https://plato.stanford.edu/entries/language-thought/#ArguSystThou 
+
+[fn:1] You will more commonly see these called /morphisms/. This name is not always technically accurate, but it was the first and most prominent usage so it became established. However, /arrow/ is more ambiguous about what it is that links $a$ and $b$ and so is a better choice for us. 
