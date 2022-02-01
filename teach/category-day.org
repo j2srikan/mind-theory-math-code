@@ -1,11 +1,11 @@
 #+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
 #+csl-style: ../admin/cambridge-university-press-numeric.csl
-#+options: ^:nil d:nil
+#+options: ^:nil toc:nil d:nil
 #+latex: \usepackage{amsmath}
 
 #+Title: Category Theory Day
 #+Author: Britt Anderson
-#+Date: Dec 24, 2021
+#+Date: Winter 2022
 
 * Coding Abstraction
    Begin with a review of the programming experience reports for the abstraction and memory exercise. 
@@ -19,7 +19,6 @@
   Does anyone who understands the meaning of the sentence "John loves Mary." also understand the meaning of the sentence "Mary loves John."? Why?[fn:2]
    
 * What is Category Theory
-
 ** Arrows and Objects
 
   "Category theory is founded upon the abstraction of the arrow, $f:a\rightarrow b$".
@@ -52,20 +51,57 @@ But are any of these categories?
 
     But recall we don't want to focus on the objects, but the arrows, so we can also view $id$ as the arrow that leaves the effects of arrows unaltered, or
     $$ \forall f: a \to b \text{ it holds that } f \circ id_a = f = id_b \circ f$$
-**** Check your understanding
+*** Understanding check
 Why did I have to write $id_b$ above?
 
-IAMHERE
 *** Composition
 
+    Composition is involved anytime you chain a series of functions together. This can be mathematical or programmatic, where it is like "piping" input through a series of bash functions at the command line.
+
+    For our abstract arrow I wrote: $f: a \to b$. The $a$ object is our /domain/ and the $b$ is our /codmain/.[fn:3] Category theory requires that for all categories and for $f$ and $g$ that are arrows in that category and where the *co-domain* of one is the same as the *domain* of the other then their composition (sometimes denoted $g \circ f$, but more often in category theory as $gf$ or $f;g$[fn:4]) is also an arrow in the category and has the domain of $f$ and the co-domain of $g$.
+
+*** Understanding Check
+:graph-responses:
+I think most students will suggest that stations are nodes and connections between stations arrows. Then one can think of identities as not getting on the train, and compositions as paths between non-contiguous stations. Of course, it might also be helpful to suggest that these choices are not forced, and there may be less obvious options that are more useful. A more common way I have seen the category of a graph made is to suggest that there are two objects: a *set* of edges and a *set* of nodes. Then there are two arrows: the /source/ arrow and the /target/ arrow. The /source/ arrow matches each arrow to its domain and the /target/ arrow matches each arrow to its codomain.
+:END:
+
+Think about a graph, that is a series of nodes and the edges that connect them. To be concrete, you could think of a subway map where the stations are /nodes/ and the connections between the stations are the /edges./
+
+Give a description of such a graph's objects and arrows. To tell if it is a category you need to verify that each object has an identity arrow and that arrows compose. How would you describe in words what the identity and composition arrows are?
+
+Now think about a brain. What is an application of a graph to a brain? How well does your description of a category apply here?
 *** Associativity
 
-** gradient Based Learning
+Another requirement of arrows is that they associate, that is, for three compatible[fn:5] arrows ($f$, $g$, and $h$) $$h \circ (g \circ f ) = ( h \circ g ) \circ f$$ Therefore, such strings of compatible arrows are usually written without parentheses or the composition operator (e.g. as $hgf$).
+
+*That is a category.* Category theory then is the study of categories. 
+** More practice making categories.
+   Pick a computational, neural, or cognitive construct of some kind and describe how you might think to make a category out of it. Elaborate on why you made the choices you made.
+** Some Examples
+*** Gradient Based Learning
+   This is an example of category theory applied to a topical topic: deep learning and gradient methods of error minimization. 
    1. Lens and Category Theory for Insight and Code [[cite:&cruttwell21_categ_found_gradien_based_learn]]
+   2. A SIAM [[https://sinews.siam.org/Details-Page/deeply-interactive-learning-systems][blog]] entry that has more pictures, but may be harder to understand.
 
-
-** Consciousness   
+*** Consciousness   
 [[https://psyarxiv.com/3y8at/download?format=pdf][Multilayer networks as embodied consciousness interactions. A formal model approach (pdf).]] 
+
+
+*** Development
+    Piaget was an early adopter of category theory [[cite:&davidson88_piaget_categ_theor_inter_cognit_devel]].
+
+** Monoids
+   It can be hard to see what the fuss is about. Isn't a category really just another name for sets and functions? No. The category *Set* does have sets as objects and functions as arrows, but anything that obeys the rules is a category, and it is possible to bend quite far from sets and functions.
+
+   /Monoids/ are a type of mathematical structure. There is a collection of things, a binary operation on those things, and a /unit/. A binary operation is an operation that takes *two* inputs and spits out an output. To be a monoid the binary operation (often symbolized by an asterisk (*)) always gives back another element of the collection. The collection is /closed/ under this operation. When the unit is one of the elements used as inputs then the output is always the other one. More formally, a monoid is a triple $( \mathbf{X}, * , 1 )$ where the $\mathbf{X}$ is some collection, perhaps a set, and $*$ an operation such that $\forall m,n \in \mathbf{X}~ m*n \text{ is } \in \mathbf{X}$, and furthermore $\forall m,n \in \mathbf{X}~ m*1 = m \text{ and } 1*n = n$ . For intuition, think of the positive integers and actual multiplication with the unit being the number 1. Can you think of another monoid for the positive integers? A different binary operation and a different unit?
+      
+*** Understanding Check
+:monoid:
+They probably won't come up with the idea that there is one un-named object, with the integers as arrows and composition as addition. 
+:END:
+Turn your monoid into a category. Name the objects, arrows, and demonstrate that the category "laws" are obeyed.
+
+
 
 * Companion and Optional Readings
   [[cite:&fong18_seven_sketc_compos]]
@@ -78,6 +114,15 @@ IAMHERE
 [[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
 
 * Footnotes
-[fn:2] https://plato.stanford.edu/entries/language-thought/#ArguSystThou 
+
+[fn:5] Compatability refers to their domains and co-domains
+
+[fn:4] Note that the changed order of $g$ and $g$ is not a typo. This is sometimes called diagrammatic order. This lets you read from left to right and see which arrow is applied first. 
+
+[fn:3] Some of you may remember the terminology of domain and range from your pre-university math classes. Co-Domain is the better term for us. First, the "co" addition to a name is a common practice in category theory vocabulary. If something has the name <name> when the arrows point away, it will often have the name <co-name> when the arrows point in the opposite diretion. Note the hyphen after co is usually, but not always part of this convention. Second, specifying the co-domain allows us to see two functions as different even when the inputs and outputs are the same. For example, a function with the domain of non-negative numbers ($\blackboard{N}$) squares them ($f(x) = x^2). We can specify the co-domain similarly or as the set of all integers, positive and negative. These two functions, with different co-domains, are different functions, even though they both have the same range.
+
+[fn:2] https://plato.stanford.edu/entries/language-thought/#ArguSystThou . A category theory account of systematicity is available [[cite:&phillips10_categ_compos]] .
 
 [fn:1] You will more commonly see these called /morphisms/. This name is not always technically accurate, but it was the first and most prominent usage so it became established. However, /arrow/ is more ambiguous about what it is that links $a$ and $b$ and so is a better choice for us. 
+
+

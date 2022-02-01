@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-12-24 Fri 06:30 -->
+<!-- 2022-02-01 Tue 17:18 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Category Theory Day</title>
@@ -193,62 +193,307 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
 </style>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content" class="content">
 <h1 class="title">Category Theory Day</h1>
-<div id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#org07ed951">1. Outline</a>
-<ul>
-<li><a href="#orged3f3f3">1.1. Gradient Based Learning</a></li>
-</ul>
-</li>
-<li><a href="#org3c0cbb9">2. Companion and Optional Readings</a></li>
-<li><a href="#orgb3a411e">3. References</a></li>
-</ul>
-</div>
-</div>
 
-<div id="outline-container-org07ed951" class="outline-2">
-<h2 id="org07ed951"><span class="section-number-2">1.</span> Outline</h2>
+<div id="outline-container-org3210ef2" class="outline-2">
+<h2 id="org3210ef2"><span class="section-number-2">1.</span> Coding Abstraction</h2>
 <div class="outline-text-2" id="text-1">
-</div>
-<div id="outline-container-orged3f3f3" class="outline-3">
-<h3 id="orged3f3f3"><span class="section-number-3">1.1.</span> Gradient Based Learning</h3>
-<div class="outline-text-3" id="text-1-1">
-<ol class="org-ol">
-<li>Lens and Category Theory for Insight and Code (<a href="#citeproc_bib_item_1">Cruttwell et al., 2021</a>)</li>
-</ol>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org3c0cbb9" class="outline-2">
-<h2 id="org3c0cbb9"><span class="section-number-2">2.</span> Companion and Optional Readings</h2>
-<div class="outline-text-2" id="text-2">
 <p>
-(<a href="#citeproc_bib_item_2">Fong and Spivak, 2018</a>)
+Begin with a review of the programming experience reports for the abstraction and memory exercise. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgb3a411e" class="outline-2">
-<h2 id="orgb3a411e"><span class="section-number-2">3.</span> References</h2>
+<div id="outline-container-org60c1456" class="outline-2">
+<h2 id="org60c1456"><span class="section-number-2">2.</span> Category Theory</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org4fb725d" class="outline-3">
+<h3 id="org4fb725d"><span class="section-number-3">2.1.</span> Setting the Scene</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+We can review the steps in our journey: what is that we want to explain? - mind; what constitutes an explanation? - theory; what is the route to generality of our ideas? - abstraction; how do we simultaneously achieve abstraction and rigor? - mathematics; and now, what is the mathematics for making analogies precise? - category theory.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3e2b28b" class="outline-2">
+<h2 id="org3e2b28b"><span class="section-number-2">3.</span> A Question of Meaning</h2>
 <div class="outline-text-2" id="text-3">
+<p>
+Does anyone who understands the meaning of the sentence "John loves Mary." also understand the meaning of the sentence "Mary loves John."? Why?<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga6b9e79" class="outline-2">
+<h2 id="orga6b9e79"><span class="section-number-2">4.</span> What is Category Theory</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org73d3fa0" class="outline-3">
+<h3 id="org73d3fa0"><span class="section-number-3">4.1.</span> Arrows and Objects</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+"Category theory is founded upon the abstraction of the arrow, \(f:a\rightarrow b\)".
+</p>
+
+<p>
+You read this as there is an <i>arrow</i><sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup> that has the name \(f\). It connects an <i>object</i> named \(a\) to an object named \(b\). 
+&#x2013; [<a href="#citeproc_bib_item_1">1</a>]
+</p>
+
+<p>
+For a particular category the objects all qualify as having a certain <i>structure.</i> Once that is established one <b>abstracts</b> away from the internals of the objects and focuses on their transportation by arrows.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a1a041" class="outline-3">
+<h3 id="org9a1a041"><span class="section-number-3">4.2.</span> Building Intuition</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Imagine a single word reading aloud task. One pronounceable word at a time is presented on a computer screen while an experimental participant reads them aloud. Their reading is transcribed to a phonetic representation.
+</p>
+
+<ol class="org-ol">
+<li>Tell me the objects.</li>
+<li>Tell me the arrows.</li>
+<li>What role does the participant play in your construction?</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org4d07d26" class="outline-3">
+<h3 id="org4d07d26"><span class="section-number-3">4.3.</span> Rules</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-org2b4bb8d" class="outline-4">
+<h4 id="org2b4bb8d"><span class="section-number-4">4.3.1.</span> Identity</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<p>
+For every <i>object</i> \(a \in \text{ of a category } A\) there is an arrow \(id_a: a \to a\) that changes nothing. 
+</p>
+
+<p>
+But recall we don't want to focus on the objects, but the arrows, so we can also view \(id\) as the arrow that leaves the effects of arrows unaltered, or
+\[ \forall f: a \to b \text{ it holds that } f \circ id_a = f = id_b \circ f\]
+</p>
+</div>
+</div>
+<div id="outline-container-orge16c0b4" class="outline-4">
+<h4 id="orge16c0b4"><span class="section-number-4">4.3.2.</span> Understanding check</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<p>
+Why did I have to write \(id_b\) above?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3aa62c7" class="outline-4">
+<h4 id="org3aa62c7"><span class="section-number-4">4.3.3.</span> Composition</h4>
+<div class="outline-text-4" id="text-4-3-3">
+<p>
+Composition is involved anytime you chain a series of functions together. This can be mathematical or programmatic, where it is like "piping" input through a series of bash functions at the command line.
+</p>
+
+<p>
+For our abstract arrow I wrote: \(f: a \to b\). The \(a\) object is our <i>domain</i> and the \(b\) is our <i>codmain</i>.<sup><a id="fnr.3" class="footref" href="#fn.3" role="doc-backlink">3</a></sup> Category theory requires that for all categories and for \(f\) and \(g\) that are arrows in that category and where the <b>co-domain</b> of one is the same as the <b>domain</b> of the other then their composition (sometimes denoted \(g \circ f\), but more often in category theory as \(gf\) or \(f;g\)<sup><a id="fnr.4" class="footref" href="#fn.4" role="doc-backlink">4</a></sup>) is also an arrow in the category and has the domain of \(f\) and the co-domain of \(g\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga2c25b0" class="outline-4">
+<h4 id="orga2c25b0"><span class="section-number-4">4.3.4.</span> Understanding Check</h4>
+<div class="outline-text-4" id="text-4-3-4">
+<p>
+Think about a graph, that is a series of nodes and the edges that connect them. To be concrete, you could think of a subway map where the stations are <i>nodes</i> and the connections between the stations are the <i>edges.</i>
+</p>
+
+<p>
+Give a description of such a graph's objects and arrows. To tell if it is a category you need to verify that each object has an identity arrow and that arrows compose. How would you describe in words what the identity and composition arrows are?
+</p>
+
+<p>
+Now think about a brain. What is an application of a graph to a brain? How well does your description of a category apply here?
+</p>
+</div>
+</div>
+<div id="outline-container-orga97a02e" class="outline-4">
+<h4 id="orga97a02e"><span class="section-number-4">4.3.5.</span> Associativity</h4>
+<div class="outline-text-4" id="text-4-3-5">
+<p>
+Another requirement of arrows is that they associate, that is, for three compatible<sup><a id="fnr.5" class="footref" href="#fn.5" role="doc-backlink">5</a></sup> arrows (\(f\), \(g\), and \(h\)) \[h \circ (g \circ f ) = ( h \circ g ) \circ f\] Therefore, such strings of compatible arrows are usually written without parentheses or the composition operator (e.g. as \(hgf\)).
+</p>
+
+<p>
+<b>That is a category.</b> Category theory then is the study of categories. 
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfe264f5" class="outline-3">
+<h3 id="orgfe264f5"><span class="section-number-3">4.4.</span> More practice making categories.</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+Pick a computational, neural, or cognitive construct of some kind and describe how you might think to make a category out of it. Elaborate on why you made the choices you made.
+</p>
+</div>
+</div>
+<div id="outline-container-org8e9dfad" class="outline-3">
+<h3 id="org8e9dfad"><span class="section-number-3">4.5.</span> Some Examples</h3>
+<div class="outline-text-3" id="text-4-5">
+</div>
+<div id="outline-container-org1e43967" class="outline-4">
+<h4 id="org1e43967"><span class="section-number-4">4.5.1.</span> Gradient Based Learning</h4>
+<div class="outline-text-4" id="text-4-5-1">
+<p>
+This is an example of category theory applied to a topical topic: deep learning and gradient methods of error minimization. 
+</p>
+<ol class="org-ol">
+<li>Lens and Category Theory for Insight and Code [<a href="#citeproc_bib_item_2">2</a>]</li>
+<li>A SIAM <a href="https://sinews.siam.org/Details-Page/deeply-interactive-learning-systems">blog</a> entry that has more pictures, but may be harder to understand.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org724f7c4" class="outline-4">
+<h4 id="org724f7c4"><span class="section-number-4">4.5.2.</span> Consciousness</h4>
+<div class="outline-text-4" id="text-4-5-2">
+<p>
+<a href="https://psyarxiv.com/3y8at/download?format=pdf">Multilayer networks as embodied consciousness interactions. A formal model approach (pdf).</a> 
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org8d4b8be" class="outline-4">
+<h4 id="org8d4b8be"><span class="section-number-4">4.5.3.</span> Development</h4>
+<div class="outline-text-4" id="text-4-5-3">
+<p>
+Piaget was an early adopter of category theory [<a href="#citeproc_bib_item_3">3</a>].
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6123681" class="outline-3">
+<h3 id="org6123681"><span class="section-number-3">4.6.</span> Monoids</h3>
+<div class="outline-text-3" id="text-4-6">
+<p>
+It can be hard to see what the fuss is about. Isn't a category really just another name for sets and functions? No. The category <b>Set</b> does have sets as objects and functions as arrows, but anything that obeys the rules is a category, and it is possible to bend quite far from sets and functions.
+</p>
+
+<p>
+<i>Monoids</i> are a type of mathematical structure. There is a collection of things, a binary operation on those things, and a <i>unit</i>. A binary operation is an operation that takes <b>two</b> inputs and spits out an output. To be a monoid the binary operation (often symbolized by an asterisk (*)) always gives back another element of the collection. The collection is <i>closed</i> under this operation. When the unit is one of the elements used as inputs then the output is always the other one. More formally, a monoid is a triple \(( \mathbf{X}, * , 1 )\) where the \(\mathbf{X}\) is some collection, perhaps a set, and \(*\) an operation such that \(\forall m,n \in \mathbf{X}~ m*n \text{ is } \in \mathbf{X}\), and furthermore \(\forall m,n \in \mathbf{X}~ m*1 = m \text{ and } 1*n = n\) . For intuition, think of the positive integers and actual multiplication with the unit being the number 1. Can you think of another monoid for the positive integers? A different binary operation and a different unit?
+</p>
+</div>
+
+<div id="outline-container-orgc1791d5" class="outline-4">
+<h4 id="orgc1791d5"><span class="section-number-4">4.6.1.</span> Understanding Check</h4>
+<div class="outline-text-4" id="text-4-6-1">
+<p>
+Turn your monoid into a category. Name the objects, arrows, and demonstrate that the category "laws" are obeyed.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-orgf011c5c" class="outline-2">
+<h2 id="orgf011c5c"><span class="section-number-2">5.</span> Companion and Optional Readings</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+[<a href="#citeproc_bib_item_4">4</a>]
+</p>
+</div>
+
+<div id="outline-container-orga5b21d6" class="outline-3">
+<h3 id="orga5b21d6"><span class="section-number-3">5.1.</span> Some History <i>Recommend this be skipped on a first encounter</i></h3>
+</div>
+</div>
+
+
+
+<div id="outline-container-org0a8d54d" class="outline-2">
+<h2 id="org0a8d54d"><span class="section-number-2">6.</span> References</h2>
+<div class="outline-text-2" id="text-6">
 <div class="csl-bib-body">
-  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Cruttwell GSH, Gavranović B, Ghani N, Wilson P, Zanasi F (2021) Categorical foundations of gradient-based learning. Available at: <a href="https://arxiv.org/pdf/2103.01931.pdf">https://arxiv.org/pdf/2103.01931.pdf</a>.</div>
-  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Fong B, Spivak DI (2018) Seven sketches in compositionality: An invitation to applied category theory. Available at: <a href="https://arxiv.org/pdf/1803.05316.pdf">https://arxiv.org/pdf/1803.05316.pdf</a>.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>
+    <div class="csl-left-margin">1.</div><div class="csl-right-inline">D. E. Rydeheard &#38; R. M. Burstall, <i>Computational category theory</i> (Prentice Hall Englewood Cliffs, 1988).</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>
+    <div class="csl-left-margin">2.</div><div class="csl-right-inline">G. S. H. Cruttwell, B. Gavranović, N. Ghani, P. Wilson, &#38; F. Zanasi, <a href="https://arxiv.org/pdf/2103.01931.pdf">Categorical foundations of gradient-based learning</a>. (2021).</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_3"></a>
+    <div class="csl-left-margin">3.</div><div class="csl-right-inline">P. M. Davidson, <a href="http://www.jstor.org/stable/26767537">Piaget’s category-theoretic interpretation of cognitive development: a neglected contribution</a>. <i>Human development</i>, <b>31</b> (1988) 225–241.</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_4"></a>
+    <div class="csl-left-margin">4.</div><div class="csl-right-inline">B. Fong &#38; D. I. Spivak, <a href="https://arxiv.org/pdf/1803.05316.pdf">Seven sketches in compositionality: An invitation to applied category theory</a>. (2018).</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_5"></a>
+    <div class="csl-left-margin">5.</div><div class="csl-right-inline">S. Phillips &#38; W. H. Wilson, Categorial compositionality: A category theory explanation for the systematicity of human cognition. <i>Plos computational biology</i>, <b>6</b> (2010) e1000858. <a href="https://doi.org/10.1371/journal.pcbi.1000858">https://doi.org/10.1371/journal.pcbi.1000858</a>.</div>
+  </div>
 </div>
 </div>
 </div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="https://plato.stanford.edu/entries/language-thought/#ArguSystThou">https://plato.stanford.edu/entries/language-thought/#ArguSystThou</a> . A category theory account of systematicity is available [<a href="#citeproc_bib_item_5">5</a>] .
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+You will more commonly see these called <i>morphisms</i>. This name is not always technically accurate, but it was the first and most prominent usage so it became established. However, <i>arrow</i> is more ambiguous about what it is that links \(a\) and \(b\) and so is a better choice for us. 
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Some of you may remember the terminology of domain and range from your pre-university math classes. Co-Domain is the better term for us. First, the "co" addition to a name is a common practice in category theory vocabulary. If something has the name &lt;name&gt; when the arrows point away, it will often have the name &lt;co-name&gt; when the arrows point in the opposite diretion. Note the hyphen after co is usually, but not always part of this convention. Second, specifying the co-domain allows us to see two functions as different even when the inputs and outputs are the same. For example, a function with the domain of non-negative numbers (\(\blackboard{N}\)) squares them ($f(x) = x^2). We can specify the co-domain similarly or as the set of all integers, positive and negative. These two functions, with different co-domains, are different functions, even though they both have the same range.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4" role="doc-backlink">4</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Note that the changed order of \(g\) and \(g\) is not a typo. This is sometimes called diagrammatic order. This lets you read from left to right and see which arrow is applied first. 
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5" role="doc-backlink">5</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Compatability refers to their domains and co-domains
+</p></div></div>
+
+
 </div>
+</div></div>
 <div id="postamble" class="status">
-<p class="date">Date: Dec 24, 2021</p>
+<p class="date">Date: Winter 2022</p>
 <p class="author">Author: Britt Anderson</p>
-<p class="date">Created: 2021-12-24 Fri 06:30</p>
+<p class="date">Created: 2022-02-01 Tue 17:18</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
