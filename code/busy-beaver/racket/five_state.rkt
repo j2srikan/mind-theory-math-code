@@ -1,5 +1,6 @@
 #lang racket
 
+; Chris Longley Sixuan Chen
 (struct turing-machine ([state #:mutable] [tape #:mutable] [head-location #:mutable] ))
 
 (define (move-left tm)
