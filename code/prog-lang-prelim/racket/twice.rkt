@@ -1,7 +1,7 @@
 #lang racket
 
-(define (twice function v)
-  (function (function v)))
+(define (twice f v)
+  (f (f v)))
 
 
 (define (divide v)
@@ -13,3 +13,11 @@
 ; 16/2 = 8, 8/2 =4
 (twice divide 16)
 
+(define counter 6)
+(define factorial 1)
+(let loop ()
+    (set! factorial (* factorial counter))
+    (set! counter (sub1 counter))
+    (displayln factorial)
+    (when (> counter 0) (loop)))
+(displayln factorial)
