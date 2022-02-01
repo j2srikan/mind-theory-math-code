@@ -1,6 +1,7 @@
 * To-dos
 
-** Write programming exercise for [[file:~/gitRepos/mind-theory-math-code/roadmap.org::*Sixth Module <2022-02-09 Wed>][Sixth Module <2022-02-09 Wed>]].
+** Write history section category theory [[file:~/gitRepos/mind-theory-math-code/teach/category-day.org::*Some History /Recommend this be skipped on a first encounter/][history]]
+
 
 
 
