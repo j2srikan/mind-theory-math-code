@@ -23,3 +23,5 @@
 readings-copyright/
 quick-notes.org
 *.org#
+__pycache__/
+ltximg/
