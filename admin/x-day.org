@@ -3,7 +3,7 @@
 #+Date: Dec 24, 2021
 #+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
 #+csl-style: ../admin/cambridge-university-press-numeric.csl
-#+options: ^:nil
+#+options: ^:nil toc:nil d:nil
 
 
 * Outline
