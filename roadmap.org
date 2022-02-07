@@ -31,3 +31,14 @@
 3. There will be a major programming exercise organized around this that will use the last part of class and the coming week. We will have a discussion about abstraction and some of the points raised in the [[http://arxiv.org/abs/2111.06969v1][reading]] during the class session.
 * TODO Seventh Module
 1. The main file for this module will be [[file:teach/category-day.org]].
+2. Our efforts to translate the ideas of modeling with computational states into code will begin the class discussion. I hope to hear from each of the programming groups about how they were tackling some of the ideas. Then we can plan as a class what we need to implement to serve as an illustration or test of the ideas so included. That is something we can work on in preparation for the following weeks class. 
+3. This first day is to be an introduction of terminology and an effort to guide them in thinking about their interests in cognition as categorical concepts.
+* Eighth Module
+1. The main file for this module will be [[file:teach/category-day.org]]. I anticipate this as a two week topic. Obviously it could be much more, but that is what I will limit myself to. 
+* Ninth Module
+* Tenth Module
+* Eleventh Module
+  I don't expect there will be an eleventh module, but this will be decided with class. Given the hectic and chaotic nature of a term with both in person and remote components and students somewhat scattered, I think it may be useful to provide this class time for discussion, questions, and a chance to work on their material with their group partners. 
+* Presentation Date
+1. The main file for this module is [[file:teach/presentation.org]].
+2. An outline of the expectations for these presentations is given in the above file. Expect today's class to made up of student presentations and discussions about them. 
