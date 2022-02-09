@@ -1,0 +1,86 @@
+#+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
+#+csl-style: ../admin/cambridge-university-press-numeric.csl
+#+options: ^:nil toc:nil d:nil
+#+Title: Category Theory Two Day
+#+Author: Britt Anderson
+#+Date: Winter 2022
+#+latex_compiler: pdflatex
+
+
+
+* Computational Category Theory
+#+begin_quote
+... category theory ... is a /guide to computation./ The conceptual clarity gained from a categorical understanding of some particular cirucmstance in mathematics enables one to see how a computation of relevant entites can be carried out for special cases.
+#+end_quote
+[[cite:&rydeheard88_comput]]
+
+* Thinking Productively
+:latex:
+To get the figures I had to change my latex-pdf-process to: ~(setq org-latex-pdf-process '("latexmk -%latex -interaction=nonstopmode -output-directory=%o %f"))~
+:END:
+
+  Category theory has the concept of products. Consider an element in a category that has morphisms that terminate in two different co-domains.
+
+#+name: wedge
+#+header: :file "./wedge.png"
+#+header: :results raw file :exports results :fit yes :border 0cm
+#+header: :imagemagick t :iminoptions -density 400
+#+header: :imoutoptions -geometry 400 -flatten
+#+header: :headers '("\\usepackage{tikz} \\usetikzlibrary{cd}")
+#+begin_src latex
+    \begin{tikzcd}
+      A \arrow[r, "p_b"] \arrow[d, "p_c"]
+      & B \\
+      C 
+    \end{tikzcd}
+#+end_src
+
+#+Attr_HTML: :width 200 :align center
+#+RESULTS: wedge
+[[file:./wedge.png]]
+
+Now assume that whenever you have another object in that category that has co-domains $B$ and $C$ it *always* has a unique morphism to $A$ such that all the triangles commute, that is, graphically:
+
+#+name: product
+#+header: :file "./product.png"
+#+header: :results raw file :exports results :fit yes :border 0cm
+#+header: :imagemagick t :iminoptions -density 400
+#+header: :imoutoptions -geometry 400 -flatten
+#+header: :headers '("\\usepackage{tikz} \\usetikzlibrary{cd}")
+#+begin_src latex
+  \begin{tikzcd}
+  O \arrow[drr, bend left,  "f" near start, "p_b \circ u" near end] \arrow[ddr, bend right, "g" near start, "p_a \circ u" near end] \arrow[rd, dotted, "u" description]\\
+  & A \arrow[r, "p_b"] \arrow[d, "p_a"] & B \\
+  & C \\
+  \end{tikzcd}
+#+end_src
+
+#+Attr_HTML: :width 400 :align center
+#+RESULTS: product
+[[file:./product.png]]
+
+Then the triple $(A,p_b,p_c)$ (but often just referred to by the object $A$ and without the morphisms) is a *product*. 
+
+** What is your programming language's equivalent of the "product"[fn:1] as described above?
+:product:
+For common lisp I think it would be the cons cells for which ~car~ and ~cdr~ would be the two projections. 
+:END:
+
+
+*** Purpose of these two thinking exercises
+The idea is to see that there are programming counterparts of this [[https://en.wikipedia.org/wiki/Abstract_nonsense]["abstract nonsense"]]. And to get a little practice trying to map these abstract ideas to concrete entities we feel we can get our hands on. 
+  
+
+
+
+
+
+* Companion and Optional Readings
+1. A good online book that seeks to connect programming to category theory is [[https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/][Category Theory for Programmers]]. The Chapter on Products is [[https://bartoszmilewski.com/2015/01/07/products-and-coproducts/][here]].
+
+* References
+[[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
+
+* Footnotes
+
+[fn:1] Product is in quotes, because I don't want the product as in multiplication, but the /thing/ to be very ambiguous that is most like the /thing/ I described graphically above. 
