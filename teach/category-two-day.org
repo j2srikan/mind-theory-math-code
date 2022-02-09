@@ -14,12 +14,16 @@
 #+end_quote
 [[cite:&rydeheard88_comput]]
 
+* Preliminary Remarks
+There is a lot terminology in category theory. Too much to include here, but there are also notions in category theory that seem to bleed between specific constructions. One of these is the idea of a *universal property*. It is the "best" example of whatever it is an example of. To give an example of this idea we will consider *wedges* and *products*. 
+
 * Thinking Productively
 :latex:
 To get the figures I had to change my latex-pdf-process to: ~(setq org-latex-pdf-process '("latexmk -%latex -interaction=nonstopmode -output-directory=%o %f"))~
 :END:
 
-  Category theory has the concept of products. Consider an element in a category that has morphisms that terminate in two different co-domains.
+** Wedges
+Consider an element in a category that has morphisms that terminate in two different co-domains.
 
 #+name: wedge
 #+header: :file "./wedge.png"
@@ -38,6 +42,10 @@ To get the figures I had to change my latex-pdf-process to: ~(setq org-latex-pdf
 #+Attr_HTML: :width 200 :align center
 #+RESULTS: wedge
 [[file:./wedge.png]]
+
+We can use a visual mnemonic and call this a wedge. There may be a lot of wedges though that have at the end of their legs $B$ and $C$. I have given you $A$ here, but there could also be an $A'$, $A''$ and so on. Is one of them "better" than the others? Is there a criteria we could apply consistently?
+
+** Products
 
 Now assume that whenever you have another object in that category that has co-domains $B$ and $C$ it *always* has a unique morphism to $A$ such that all the triangles commute, that is, graphically:
 
@@ -59,19 +67,21 @@ Now assume that whenever you have another object in that category that has co-do
 #+RESULTS: product
 [[file:./product.png]]
 
-Then the triple $(A,p_b,p_c)$ (but often just referred to by the object $A$ and without the morphisms) is a *product*. 
+And that this is true of all the other $A'$ $A''$ and so on that I mentioned before. They all have that unique arrow that connects them $A$ and /factors/ their connection to $B$ and $C$.
 
-** What is your programming language's equivalent of the "product"[fn:1] as described above?
+Then the triple $(A,p_b,p_c)$ (but often just referred to by the object $A$ and without the morphisms) is a *product*. In this regard, since it is true for /all/ wedges it is universal. It can also be viewed as a *limit* from a slightly different perspective. 
+
+** What is your programming language's equivalent for creating a "product"[fn:1] as described above? :class_exercise:
 :product:
 For common lisp I think it would be the cons cells for which ~car~ and ~cdr~ would be the two projections. 
 :END:
 
+** Does this idea of a universal property have any connection to the things we read or think about in empirical neuroscientific or psychological studies? :class_exercise:
 
-*** Purpose of these two thinking exercises
+*** Purpose of these thinking exercises
 The idea is to see that there are programming counterparts of this [[https://en.wikipedia.org/wiki/Abstract_nonsense]["abstract nonsense"]]. And to get a little practice trying to map these abstract ideas to concrete entities we feel we can get our hands on. 
-  
 
-
+NOTE: IAMHERE: introduce the idea of a co-limit and compare to neurons and connections?
 
 
 
@@ -83,4 +93,4 @@ The idea is to see that there are programming counterparts of this [[https://en.
 
 * Footnotes
 
-[fn:1] Product is in quotes, because I don't want the product as in multiplication, but the /thing/ to be very ambiguous that is most like the /thing/ I described graphically above. 
+[fn:1] Product is in quotes, because I don't want the product as in multiplication, but the /thing/, to be very ambiguous, that is most like the /thing/ I described graphically above. 

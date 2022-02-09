@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-02-08 Tue 10:57 -->
+<!-- 2022-02-08 Tue 20:16 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Category Theory Two Day</title>
@@ -221,8 +221,8 @@
 
 
 
-<div id="outline-container-orgcfcf410" class="outline-2">
-<h2 id="orgcfcf410"><span class="section-number-2">1.</span> Computational Category Theory</h2>
+<div id="outline-container-org720b5bf" class="outline-2">
+<h2 id="org720b5bf"><span class="section-number-2">1.</span> Computational Category Theory</h2>
 <div class="outline-text-2" id="text-1">
 <blockquote>
 <p>
@@ -235,54 +235,96 @@
 </div>
 </div>
 
-<div id="outline-container-orgc133dce" class="outline-2">
-<h2 id="orgc133dce"><span class="section-number-2">2.</span> Thinking Productively</h2>
+<div id="outline-container-orgb303875" class="outline-2">
+<h2 id="orgb303875"><span class="section-number-2">2.</span> Preliminary Remarks</h2>
 <div class="outline-text-2" id="text-2">
 <p>
-Category theory has the concept of products. Consider an element in a category that has morphisms that terminate in two different co-domains.
+There is a lot terminology in category theory. Too much to include here, but there are also notions in category theory that seem to bleed between specific constructions. One of these is the idea of a <b>universal property</b>. It is the "best" example of whatever it is an example of. To give an example of this idea we will consider <b>wedges</b> and <b>products</b>. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgef803f1" class="outline-2">
+<h2 id="orgef803f1"><span class="section-number-2">3.</span> Thinking Productively</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+
+<div id="outline-container-org4cf9f02" class="outline-3">
+<h3 id="org4cf9f02"><span class="section-number-3">3.1.</span> Wedges</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Consider an element in a category that has morphisms that terminate in two different co-domains.
 </p>
 
 
-<div id="orgb363977" class="figure">
+<div id="org7c2ab77" class="figure">
 <p><img src="./wedge.png" alt="wedge.png" width="200" align="center" />
 </p>
 </div>
 
 <p>
+We can use a visual mnemonic and call this a wedge. There may be a lot of wedges though that have at the end of their legs \(B\) and \(C\). I have given you \(A\) here, but there could also be an \(A'\), \(A''\) and so on. Is one of them "better" than the others? Is there a criteria we could apply consistently?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4ab1acc" class="outline-3">
+<h3 id="org4ab1acc"><span class="section-number-3">3.2.</span> Products</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
 Now assume that whenever you have another object in that category that has co-domains \(B\) and \(C\) it <b>always</b> has a unique morphism to \(A\) such that all the triangles commute, that is, graphically:
 </p>
 
 
-<div id="orgbda5685" class="figure">
+<div id="orgd8ed56c" class="figure">
 <p><img src="./product.png" alt="product.png" width="400" align="center" />
 </p>
 </div>
 
 <p>
-Then the triple \((A,p_b,p_c)\) (but often just referred to by the object \(A\) and without the morphisms) is a <b>product</b>. 
+And that this is true of all the other \(A'\) \(A''\) and so on that I mentioned before. They all have that unique arrow that connects them \(A\) and <i>factors</i> their connection to \(B\) and \(C\).
+</p>
+
+<p>
+Then the triple \((A,p_b,p_c)\) (but often just referred to by the object \(A\) and without the morphisms) is a <b>product</b>. In this regard, since it is true for <i>all</i> wedges it is universal. It can also be viewed as a <b>limit</b> from a slightly different perspective. 
 </p>
 </div>
+</div>
 
-<div id="outline-container-orgff97691" class="outline-3">
-<h3 id="orgff97691"><span class="section-number-3">2.1.</span> What is your programming language's equivalent of the "product"<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> as described above?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_exercise">class_exercise</span></span></h3>
-<div class="outline-text-3" id="text-2-1">
+<div id="outline-container-org999716b" class="outline-3">
+<h3 id="org999716b"><span class="section-number-3">3.3.</span> What is your programming language's equivalent for creating a "product"<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> as described above?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_exercise">class_exercise</span></span></h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+</div>
+
+<div id="outline-container-org11e224b" class="outline-3">
+<h3 id="org11e224b"><span class="section-number-3">3.4.</span> Does this idea of a universal property have any connection to the things we read or think about in empirical neuroscientific or psychological studies?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_exercise">class_exercise</span></span></h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-org556ade4" class="outline-4">
+<h4 id="org556ade4"><span class="section-number-4">3.4.1.</span> Purpose of these thinking exercises</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<p>
+The idea is to see that there are programming counterparts of this <a href="https://en.wikipedia.org/wiki/Abstract_nonsense">"abstract nonsense"</a>. And to get a little practice trying to map these abstract ideas to concrete entities we feel we can get our hands on. 
+</p>
 </div>
 </div>
 </div>
-
-
-
-
-
-
-<div id="outline-container-orgb538032" class="outline-2">
-<h2 id="orgb538032"><span class="section-number-2">3.</span> Companion and Optional Readings</h2>
 </div>
 
 
-<div id="outline-container-org124b8d3" class="outline-2">
-<h2 id="org124b8d3"><span class="section-number-2">4.</span> References</h2>
+<div id="outline-container-org060841d" class="outline-2">
+<h2 id="org060841d"><span class="section-number-2">4.</span> Companion and Optional Readings</h2>
 <div class="outline-text-2" id="text-4">
+<ol class="org-ol">
+<li>A good online book that seeks to connect programming to category theory is <a href="https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/">Category Theory for Programmers</a>. The Chapter on Products is <a href="https://bartoszmilewski.com/2015/01/07/products-and-coproducts/">here</a>.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org465f06f" class="outline-2">
+<h2 id="org465f06f"><span class="section-number-2">5.</span> References</h2>
+<div class="outline-text-2" id="text-5">
 <div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>
     <div class="csl-left-margin">1.</div><div class="csl-right-inline">D. E. Rydeheard &#38; R. M. Burstall, <i>Computational category theory</i> (Prentice Hall Englewood Cliffs, 1988).</div>
@@ -295,7 +337,7 @@ Then the triple \((A,p_b,p_c)\) (but often just referred to by the object \(A\) 
 <div id="text-footnotes">
 
 <div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
-Product is in quotes, because I don't want the product as in multiplication, but the <i>thing</i> to be very ambiguous that is most like the <i>thing</i> I described graphically above. 
+Product is in quotes, because I don't want the product as in multiplication, but the <i>thing</i>, to be very ambiguous, that is most like the <i>thing</i> I described graphically above. 
 </p></div></div>
 
 
@@ -304,7 +346,7 @@ Product is in quotes, because I don't want the product as in multiplication, but
 <div id="postamble" class="status">
 <p class="date">Date: Winter 2022</p>
 <p class="author">Author: Britt Anderson</p>
-<p class="date">Created: 2022-02-08 Tue 10:57</p>
+<p class="date">Created: 2022-02-08 Tue 20:16</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
