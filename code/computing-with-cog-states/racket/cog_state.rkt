@@ -1,14 +1,15 @@
 #lang racket
 (require math/distributions)
-(define kappa 200)
+(define kappa 2)
 (define N 40.0)
 (define p 0.5)
 (random-seed 2)
 
 (define dis (binomial-dist N p))
-(define cdf-value (cdf dis p))
+
 
 (define (similarity d)
+  (define cdf-value (cdf dis d))
   (exp (- (* kappa cdf-value))))
 
 (define (not-xor a b)
@@ -72,8 +73,6 @@
 (define right_B (right_bundle my_memory))
 
 (define left_results (vector (hamDis left_B vm1)(hamDis left_B vm2)(hamDis left_B vm3) (hamDis left_B vm4) (hamDis left_B vm5)(hamDis left_B vm6)(hamDis left_B vm7)))
-
-
 (define right_results (vector (hamDis right_B vm1)(hamDis right_B vm2)(hamDis right_B vm3)(hamDis right_B vm4)(hamDis right_B vm5)(hamDis right_B vm6)(hamDis right_B vm7)))
 
 (define (divD a)
