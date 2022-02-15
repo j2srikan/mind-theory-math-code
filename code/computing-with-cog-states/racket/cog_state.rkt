@@ -82,3 +82,6 @@
 (vector-map divD left_results )
 
 (vector-map divD right_results )
+(vector-map similarity left_results )
+(vector-map similarity right_results )
+
