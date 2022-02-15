@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-02-08 Tue 20:16 -->
+<!-- 2022-02-15 Tue 06:23 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Category Theory Two Day</title>
@@ -221,8 +221,8 @@
 
 
 
-<div id="outline-container-org720b5bf" class="outline-2">
-<h2 id="org720b5bf"><span class="section-number-2">1.</span> Computational Category Theory</h2>
+<div id="outline-container-org7128285" class="outline-2">
+<h2 id="org7128285"><span class="section-number-2">1.</span> Computational Category Theory</h2>
 <div class="outline-text-2" id="text-1">
 <blockquote>
 <p>
@@ -235,29 +235,146 @@
 </div>
 </div>
 
-<div id="outline-container-orgb303875" class="outline-2">
-<h2 id="orgb303875"><span class="section-number-2">2.</span> Preliminary Remarks</h2>
+<div id="outline-container-org76898c8" class="outline-2">
+<h2 id="org76898c8"><span class="section-number-2">2.</span> More Vocabulary</h2>
 <div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgf90a0dc" class="outline-3">
+<h3 id="orgf90a0dc"><span class="section-number-3">2.1.</span> Functor</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Imagine for a moment that you had a reasonably good theory that related neural activity to behavior, say something to do with the patterns of spikes in the neurons of the brain across time (or to make it a bit more accessible to the sort of experiments psychologists do a pattern of EEG or voxel activity in a functional magnetic resonance image). Further imagine that you have a pretty good theory about mental constructs and behaviors. How could you relate those two "worlds" together?
+</p>
+
+<p>
+ A <i>functor</i> connects to categories together. Assume a category \(\mathcal{A}\) and a second category \(\mathcal{B}\)<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>. A functor specifies a mapping from the objects of \(\mathcal{A}\) to the objects of \(\mathcal{B}\) and the arrows of \(\mathcal{A}\) to the arrows of \(\mathcal{B}\). This mapping cannot be any old mapping. It must obey the rule that it respects the structure of the source category so that the things in \(mathcal{B}\) obey the rules of the things in \(\mathcal{A}\). To state this in a formula we will call the functor \(F\) and we will consider two compatible mappings from \(\mathcal{A}~ f \text{ and } f'\). To be functorial it must be the case that:
+\[F(f' \circ f) = F(f') \circ F(f)\text{ and,}\] 
+\[F(id_a) = id_{F(a)}\text{.}\]
+</p>
+
+<p>
+An informal way to think of the above is as seeing the structure of one category when place into another. You might want to do this for the same reason you take an x-ray. An x-ray does not produce a broken bone, but it makes it visible. By mapping the objects of the body to pixels in a radiograph we may make discoverable relationships that were present, but invisible, when we looked for them in the first category.
+</p>
+</div>
+
+
+<div id="outline-container-org907e249" class="outline-4">
+<h4 id="org907e249"><span class="section-number-4">2.1.1.</span> Discussion Question&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_exercise">class_exercise</span></span></h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+<textarea cols="80" rows="1">
+Can we use the ideas of functors to elucidate when two differently stated models are the same? What do we want the same to mean for models and theories?</textarea>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org23551ae" class="outline-3">
+<h3 id="org23551ae"><span class="section-number-3">2.2.</span> Natural Transformation</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+There may be more than one functor between two categories. If there are we might be interested in whether one of them is a version of the other. To determine this we try to transform one of the functors into the other. In doing we might choose a transformation that is particularly convoluted and doesn't agree with our notion of reasonable transformations. Those don't count. For most of mathematics history this notion of reasonableness was called <b>"naturality"</b> and left to the communal intuition of professional mathematicians. One of the motivations for category theory was to make the term <b>"natural transformation"</b> rigorous.
+</p>
+
+<p>
+To compare two functors we could compare their starting point, but that hardly seems useful. The initial category is the same for both by definition. So to compare the functors and their mapping of objects and arrows we must look to the landing zone. If we can align the objects of functor \(F\) with those of functor \(G\) we have made a start. These objects are in the landing category \(\mathcal{B}\). For an object \(a \in \mathcal{A}\) we will have both \(F(a)\) and \(G(a)\), the objects in \(\mathcal{B}\) that each functor assigns to the same object from \(\mathcal{A}\).
+</p>
+</div>
+
+<div id="outline-container-orgfe4ddad" class="outline-4">
+<h4 id="orgfe4ddad"><span class="section-number-4">2.2.1.</span> Discussion Pause&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_exercise">class_exercise</span></span></h4>
+<div class="outline-text-4" id="text-2-2-1">
+<p>
+<textarea cols="80" rows="1">
+What are the tools available to us to make the comparison of the destination objects of functors $F$ and $G$?</textarea>
+</p>
+
+<p>
+The only things we have are objects, arrows, and the requirements they must meet. Conveniently, the destination category for the objects of the functors is the same one for both functors. When we are in a category we have arrows as well as objects. Our first requirement then is to find for each object \(a \in \mathcal{A}\) the pair of objects \(F(a)\) and \(G(a)\) in \(\mathcal{B}\) an arrow in \(\mathcal{B}\) that connects<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup> them:
+\[F(a) \rightarrow G(a)\]
+</p>
+
+<p>
+If there are no such arrows we don't have a transformation, let alone a <i>natural</i> transformation, but if we do have such arrows then we have a transformation. The question remains whether it is <i>natural?</i>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdb0aa76" class="outline-4">
+<h4 id="orgdb0aa76"><span class="section-number-4">2.2.2.</span> Discussion Pause&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_exercise">class_exercise</span></span></h4>
+<div class="outline-text-4" id="text-2-2-2">
+<p>
+<textarea cols="80" rows="1">
+Given a set of transformations. What might we consider as candidates for naturality?</textarea>
+</p>
+
+<p>
+When we created a category we specified objects and arrows, but then we went further and required composition, associativity, and identities. The intuition goes that any natural transformation of two functors should respect these features of both categories: identity and composition.
+</p>
+
+<p>
+ To test whether they do obey the rules we need a two objects and one arrow:
+\[a\text{ and }a' \text{ in } \mathcal{A} \text{ and an arrow } f:a \rightarrow a'\]
+then we need to look at the square that emerges after they have both been transported to category \(\mathcal{B}\) by both of the functors.
+</p>
+
+
+<div id="org10f2f63" class="figure">
+<p><img src="./naturality.png" alt="naturality.png" width="400px" />
+</p>
+<p><span class="figure-number">Figure 1: </span>The Naturality Square. As we are in a category both compositions must exist: the route along the top and down the right hand side, and the route down and along the bottom. For things to be natural those two compositions must be the same. What does "the same" mean here?</p>
+</div>
+
+
+
+<p>
+To test whether they do we need a three objects and two arrows:
+\[a,a',a'' \text{ in } \mathcal{A} \text{ and arrows } f:a \rightarrow a'; f':a' \rightarrow a''\]
+then we need to look at the square:
+</p>
+
+
+<div id="orgfcb4fbf" class="figure">
+<p><img src="./two_commutative_squares.png" alt="two_commutative_squares.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org21aab70" class="outline-4">
+<h4 id="org21aab70"><span class="section-number-4">2.2.3.</span> Vertical Composition of Natural Transformations&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_exercise">class_exercise</span></span></h4>
+<div class="outline-text-4" id="text-2-2-3">
+<p>
+Individually or in small groups can you prove that if we have functors \(F,G \text{ and } H\) each from categories \(\mathcal{A} \text { to } \mathcal{B}\) and also natural transformations from \(\phi : F \rightarrow G\) and \(\psi : G \rightarrow H\) then we also have their composition \(\psi \circ \phi : F \rightarrow H\)?
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2750b9d" class="outline-2">
+<h2 id="org2750b9d"><span class="section-number-2">3.</span> Preliminary Remarks</h2>
+<div class="outline-text-2" id="text-3">
 <p>
 There is a lot terminology in category theory. Too much to include here, but there are also notions in category theory that seem to bleed between specific constructions. One of these is the idea of a <b>universal property</b>. It is the "best" example of whatever it is an example of. To give an example of this idea we will consider <b>wedges</b> and <b>products</b>. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgef803f1" class="outline-2">
-<h2 id="orgef803f1"><span class="section-number-2">3.</span> Thinking Productively</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-org9ca8076" class="outline-2">
+<h2 id="org9ca8076"><span class="section-number-2">4.</span> Thinking Productively</h2>
+<div class="outline-text-2" id="text-4">
 </div>
 
-<div id="outline-container-org4cf9f02" class="outline-3">
-<h3 id="org4cf9f02"><span class="section-number-3">3.1.</span> Wedges</h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-org68cd3f1" class="outline-3">
+<h3 id="org68cd3f1"><span class="section-number-3">4.1.</span> Wedges</h3>
+<div class="outline-text-3" id="text-4-1">
 <p>
 Consider an element in a category that has morphisms that terminate in two different co-domains.
 </p>
 
 
-<div id="org7c2ab77" class="figure">
+<div id="org25ab38c" class="figure">
 <p><img src="./wedge.png" alt="wedge.png" width="200" align="center" />
 </p>
 </div>
@@ -268,15 +385,15 @@ We can use a visual mnemonic and call this a wedge. There may be a lot of wedges
 </div>
 </div>
 
-<div id="outline-container-org4ab1acc" class="outline-3">
-<h3 id="org4ab1acc"><span class="section-number-3">3.2.</span> Products</h3>
-<div class="outline-text-3" id="text-3-2">
+<div id="outline-container-org1557d33" class="outline-3">
+<h3 id="org1557d33"><span class="section-number-3">4.2.</span> Products</h3>
+<div class="outline-text-3" id="text-4-2">
 <p>
 Now assume that whenever you have another object in that category that has co-domains \(B\) and \(C\) it <b>always</b> has a unique morphism to \(A\) such that all the triangles commute, that is, graphically:
 </p>
 
 
-<div id="orgd8ed56c" class="figure">
+<div id="org3924289" class="figure">
 <p><img src="./product.png" alt="product.png" width="400" align="center" />
 </p>
 </div>
@@ -291,19 +408,19 @@ Then the triple \((A,p_b,p_c)\) (but often just referred to by the object \(A\) 
 </div>
 </div>
 
-<div id="outline-container-org999716b" class="outline-3">
-<h3 id="org999716b"><span class="section-number-3">3.3.</span> What is your programming language's equivalent for creating a "product"<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> as described above?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_exercise">class_exercise</span></span></h3>
-<div class="outline-text-3" id="text-3-3">
+<div id="outline-container-org7fe9533" class="outline-3">
+<h3 id="org7fe9533"><span class="section-number-3">4.3.</span> What is your programming language's equivalent for creating a "product"<sup><a id="fnr.3" class="footref" href="#fn.3" role="doc-backlink">3</a></sup> as described above?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_exercise">class_exercise</span></span></h3>
+<div class="outline-text-3" id="text-4-3">
 </div>
 </div>
 
-<div id="outline-container-org11e224b" class="outline-3">
-<h3 id="org11e224b"><span class="section-number-3">3.4.</span> Does this idea of a universal property have any connection to the things we read or think about in empirical neuroscientific or psychological studies?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_exercise">class_exercise</span></span></h3>
-<div class="outline-text-3" id="text-3-4">
+<div id="outline-container-org762be03" class="outline-3">
+<h3 id="org762be03"><span class="section-number-3">4.4.</span> Does this idea of a universal property have any connection to the things we read or think about in empirical neuroscientific or psychological studies?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_exercise">class_exercise</span></span></h3>
+<div class="outline-text-3" id="text-4-4">
 </div>
-<div id="outline-container-org556ade4" class="outline-4">
-<h4 id="org556ade4"><span class="section-number-4">3.4.1.</span> Purpose of these thinking exercises</h4>
-<div class="outline-text-4" id="text-3-4-1">
+<div id="outline-container-orge92cc47" class="outline-4">
+<h4 id="orge92cc47"><span class="section-number-4">4.4.1.</span> Purpose of these thinking exercises</h4>
+<div class="outline-text-4" id="text-4-4-1">
 <p>
 The idea is to see that there are programming counterparts of this <a href="https://en.wikipedia.org/wiki/Abstract_nonsense">"abstract nonsense"</a>. And to get a little practice trying to map these abstract ideas to concrete entities we feel we can get our hands on. 
 </p>
@@ -313,21 +430,72 @@ The idea is to see that there are programming counterparts of this <a href="http
 </div>
 
 
-<div id="outline-container-org060841d" class="outline-2">
-<h2 id="org060841d"><span class="section-number-2">4.</span> Companion and Optional Readings</h2>
-<div class="outline-text-2" id="text-4">
+
+<div id="outline-container-orgefb093f" class="outline-2">
+<h2 id="orgefb093f"><span class="section-number-2">5.</span> Psychological Case Study: Dempster-Shafer Theory</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Dempster-Shafer theory is, among other things, a theory of evidence and belief revision [<a href="#citeproc_bib_item_2">2</a>]. It began, with Dempster, as an idea about probability intervals. A probability interval has a lower and upper probability, and intuitively seems a reasonable idea about how you might believe something. For instance, you may not have a precise, crisp, belief about your favorite sporting team winning a game, but you might be willing to say that it is more likey than $X$%, but less than $Y$%. Shafer added to this interpretation ideas about evidence revision. How one could, maybe should, revise these estimates in light of new information. [<a href="#citeproc_bib_item_3">3</a>] provides a more modern overview with all the math and a common example treated from multiple perspectives. 
+</p>
+
+<p>
+It is common to think that how strongly people belive something is akin to their subjective probability for the same proposition, but what does it mean to have a subjective probability for a counter-factual statement? We may be able to ascribe a numerical value to our degree of belief, but is that the same as a probability judgement? Because of issues like these people have looked at alternative accounts of belief and the calculus of Dempster and Shafer is one of them. It is possible to develop the theory of probability categorically [<a href="#citeproc_bib_item_4">4</a>], though I won't go into it here as it benefits from some familiarity with measure theory, and the categorical concept of a <i>monad.</i> It appears it is also possible to develop Dempster-Shafer theory categorically [<a href="#citeproc_bib_item_5">5</a>]. 
+</p>
+
+<p>
+In order to attempt some practical use of this category theory diversion I want to do the following: an in-class discussion/application of category theory, and a short programmatic exercise as a take home project.
+</p>
+</div>
+
+<div id="outline-container-org4ff175d" class="outline-3">
+<h3 id="org4ff175d"><span class="section-number-3">5.1.</span> Boolean and Bayesian Categories of Belief&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_discussion">class_discussion</span></span></h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+In Kennes' [Page 176 <a href="#citeproc_bib_item_5">5</a>] article there is a short summary of both categories. I will divide you into two groups. You will read your brief section, and discuss it so that you can share it after a short break with the other half of the class. We will discuss as a group what we like about each account and whether we benefit from this categorical account, e.g. by having a common formalism to compare the two. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org713e574" class="outline-3">
+<h3 id="org713e574"><span class="section-number-3">5.2.</span> Dempster-Shafer Theory of Evidence Combination&#xa0;&#xa0;&#xa0;<span class="tag"><span class="homework">homework</span></span></h3>
+<div class="outline-text-3" id="text-5-2">
+<ol class="org-ol">
+<li>Read the section on DS as a category [Page 177 <a href="#citeproc_bib_item_5">5</a>]</li>
+<li>Write a short program that computes Dempster's combination rule. You will find it easier to work from the <a href="https://en.wikipedia.org/wiki/Dempster%E2%80%93Shafer_theory#Dempster's_rule_of_combination">definition</a> given in wikipedia than this article. The idea is that I should be able to use your function for a specificed mass function. You get to decide the data structure for representing the mass function.</li>
+<li>Commit your implementation and push it to the repository.</li>
+<li>In class be prepared to discuss whether the math your read about categorizing DS Theory made any useful contact with the effort to program a computational algorithm.</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org324834d" class="outline-2">
+<h2 id="org324834d"><span class="section-number-2">6.</span> Companion and Optional Readings</h2>
+<div class="outline-text-2" id="text-6">
 <ol class="org-ol">
 <li>A good online book that seeks to connect programming to category theory is <a href="https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/">Category Theory for Programmers</a>. The Chapter on Products is <a href="https://bartoszmilewski.com/2015/01/07/products-and-coproducts/">here</a>.</li>
 </ol>
 </div>
 </div>
 
-<div id="outline-container-org465f06f" class="outline-2">
-<h2 id="org465f06f"><span class="section-number-2">5.</span> References</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-org7f2f406" class="outline-2">
+<h2 id="org7f2f406"><span class="section-number-2">7.</span> References</h2>
+<div class="outline-text-2" id="text-7">
 <div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>
-    <div class="csl-left-margin">1.</div><div class="csl-right-inline">D. E. Rydeheard &#38; R. M. Burstall, <i>Computational category theory</i> (Prentice Hall Englewood Cliffs, 1988).</div>
+    <div class="csl-left-margin">1.</div><div class="csl-right-inline">D. E. Rydeheard &#38; R. M. Burstall, <i><a href="http://www.cs.man.ac.uk/~david/categories/book/book.pdf">Computational category theory</a></i> (Prentice Hall Englewood Cliffs, 1988).</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>
+    <div class="csl-left-margin">2.</div><div class="csl-right-inline">G. Shafer, <a href="http://glennshafer.com/assets/downloads/rur_chapter7.pdf">Belief functions</a>. In, <i>Readings in uncertain reasoning</i> (San Mateo, Calif: Morgan Kaufmann, 1990).</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_3"></a>
+    <div class="csl-left-margin">3.</div><div class="csl-right-inline">T. Denœux, Decision-making with belief functions: a review. <i>International journal of approximate reasoning</i>, <b>109</b> (2019) 87-110. <a href="https://doi.org/10.1016/j.ijar.2019.03.009">https://doi.org/10.1016/j.ijar.2019.03.009</a>.</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_4"></a>
+    <div class="csl-left-margin">4.</div><div class="csl-right-inline">R. Furber &#38; B. Jacobs, Towards a categorical account of conditional probability. <i>Electronic proceedings in theoretical computer science</i>, <b>195</b> (2015) 179-195. <a href="https://doi.org/10.4204/eptcs.195.14">https://doi.org/10.4204/eptcs.195.14</a>.</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_5"></a>
+    <div class="csl-left-margin">5.</div><div class="csl-right-inline">R. Kennes, <a href="http://arxiv.org/abs/1303.5725v1">Evidential reasoning in a categorial perspective: Conjunction and disjunction of belief functions</a>. <i>Corr</i>, (2013).</div>
   </div>
 </div>
 </div>
@@ -337,6 +505,14 @@ The idea is to see that there are programming counterparts of this <a href="http
 <div id="text-footnotes">
 
 <div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Note that nothing prevents these "two" categories being the same category. Then you have an <i>endofunctor</i> that maps back on itself. 
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Note that natural transformations are for a particular direction between two functors.  
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
 Product is in quotes, because I don't want the product as in multiplication, but the <i>thing</i>, to be very ambiguous, that is most like the <i>thing</i> I described graphically above. 
 </p></div></div>
 
@@ -346,7 +522,7 @@ Product is in quotes, because I don't want the product as in multiplication, but
 <div id="postamble" class="status">
 <p class="date">Date: Winter 2022</p>
 <p class="author">Author: Britt Anderson</p>
-<p class="date">Created: 2022-02-08 Tue 20:16</p>
+<p class="date">Created: 2022-02-15 Tue 06:23</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
