@@ -22,9 +22,10 @@
 ** Arrows and Objects
 
   "Category theory is founded upon the abstraction of the arrow, $f:a\rightarrow b$".
-
-  You read this as there is an /arrow/[fn:1] that has the name $f$. It connects an /object/ named $a$ to an object named $b$. 
   -- [[cite:&rydeheard88_comput]]
+  
+  You read this as there is an /arrow/[fn:1] that has the name $f$. It connects an /object/ named $a$ to an object named $b$. 
+
 
   For a particular category the objects all qualify as having a certain /structure./ Once that is established one *abstracts* away from the internals of the objects and focuses on their transportation by arrows.
 

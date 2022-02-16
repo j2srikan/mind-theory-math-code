@@ -1,9 +1,10 @@
-#+Title: X Day
+#+Title: Geometry Manifold Day
 #+Author: Britt Anderson
-#+Date: Dec 24, 2021
+#+Date: Winter 2022
 #+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
 #+csl-style: ../admin/cambridge-university-press-numeric.csl
 #+options: ^:nil toc:nil d:nil
+
 
 
 * Outline

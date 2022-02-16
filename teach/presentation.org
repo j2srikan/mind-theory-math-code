@@ -1,0 +1,48 @@
+#+Title: Presentation Day
+#+Author: Britt Anderson
+#+Date: Winter 2022
+#+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
+#+csl-style: ../admin/cambridge-university-press-numeric.csl
+#+options: ^:nil toc:nil
+
+
+* Outline
+
+The main goal for this day is to be able to have each of the four groups take a 1/2 hour or so to share their project with the rest of the class. The nature of the presentations are pretty open. They can be power points and talking, assignments that we are guided through. It is fine if they require us to read something in advance for a discussion. The main goal we are trying to achieve is to extend the range of topics we are exposed to. Given the time constraint it is unlikely that we will be able to go very deeply into any of these topics in class so there is some expectation that part of the provided material should be a guide for us to continue our studies on our own via readings or on-line material and programming exercises we can pursue.
+
+* More Details
+  1. Agree on a mathematical topic with me.
+  2. The topic should make a connection to mind/cognition/theory in some way, and also allow for some simple computing/programming activity that will help us to consider the practical and conceptual advantages of the different programming language styles for modeling such topics. It is also okay if the order of things is slightly reversed in that the some cognitive model is taken as the focal point and then the mathematical content is introduced subsidiary to that.
+  3. Each presentation should try to include:
+     - an introduction to the topic (and ideally something to read in advance)
+     - a presentation that summarizes the project to be done live in class
+     - a clear designation of the new mathematics introduced
+     - an explanation of the programming connection
+     - guidance for continued study.
+     - a written version of the report to be uploaded to Learn, and if appropriate the github repo, that provides the links and text necessary to understand the above points when the presenters are not there to talk about the material.
+
+* Some Ideas
+Comment: these topics are to be connected to our interest in modelling and simulation and generating explanations for cognition or neural activity. They are not to be presented as isolated domains of mathematics. 
+  - Topological Data Analysis
+  - Information Geometry
+  - Higher Order Homotopy Theory
+  - Bifurcation and Phase Analysis Methods
+
+The list is not comprehensive, but just to give some examples and provide some ideas.
+
+* Companion and Optional Readings
+
+  To be provided by the groups as they organize their presentations. I organize them here by programming language for convenience.
+
+  
+** Python
+
+** Racket
+
+** Julia
+
+** Probabilistic Programming
+
+* References
+[[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
+
