@@ -40,18 +40,28 @@
 4. Discuss final project plans; groups; mechanics of submitting.
 5. Review what a /functor/ and /natural transformation/ are, and consider them as useful constructs for mental modelling.
 6. Implement Dempster-Shafer combination rule as programming homework. Advertise "quiz" for documenting completion.
+7. This was to be done next week, but on the first offering of the class this seem too onerous, so I just ditched it.
+
+   Check-in on the Dempster Shafer implementations and comments on language efficiencies and libraries.
 * Ninth Module
-1. Today's reading is [[cite:&chung21_neural_popul_geomet]]. Please do before class. 
-2. The main file for this module is [[file:teach/geometry-manifold-day.org]].
-3. Check-in on the Dempster Shafer implementations and comments on language efficiencies and libraries.
-4. Finalize our presentation/final project plans.
+1. Finalize our presentation/final project plans.
+2. Today's reading is [[cite:&chung21_neural_popul_geomet]]. Please do before class. 
+3. The main file for this module is [[file:teach/geometry-manifold-day.org]].
+4. Tentatively I hope to have the students create and map the swiss roll for verifying the algorithm *and* any other data set they think might be fun for the purpose of trying to display underlying structures. 
+
+Somehow there is a "week" missing. Will need to go back and restructure the list and make sure each Wed is covered. 
+
 * Tenth Module
 1. Discuss the manifold programming project.
-2. Bookmarked to revisit old issues. An opportunity to return to our earlier discussion about mind -> theory -> math/computation to see if we have changed our minds at all as we have worked through the earlier material.
-3. Finish up any remaining manifold issues.
-4. Address any pending final project questions. 
+2. Review any old business or revisit any issue we wish to discuss again.
+3. Retrace our footsteps to see if we have a different take on the objectives of the course or whether we feel differently on the value of this approach.
+4. Although we may not have been able to capitalize on the various programming languages fully, I would like to have a discussion on this issue, and what we see as the role of programming language choice in the regard of making models more transparent, making ideas clearer, enabling new ideas to emerge, but not efficiency and ease of sharing. 
+5. Finish up any remaining manifold issues.
+6. Address any pending final project questions.
 * Eleventh Module
   I don't expect there will be an eleventh module, but this will be decided with class. Given the hectic and chaotic nature of a term with both in person and remote components and students somewhat scattered, I think it may be useful to provide this class time for discussion, questions, and a chance to work on their material with their group partners. 
+
+  1. Do people want to use the room?
 * Presentation Date
 1. The main file for this module is [[file:teach/presentation.org]].
 2. An outline of the expectations for these presentations is given in the above file. Expect today's class to made up of student presentations and discussions about them. 
