@@ -5,6 +5,100 @@
 #+csl-style: ../admin/cambridge-university-press-numeric.csl
 #+options: ^:nil toc:nil d:nil
 
+* Discussion Questions Geometry :disc_ques_purpose:
+The purpose for these discussion questions is to get people thinking of concretely measuring abstract entities.
+:end:
+1. Can we measure ideas?
+2. What is the /shortest/ path between an image of a fish and an image of a man?
+3. How do we transit from our current beliefs about the future starting only with our past observations?
+
+#+Name: Morphing between birdshapes
+#+Caption: A geodesic path between two bird shapes. Taken from: https://link.springer.com/book/10.1007/978-1-4939-4020-2
+[[./morphImg.png]]
+
+* Some Motivating Ideas
+  1. Algebra and Geometry - what are the differences?
+  2. Which of the two is more relevant for brain and cognitive modelling?
+
+* Article Questions
+1. From the students
+2. From me
+   1. Explain untangling.
+   2. Explain why a neural manifold may or may not be a manifold?
+
+* What is a manifold?
+A manifold is a "thingie" that can be as weird as you want it to be, but that is locally like $\mathbb{R}^n$. Let's examine what that statement means and some of the terminology those who talk about it like to use. 
+** Points
+   You can follow your intuition here. It is a thing. An object. A recognizable separate element of the space you are interested in. You may represent it by coordinate values $(x_1, x_2 ... x_n)$ or you could think of it as a vector. There are other conceptions too. 
+** Sets
+   For us, in this context,  a /set/ is just a collection of points. 
+** Open Sets
+   A set is open if it's complement is closed. This may strike you as being underspecified, but it is really just very general and allows us a lot of freedom to create the criteria by which /openess/ of our sets will be judged. Often, it is useful to have the intuition that it is a set with no sharp edges. If you have a *metric* on your space then you can define the open sets via a notion that all the points in your set have some small $\epsilon$ (measured by your distance metric) that is also in the set. There is no hard border that you can come up against. 
+** Topology
+   For a given set $X$ a topology is a collection of subsets of $X$ that are all open and that together (via *unions*) will include all the points you have in the set $X$.
+** Topological Spaces
+   The tuple of the set $X$ and the collection of open subsets that comprise the topology is the /topological space./ Usually these are not unique for a set $X$.
+** Homeomorphisms
+   To come to grips with the ideas it often helps to start small. Think of two or three dimensions where you can sketch a diagram or look at an object, but realize it scales up to arbitrarily large numbers of dimensions....IAMHERE
+
+** Charts and Atlases
+
+** Diffeomorphisms
+
+** Tangent Vectors
+
+** Equivalence Classes
+
+** Tangent Spaces
+
+* What is Wrong With Principle Components Analysis (PCA)?
+
+* Companion and Optional Readings
+
+  1. Generative Dynamics in Brain Networks [[cite:&panahi21_gener_model_brain_dynam]]
+     
+
+* References
+[[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
+
+@article{bronstein17_geomet_deep_learn,
+  author = {Michael M. Bronstein and Joan Bruna and Yann LeCun and Arthur Szlam and Pierre Vandergheynst},
+  title = {Geometric Deep Learning: Going Beyond Euclidean Data},
+  journal = {IEEE Signal Processing Magazine},
+  volume = {34},
+  number = {4},
+  pages = {18-42},
+  year = {2017},
+  doi = {10.1109/msp.2017.2693418},
+  url = {https://doi.org/10.1109/msp.2017.2693418},
+}
+
+This article talks about the population doctrine in neuroscience, and talks about the new ideas from geometry like the neural manifold.
+
+@article{ebitz21_popul_doctr_cognit_neuros,
+  author =	 {R. Becket Ebitz and Benjamin Y. Hayden},
+  title =	 {The Population Doctrine in Cognitive Neuroscience},
+  journal =	 {Neuron},
+  volume =	 109,
+  number =	 19,
+  pages =	 {3055-3068},
+  year =	 2021,
+  doi =		 {10.1016/j.neuron.2021.07.011},
+  url =		 {https://doi.org/10.1016/j.neuron.2021.07.011},
+  DATE_ADDED =	 {Wed Nov 17 20:53:44 2021},
+}
+
+Another [[file:local-articles/VyasEtAlAnnRevNeurosci2020.pdf][population dynamics article.]]
+
+[[ https://doi.org/10.1002/wics.128][Geometry in Statistics]]
+
+[[ 
+https://journals.aps.org/prx/pdf/10.1103/PhysRevX.8.031003][Geometry of Perceptual Manifolds]]
+
+* Information Geometry
+
+** Articles
+   An introduction https://arxiv.org/pdf/1412.5633.pdf (also kept [[file:local-articles/info-geo.pdf][local copy]]).
 
 
 * Outline
@@ -13,3 +107,14 @@
 
 * References
 [[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
+* Discussion Questions Dynamics and DEs
+1. What is emergence?
+2. Is there a feature of differential equations or their dynamic behavior that can be described as emergent?
+3. Are there neural or mental phenomena that could thusly be well captured?
+
+** Articles
+An introductory [[http://www.faculty.sfasu.edu/judsontw/ode/html-snapshot/firstlook01.html][website]].
+
+An introductory website talking about [[https://www.cfm.brown.edu/people/dobrush/am33/Mathematica/ch2/bifurcation.html][bifurcations]] and using Mathematica, but maybe some can be adapted to other programming languages or computer algebra systems like Maxima.
+
+

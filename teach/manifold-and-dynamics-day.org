@@ -6,12 +6,6 @@
 #+Author: Britt Anderson
 #+Date: Dec 24, 2021
 
-* Outline
-
-#+Title: Differential Equations
-
-* Quickie start to file
-
 * Discussion Questions Geometry
 1. Can we measure ideas?
 2. What is the /shortest/ path between an image of a fish and an image of a man?
