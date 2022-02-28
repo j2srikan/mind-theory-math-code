@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-02-28 Mon 14:09 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Geometry Manifold Day</title>
+<meta name="author" content="Britt Anderson" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Geometry Manifold Day</h1>
+
+<div id="outline-container-org0ede748" class="outline-2">
+<h2 id="org0ede748"><span class="section-number-2">1.</span> Discussion Questions Geometry&#xa0;&#xa0;&#xa0;<span class="tag"><span class="disc_ques_purpose">disc_ques_purpose</span></span></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+The purpose for these discussion questions is to get people thinking of concretely measuring abstract entities.
+</p>
+<p>
+:end:
+</p>
+<ol class="org-ol">
+<li>Can we measure ideas?</li>
+<li>What is the <i>shortest</i> path between an image of a fish and an image of a man?</li>
+<li>How do we transit from our current beliefs about the future starting only with our past observations?</li>
+</ol>
+
+
+<div id="orgc87b7e3" class="figure">
+<p><img src="./morphImg.png" alt="morphImg.png" />
+</p>
+<p><span class="figure-number">Figure 1: </span>A geodesic path between two bird shapes. Taken from: <a href="https://link.springer.com/book/10.1007/978-1-4939-4020-2">https://link.springer.com/book/10.1007/978-1-4939-4020-2</a></p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgea3b7f1" class="outline-2">
+<h2 id="orgea3b7f1"><span class="section-number-2">2.</span> Some Motivating Ideas</h2>
+<div class="outline-text-2" id="text-2">
+<ol class="org-ol">
+<li>Algebra and Geometry - what are the differences?</li>
+<li>Which of the two is more relevant for brain and cognitive modelling?</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org80ab59e" class="outline-2">
+<h2 id="org80ab59e"><span class="section-number-2">3.</span> Article Questions</h2>
+<div class="outline-text-2" id="text-3">
+<ol class="org-ol">
+<li>From the students</li>
+<li>From me
+<ol class="org-ol">
+<li>Explain untangling.</li>
+<li>Explain why a neural manifold may or may not be a manifold?</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org5902cd4" class="outline-2">
+<h2 id="org5902cd4"><span class="section-number-2">4.</span> What is a manifold?</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+A manifold is a "thingie" that can be as weird as you want it to be, but that is locally like \(\mathbb{R}^n\). Let's examine what that statement means and some of the terminology those who talk about it like to use. 
+</p>
+</div>
+<div id="outline-container-org933ba1f" class="outline-3">
+<h3 id="org933ba1f"><span class="section-number-3">4.1.</span> Points</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+You can follow your intuition here. It is a thing. An object. A recognizable separate element of the space you are interested in. You may represent it by coordinate values \((x_1, x_2 ... x_n)\) or you could think of it as a vector. There are other conceptions too. 
+</p>
+</div>
+</div>
+<div id="outline-container-org375ee58" class="outline-3">
+<h3 id="org375ee58"><span class="section-number-3">4.2.</span> Sets</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+For us, in this context,  a <i>set</i> is just a collection of points. 
+</p>
+</div>
+</div>
+<div id="outline-container-orgbcddcfc" class="outline-3">
+<h3 id="orgbcddcfc"><span class="section-number-3">4.3.</span> Open Sets</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+A set is open if it's complement is closed. This may strike you as being underspecified, but it is really just very general and allows us a lot of freedom to create the criteria by which <i>openess</i> of our sets will be judged. Often, it is useful to have the intuition that it is a set with no sharp edges. If you have a <b>metric</b> on your space then you can define the open sets via a notion that all the points in your set have some small \(\epsilon\) (measured by your distance metric) that is also in the set. There is no hard border that you can come up against. 
+</p>
+</div>
+</div>
+<div id="outline-container-orga97c6a1" class="outline-3">
+<h3 id="orga97c6a1"><span class="section-number-3">4.4.</span> Topology</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+For a given set \(X\) a topology is a collection of subsets of \(X\) that are all open and that together (via <b>unions</b>) will include all the points you have in the set \(X\).
+</p>
+</div>
+</div>
+<div id="outline-container-org5f60108" class="outline-3">
+<h3 id="org5f60108"><span class="section-number-3">4.5.</span> Topological Spaces</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+The tuple of the set \(X\) and the collection of open subsets that comprise the topology is the <i>topological space.</i> Usually these are not unique for a set \(X\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org258ee36" class="outline-3">
+<h3 id="org258ee36"><span class="section-number-3">4.6.</span> Homeomorphisms</h3>
+</div>
+
+<div id="outline-container-org021c714" class="outline-3">
+<h3 id="org021c714"><span class="section-number-3">4.7.</span> Charts and Atlases</h3>
+</div>
+
+<div id="outline-container-orgd79060e" class="outline-3">
+<h3 id="orgd79060e"><span class="section-number-3">4.8.</span> Diffeomorphisms</h3>
+</div>
+
+<div id="outline-container-orgcfc375f" class="outline-3">
+<h3 id="orgcfc375f"><span class="section-number-3">4.9.</span> Tangent Vectors</h3>
+</div>
+
+<div id="outline-container-orgd77ac8a" class="outline-3">
+<h3 id="orgd77ac8a"><span class="section-number-3">4.10.</span> Equivalence Classes</h3>
+</div>
+
+<div id="outline-container-org089b802" class="outline-3">
+<h3 id="org089b802"><span class="section-number-3">4.11.</span> Tangent Spaces</h3>
+</div>
+</div>
+
+<div id="outline-container-org264a7b1" class="outline-2">
+<h2 id="org264a7b1"><span class="section-number-2">5.</span> What is Wrong With Principle Components Analysis (PCA)?</h2>
+</div>
+
+<div id="outline-container-org4d01f02" class="outline-2">
+<h2 id="org4d01f02"><span class="section-number-2">6.</span> Companion and Optional Readings</h2>
+<div class="outline-text-2" id="text-6">
+<ol class="org-ol">
+<li>Generative Dynamics in Brain Networks [<a href="#citeproc_bib_item_1">1</a>]</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-org437d31d" class="outline-2">
+<h2 id="org437d31d"><span class="section-number-2">7.</span> References</h2>
+<div class="outline-text-2" id="text-7">
+<div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>
+    <div class="csl-left-margin">1.</div><div class="csl-right-inline">M. R. Panahi, G. Abrevaya, J.-C. Gagnon-Audet, V. Voleti, I. Rish, &#38; G. Dumas, <a href="https://arxiv.org/pdf/2112.12147.pdf">Generative models of brain dynamics – a review</a>. (2021).</div>
+  </div>
+</div>
+
+
+<p>
+@article{bronstein17_geomet_deep_learn,
+  author = {Michael M. Bronstein and Joan Bruna and Yann LeCun and Arthur Szlam and Pierre Vandergheynst},
+  title = {Geometric Deep Learning: Going Beyond Euclidean Data},
+  journal = {IEEE Signal Processing Magazine},
+  volume = {34},
+  number = {4},
+  pages = {18-42},
+  year = {2017},
+  doi = {10.1109/msp.2017.2693418},
+  url = {<a href="https://doi.org/10.1109/msp.2017.2693418">https://doi.org/10.1109/msp.2017.2693418</a>},
+}
+</p>
+
+<p>
+This article talks about the population doctrine in neuroscience, and talks about the new ideas from geometry like the neural manifold.
+</p>
+
+<p>
+@article{ebitz21_popul_doctr_cognit_neuros,
+  author =	 {R. Becket Ebitz and Benjamin Y. Hayden},
+  title =	 {The Population Doctrine in Cognitive Neuroscience},
+  journal =	 {Neuron},
+  volume =	 109,
+  number =	 19,
+  pages =	 {3055-3068},
+  year =	 2021,
+  doi =		 {10.1016/j.neuron.2021.07.011},
+  url =		 {<a href="https://doi.org/10.1016/j.neuron.2021.07.011">https://doi.org/10.1016/j.neuron.2021.07.011</a>},
+  DATE_ADDED =	 {Wed Nov 17 20:53:44 2021},
+}
+</p>
+
+<p>
+Another <a href="local-articles/VyasEtAlAnnRevNeurosci2020.pdf">population dynamics article.</a>
+</p>
+
+<p>
+[[ <a href="https://doi.org/10.1002/wics.1">https://doi.org/10.1002/wics.1</a>
+</p>
+<div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>
+    <div class="csl-left-margin">1.</div><div class="csl-right-inline">M. R. Panahi, G. Abrevaya, J.-C. Gagnon-Audet, V. Voleti, I. Rish, &#38; G. Dumas, <a href="https://arxiv.org/pdf/2112.12147.pdf">Generative models of brain dynamics – a review</a>. (2021).</div>
+  </div>
+</div>
+<p>
+/prx/pdf/10.1103/PhysRevX.8.031003][Geometry of Perceptual Manifolds]]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org556d31e" class="outline-2">
+<h2 id="org556d31e"><span class="section-number-2">8.</span> Information Geometry</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+<div id="outline-container-org49526c3" class="outline-3">
+<h3 id="org49526c3"><span class="section-number-3">8.1.</span> Articles</h3>
+<div class="outline-text-3" id="text-8-1">
+<p>
+An introduction <a href="https://arxiv.org/pdf/1412.5633.pdf">https://arxiv.org/pdf/1412.5633.pdf</a> (also kept <a href="local-articles/info-geo.pdf">local copy</a>).
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org4ca3365" class="outline-2">
+<h2 id="org4ca3365"><span class="section-number-2">9.</span> Outline</h2>
+</div>
+
+<div id="outline-container-orgf683302" class="outline-2">
+<h2 id="orgf683302"><span class="section-number-2">10.</span> Companion and Optional Readings</h2>
+</div>
+
+<div id="outline-container-org96688cf" class="outline-2">
+<h2 id="org96688cf"><span class="section-number-2">11.</span> References</h2>
+<div class="outline-text-2" id="text-11">
+<p>
+<a href="/home/britt/gitRepos/masterBib/bayatt.bib">/home/britt/gitRepos/masterBib/bayatt.bib</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgb9928fe" class="outline-2">
+<h2 id="orgb9928fe"><span class="section-number-2">12.</span> Discussion Questions Dynamics and DEs</h2>
+<div class="outline-text-2" id="text-12">
+<ol class="org-ol">
+<li>What is emergence?</li>
+<li>Is there a feature of differential equations or their dynamic behavior that can be described as emergent?</li>
+<li>Are there neural or mental phenomena that could thusly be well captured?</li>
+</ol>
+</div>
+
+<div id="outline-container-org90ac2e6" class="outline-3">
+<h3 id="org90ac2e6"><span class="section-number-3">12.1.</span> Articles</h3>
+<div class="outline-text-3" id="text-12-1">
+<p>
+An introductory <a href="http://www.faculty.sfasu.edu/judsontw/ode/html-snapshot/firstlook01.html">website</a>.
+</p>
+
+<p>
+An introductory website talking about <a href="https://www.cfm.brown.edu/people/dobrush/am33/Mathematica/ch2/bifurcation.html">bifurcations</a> and using Mathematica, but maybe some can be adapted to other programming languages or computer algebra systems like Maxima.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: Winter 2022</p>
+<p class="author">Author: Britt Anderson</p>
+<p class="date">Created: 2022-02-28 Mon 14:09</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
