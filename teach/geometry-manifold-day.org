@@ -10,7 +10,8 @@ The purpose for these discussion questions is to get people thinking of concrete
 :end:
 1. Can we measure ideas?
 2. What is the /shortest/ path between an image of a fish and an image of a man?
-3. How do we transit from our current beliefs about the future starting only with our past observations?
+3. What is the shape of the semantic neighborhood of political conservatism?
+4. How do we transit from our current beliefs about the future starting only with our past observations?
 
 #+Name: Morphing between birdshapes
 #+Caption: A geodesic path between two bird shapes. Taken from: https://link.springer.com/book/10.1007/978-1-4939-4020-2
@@ -20,101 +21,144 @@ The purpose for these discussion questions is to get people thinking of concrete
   1. Algebra and Geometry - what are the differences?
   2. Which of the two is more relevant for brain and cognitive modelling?
 
-* Article Questions
+* Article Questions about [[cite:&chung21_neural_popul_geomet]]
 1. From the students
 2. From me
    1. Explain untangling.
    2. Explain why a neural manifold may or may not be a manifold?
 
 * What is a manifold?
-A manifold is a "thingie" that can be as weird as you want it to be, but that is locally like $\mathbb{R}^n$. Let's examine what that statement means and some of the terminology those who talk about it like to use. 
-** Points
-   You can follow your intuition here. It is a thing. An object. A recognizable separate element of the space you are interested in. You may represent it by coordinate values $(x_1, x_2 ... x_n)$ or you could think of it as a vector. There are other conceptions too. 
-** Sets
+A manifold is a "thingie" that can be as weird as you want it to be, but that is locally like $\mathbb{R}^n$. Let's examine what that statement means and some of the terminology those who talk about it like to use. In what follows I try to provide a sketch of a lot of the terminology that shows up and also some of the logic behind the ideas of what the utility is of a manifold.
+
+First up, what is $\mathbb{R}^n$?
+
+** Manifold Vocabulary
+*** Points
+   You can follow your intuition here. A point is a thing. An object. A word. The atom of your domain of interest. It is a recognizable separate element of the space you are interested in. You may represent it by coordinate values $(x_1, x_2 ... x_n)$ or you could think of it as a vector. There are other ways to conceive of this too. 
+*** Sets
    For us, in this context,  a /set/ is just a collection of points. 
-** Open Sets
+*** Open Sets
    A set is open if it's complement is closed. This may strike you as being underspecified, but it is really just very general and allows us a lot of freedom to create the criteria by which /openess/ of our sets will be judged. Often, it is useful to have the intuition that it is a set with no sharp edges. If you have a *metric* on your space then you can define the open sets via a notion that all the points in your set have some small $\epsilon$ (measured by your distance metric) that is also in the set. There is no hard border that you can come up against. 
-** Topology
-   For a given set $X$ a topology is a collection of subsets of $X$ that are all open and that together (via *unions*) will include all the points you have in the set $X$.
-** Topological Spaces
+*** Topology
+   For a given set $X$ a topology is a collection of subsets of $X$ that are all open and that together (via *unions*) will include all the points you have in the set $X$ [fn:1].
+*** Topological Spaces
    The tuple of the set $X$ and the collection of open subsets that comprise the topology is the /topological space./ Usually these are not unique for a set $X$.
-** Homeomorphisms
-   To come to grips with the ideas it often helps to start small. Think of two or three dimensions where you can sketch a diagram or look at an object, but realize it scales up to arbitrarily large numbers of dimensions....IAMHERE
+*** Homeomorphisms
+   To come to grips with the mathematical ideas it often helps to start small. Think of two or three dimensions where you can sketch a diagram, but also realize that as you scale up especially to very big or even infinite dimensions things may break your intuition.
 
-** Charts and Atlases
+With a /homeomorphism/ you jump from your "real" space into the flat map of $\mathbb{R}^n$. You move around and measure things there. Then you jump back to your tricky and maybe arbitrarily wrinkly space. Denote the map from your space to $\mathbb{R}^n$ via $\phi$.
 
-** Diffeomorphisms
+What makes it a *homeomorphism* is that it is /continuous/ and has an /inverse/. Oversimplified this means nearby points stay nearby without breaks. When you jump to $\mathbb{R}^n$ and jump back you end up where you started. 
 
-** Tangent Vectors
+*** Charts and Atlases
+#+Name: Chart
+#+Caption: The Idea of a Chart for a Manifold
+[[file:chart.png]]
 
-** Equivalence Classes
+If you could walk around in your original space or $\mathbb{R}^n$ without limit the problem would be simple. You would just figure out distances and paths as you do in the real world. The tools of the manifold are for the circumstance where you can't just do that. In many cases the map ($\phi$) from your space to $\mathbb{R}^n$ only covers a small area around your starting point and a small area in $\mathbb{R}^n$. The $\phi$ is called a *chart*. We rely on the fact that there is more than one chart and that charts overlap. An example is to consider a $\phi$ and $\psi$ for sets $U$ and $V$ which are both in your space and which sets overlap. $\phi$ and $\psi$ are both homeomorphisms so we can have the compositions of these functions with the inverse of the other in both orders: $\psi^{-1}\circ\phi$ or $\phi^{-1}\circ\psi$. For things to work out in a useful way we need these two things to be equal for all $\{x \in U \cap V\}$
 
-** Tangent Spaces
+#+Name: Chart Composition
+#+Caption: Composing Charts to Measure a Manifold
+[[file:compSmthMap.png]]
 
-* What is Wrong With Principle Components Analysis (PCA)?
 
+   Here is the idea informally, but with some of the mathematical notation: You start in your weird space at $x$ and you want to measure the distance to $y$ in your weird space. But your space is weird so there is no easy way to just measure a distance. What you do is use $\phi$ to get into $\mathbb{R}^n$ (you are now at $\phi(x)$ measure the distance to $\psi(y)$ there and then use $\psi^{-1}(y)$ to get back to $y$. That is your distance between $x$ and $y$ (denoted often as $d(x,y)$).
+
+   
+   If you need to measure the space between an $x$ and $z$ that do not have intersecting charts you will need to use an *atlas*, which is the collection of all the charts. You then have to walk from one point to another chaining all the maps together.
+   
+*** Diffeomorphisms
+   For many of things we are interested in you may want other measures from $\mathbb{R}^n$ that are more like speed or rates of change. We may therefore want more than just /homeomorphisms/. If we also want those maps to be differentiable so we can get "rates" then we want them to be things that we can take the derivatives of. Maybe many derivatives. So, we can require them to be infinitely differentiable (that is to have derivatives of all orders ($C^\infty$)). If they are invertible (that is have inverses; we can get back to where we started; $f \circ f^{-1} = \mbox{id}_{end} \mbox{ and } f^{-1} \circ f = \mbox{id}_{start}$.
+
+   
+**** Where have we seen something like this before?          :class_question:
+
+*** Tangent Vectors
+   In high school we learned that slopes were rise over run. In calculus we learned to think of derivatives as slopes at a point along a curve. They were /tangent/: touching only at that one point. When that tangent "line" points in a multi-dimensional space we might choose to regard it as a vector and say it is a *tangent vector*. In summary, to find a tangent vector at a point in our weird space we fix a curve that travels through that point, use our tools for traveling to and from $\mathbb{R}^n$ to get the tangent vector there, and label our original point with that tangent vector in the weird space. Of course, there might be a lot of ways to create a curve that passes through our point of interest. What do we do?
+
+*** Equivalence Classes
+   We measure /all/ of them. Many of the tangent vectors from these curves may be the same. We don't need to worry about them all since they are redundant in this respect. Thus we use *equivalence classes*. $\[\gamma\]$ is the notation used for the collection of things (in our particular case here it is curves) that give us back the same result (in our particular case here it is a tangent vector) when we do to them whatever it was we did to $\gamma$.
+
+*** Tangent Spaces
+   The collection of all the equivalence classes of tangent vectors at a point is the *tangent space*. If we have done everything right with setting up all our components, charts and so forth this tangent space will be a space of vectors, that it will be a *vector space*, which is its own mathematical thing with various rules and properties we might be able to exploit to interesting effects.
+
+** What Is Your Manifold?                                    :class_activity:
+   Take some time to identify a domain of scientific interest to you and explain (in a sketchy, hand-waving way) how it could be treated as a manifold, and what you might hope to gain or learn by doing so. 
+
+* Why Bother With Weird Spaces
+
+#+begin_src lisp :results silent :exports none
+  (load "swiss-roll.lisp")
+  (in-package "swiss")
+#+end_src
+
+#+begin_src lisp :results replace graphics file "swiss-roll.png" :exports graphics
+  (swiss-plot-all "swiss-roll-flat.png" *srd* T)
+#+end_src
+
+#+RESULTS:
+[[file:swiss-roll-flat.png]]
+
+#+begin_src lisp :results replace graphics file "swiss-roll.png" :exports graphics
+  (swiss-plot-all "swiss-roll.png" *srd*)
+#+end_src
+
+#+RESULTS:
+[[file:swiss-roll.png]]
+
+
+** What is Wrong With Principle Components Analysis (PCA)?
+
+#+Name: PCA
+#+Caption: PCA and the Swiss Roll Data [[https://www.sjsu.edu/faculty/guangliang.chen/Math285F15/285%20Final%20Project%20-%20LLE.pdf][temp]]
+[[file:swiss-pca.png]]
+
+** What Works Better - one example "isomap"
+#+Name: isomap
+#+Caption: Isomap and the PCA Data
+[[file:swiss-isomap.png]]
+
+* ISOMAP  :homework:
+  This module's project is to implement some pieces (or all) of the isomap procedure for capturing the low dimensional structure of a complicated shape. We will try to use the swiss roll data so you will first need to implement a way to generate those data.
+
+  There is a [[https://benalexkeen.com/isomap-for-dimensionality-reduction-in-python/][blog]] describing a python implementation, but the goal here is less about getting something to work than understanding the mappings and what they mean. As well, we want to come to grips with the idea of a manifold and the tools that would help analyze data that lie upon one. Also, we would like to think about the expressivity of a programming language for these sorts of relations.
+
+  The steps are (see [[https://en.wikipedia.org/wiki/Isomap#Algorithm][Algorithm Wikipedia]]):
+  1. Make the data.
+  2. Find the nearest neighbors for each point. There are choices to be made here. What is a neighbor? What is near? How many neighbors?
+  3. Then you do something like multidimensional scaling on the graph distances to recover the local structure.
+** Note bene
+   Keep it real. Remember our high level goals, and don't spend hours and hours tweaking something to work. If it doesn't work well. It doesn't work well. Don't worry if you don't finish, but *do* try to explore the things your programming language does well and see if there are elements that you can implement to emphasize the power features of your language.
+   
 * Companion and Optional Readings
 
   1. Generative Dynamics in Brain Networks [[cite:&panahi21_gener_model_brain_dynam]]
+  2. Neurons, Populations, and a view of the Neural Manifold [[cite:&vyas20_comput_throug_neural_popul_dynam;&ebitz21_popul_doctr_cognit_neuros]]
+  3. [[cite:&chung18_class_geomet_gener_percep_manif]]
      
 
+     
+     #+Name: percepManifold
+     #+Caption: The Geometry of Perceptual Manifolds
+     [[file:percepManifold.png]]
+     
 * References
 [[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
 
-@article{bronstein17_geomet_deep_learn,
-  author = {Michael M. Bronstein and Joan Bruna and Yann LeCun and Arthur Szlam and Pierre Vandergheynst},
-  title = {Geometric Deep Learning: Going Beyond Euclidean Data},
-  journal = {IEEE Signal Processing Magazine},
-  volume = {34},
-  number = {4},
-  pages = {18-42},
-  year = {2017},
-  doi = {10.1109/msp.2017.2693418},
-  url = {https://doi.org/10.1109/msp.2017.2693418},
-}
 
-This article talks about the population doctrine in neuroscience, and talks about the new ideas from geometry like the neural manifold.
+* Footnotes
 
-@article{ebitz21_popul_doctr_cognit_neuros,
-  author =	 {R. Becket Ebitz and Benjamin Y. Hayden},
-  title =	 {The Population Doctrine in Cognitive Neuroscience},
-  journal =	 {Neuron},
-  volume =	 109,
-  number =	 19,
-  pages =	 {3055-3068},
-  year =	 2021,
-  doi =		 {10.1016/j.neuron.2021.07.011},
-  url =		 {https://doi.org/10.1016/j.neuron.2021.07.011},
-  DATE_ADDED =	 {Wed Nov 17 20:53:44 2021},
-}
-
-Another [[file:local-articles/VyasEtAlAnnRevNeurosci2020.pdf][population dynamics article.]]
-
-[[ https://doi.org/10.1002/wics.128][Geometry in Statistics]]
-
-[[ 
-https://journals.aps.org/prx/pdf/10.1103/PhysRevX.8.031003][Geometry of Perceptual Manifolds]]
-
-* Information Geometry
-
-** Articles
-   An introduction https://arxiv.org/pdf/1412.5633.pdf (also kept [[file:local-articles/info-geo.pdf][local copy]]).
+[fn:1] There actually more rules than just this.  
 
 
-* Outline
+* Code
 
-* Companion and Optional Readings
+** Making the Swiss Roll Data
 
-* References
-[[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
-* Discussion Questions Dynamics and DEs
-1. What is emergence?
-2. Is there a feature of differential equations or their dynamic behavior that can be described as emergent?
-3. Are there neural or mental phenomena that could thusly be well captured?
-
-** Articles
-An introductory [[http://www.faculty.sfasu.edu/judsontw/ode/html-snapshot/firstlook01.html][website]].
-
-An introductory website talking about [[https://www.cfm.brown.edu/people/dobrush/am33/Mathematica/ch2/bifurcation.html][bifurcations]] and using Mathematica, but maybe some can be adapted to other programming languages or computer algebra systems like Maxima.
+#+include: swiss-roll.lisp src lisp
 
 
+* COMMENT Local Variables
+# local variables
+# org-latex-pdf-process: '("latexmk -%latex -interaction=nonstopmode -output-directory=%o %f")
+# end

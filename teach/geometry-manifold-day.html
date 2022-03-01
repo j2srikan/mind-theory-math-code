@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-02-28 Mon 14:09 -->
+<!-- 2022-03-01 Tue 16:49 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Geometry Manifold Day</title>
@@ -219,8 +219,8 @@
 <div id="content" class="content">
 <h1 class="title">Geometry Manifold Day</h1>
 
-<div id="outline-container-org0ede748" class="outline-2">
-<h2 id="org0ede748"><span class="section-number-2">1.</span> Discussion Questions Geometry&#xa0;&#xa0;&#xa0;<span class="tag"><span class="disc_ques_purpose">disc_ques_purpose</span></span></h2>
+<div id="outline-container-org39f6b21" class="outline-2">
+<h2 id="org39f6b21"><span class="section-number-2">1.</span> Discussion Questions Geometry&#xa0;&#xa0;&#xa0;<span class="tag"><span class="disc_ques_purpose">disc_ques_purpose</span></span></h2>
 <div class="outline-text-2" id="text-1">
 <p>
 The purpose for these discussion questions is to get people thinking of concretely measuring abstract entities.
@@ -231,11 +231,12 @@ The purpose for these discussion questions is to get people thinking of concrete
 <ol class="org-ol">
 <li>Can we measure ideas?</li>
 <li>What is the <i>shortest</i> path between an image of a fish and an image of a man?</li>
+<li>What is the shape of the semantic neighborhood of political conservatism?</li>
 <li>How do we transit from our current beliefs about the future starting only with our past observations?</li>
 </ol>
 
 
-<div id="orgc87b7e3" class="figure">
+<div id="orgc2ebfab" class="figure">
 <p><img src="./morphImg.png" alt="morphImg.png" />
 </p>
 <p><span class="figure-number">Figure 1: </span>A geodesic path between two bird shapes. Taken from: <a href="https://link.springer.com/book/10.1007/978-1-4939-4020-2">https://link.springer.com/book/10.1007/978-1-4939-4020-2</a></p>
@@ -243,8 +244,8 @@ The purpose for these discussion questions is to get people thinking of concrete
 </div>
 </div>
 
-<div id="outline-container-orgea3b7f1" class="outline-2">
-<h2 id="orgea3b7f1"><span class="section-number-2">2.</span> Some Motivating Ideas</h2>
+<div id="outline-container-orgaf4ad66" class="outline-2">
+<h2 id="orgaf4ad66"><span class="section-number-2">2.</span> Some Motivating Ideas</h2>
 <div class="outline-text-2" id="text-2">
 <ol class="org-ol">
 <li>Algebra and Geometry - what are the differences?</li>
@@ -253,8 +254,8 @@ The purpose for these discussion questions is to get people thinking of concrete
 </div>
 </div>
 
-<div id="outline-container-org80ab59e" class="outline-2">
-<h2 id="org80ab59e"><span class="section-number-2">3.</span> Article Questions</h2>
+<div id="outline-container-org61f0fd7" class="outline-2">
+<h2 id="org61f0fd7"><span class="section-number-2">3.</span> Article Questions about [<a href="#citeproc_bib_item_1">1</a>]</h2>
 <div class="outline-text-2" id="text-3">
 <ol class="org-ol">
 <li>From the students</li>
@@ -267,213 +268,389 @@ The purpose for these discussion questions is to get people thinking of concrete
 </div>
 </div>
 
-<div id="outline-container-org5902cd4" class="outline-2">
-<h2 id="org5902cd4"><span class="section-number-2">4.</span> What is a manifold?</h2>
+<div id="outline-container-org6d66378" class="outline-2">
+<h2 id="org6d66378"><span class="section-number-2">4.</span> What is a manifold?</h2>
 <div class="outline-text-2" id="text-4">
 <p>
-A manifold is a "thingie" that can be as weird as you want it to be, but that is locally like \(\mathbb{R}^n\). Let's examine what that statement means and some of the terminology those who talk about it like to use. 
+A manifold is a "thingie" that can be as weird as you want it to be, but that is locally like \(\mathbb{R}^n\). Let's examine what that statement means and some of the terminology those who talk about it like to use. In what follows I try to provide a sketch of a lot of the terminology that shows up and also some of the logic behind the ideas of what the utility is of a manifold.
 </p>
-</div>
-<div id="outline-container-org933ba1f" class="outline-3">
-<h3 id="org933ba1f"><span class="section-number-3">4.1.</span> Points</h3>
-<div class="outline-text-3" id="text-4-1">
+
 <p>
-You can follow your intuition here. It is a thing. An object. A recognizable separate element of the space you are interested in. You may represent it by coordinate values \((x_1, x_2 ... x_n)\) or you could think of it as a vector. There are other conceptions too. 
+First up, what is \(\mathbb{R}^n\)?
+</p>
+</div>
+
+<div id="outline-container-org20ef7c6" class="outline-3">
+<h3 id="org20ef7c6"><span class="section-number-3">4.1.</span> Manifold Vocabulary</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org8acea63" class="outline-4">
+<h4 id="org8acea63"><span class="section-number-4">4.1.1.</span> Points</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<p>
+You can follow your intuition here. A point is a thing. An object. A word. The atom of your domain of interest. It is a recognizable separate element of the space you are interested in. You may represent it by coordinate values \((x_1, x_2 ... x_n)\) or you could think of it as a vector. There are other ways to conceive of this too. 
 </p>
 </div>
 </div>
-<div id="outline-container-org375ee58" class="outline-3">
-<h3 id="org375ee58"><span class="section-number-3">4.2.</span> Sets</h3>
-<div class="outline-text-3" id="text-4-2">
+<div id="outline-container-orgca73335" class="outline-4">
+<h4 id="orgca73335"><span class="section-number-4">4.1.2.</span> Sets</h4>
+<div class="outline-text-4" id="text-4-1-2">
 <p>
 For us, in this context,  a <i>set</i> is just a collection of points. 
 </p>
 </div>
 </div>
-<div id="outline-container-orgbcddcfc" class="outline-3">
-<h3 id="orgbcddcfc"><span class="section-number-3">4.3.</span> Open Sets</h3>
-<div class="outline-text-3" id="text-4-3">
+<div id="outline-container-org3300a26" class="outline-4">
+<h4 id="org3300a26"><span class="section-number-4">4.1.3.</span> Open Sets</h4>
+<div class="outline-text-4" id="text-4-1-3">
 <p>
 A set is open if it's complement is closed. This may strike you as being underspecified, but it is really just very general and allows us a lot of freedom to create the criteria by which <i>openess</i> of our sets will be judged. Often, it is useful to have the intuition that it is a set with no sharp edges. If you have a <b>metric</b> on your space then you can define the open sets via a notion that all the points in your set have some small \(\epsilon\) (measured by your distance metric) that is also in the set. There is no hard border that you can come up against. 
 </p>
 </div>
 </div>
-<div id="outline-container-orga97c6a1" class="outline-3">
-<h3 id="orga97c6a1"><span class="section-number-3">4.4.</span> Topology</h3>
-<div class="outline-text-3" id="text-4-4">
+<div id="outline-container-org4f3ace5" class="outline-4">
+<h4 id="org4f3ace5"><span class="section-number-4">4.1.4.</span> Topology</h4>
+<div class="outline-text-4" id="text-4-1-4">
 <p>
-For a given set \(X\) a topology is a collection of subsets of \(X\) that are all open and that together (via <b>unions</b>) will include all the points you have in the set \(X\).
+For a given set \(X\) a topology is a collection of subsets of \(X\) that are all open and that together (via <b>unions</b>) will include all the points you have in the set \(X\) <sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>.
 </p>
 </div>
 </div>
-<div id="outline-container-org5f60108" class="outline-3">
-<h3 id="org5f60108"><span class="section-number-3">4.5.</span> Topological Spaces</h3>
-<div class="outline-text-3" id="text-4-5">
+<div id="outline-container-org3bb3034" class="outline-4">
+<h4 id="org3bb3034"><span class="section-number-4">4.1.5.</span> Topological Spaces</h4>
+<div class="outline-text-4" id="text-4-1-5">
 <p>
 The tuple of the set \(X\) and the collection of open subsets that comprise the topology is the <i>topological space.</i> Usually these are not unique for a set \(X\).
 </p>
 </div>
 </div>
+<div id="outline-container-orgd2c7c33" class="outline-4">
+<h4 id="orgd2c7c33"><span class="section-number-4">4.1.6.</span> Homeomorphisms</h4>
+<div class="outline-text-4" id="text-4-1-6">
+<p>
+To come to grips with the mathematical ideas it often helps to start small. Think of two or three dimensions where you can sketch a diagram, but also realize that as you scale up especially to very big or even infinite dimensions things may break your intuition.
+</p>
 
-<div id="outline-container-org258ee36" class="outline-3">
-<h3 id="org258ee36"><span class="section-number-3">4.6.</span> Homeomorphisms</h3>
-</div>
+<p>
+With a <i>homeomorphism</i> you jump from your "real" space into the flat map of \(\mathbb{R}^n\). You move around and measure things there. Then you jump back to your tricky and maybe arbitrarily wrinkly space. Denote the map from your space to \(\mathbb{R}^n\) via \(\phi\).
+</p>
 
-<div id="outline-container-org021c714" class="outline-3">
-<h3 id="org021c714"><span class="section-number-3">4.7.</span> Charts and Atlases</h3>
-</div>
-
-<div id="outline-container-orgd79060e" class="outline-3">
-<h3 id="orgd79060e"><span class="section-number-3">4.8.</span> Diffeomorphisms</h3>
-</div>
-
-<div id="outline-container-orgcfc375f" class="outline-3">
-<h3 id="orgcfc375f"><span class="section-number-3">4.9.</span> Tangent Vectors</h3>
-</div>
-
-<div id="outline-container-orgd77ac8a" class="outline-3">
-<h3 id="orgd77ac8a"><span class="section-number-3">4.10.</span> Equivalence Classes</h3>
-</div>
-
-<div id="outline-container-org089b802" class="outline-3">
-<h3 id="org089b802"><span class="section-number-3">4.11.</span> Tangent Spaces</h3>
+<p>
+What makes it a <b>homeomorphism</b> is that it is <i>continuous</i> and has an <i>inverse</i>. Oversimplified this means nearby points stay nearby without breaks. When you jump to \(\mathbb{R}^n\) and jump back you end up where you started. 
+</p>
 </div>
 </div>
 
-<div id="outline-container-org264a7b1" class="outline-2">
-<h2 id="org264a7b1"><span class="section-number-2">5.</span> What is Wrong With Principle Components Analysis (PCA)?</h2>
+<div id="outline-container-orge88475b" class="outline-4">
+<h4 id="orge88475b"><span class="section-number-4">4.1.7.</span> Charts and Atlases</h4>
+<div class="outline-text-4" id="text-4-1-7">
+
+<div id="org4248eec" class="figure">
+<p><img src="chart.png" alt="chart.png" />
+</p>
+<p><span class="figure-number">Figure 2: </span>The Idea of a Chart for a Manifold</p>
 </div>
 
-<div id="outline-container-org4d01f02" class="outline-2">
-<h2 id="org4d01f02"><span class="section-number-2">6.</span> Companion and Optional Readings</h2>
+<p>
+If you could walk around in your original space or \(\mathbb{R}^n\) without limit the problem would be simple. You would just figure out distances and paths as you do in the real world. The tools of the manifold are for the circumstance where you can't just do that. In many cases the map (\(\phi\)) from your space to \(\mathbb{R}^n\) only covers a small area around your starting point and a small area in \(\mathbb{R}^n\). The \(\phi\) is called a <b>chart</b>. We rely on the fact that there is more than one chart and that charts overlap. An example is to consider a \(\phi\) and \(\psi\) for sets \(U\) and \(V\) which are both in your space and which sets overlap. \(\phi\) and \(\psi\) are both homeomorphisms so we can have the compositions of these functions with the inverse of the other in both orders: \(\psi^{-1}\circ\phi\) or \(\phi^{-1}\circ\psi\). For things to work out in a useful way we need these two things to be equal for all \(\{x \in U \cap V\}\)
+</p>
+
+
+<div id="org3f08e39" class="figure">
+<p><img src="compSmthMap.png" alt="compSmthMap.png" />
+</p>
+<p><span class="figure-number">Figure 3: </span>Composing Charts to Measure a Manifold</p>
+</div>
+
+
+<p>
+Here is the idea informally, but with some of the mathematical notation: You start in your weird space at \(x\) and you want to measure the distance to \(y\) in your weird space. But your space is weird so there is no easy way to just measure a distance. What you do is use \(\phi\) to get into \(\mathbb{R}^n\) (you are now at \(\phi(x)\) measure the distance to \(\psi(y)\) there and then use \(\psi^{-1}(y)\) to get back to \(y\). That is your distance between \(x\) and \(y\) (denoted often as \(d(x,y)\)).
+</p>
+
+
+<p>
+If you need to measure the space between an \(x\) and \(z\) that do not have intersecting charts you will need to use an <b>atlas</b>, which is the collection of all the charts. You then have to walk from one point to another chaining all the maps together.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5ea2da5" class="outline-4">
+<h4 id="org5ea2da5"><span class="section-number-4">4.1.8.</span> Diffeomorphisms</h4>
+<div class="outline-text-4" id="text-4-1-8">
+<p>
+For many of things we are interested in you may want other measures from \(\mathbb{R}^n\) that are more like speed or rates of change. We may therefore want more than just <i>homeomorphisms</i>. If we also want those maps to be differentiable so we can get "rates" then we want them to be things that we can take the derivatives of. Maybe many derivatives. So, we can require them to be infinitely differentiable (that is to have derivatives of all orders (\(C^\infty\))). If they are invertible (that is have inverses; we can get back to where we started; \(f \circ f^{-1} = \mbox{id}_{end} \mbox{ and } f^{-1} \circ f = \mbox{id}_{start}\).
+</p>
+</div>
+
+
+<ol class="org-ol">
+<li><a id="orgd11bdc3"></a>Where have we seen something like this before?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_question">class_question</span></span><br /></li>
+</ol>
+</div>
+
+<div id="outline-container-org865ddd6" class="outline-4">
+<h4 id="org865ddd6"><span class="section-number-4">4.1.9.</span> Tangent Vectors</h4>
+<div class="outline-text-4" id="text-4-1-9">
+<p>
+In high school we learned that slopes were rise over run. In calculus we learned to think of derivatives as slopes at a point along a curve. They were <i>tangent</i>: touching only at that one point. When that tangent "line" points in a multi-dimensional space we might choose to regard it as a vector and say it is a <b>tangent vector</b>. In summary, to find a tangent vector at a point in our weird space we fix a curve that travels through that point, use our tools for traveling to and from \(\mathbb{R}^n\) to get the tangent vector there, and label our original point with that tangent vector in the weird space. Of course, there might be a lot of ways to create a curve that passes through our point of interest. What do we do?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb407f6c" class="outline-4">
+<h4 id="orgb407f6c"><span class="section-number-4">4.1.10.</span> Equivalence Classes</h4>
+<div class="outline-text-4" id="text-4-1-10">
+<p>
+We measure <i>all</i> of them. Many of the tangent vectors from these curves may be the same. We don't need to worry about them all since they are redundant in this respect. Thus we use <b>equivalence classes</b>. \(\[\gamma\]\) is the notation used for the collection of things (in our particular case here it is curves) that give us back the same result (in our particular case here it is a tangent vector) when we do to them whatever it was we did to \(\gamma\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge33b758" class="outline-4">
+<h4 id="orge33b758"><span class="section-number-4">4.1.11.</span> Tangent Spaces</h4>
+<div class="outline-text-4" id="text-4-1-11">
+<p>
+The collection of all the equivalence classes of tangent vectors at a point is the <b>tangent space</b>. If we have done everything right with setting up all our components, charts and so forth this tangent space will be a space of vectors, that it will be a <b>vector space</b>, which is its own mathematical thing with various rules and properties we might be able to exploit to interesting effects.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9ae1b0e" class="outline-3">
+<h3 id="org9ae1b0e"><span class="section-number-3">4.2.</span> What Is Your Manifold?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_activity">class_activity</span></span></h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Take some time to identify a domain of scientific interest to you and explain (in a sketchy, hand-waving way) how it could be treated as a manifold, and what you might hope to gain or learn by doing so. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org83fed83" class="outline-2">
+<h2 id="org83fed83"><span class="section-number-2">5.</span> Why Bother With Weird Spaces</h2>
+<div class="outline-text-2" id="text-5">
+<div class="org-src-container">
+<pre class="src src-lisp">(swiss-plot-all <span style="color: #8b2252;">"swiss-roll-flat.png"</span> *srd* T)
+</pre>
+</div>
+
+
+<div id="orgdb24dbb" class="figure">
+<p><img src="swiss-roll-flat.png" alt="swiss-roll-flat.png" />
+</p>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-lisp">(swiss-plot-all <span style="color: #8b2252;">"swiss-roll.png"</span> *srd*)
+</pre>
+</div>
+
+
+<div id="orgf10b40d" class="figure">
+<p><img src="swiss-roll.png" alt="swiss-roll.png" />
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orga9029e9" class="outline-3">
+<h3 id="orga9029e9"><span class="section-number-3">5.1.</span> What is Wrong With Principle Components Analysis (PCA)?</h3>
+<div class="outline-text-3" id="text-5-1">
+
+<div id="org331ae3b" class="figure">
+<p><img src="swiss-pca.png" alt="swiss-pca.png" />
+</p>
+<p><span class="figure-number">Figure 4: </span>PCA and the Swiss Roll Data <a href="https://www.sjsu.edu/faculty/guangliang.chen/Math285F15/285%20Final%20Project%20-%20LLE.pdf">temp</a></p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org71aa219" class="outline-3">
+<h3 id="org71aa219"><span class="section-number-3">5.2.</span> What Works Better - one example "isomap"</h3>
+<div class="outline-text-3" id="text-5-2">
+
+<div id="org838f14e" class="figure">
+<p><img src="swiss-isomap.png" alt="swiss-isomap.png" />
+</p>
+<p><span class="figure-number">Figure 5: </span>Isomap and the PCA Data</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3c583e9" class="outline-2">
+<h2 id="org3c583e9"><span class="section-number-2">6.</span> ISOMAP&#xa0;&#xa0;&#xa0;<span class="tag"><span class="homework">homework</span></span></h2>
 <div class="outline-text-2" id="text-6">
+<p>
+This module's project is to implement some pieces (or all) of the isomap procedure for capturing the low dimensional structure of a complicated shape. We will try to use the swiss roll data so you will first need to implement a way to generate those data.
+</p>
+
+<p>
+There is a <a href="https://benalexkeen.com/isomap-for-dimensionality-reduction-in-python/">blog</a> describing a python implementation, but the goal here is less about getting something to work than understanding the mappings and what they mean. As well, we want to come to grips with the idea of a manifold and the tools that would help analyze data that lie upon one. Also, we would like to think about the expressivity of a programming language for these sorts of relations.
+</p>
+
+<p>
+The steps are (see <a href="https://en.wikipedia.org/wiki/Isomap#Algorithm">Algorithm Wikipedia</a>):
+</p>
 <ol class="org-ol">
-<li>Generative Dynamics in Brain Networks [<a href="#citeproc_bib_item_1">1</a>]</li>
+<li>Make the data.</li>
+<li>Find the nearest neighbors for each point. There are choices to be made here. What is a neighbor? What is near? How many neighbors?</li>
+<li>Then you do something like multidimensional scaling on the graph distances to recover the local structure.</li>
 </ol>
 </div>
+<div id="outline-container-orgf9e318c" class="outline-3">
+<h3 id="orgf9e318c"><span class="section-number-3">6.1.</span> Note bene</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+Keep it real. Remember our high level goals, and don't spend hours and hours tweaking something to work. If it doesn't work well. It doesn't work well. Don't worry if you don't finish, but <b>do</b> try to explore the things your programming language does well and see if there are elements that you can implement to emphasize the power features of your language.
+</p>
+</div>
+</div>
 </div>
 
-
-<div id="outline-container-org437d31d" class="outline-2">
-<h2 id="org437d31d"><span class="section-number-2">7.</span> References</h2>
+<div id="outline-container-org5969880" class="outline-2">
+<h2 id="org5969880"><span class="section-number-2">7.</span> Companion and Optional Readings</h2>
 <div class="outline-text-2" id="text-7">
-<div class="csl-bib-body">
-  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>
-    <div class="csl-left-margin">1.</div><div class="csl-right-inline">M. R. Panahi, G. Abrevaya, J.-C. Gagnon-Audet, V. Voleti, I. Rish, &#38; G. Dumas, <a href="https://arxiv.org/pdf/2112.12147.pdf">Generative models of brain dynamics – a review</a>. (2021).</div>
-  </div>
-</div>
-
-
-<p>
-@article{bronstein17_geomet_deep_learn,
-  author = {Michael M. Bronstein and Joan Bruna and Yann LeCun and Arthur Szlam and Pierre Vandergheynst},
-  title = {Geometric Deep Learning: Going Beyond Euclidean Data},
-  journal = {IEEE Signal Processing Magazine},
-  volume = {34},
-  number = {4},
-  pages = {18-42},
-  year = {2017},
-  doi = {10.1109/msp.2017.2693418},
-  url = {<a href="https://doi.org/10.1109/msp.2017.2693418">https://doi.org/10.1109/msp.2017.2693418</a>},
-}
-</p>
-
-<p>
-This article talks about the population doctrine in neuroscience, and talks about the new ideas from geometry like the neural manifold.
-</p>
-
-<p>
-@article{ebitz21_popul_doctr_cognit_neuros,
-  author =	 {R. Becket Ebitz and Benjamin Y. Hayden},
-  title =	 {The Population Doctrine in Cognitive Neuroscience},
-  journal =	 {Neuron},
-  volume =	 109,
-  number =	 19,
-  pages =	 {3055-3068},
-  year =	 2021,
-  doi =		 {10.1016/j.neuron.2021.07.011},
-  url =		 {<a href="https://doi.org/10.1016/j.neuron.2021.07.011">https://doi.org/10.1016/j.neuron.2021.07.011</a>},
-  DATE_ADDED =	 {Wed Nov 17 20:53:44 2021},
-}
-</p>
-
-<p>
-Another <a href="local-articles/VyasEtAlAnnRevNeurosci2020.pdf">population dynamics article.</a>
-</p>
-
-<p>
-[[ <a href="https://doi.org/10.1002/wics.1">https://doi.org/10.1002/wics.1</a>
-</p>
-<div class="csl-bib-body">
-  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>
-    <div class="csl-left-margin">1.</div><div class="csl-right-inline">M. R. Panahi, G. Abrevaya, J.-C. Gagnon-Audet, V. Voleti, I. Rish, &#38; G. Dumas, <a href="https://arxiv.org/pdf/2112.12147.pdf">Generative models of brain dynamics – a review</a>. (2021).</div>
-  </div>
-</div>
-<p>
-/prx/pdf/10.1103/PhysRevX.8.031003][Geometry of Perceptual Manifolds]]
-</p>
-</div>
-</div>
-
-<div id="outline-container-org556d31e" class="outline-2">
-<h2 id="org556d31e"><span class="section-number-2">8.</span> Information Geometry</h2>
-<div class="outline-text-2" id="text-8">
-</div>
-<div id="outline-container-org49526c3" class="outline-3">
-<h3 id="org49526c3"><span class="section-number-3">8.1.</span> Articles</h3>
-<div class="outline-text-3" id="text-8-1">
-<p>
-An introduction <a href="https://arxiv.org/pdf/1412.5633.pdf">https://arxiv.org/pdf/1412.5633.pdf</a> (also kept <a href="local-articles/info-geo.pdf">local copy</a>).
-</p>
-</div>
-</div>
-</div>
-
-
-<div id="outline-container-org4ca3365" class="outline-2">
-<h2 id="org4ca3365"><span class="section-number-2">9.</span> Outline</h2>
-</div>
-
-<div id="outline-container-orgf683302" class="outline-2">
-<h2 id="orgf683302"><span class="section-number-2">10.</span> Companion and Optional Readings</h2>
-</div>
-
-<div id="outline-container-org96688cf" class="outline-2">
-<h2 id="org96688cf"><span class="section-number-2">11.</span> References</h2>
-<div class="outline-text-2" id="text-11">
-<p>
-<a href="/home/britt/gitRepos/masterBib/bayatt.bib">/home/britt/gitRepos/masterBib/bayatt.bib</a>
-</p>
-</div>
-</div>
-<div id="outline-container-orgb9928fe" class="outline-2">
-<h2 id="orgb9928fe"><span class="section-number-2">12.</span> Discussion Questions Dynamics and DEs</h2>
-<div class="outline-text-2" id="text-12">
 <ol class="org-ol">
-<li>What is emergence?</li>
-<li>Is there a feature of differential equations or their dynamic behavior that can be described as emergent?</li>
-<li>Are there neural or mental phenomena that could thusly be well captured?</li>
+<li>Generative Dynamics in Brain Networks [<a href="#citeproc_bib_item_2">2</a>]</li>
+<li>Neurons, Populations, and a view of the Neural Manifold [<a href="#citeproc_bib_item_3">3</a>–<a href="#citeproc_bib_item_4">4</a>]</li>
+<li>[<a href="#citeproc_bib_item_5">5</a>]</li>
 </ol>
+
+
+
+
+<div id="org9dd7d5d" class="figure">
+<p><img src="percepManifold.png" alt="percepManifold.png" />
+</p>
+<p><span class="figure-number">Figure 6: </span>The Geometry of Perceptual Manifolds</p>
+</div>
+</div>
 </div>
 
-<div id="outline-container-org90ac2e6" class="outline-3">
-<h3 id="org90ac2e6"><span class="section-number-3">12.1.</span> Articles</h3>
-<div class="outline-text-3" id="text-12-1">
-<p>
-An introductory <a href="http://www.faculty.sfasu.edu/judsontw/ode/html-snapshot/firstlook01.html">website</a>.
-</p>
+<div id="outline-container-org725ac7b" class="outline-2">
+<h2 id="org725ac7b"><span class="section-number-2">8.</span> References</h2>
+<div class="outline-text-2" id="text-8">
+<div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>
+    <div class="csl-left-margin">1.</div><div class="csl-right-inline">S. Chung &#38; L. Abbott, Neural population geometry: an approach for understanding biological and artificial neural networks. <i>Current opinion in neurobiology</i>, <b>70</b> (2021) 137-144. <a href="https://doi.org/10.1016/j.conb.2021.10.010">https://doi.org/10.1016/j.conb.2021.10.010</a>.</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>
+    <div class="csl-left-margin">2.</div><div class="csl-right-inline">M. R. Panahi, G. Abrevaya, J.-C. Gagnon-Audet, V. Voleti, I. Rish, &#38; G. Dumas, <a href="https://arxiv.org/pdf/2112.12147.pdf">Generative models of brain dynamics – a review</a>. (2021).</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_3"></a>
+    <div class="csl-left-margin">3.</div><div class="csl-right-inline">S. Vyas, M. D. Golub, D. Sussillo, &#38; K. V. Shenoy, Computation through neural population dynamics. <i>Annual review of neuroscience</i>, <b>43</b> (2020) 249-275. <a href="https://doi.org/10.1146/annurev-neuro-092619-094115">https://doi.org/10.1146/annurev-neuro-092619-094115</a>.</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_4"></a>
+    <div class="csl-left-margin">4.</div><div class="csl-right-inline">R. B. Ebitz &#38; B. Y. Hayden, The population doctrine in cognitive neuroscience. <i>Neuron</i>, <b>109</b> (2021) 3055-3068. <a href="https://doi.org/10.1016/j.neuron.2021.07.011">https://doi.org/10.1016/j.neuron.2021.07.011</a>.</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_5"></a>
+    <div class="csl-left-margin">5.</div><div class="csl-right-inline">S. Chung, D. D. Lee, &#38; H. Sompolinsky, Classification and geometry of general perceptual manifolds. <i>Physical review x</i>, <b>8</b> (2018) 031003. <a href="https://doi.org/10.1103/physrevx.8.031003">https://doi.org/10.1103/physrevx.8.031003</a>.</div>
+  </div>
+</div>
+</div>
+</div>
 
-<p>
-An introductory website talking about <a href="https://www.cfm.brown.edu/people/dobrush/am33/Mathematica/ch2/bifurcation.html">bifurcations</a> and using Mathematica, but maybe some can be adapted to other programming languages or computer algebra systems like Maxima.
-</p>
+
+
+<div id="outline-container-orgcc4cfd8" class="outline-2">
+<h2 id="orgcc4cfd8"><span class="section-number-2">9.</span> Code</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+<div id="outline-container-org82f9511" class="outline-3">
+<h3 id="org82f9511"><span class="section-number-3">9.1.</span> Making the Swiss Roll Data</h3>
+<div class="outline-text-3" id="text-9-1">
+<div class="org-src-container">
+<pre class="src src-lisp">(ql:quickload <span style="color: #8b2252;">"alexandria"</span> <span style="color: #483d8b;">:silent</span> t)
+(ql:quickload <span style="color: #8b2252;">"eazy-gnuplot"</span> <span style="color: #483d8b;">:silent</span> t)
+
+(<span style="color: #a020f0;">defpackage</span> <span style="color: #b22222;">#:</span><span style="color: #8b2252;">swiss-roll</span>
+  (<span style="color: #483d8b;">:nicknames</span> <span style="color: #8b2252;">"swiss"</span>)
+  (<span style="color: #483d8b;">:use</span> <span style="color: #b22222;">#:</span><span style="color: #8b2252;">cl</span> <span style="color: #b22222;">#:</span><span style="color: #8b2252;">eazy-gnuplot</span>))
+
+(<span style="color: #a020f0;">in-package</span> <span style="color: #483d8b;">:swiss-roll</span>)
+
+(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">2d-gaussian-random</span> (<span style="color: #228b22;">&amp;key</span> (how-many 1) (m1 0.0) (m2 0.0) (sd1 1.0) (sd2 1.0))
+  (<span style="color: #a020f0;">let</span> ((out 'nil))
+    (<span style="color: #a020f0;">dotimes</span> (i how-many out)
+      (<span style="color: #a020f0;">multiple-value-bind</span> (x y) (alexandria:gaussian-random)
+        (setq out (cons (list (+ m1 (* sd1 x)) (+ m2 (* sd2 y))) out))))))
+
+(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">swiss-roll-transform</span> (x y)
+  (list (* x (cos x)) y (* x (sin x))))
+
+(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">swiss-roll-dat</span> (<span style="color: #228b22;">&amp;key</span> (how-many 1) (m1 0.0) (m2 0.0) (sd1 1.0) (sd2 1.0))
+  (<span style="color: #a020f0;">let</span> ((2dgdat (2d-gaussian-random <span style="color: #483d8b;">:how-many</span> how-many <span style="color: #483d8b;">:m1</span> m1 <span style="color: #483d8b;">:m2</span> m2 <span style="color: #483d8b;">:sd1</span> sd1 <span style="color: #483d8b;">:sd2</span> sd2)))
+    (mapcar (<span style="color: #a020f0;">lambda</span> (x) (<span style="color: #a020f0;">destructuring-bind</span> (a b) x
+                          (swiss-roll-transform a b)))
+            2dgdat)))
+
+<span style="color: #b22222;">;;; </span><span style="color: #b22222;">numbers taken from: https://people.cs.uchicago.edu/~dinoj/manifold/swissroll.htmlk</span>
+(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">make-example-swiss-roll</span> ()
+  (<span style="color: #a020f0;">let</span> ((mredx 7.5)
+        (mredy 7.5)
+        (mbluex 7.5)
+        (mbluey 12.5)
+        (mgreenx 12.5)
+        (mgreeny 7.5)
+        (mblackx 12.5)
+        (mblacky 12.5)
+        (how-many 400))
+    (list (swiss-roll-dat <span style="color: #483d8b;">:how-many</span> how-many <span style="color: #483d8b;">:m1</span> mredx <span style="color: #483d8b;">:m2</span> mredy)
+          (swiss-roll-dat <span style="color: #483d8b;">:how-many</span> how-many <span style="color: #483d8b;">:m1</span> mbluex <span style="color: #483d8b;">:m2</span> mbluey)
+          (swiss-roll-dat <span style="color: #483d8b;">:how-many</span> how-many <span style="color: #483d8b;">:m1</span> mgreenx <span style="color: #483d8b;">:m2</span> mgreeny)
+          (swiss-roll-dat <span style="color: #483d8b;">:how-many</span> how-many <span style="color: #483d8b;">:m1</span> mblackx <span style="color: #483d8b;">:m2</span> mblacky))))
+
+
+(<span style="color: #a020f0;">defparameter</span> <span style="color: #a0522d;">*srd*</span> (make-example-swiss-roll))
+
+
+(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">swiss-plot</span> (output plot-data)
+  (<span style="color: #a020f0;">with-plots</span> (*standard-output* <span style="color: #483d8b;">:debug</span> nil)
+    (gp-setup <span style="color: #483d8b;">:output</span> output <span style="color: #483d8b;">:terminal</span> <span style="color: #483d8b;">:png</span>)
+    (splot
+     (<span style="color: #a020f0;">lambda</span> ()
+       (<span style="color: #a020f0;">loop</span> for p in plot-data
+             do (format t <span style="color: #8b2252;">"~&amp;~a ~a ~a"</span> (first p) (second p) (third p))))
+    <span style="color: #483d8b;">:with</span> '(<span style="color: #483d8b;">:points</span> <span style="color: #483d8b;">:pt</span> 5 <span style="color: #483d8b;">:lc</span> <span style="color: #483d8b;">:rgb</span> <span style="color: #8b2252;">"blue"</span>)))
+  output)
+
+(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">swiss-plot-all</span> (output plot-data <span style="color: #228b22;">&amp;optional</span> (flat nil))
+  (<span style="color: #a020f0;">with-plots</span> (*standard-output* <span style="color: #483d8b;">:debug</span> nil)
+    (gp-setup <span style="color: #483d8b;">:output</span> output <span style="color: #483d8b;">:terminal</span> <span style="color: #483d8b;">:png</span>)
+    (gp <span style="color: #483d8b;">:set</span> <span style="color: #483d8b;">:title</span> <span style="color: #8b2252;">"Swiss Roll Data"</span>)
+<span style="color: #b22222;">;    </span><span style="color: #b22222;">problem with the list passed to view, cannot handle comma</span>
+                                        <span style="color: #b22222;">;    (gp :set :view '(60.0d0 #\U+002C 30.0d0))</span>
+    (<span style="color: #a020f0;">when</span> flat (gp <span style="color: #483d8b;">:set</span> <span style="color: #483d8b;">:view</span> 'map))
+    (<span style="color: #a020f0;">loop</span> for ps in plot-data
+          for pt in (list 1 2 3 4)
+          for pc in (list <span style="color: #8b2252;">"red"</span> <span style="color: #8b2252;">"green"</span> <span style="color: #8b2252;">"blue"</span> <span style="color: #8b2252;">"black"</span>)
+          do (splot
+              (<span style="color: #a020f0;">lambda</span> ()
+                (<span style="color: #a020f0;">loop</span> for p in ps
+                      do (format t <span style="color: #8b2252;">"~&amp;~a ~a ~a"</span> (first p) (second p) (third p))))
+              <span style="color: #483d8b;">:with</span> `(<span style="color: #483d8b;">:points</span> <span style="color: #483d8b;">:pt</span> ,pt <span style="color: #483d8b;">:lc</span> <span style="color: #483d8b;">:rgb</span> ,pc))))
+  output)
+</pre>
 </div>
 </div>
 </div>
 </div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+There actually more rules than just this.  
+</p></div></div>
+
+
+</div>
+</div></div>
 <div id="postamble" class="status">
 <p class="date">Date: Winter 2022</p>
 <p class="author">Author: Britt Anderson</p>
-<p class="date">Created: 2022-02-28 Mon 14:09</p>
+<p class="date">Created: 2022-03-01 Tue 16:49</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
