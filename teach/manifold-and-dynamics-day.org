@@ -2,15 +2,9 @@
 #+csl-style: ./j-neurosci.csl
 
 
-#+Title: Manifold and Dynamics Day
+#+Title: Dynamics Day
 #+Author: Britt Anderson
 #+Date: Dec 24, 2021
-
-* Discussion Questions Geometry
-1. Can we measure ideas?
-2. What is the /shortest/ path between an image of a fish and an image of a man?
-3. How do we transit from our current beliefs about the future starting only with our past observations?
-
 
 * Discussion Questions Dynamics and DEs
 1. What is emergence?
@@ -77,4 +71,31 @@ https://journals.aps.org/prx/pdf/10.1103/PhysRevX.8.031003][Geometry of Perceptu
 ** Articles
    An introduction https://arxiv.org/pdf/1412.5633.pdf (also kept [[file:local-articles/info-geo.pdf][local copy]]).
 
+
+   ** Articles
+An introductory [[http://www.faculty.sfasu.edu/judsontw/ode/html-snapshot/firstlook01.html][website]].
+
+An introductory website talking about [[https://www.cfm.brown.edu/people/dobrush/am33/Mathematica/ch2/bifurcation.html][bifurcations]] and using Mathematica, but maybe some can be adapted to other programming languages or computer algebra systems like Maxima.
+
+
+* Discussion Questions Dynamics and DEs
+1. What is emergence?
+2. Is there a feature of differential equations or their dynamic behavior that can be described as emergent?
+3. Are there neural or mental phenomena that could thusly be well captured?
+
    
+
+
+* Information Geometry
+
+** Articles
+   An introduction https://arxiv.org/pdf/1412.5633.pdf (also kept [[file:local-articles/info-geo.pdf][local copy]]).
+
+
+* Outline
+
+* Companion and Optional Readings
+
+* References
+
+[[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
