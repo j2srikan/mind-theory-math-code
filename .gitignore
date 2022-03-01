@@ -27,3 +27,4 @@ __pycache__/
 ltximg/
 latex-*
 manifold-and-dynamics-day.org
+.DS_Store
