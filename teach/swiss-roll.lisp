@@ -22,7 +22,7 @@
 			  (swiss-roll-transform a b)))
 	    2dgdat)))
 
-;;; numbers taken from: https://people.cs.uchicago.edu/~dinoj/manifold/swissroll.htmlk
+;;; numbers taken from: https://people.cs.uchicago.edu/~dinoj/manifold/swissroll.html
 (defun make-example-swiss-roll ()
   (let ((mredx 7.5)
 	(mredy 7.5)
