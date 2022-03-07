@@ -52,13 +52,13 @@
     :with '(:points :pt 5 :lc :rgb "blue")))
   output)
 
-(defun swiss-plot-all (output plot-data &optional (flat nil))
+(defun swiss-plot-all (output plot-data &key (vx 60) (vz 0))
   (with-plots (*standard-output* :debug nil)
     (gp-setup :output output :terminal :png)
     (gp :set :title "Swiss Roll Data")
 ;    problem with the list passed to view, cannot handle comma
-					;    (gp :set :view '(60.0d0 #\U+002C 30.0d0))
-    (when flat (gp :set :view 'map))
+    (gp :set :view (list vx vz))
+;    (when flat (gp :set :view 'map))
     (loop for ps in plot-data
 	  for pt in (list 1 2 3 4)
 	  for pc in (list "red" "green" "blue" "black")
