@@ -106,7 +106,7 @@
 ;if we generated the graph with k(5) nearest neighbour such that each ThreeDsPoint only have edge to
 ; its nearest neighbour in terms of Euclidean distance
 ;then we can proferm dijkstra to calculate geodesic distance
-;which allow us to have a N*N matrix of each points' geodesic distance
+;which allow us to have a 4N*4N matrix of each points' geodesic distance
 
 
 ;code referenced from https://github.com/xinchaosong/shortest-path-problem-racket/blob/master/dijkstra.rktfrom 
@@ -194,7 +194,7 @@
 
 ;Summary of the steps that should be implement for Isomap
 ;1. Calculate the Euclidean distance between each points
-;create a N*N matrix as a reference
+;create a 4N*4N matrix as a reference
 ;2. Create a graph in which a point has edges to k(for example 5) nearest neighbours, each edge has cost as the the Euclidean distance
 ;then use Djikstra’s Shortest Path algorithm to find the shortest path between each points
 ;3. Create a new  geodesic distance matrix for reference
