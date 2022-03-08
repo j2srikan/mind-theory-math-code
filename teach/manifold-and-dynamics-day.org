@@ -1,10 +1,11 @@
-#+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
-#+csl-style: ./j-neurosci.csl
-
-
-#+Title: Dynamics Day
+#+Title: Dynamics and Information
 #+Author: Britt Anderson
-#+Date: Dec 24, 2021
+#+Date: Winter 2022
+#+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
+#+csl-style: ../admin/cambridge-university-press-numeric.csl
+#+options: ^:nil toc:nil d:nil
+
+
 
 * Discussion Questions Dynamics and DEs
 1. What is emergence?
