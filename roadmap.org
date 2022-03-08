@@ -1,13 +1,13 @@
 #+Title: Roadmap for Psych670 Winter 2022
 
-* First Module <2022-01-05 Wed>
+* First Module
 1. Start with File [[file:teach/first-day.org]]. 
 2. And also check out the [[file:admin/syllabus-winter-2022.org][syllabus]].
 3. This was my original [[file:admin/mtmc.org]["summary" file]]. A blend of aspiration, outline, and summary of topics. There might be some useful discussion questions here, or just a way to reorient yourself if you feel you are getting lost in the weeds. 
-* Second Module <2022-01-12 Wed>
+* Second Module
 1. The main file for this class will be [[file:teach/mind.org]]. Note this file imports another file. You will see their combination if you look at [[file:teach/mind.html]], but if you are looking for the raw files you will also have to checkout [[file:imports/computational-mind-book.org]].
 2. We will be discussing articles that can be found on learn and that come from the Handbook of the Computational Mind. Groups were arranged in class on <2022-01-05 Wed>. *These should be read /before/ class*.
-* Third Module <2022-01-19 Wed>
+* Third Module 
 1. The main file for this class will be [[file:teach/theory-day.org]].
 2. Things to read *before* class.
    There are three short opinion pieces [[file:teach/theory-day.org::*Some opinions][here.]] Give them a skim with the goal of priming your thinking for whether you agree or disagree that there is a problem with theories in psychology and neuroscience.
@@ -16,24 +16,21 @@
 
    [[file:teach/theory-day.org::*Suppes \[\[cite:&suppes67_what\]\]][This]] is important since I plan to base a lot of my discussion around it. Suppes, 1967, What is a scientific theory.
 3. Before class next week *submit* the github repo dropbox item. 
-* Fourth Module <2022-01-26 Wed> 
+* Fourth Module
 1. Talk about coming back to campus to meet in person - what does everyone think?
 2. The main file for this module is:  [[file:teach/prog-lang.org]]
 3. Prior to this class make sure to put your groups thoughts on github in the proper folder and to signal this by taking the quiz on Learn. The submission (to be discussed in class; ask if not clear) should be the first impressions about installation and any other general, early opinions. 
 4. Will be our first occasion to discuss the abstract pros/cons of the various programming options chosen. A [[file:imports/prog-lang-disc-guide.org][guide]] is available to prepare for this preliminary discussion and gives some details on the accompanying exercise.
-* Fifth Module <2022-01-26 Wed>--<2022-02-02 Wed>
+* Fifth Module 
 1. I need to come up with a good concise reading for this exercise, but I don't  have one yet. You can see the handout for several readings that are available to skim for your preparation. I hope the discussion we did on the computational mind prepares us for this. 
 2. The main file for this day will be [[file:teach/computation-day.org]]
 3. Programming exercise will be the Busy Beaver
-* Sixth Module  <2022-02-09 Wed>
-1. Prior to this module you will want to read http://arxiv.org/abs/2111.06969v1.
-2. The main file for this day will be [[file:teach/abstraction.org]]
-3. There will be a major programming exercise organized around this that will use the last part of class and the coming week. We will have a discussion about abstraction and some of the points raised in the [[http://arxiv.org/abs/2111.06969v1][reading]] during the class session.
-* Seventh Module
+* Sixth Module 
+* Seventh Module 
 1. The main file for this module will be [[file:teach/category-day.org]].
 2. Our efforts to translate the ideas of modeling with computational states into code will begin the class discussion. I hope to hear from each of the programming groups about how they were tackling some of the ideas. Then we can plan as a class what we need to implement to serve as an illustration or test of the ideas so included. That is something we can work on in preparation for the following weeks class. 
 3. This first day is to be an introduction of terminology and an effort to guide them in thinking about their interests in cognition as categorical concepts.
-* Eighth Module
+* Eighth Module 
 1. The main file for this module will be [[file:teach/category-two-day.org]]. I anticipated category as a  this as a two week topic, and this is week two. Obviously it could be much more, but that is what I will limit myself to.
 2. Start with a review of the cognitive state coding activity.
 3. Post-mortem on the article, model, and exercise in coding it.
@@ -43,25 +40,23 @@
 7. This was to be done next week, but on the first offering of the class this seem too onerous, so I just ditched it.
 
    Check-in on the Dempster Shafer implementations and comments on language efficiencies and libraries.
-* Ninth Module
+* Ninth Module 
 1. Finalize our presentation/final project plans.
 2. Today's reading is [[cite:&chung21_neural_popul_geomet]]. Please do before class. 
 3. The main file for this module is [[file:teach/geometry-manifold-day.org]].
-4. Tentatively I hope to have the students create and map the swiss roll for verifying the algorithm *and* any other data set they think might be fun for the purpose of trying to display underlying structures. 
-
-Somehow there is a "week" missing. Will need to go back and restructure the list and make sure each Wed is covered. 
-
-* Tenth Module
-1. Discuss the manifold programming project.
-2. Review any old business or revisit any issue we wish to discuss again.
-3. Retrace our footsteps to see if we have a different take on the objectives of the course or whether we feel differently on the value of this approach.
-4. Although we may not have been able to capitalize on the various programming languages fully, I would like to have a discussion on this issue, and what we see as the role of programming language choice in the regard of making models more transparent, making ideas clearer, enabling new ideas to emerge, but not efficiency and ease of sharing. 
-5. Finish up any remaining manifold issues.
-6. Address any pending final project questions.
-* Eleventh Module
-  I don't expect there will be an eleventh module, but this will be decided with class. Given the hectic and chaotic nature of a term with both in person and remote components and students somewhat scattered, I think it may be useful to provide this class time for discussion, questions, and a chance to work on their material with their group partners. 
-
+4. Tentatively I hope to have the students create and map the swiss roll for verifying the algorithm *and* any other data set they think might be fun for the purpose of trying to display underlying structures.
+5. The homework is focused on implementing an isomap version to discover the ideas behind local embeddings, and also to discuss the potential strengths and difficulties of the different programming language implementations.
+* Tenth Module 
+1. The file for this module is [[file:teach/manifold-and-dynamics-day.org]]
+2. Discuss the manifold programming project.
+3. Finalize the project teams and broadly the scope of the projects
+4. Review any old business or revisit any issue we wish to discuss again.
+5. Go through primarily the morris-lecar model that has been widely used for looking at dynamical issues of neuron firing models, but also connect it to the idea that anything exhibiting an interesting dynamics is amenable to the same approach. Also, many of the manifold ideas are able to be blended with the dynamical ones since the manifold is just "points" and a "space" and those points and spaces can be parameters of a model and phase spaces, for example.
+* Eleventh Module 
+  TBD
+* Twelth Module 
+  I don't expect there will be an twelth module, but this will be decided with class. Given the hectic and chaotic nature of a term with both in person and remote components and students somewhat scattered, I think it may be useful to provide this class time for discussion, questions, and a chance to work on their material with their group partners. 
   1. Do people want to use the room?
-* Presentation Date
+* Presentation Date 
 1. The main file for this module is [[file:teach/presentation.org]].
 2. An outline of the expectations for these presentations is given in the above file. Expect today's class to made up of student presentations and discussions about them. 
