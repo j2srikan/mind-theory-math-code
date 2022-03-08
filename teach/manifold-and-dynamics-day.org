@@ -43,10 +43,146 @@ I don't think they have any dynamics and it shows how biased psychology is from 
 
 ** Derivatives and Differential Equations
 
-*** Does Code Matter?
-    A principal theme that I have wanted to emphasize, and perhaps failed to fully demonstrate, is the mind, theory, math, /code/ pathway. I feel we have talked about these individuall, but that I have not always been persuasive in establishing their continuity and interdependence. IAMHERE
-   
+*** The Derivative
+    A principal theme that I have wanted to emphasize, and perhaps failed to fully demonstrate, is the mind, theory, math, /code/ pathway. I feel we have talked about these individuall, but that I have not always been persuasive in establishing their continuity and interdependence. 
+   The mathematical concept at the heart of a science of change is the *derivative*. How something changes when something else changes. It is the ratio of the one quantity divided by the other. In high school this was $\frac{\mbox{rise}}{\mbox{run}}$, but not everything is a line. How do we deal with curves? We do what we did with manifolds and pretend that if we only look in a small enough area the difference between our curve of interest and a concatentation of little teeny line segments is essentially the same. Formally, we shrink the size of the "run" above to be infinitesimal [fn:1].
+$$\frac{d f(x)}{dx} = \lim_{x \rightarrow 0} \frac{f(x+\Delta) - f(x)}{(x + \Delta) - x}$$.
 
+*** A Differential Equation [fn:2]
+:sinx:
+For starters the dependence on $t$ has been suppressed. It is easier for newcomers to see that this is a different beast if they consider $\dot{x}(t) = \sin{x(t)}$. It also helps to see use the Leibniz notation $$\frac{dx(t)}{dt} = \sin{x(t)}}$$ where you can treat things like fractions and isolate your variables to each side. 
+:END:
+
+    It if includes a derivative it is a differential equation. $\dot{y} = \cos{x}$ is a differential equation, but that can be solved by integration and is not what people usually mean. They usually mean something more like $\dot{x} = \sin{x}$. What is the difference? 
+
+    
+**** Everybody knows what a sin wave is? How complicated can it be? :class_discussion:
+     Can you give a formula for $t$ in terms of $x$ that makes this statement true?
+**** Some Algebra
+
+#+Name: solving-for-t
+#+header: :headers '("\\usepackage{amsmath}")
+#+header: :exports results
+#+options: tex:t
+#+begin_src latex :results raw
+    \begin{align*}
+      \frac{dx}{dt} &= \sin{x} \\
+      \frac{dx}{\sin{x}} &= dt\\
+      \int{\csc{x} dx} &= \int{dt}\\
+      -\ln{|\csc{x} + \cot{x}|}+C &= t\\
+      \ln{\left| \frac{\csc{x_0} + \cot{x_0}}{\csc{x} + \cot{x}}\right|} &= t\\
+  \end{align*}
+#+end_src
+
+#+RESULTS:
+\begin{align*}
+    \frac{dx}{dt} &= \sin{x} \\
+    \frac{dx}{\sin{x}} &= dt\\
+    \int{\csc{x} dx} &= \int{dt}\\
+    -\ln{|\csc{x} + \cot{x}|}+C &= t\\
+    \ln{\left| \frac{\csc{x_0} + \cot{x_0}}{\csc{x} + \cot{x}}\right|} &= t\\
+\end{align*}
+
+**** Some Geometry
+
+     #+begin_src lisp :results graphics file :file "sine-wave.png" :exports results
+       (with-plots (*standard-output* :debug nil)
+       (gp-setup :terminal 'png :output "sine-wave.png")
+       (plot "sin(x)" :with '(lines :lw 3)))
+     #+end_src
+
+     #+Caption: "Plot of sin(x)"
+     #+RESULTS:
+     [[file:sine-wave.png]]
+
+**** Answer some questions
+1. Suppose $x_0 = \frac{\pi}{4}$. What happens as $t \rightarrow \infty$?
+2. What is the arbitrary of $x(t)$ for any $x_0$ as $t \rightarrow \infty$?
+**** Terminology
+:answers:
+fixed point. where the derivative is zero.
+
+demo how to use the value of the derivative to see the result.
+:END:
+
+- Fixed point :: Where $x(t)$ does not change. When is that?
+- Phase Plot  :: The evolution of $f(x)$ starting from some $x_0$ as $t$ increases. What is your solution for $\dot{x}(t)$ starting from some $x_0$? Just follow the trajectory on the graph and see where you end up. [fn:3] 
+
+*** Does Code Matter?
+Have we seen any cases yet where the language we chose for implementing an algorithm or approaching a problem has had any impact on the transparency of the solution or facility with which we can see the implications of an algorithm? I think not. Mostly we have seen that different languages bring different practical benefits. But we have repeatedly seen where the ability to translate a mathematical statement into code for simulation brings insights that would have been hard to see from the formula alone. This is another case in point. 
+
+* Examples from Neuroscience
+
+** Spiking Neuron Models
+#+begin_src lisp :results silent :exports none
+  (load "neural-bifurcation.lisp")
+  (in-package :neubif)
+#+end_src
+
+The best example I am aware of where people are using these models is in analyzing computational models of spiking. A good tutorial article is [[citeauthor:&izhikevich00_neural_excit_spikin_burst]].
+
+
+
+*** [[https://en.wikipedia.org/wiki/Morris%E2%80%93Lecar_model][Morris Lecar Model]]
+This model is similar to the Hodgkin-Huxley model, but focuses on two channel types: calcium and potassium. It was developed with an eye to explaining oscillatory activity.
+
+Because it is two-dimensional (whereas the HH is four dimensional) it allows an easier representation of how things are dynamically evolving graphically, while having lots of interesting behaviors that are dependent on parameter settings. The equations for the model are found on the wikipedia page above or the [[file:neural-bifurcation.lisp][code]] I wrote for these visualizations. 
+
+A basic version generates a spike much like the Hodgkin-Huxley model.
+
+#+Caption: Action Potential with the Morris-Lecar Model (Hopf Settings)
+     [[file:hopf-spike.png]]
+
+#+Caption: Action Potential with the Morris-Lecar Model (Snic Settings)
+     [[file:snic-spike.png]]
+
+#+Caption: Action Potential with the Morris-Lecar Model (Homoclinic Settings)
+     [[file:homoclinic-spike.png]]
+
+What is changing? Only two parameters: the V_4 and the φ. The current injection was the same for all three versions.
+
+** Bifurcations
+*Bifurcation* is the name given to a qualitative change in the behavior of a dynamical model. Usually we are referring to changes in the number and variety of fixed points.
+
+     #+begin_src lisp :results graphics file :file "parabola.png" :exports results
+       (with-plots (*standard-output* :debug nil)
+	 (gp-setup :terminal 'png :output "parabola.png")
+	 (gp :set :yrange '(-8 8))
+	 (gp :set :xrange '(-8 8))
+	 (gp :set :xzeroaxis)
+	 (gp :set :yzeroaxis)
+	 (gp :set :border 0  )       
+	 (gp :set :xtics 'axis )      
+	 (gp :set :ytics 'axis)
+	 (gp :set :ticscale 0 )
+	 (gp :set :xlabel "x")
+	 (gp :set :ylabel "x-dot")
+	 (plot "x**2" :with '(lines lw 3 lt rgb "blue"))
+	 (plot "4 + x**2" :with '(lines lw 3 lt rgb "red"))
+	 (plot "-4 + x**2" :with '(lines lw 3 lt rgb "green")))
+     #+end_src
+
+#+Caption: Plot of $\dot{x} = r + x^2$ with three values of $r$. What are the fixed points for each curve? Are they stable? How do they change as "r" changes?
+#+RESULTS:
+     [[file:parabola.png]]
+
+** Phase Plots and Nullclines
+
+#+Caption: Phase plot with the Morris-Lecar Model (Hopf Settings). Does this neuron fire repetitively? How can you tell?
+     [[file:hopf.png]]
+
+#+Caption: Phase plot with the Morris-Lecar Model (SNIC Settings). Does this neuron fire repetitively? How can you tell?
+     [[file:snic.png]]
+
+These plots take our voltage and plot it against the potassium current. This is a particular trajectory of our data as time progresses (both our voltage and potassium current are functions of, among other variables, time). You can think of these as sort of like one of the parabolas, and the collection of them like the collection of parabolas where the $r$ of our parabolas is the combination of $V_4$ and $\phi$. A *nullcline* is where the derivative becomes zero. I don't have that nicely illustrated here, but it is another bit of the terminology it is well to have heard even if you don't remember it.
+
+As I think the plots demonstrate, it is much easier to get a feel for what is going on by looking at the pictures. Since for many models of interest the behavior doesn't he have an analytical solution (like our simple $\sin(x)$ did above) we have no choice but to visualize for understanding, and that requires coding. The question for us, in the context of this course, is whether the language matters? Is it merely practical convenience or would certain languages facilitate our understanding the math better or the implications of a particular model?
+
+* Final Question
+All these examples were largely physical. How does this approach fit in with a desire to understand cognition? If I had found it sooner I would have had us all read this [[https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1756-8765.2011.01164.x][article]] [[cite:&wagenmakers12_abstr_concep_requir_concr_model]] as it seems to advocate the idea that models must precede methods. And that it is such theories that we lack. I think this type of math is very underexploited in cognitive modelling compared to some of the other approaches we have covered.
+
+* Homework
+  I am of two minds. I think I would like everyone to start focusing on their projects, though I can come up with an exercise if requested or we can take another stab at isomap. But what I would like to do is to try and revive the discussion of the roll of particular programming languages in this process. Maybe everyone can try to find some example that particulary well demonstrates the power of their paradigm. Preferably cognitive, but fine if not as long as it shows off the unique features of the paradigm well. Thoughts?
 
 * Companion and Optional Readings
   - Nonlinear Dynamics and Chaos (Strogatz) was recommended to me by several faculty [[cite:&strogatz00_nonlin_dynam_chaos]].
@@ -61,3 +197,11 @@ I don't think they have any dynamics and it shows how biased psychology is from 
 # local variables
 # org-latex-pdf-process: '("latexmk -%latex -interaction=nonstopmode -output-directory=%o %f")
 # end
+
+* Footnotes
+
+[fn:3] For the one-variable case (like this example), it is strictly called a /phase portrait./ 
+[fn:2] This example is pretty much taken from [[cite:&strogatz00_nonlin_dynam_chaos]].  
+
+[fn:1] The use of the idea of the infinitesimal is an historical one that everyone understood, but which mathematicans felt insufficiently rigourous. Turns out infinitesimals may be okay [[cite:&goldblatt_lectur_hyper]]. 
+

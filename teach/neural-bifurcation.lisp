@@ -4,7 +4,8 @@
   (:import-from "EAZY-GNUPLOT"
 		"WITH-PLOTS"
 		"PLOT"
-		"GP-SETUP"))
+		"GP-SETUP"
+		"GP"))
 
 
 (defparameter c         20)
@@ -17,7 +18,7 @@
 (defparameter v1        -1.2)
 (defparameter v2        18)
 (defparameter v3        2)
-(defparameter v4        17)
+(defparameter v4        30)
 (defparameter phi       0.04)
 (defparameter tau-n     0.8)
 (defparameter curr      85.0)
@@ -93,6 +94,8 @@
   (with-plots (*standard-output* :debug nil)
     (gp-setup :output output :terminal :png
 	      :key '())
+    (gp :set :xlabel "Voltage")
+    (gp :set :ylabel "W (Potassium)")
     (plot
      (lambda ()
        (loop for volts in (second plot-data)
