@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-03-08 Tue 10:27 -->
+<!-- 2022-03-08 Tue 17:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dynamics and Information</title>
@@ -193,13 +193,34 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
 </style>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content" class="content">
 <h1 class="title">Dynamics and Information</h1>
 
-<div id="outline-container-org97dc6de" class="outline-2">
-<h2 id="org97dc6de"><span class="section-number-2">1.</span> Old Business</h2>
+<div id="outline-container-orgcd2ded7" class="outline-2">
+<h2 id="orgcd2ded7"><span class="section-number-2">1.</span> Old Business</h2>
 <div class="outline-text-2" id="text-1">
 <ol class="org-ol">
 <li>Projects</li>
@@ -211,8 +232,8 @@ An interesting article that combines deep learning with manifold content. [<a hr
 </div>
 </div>
 
-<div id="outline-container-orgc850b41" class="outline-2">
-<h2 id="orgc850b41"><span class="section-number-2">2.</span> Warming Up</h2>
+<div id="outline-container-orgb885165" class="outline-2">
+<h2 id="orgb885165"><span class="section-number-2">2.</span> Warming Up&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_questions">class_questions</span></span></h2>
 <div class="outline-text-2" id="text-2">
 <ol class="org-ol">
 <li><p>
@@ -234,54 +255,244 @@ Draw a simple diagram to capture your intution.
 </p></li>
 
 <li>What is emergence?</li>
+
+<li>What is the dynamic content of the psychological terms: <i>state</i> and <i>trait</i>?</li>
+
+<li>Are mental representations dynamic?</li>
 </ol>
-
-<p>
-The idea behind these questions is twofold. First, I want to suggest that dynamics is implicit in the way we talk about things. It is such a common metaphor that I think we often omit to consider they dynamical when we reflect on the mental. And therefore, the second point is that dynamics can be useful for much more than neural models; it can apply to things that are mental and cognitive too.
-</p>
-
-<p>
-As a follow-up, what is the dynamic content of the psychological terms: <i>state</i> and <i>trait</i>?
-</p>
-</div>
-
-<div id="outline-container-org8f8a4f0" class="outline-3">
-<h3 id="org8f8a4f0"><span class="section-number-3">2.1.</span> Dynamics of State and Trait</h3>
-<div class="outline-text-3" id="text-2-1">
-</div>
 </div>
 </div>
 
-
-
-
-<div id="outline-container-orgacd5bd5" class="outline-2">
-<h2 id="orgacd5bd5"><span class="section-number-2">3.</span> Mathematical Tools For The Study of Change</h2>
+<div id="outline-container-orga438809" class="outline-2">
+<h2 id="orga438809"><span class="section-number-2">3.</span> Mathematical Tools For The Study of Change</h2>
 <div class="outline-text-2" id="text-3">
+<p>
+Give an example of a cognitive or neural phenomenon for which you think the right way to think about it is about its dynamics? 
+</p>
+
+<p>
+If you feel that there is a need to incorporate they study of how things change in your area of interest, then you need the tools of <b>Dynamical Systems</b>.
+</p>
 </div>
-<div id="outline-container-org98c59b0" class="outline-3">
-<h3 id="org98c59b0"><span class="section-number-3">3.1.</span> Derivatives and Differential Equations</h3>
+
+<div id="outline-container-orgc65bd96" class="outline-3">
+<h3 id="orgc65bd96"><span class="section-number-3">3.1.</span> Derivatives and Differential Equations</h3>
 <div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org39e5a92" class="outline-4">
+<h4 id="org39e5a92"><span class="section-number-4">3.1.1.</span> The Derivative</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+ A principal theme that I have wanted to emphasize, and perhaps failed to fully demonstrate, is the mind, theory, math, <i>code</i> pathway. I feel we have talked about these individuall, but that I have not always been persuasive in establishing their continuity and interdependence. 
+The mathematical concept at the heart of a science of change is the <b>derivative</b>. How something changes when something else changes. It is the ratio of the one quantity divided by the other. In high school this was \(\frac{\mbox{rise}}{\mbox{run}}\), but not everything is a line. How do we deal with curves? We do what we did with manifolds and pretend that if we only look in a small enough area the difference between our curve of interest and a concatentation of little teeny line segments is essentially the same. Formally, we shrink the size of the "run" above to be infinitesimal <sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>.
+\[\frac{d f(x)}{dx} = \lim_{x \rightarrow 0} \frac{f(x+\Delta) - f(x)}{(x + \Delta) - x}\].
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb6834a7" class="outline-4">
+<h4 id="orgb6834a7"><span class="section-number-4">3.1.2.</span> A Differential Equation <sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup></h4>
+<div class="outline-text-4" id="text-3-1-2">
+<p>
+It if includes a derivative it is a differential equation. \(\dot{y} = \cos{x}\) is a differential equation, but that can be solved by integration and is not what people usually mean. They usually mean something more like \(\dot{x} = \sin{x}\). What is the difference? 
+</p>
+</div>
+
+
 <ol class="org-ol">
-<li>Are there neural or mental phenomena that could thusly be well captured?</li>
+<li><a id="org707b910"></a>Everybody knows what a sin wave is? How complicated can it be?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_discussion">class_discussion</span></span><br />
+<div class="outline-text-5" id="text-3-1-2-1">
+<p>
+Can you give a formula for \(t\) in terms of \(x\) that makes this statement true?
+</p>
+</div>
+</li>
+<li><a id="orgb6c3c4c"></a>Some Algebra<br />
+<div class="outline-text-5" id="text-3-1-2-2">
+\begin{align*}
+    \frac{dx}{dt} &= \sin{x} \\
+    \frac{dx}{\sin{x}} &= dt\\
+    \int{\csc{x} dx} &= \int{dt}\\
+    -\ln{|\csc{x} + \cot{x}|}+C &= t\\
+    \ln{\left| \frac{\csc{x_0} + \cot{x_0}}{\csc{x} + \cot{x}}\right|} &= t\\
+\end{align*}
+</div>
+</li>
+
+<li><a id="org3701776"></a>Some Geometry<br />
+<div class="outline-text-5" id="text-3-1-2-3">
+
+<div id="orga343128" class="figure">
+<p><img src="sine-wave.png" alt="sine-wave.png" />
+</p>
+<p><span class="figure-number">Figure 1: </span>"Plot of sin(x)"</p>
+</div>
+</div>
+</li>
+
+<li><a id="org79e9f4d"></a>Answer some questions<br />
+<div class="outline-text-5" id="text-3-1-2-4">
+<ol class="org-ol">
+<li>Suppose \(x_0 = \frac{\pi}{4}\). What happens as \(t \rightarrow \infty\)?</li>
+<li>What is the arbitrary of \(x(t)\) for any \(x_0\) as \(t \rightarrow \infty\)?</li>
 </ol>
 </div>
+</li>
+<li><a id="orgcb909ae"></a>Terminology<br />
+<div class="outline-text-5" id="text-3-1-2-5">
+<dl class="org-dl">
+<dt>Fixed point</dt><dd>Where \(x(t)\) does not change. When is that?</dd>
+<dt>Phase Plot </dt><dd>The evolution of \(f(x)\) starting from some \(x_0\) as \(t\) increases. What is your solution for \(\dot{x}(t)\) starting from some \(x_0\)? Just follow the trajectory on the graph and see where you end up. <sup><a id="fnr.3" class="footref" href="#fn.3" role="doc-backlink">3</a></sup></dd>
+</dl>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org9df2c10" class="outline-4">
+<h4 id="org9df2c10"><span class="section-number-4">3.1.3.</span> Does Code Matter?</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<p>
+Have we seen any cases yet where the language we chose for implementing an algorithm or approaching a problem has had any impact on the transparency of the solution or facility with which we can see the implications of an algorithm? I think not. Mostly we have seen that different languages bring different practical benefits. But we have repeatedly seen where the ability to translate a mathematical statement into code for simulation brings insights that would have been hard to see from the formula alone. This is another case in point. 
+</p>
 </div>
 </div>
-<div id="outline-container-orge3d60b9" class="outline-2">
-<h2 id="orge3d60b9"><span class="section-number-2">4.</span> Companion and Optional Readings</h2>
+</div>
+</div>
+
+<div id="outline-container-org336c88e" class="outline-2">
+<h2 id="org336c88e"><span class="section-number-2">4.</span> Examples from Neuroscience</h2>
 <div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org260a604" class="outline-3">
+<h3 id="org260a604"><span class="section-number-3">4.1.</span> Spiking Neuron Models</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+The best example I am aware of where people are using these models is in analyzing computational models of spiking. A good tutorial article is <a href="#citeproc_bib_item_3">3</a>.
+</p>
+</div>
+
+
+
+<div id="outline-container-org60faea3" class="outline-4">
+<h4 id="org60faea3"><span class="section-number-4">4.1.1.</span> <a href="https://en.wikipedia.org/wiki/Morris%E2%80%93Lecar_model">Morris Lecar Model</a></h4>
+<div class="outline-text-4" id="text-4-1-1">
+<p>
+This model is similar to the Hodgkin-Huxley model, but focuses on two channel types: calcium and potassium. It was developed with an eye to explaining oscillatory activity.
+</p>
+
+<p>
+Because it is two-dimensional (whereas the HH is four dimensional) it allows an easier representation of how things are dynamically evolving graphically, while having lots of interesting behaviors that are dependent on parameter settings. The equations for the model are found on the wikipedia page above or the <a href="neural-bifurcation.lisp">code</a> I wrote for these visualizations. 
+</p>
+
+<p>
+A basic version generates a spike much like the Hodgkin-Huxley model.
+</p>
+
+
+<div id="orgeab36e7" class="figure">
+<p><img src="hopf-spike.png" alt="hopf-spike.png" />
+</p>
+<p><span class="figure-number">Figure 2: </span>Action Potential with the Morris-Lecar Model (Hopf Settings)</p>
+</div>
+
+
+<div id="orgb085a5f" class="figure">
+<p><img src="snic-spike.png" alt="snic-spike.png" />
+</p>
+<p><span class="figure-number">Figure 3: </span>Action Potential with the Morris-Lecar Model (Snic Settings)</p>
+</div>
+
+
+<div id="org329d99d" class="figure">
+<p><img src="homoclinic-spike.png" alt="homoclinic-spike.png" />
+</p>
+<p><span class="figure-number">Figure 4: </span>Action Potential with the Morris-Lecar Model (Homoclinic Settings)</p>
+</div>
+
+<p>
+What is changing? Only two parameters: the V_4 and the φ. The current injection was the same for all three versions.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgac2e9ef" class="outline-3">
+<h3 id="orgac2e9ef"><span class="section-number-3">4.2.</span> Bifurcations</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+<b>Bifurcation</b> is the name given to a qualitative change in the behavior of a dynamical model. Usually we are referring to changes in the number and variety of fixed points.
+</p>
+
+
+<div id="org384a11c" class="figure">
+<p><img src="parabola.png" alt="parabola.png" />
+</p>
+<p><span class="figure-number">Figure 5: </span>Plot of \(\dot{x} = r + x^2\) with three values of \(r\). What are the fixed points for each curve? Are they stable? How do they change as "r" changes?</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf7cb728" class="outline-3">
+<h3 id="orgf7cb728"><span class="section-number-3">4.3.</span> Phase Plots and Nullclines</h3>
+<div class="outline-text-3" id="text-4-3">
+
+<div id="org9532289" class="figure">
+<p><img src="hopf.png" alt="hopf.png" />
+</p>
+<p><span class="figure-number">Figure 6: </span>Phase plot with the Morris-Lecar Model (Hopf Settings). Does this neuron fire repetitively? How can you tell?</p>
+</div>
+
+
+<div id="org43405cb" class="figure">
+<p><img src="snic.png" alt="snic.png" />
+</p>
+<p><span class="figure-number">Figure 7: </span>Phase plot with the Morris-Lecar Model (SNIC Settings). Does this neuron fire repetitively? How can you tell?</p>
+</div>
+
+<p>
+These plots take our voltage and plot it against the potassium current. This is a particular trajectory of our data as time progresses (both our voltage and potassium current are functions of, among other variables, time). You can think of these as sort of like one of the parabolas, and the collection of them like the collection of parabolas where the \(r\) of our parabolas is the combination of \(V_4\) and \(\phi\). A <b>nullcline</b> is where the derivative becomes zero. I don't have that nicely illustrated here, but it is another bit of the terminology it is well to have heard even if you don't remember it.
+</p>
+
+<p>
+As I think the plots demonstrate, it is much easier to get a feel for what is going on by looking at the pictures. Since for many models of interest the behavior doesn't he have an analytical solution (like our simple \(\sin(x)\) did above) we have no choice but to visualize for understanding, and that requires coding. The question for us, in the context of this course, is whether the language matters? Is it merely practical convenience or would certain languages facilitate our understanding the math better or the implications of a particular model?
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfc47919" class="outline-2">
+<h2 id="orgfc47919"><span class="section-number-2">5.</span> Final Question</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+All these examples were largely physical. How does this approach fit in with a desire to understand cognition? If I had found it sooner I would have had us all read this <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1756-8765.2011.01164.x">article</a> [<a href="#citeproc_bib_item_4">4</a>] as it seems to advocate the idea that models must precede methods. And that it is such theories that we lack. I think this type of math is very underexploited in cognitive modelling compared to some of the other approaches we have covered.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3d7e5be" class="outline-2">
+<h2 id="org3d7e5be"><span class="section-number-2">6.</span> Homework</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+I am of two minds. I think I would like everyone to start focusing on their projects, though I can come up with an exercise if requested or we can take another stab at isomap. But what I would like to do is to try and revive the discussion of the roll of particular programming languages in this process. Maybe everyone can try to find some example that particulary well demonstrates the power of their paradigm. Preferably cognitive, but fine if not as long as it shows off the unique features of the paradigm well. Thoughts?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc7c6f2e" class="outline-2">
+<h2 id="orgc7c6f2e"><span class="section-number-2">7.</span> Companion and Optional Readings</h2>
+<div class="outline-text-2" id="text-7">
 <ul class="org-ul">
-<li>Nonlinear Dynamics and Chaos (Strogatz) was recommended to me by several faculty [<a href="#citeproc_bib_item_3">3</a>].</li>
-<li>A review that blends manifold ideas with dynamic ones [<a href="#citeproc_bib_item_4">4</a>] .</li>
-<li>Generative Dynamics in Brain Networks [<a href="#citeproc_bib_item_5">5</a>]</li>
+<li>Nonlinear Dynamics and Chaos (Strogatz) was recommended to me by several faculty [<a href="#citeproc_bib_item_5">5</a>].</li>
+<li>A review that blends manifold ideas with dynamic ones [<a href="#citeproc_bib_item_6">6</a>] .</li>
+<li>Generative Dynamics in Brain Networks [<a href="#citeproc_bib_item_7">7</a>]</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org609486e" class="outline-2">
-<h2 id="org609486e"><span class="section-number-2">5.</span> References</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-orge61fbec" class="outline-2">
+<h2 id="orge61fbec"><span class="section-number-2">8.</span> References</h2>
+<div class="outline-text-2" id="text-8">
 <style>.csl-left-margin{float: left; padding-right: 0em;}
  .csl-right-inline{margin: 0 0 0 1em;}</style><div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>
@@ -291,22 +502,49 @@ As a follow-up, what is the dynamic content of the psychological terms: <i>state
     <div class="csl-left-margin">2.</div><div class="csl-right-inline">R. B. Ebitz &#38; B. Y. Hayden, The population doctrine in cognitive neuroscience. <i>Neuron</i>, <b>109</b> (2021) 3055-3068. <a href="https://doi.org/10.1016/j.neuron.2021.07.011">https://doi.org/10.1016/j.neuron.2021.07.011</a>.</div>
   </div>
   <div class="csl-entry"><a id="citeproc_bib_item_3"></a>
-    <div class="csl-left-margin">3.</div><div class="csl-right-inline">S. H. Strogatz, <i>Nonlinear dynamics and chaos: With applications to physics, biology, chemistry and engineering</i> (Westview Press, 2000).</div>
+    <div class="csl-left-margin">3.</div><div class="csl-right-inline">E. M. IZHIKEVICH, Neural excitability, spiking and bursting. <i>International journal of bifurcation and chaos</i>, <b>10</b> (2000) 1171-1266. <a href="https://doi.org/10.1142/s0218127400000840">https://doi.org/10.1142/s0218127400000840</a>.</div>
   </div>
   <div class="csl-entry"><a id="citeproc_bib_item_4"></a>
-    <div class="csl-left-margin">4.</div><div class="csl-right-inline">S. Vyas, M. D. Golub, D. Sussillo, &#38; K. V. Shenoy, Computation through neural population dynamics. <i>Annual review of neuroscience</i>, <b>43</b> (2020) 249-275. <a href="https://doi.org/10.1146/annurev-neuro-092619-094115">https://doi.org/10.1146/annurev-neuro-092619-094115</a>.</div>
+    <div class="csl-left-margin">4.</div><div class="csl-right-inline">E.-J. Wagenmakers, H. L. van der Maas, &#38; S. Farrell, Abstract concepts require concrete models: Why cognitive scientists have not yet embraced nonlinearly coupled, dynamical, self-organized critical, synergistic, scale-free, exquisitely context-sensitive, interaction-dominant, multifractal, interdependent brain-body-niche systems. <i>Topics in cognitive science</i>, <b>4</b> (2012) 87–93.</div>
   </div>
   <div class="csl-entry"><a id="citeproc_bib_item_5"></a>
-    <div class="csl-left-margin">5.</div><div class="csl-right-inline">M. R. Panahi, G. Abrevaya, J.-C. Gagnon-Audet, V. Voleti, I. Rish, &#38; G. Dumas, <a href="https://arxiv.org/pdf/2112.12147.pdf">Generative models of brain dynamics – a review</a>. (2021).</div>
+    <div class="csl-left-margin">5.</div><div class="csl-right-inline">S. H. Strogatz, <i>Nonlinear dynamics and chaos: With applications to physics, biology, chemistry and engineering</i> (Westview Press, 2000).</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_6"></a>
+    <div class="csl-left-margin">6.</div><div class="csl-right-inline">S. Vyas, M. D. Golub, D. Sussillo, &#38; K. V. Shenoy, Computation through neural population dynamics. <i>Annual review of neuroscience</i>, <b>43</b> (2020) 249-275. <a href="https://doi.org/10.1146/annurev-neuro-092619-094115">https://doi.org/10.1146/annurev-neuro-092619-094115</a>.</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_7"></a>
+    <div class="csl-left-margin">7.</div><div class="csl-right-inline">M. R. Panahi, G. Abrevaya, J.-C. Gagnon-Audet, V. Voleti, I. Rish, &#38; G. Dumas, <a href="https://arxiv.org/pdf/2112.12147.pdf">Generative models of brain dynamics – a review</a>. (2021).</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_8"></a>
+    <div class="csl-left-margin">8.</div><div class="csl-right-inline">R. Goldblatt, <i>Lectures on the hyperreals: An introduction to nonstandard analysis</i> (New York, NY: Springer New York).</div>
   </div>
 </div>
 </div>
 </div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+The use of the idea of the infinitesimal is an historical one that everyone understood, but which mathematicans felt insufficiently rigourous. Turns out infinitesimals may be okay [<a href="#citeproc_bib_item_8">8</a>]. 
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+This example is pretty much taken from [<a href="#citeproc_bib_item_5">5</a>].  
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+For the one-variable case (like this example), it is strictly called a <i>phase portrait.</i> 
+</p></div></div>
+
+
 </div>
+</div></div>
 <div id="postamble" class="status">
 <p class="date">Date: Winter 2022</p>
 <p class="author">Author: Britt Anderson</p>
-<p class="date">Created: 2022-03-08 Tue 10:27</p>
+<p class="date">Created: 2022-03-08 Tue 17:29</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
