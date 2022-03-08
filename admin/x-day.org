@@ -12,3 +12,9 @@
 
 * References
 [[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
+
+
+* COMMENT Local Variables
+# local variables
+# org-latex-pdf-process: '("latexmk -%latex -interaction=nonstopmode -output-directory=%o %f")
+# end
