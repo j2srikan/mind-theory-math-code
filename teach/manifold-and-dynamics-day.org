@@ -43,7 +43,9 @@ I don't think they have any dynamics and it shows how biased psychology is from 
 
 ** Derivatives and Differential Equations
 
-
+*** Does Code Matter?
+    A principal theme that I have wanted to emphasize, and perhaps failed to fully demonstrate, is the mind, theory, math, /code/ pathway. I feel we have talked about these individuall, but that I have not always been persuasive in establishing their continuity and interdependence. IAMHERE
+   
 
 
 * Companion and Optional Readings
