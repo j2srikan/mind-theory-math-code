@@ -79,16 +79,16 @@
 
 
 (plot3d (points3d (map vector (vector->list g1_x7.5_cos) (vector->list g1_y7.5) (vector->list g1_x7.5_sin))
-                  #:sym 'dot #:color 'red)     #:altitude 25)
+                  #:sym 'dot #:color 'red #:size 30)     #:altitude 25)
      
 (plot3d (points3d (map vector (vector->list g2_x7.5_cos) (vector->list g2_y12.5) (vector->list g2_x7.5_sin))
-                  #:sym 'dot #:color 'blue) #:altitude 25)
+                  #:sym 'dot #:color 'blue #:size 30) #:altitude 25)
 
 (plot3d (points3d (map vector (vector->list g3_x12.5_cos) (vector->list g3_y7.5) (vector->list g3_x12.5_sin))
-                  #:sym 'dot #:color 'green) #:altitude 25)
+                  #:sym 'dot #:color 'green #:size 30) #:altitude 25)
 
 (plot3d (points3d (map vector (vector->list g4_x12.5_cos) (vector->list g4_y12.5) (vector->list g4_x12.5_sin))
-                  #:sym 'dot #:color 'black) #:altitude 25)
+                  #:sym 'dot #:color 'black #:size 30) #:altitude 25)
 
 
 (define group1 (ThreeDsPoint  g1_x7.5_cos  g1_y7.5  g1_x7.5_sin [] []))
@@ -207,3 +207,4 @@
 ;it is very hard to calculate geodesic distance following Djikstra’s Shortest Path algorithm
 ;it is very hard for Racket to calculate eigenvectors of the matrix.
 ;it is thus very hard to recover a 2D graph based on the new axis.
+
