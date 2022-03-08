@@ -69,3 +69,23 @@
 	      :with `(:points :pt ,pt :lc :rgb ,pc))))
   output)
 
+
+					;working on finding neighbors
+
+(defun ptdist (p1 p2)
+  (apply #'+ (mapcar #'(lambda (x y) (expt (- x y) 2)) p1 p2)))
+
+(defun mapdists (l1)
+  (let ((r 0)
+	(c 0)
+	(ma (make-array `(3 3))))
+    (dolist (l l1 ma)
+      (dolist (ll l1)
+	(setf (aref ma r c) (ptdist l ll))
+	(incf c)
+	(format t "c is ~a~%" c))
+      (setf c 0)
+      (incf r)
+      (format t "r is ~a~%" r))))
+      
+
