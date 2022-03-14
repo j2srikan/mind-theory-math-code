@@ -1,0 +1,34 @@
+#+Title: Symbol Day
+#+Author: Britt Anderson
+#+Date: Winter 2022
+#+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
+#+csl-style: ../admin/cambridge-university-press-numeric.csl
+#+options: ^:nil toc:nil d:nil
+
+
+* Outline
+A great failure of computational neuroscience has been to provide a
+useful account of symbolic processing. We saw in [[file:computation-day.org][computation module]]
+with its elaboration of Turing machines and our coding of the [[file:~/gitRepos/mind-theory-math-code/code/busy-beaver/][busy
+beaver]] problem that thinking symbolically is key to thinking of cognition computationally, and more fundamentally to the idea of computation itself. Computational neuroscience on the other hand is often more concerned with numerical estimation and optimization. One approach seeking to connect these approaches is *vector symbolic architectures*. This recent review mentions eleven of them [[cite:&schlegel21_compar_vector_symbol_archit]]. This approach to blending cognition, symbolic computation, and computational neuroscience relies on the idea of a /vector space/. As vectors have shown up in numerous course components (e.g. manifolds) it seemed reasonable to treat this more directly. 
+
+* Vector Spaces
+
+** Definition
+   If you have a /field/[fn:1] (call if $F$) and a bunch of things (let's call this bunch $V$ ) $\backepsilon$ for any two of the "things" the following holds: $$ \forall x \in F \text{ and } v,w \in V, ~x(v+w) = xv + xw $$ then you have a vector space over a field. The $v$ s and $w$ s are the vectors and the $x$ s are the /scalars/. Note that this means a lot of things that you might not normally think of as a vector can in fact by such. For example, the real numbers form a vector space over the real numbers. While we usually think of matrices as made up of vectors, in fact a collection of matrices (e.g. all 2 x 2 matrices with real number elements) can comprise a vector space and the vectors of that space are the matrices themselves not their individual columns and rows (which are not elements of that space since they are not 2x2).  
+
+* Companion and Optional Readings
+  1. A review on neural circuits for symbolic processing [[cite:&do21_neural_circuit_symbol_proces]]
+     
+* References
+[[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
+
+
+* COMMENT Local Variables
+# local variables
+# org-latex-pdf-process: '("latexmk -%latex -interaction=nonstopmode -output-directory=%o %f")
+# end
+
+* Footnotes
+
+[fn:1] The *R* eal numbers a *R* e a /field/, but *N* ot the *N* atural numbers. A /field/ has two binary operations (often called addition and multiplication, but they don't have to be what they are used to from arithmetic). It is closed under these operations and each of them has an identity and an inverse. In addition the operations are associative, commutative, and distribute. 
