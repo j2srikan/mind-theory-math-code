@@ -1,0 +1,99 @@
+#+Title: Minds Programming Minds
+#+Author: Britt Anderson
+#+Date: Dec 24, 2021
+#+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
+#+csl-style: ../admin/cambridge-university-press-numeric.csl
+#+options: ^:nil toc:nil d:nil
+
+* Outline
+  We know very little about how the minds work, but we do know that minds are at work in the construction of human artifacts. Artificial languages are one such product, and programming languages a particularly relevent subgenre for the effort to explain thinking via the exposition of formal rules and relations and the examination of the implications of such constructions by simulations. It is in a sense a recursion: a mind creates a programming language used by a mind to write a program to simulate the working of a mind in order to help understand and explain the mind to a mind.
+
+  What then are the unique features of programming languages that might provide hints to methods and capabilities not heretofore exploited? When programming to get something done we appropriately emphasize practical ease and computational efficiencies, but getting something done is not the only purpose behind a computational simulation. It can also be to explicate, and for such purposes we may not want the shortest code, nor to default to the language with the most libraries or the compiler that yields the fastest executing binaries. We may care less about what it is our code produces and more about our code as product.
+
+  The purpoes today then is to provide some concise examples of some of the language features alluded to in the beginning that we have not had a chance to take advantage of yet in our weekly rush to get things done.
+
+* Lisp
+  
+** Code as Data; Code that Rewrites Itself (can also be called metaprogramming)
+   Under this same heading is the notion of *macro* [[cite:&hoyte2008let]]. Try to do this in python.
+
+   #+begin_src lisp :exports both :results silent
+	  (defvar a 5)
+	  (defvar b 7)
+   #+End_src
+
+   #+begin_src lisp :exports both :results silent
+     (defmacro set2 (var1 var2 value-for-both)
+	    `(progn
+	       (format t "Old value for ~a was ~a and new value is ~a~%" ',var1 ,var1 ,value-for-both)
+	       (format t "Old value for ~a was ~a and new value is ~a~%" ',var2 ,var2 ,value-for-both)
+	       (setq ,var1 ,value-for-both)
+	       (setq ,var2 ,value-for-both))) 
+   #+end_src
+
+   #+begin_src lisp :results output :exports both
+     (set2 a b 3)
+   #+end_src
+
+   #+RESULTS:
+   : Old value for A was 5 and new value is 3
+   : Old value for B was 7 and new value is 3
+
+*** What does this have to do with the mind?
+    The example is a bit contrived, but in the distant past the morning star was known as Phosphorus and the evening star was known as Hesperus. However, we now know that they are the same thing: the planet Venus. In order to make the statement that
+    #+Begin_quote
+    The morning star used be be called Phosphorus and the evening star Hesperus, but we now know them both to be Venus.
+    #+end_quote
+
+You have to be able to do the operation above. You need access to the symbolic name (here the X-star), what it used to refer to (here the Greek names), and set them to a common value having the same referent. I maintain you cannot program that in Python.
+
+    For more on this issue of naming and reference you might want to read about [[https://plato.stanford.edu/archives/fall2014/entries/frege/][Frege]].
+*** Question :class_discussion:
+    Assume I am right in my claim. Does that mean that Python is not a good language for writing code for mental models?
+
+** Reprogramming a Running Instance
+
+   
+   #+begin_example lisp
+   ;start slime
+   (load "hack-running.lisp")
+   #+end_example
+
+   This is what is in that file. We should see the repeated application of our bad addition function. 
+
+   #+include: "hack-running.lisp" src lisp
+
+   Now connect to the running instance with ~slime-connect :port 4123~ and rewrite the function as ~(defun bad-add (a b) (+ a b))~ and when toggling back over note that the function is now adding correctly. Can you do that with Julia? Python? 
+* Haskell
+** Lazy Evaluation By Default
+
+   Can you write this in Python?
+
+   #+begin_src haskell
+     count = [1 ..]
+     take 10 count
+   #+end_src
+
+
+   #+Caption: How high can you count?
+   #+RESULTS: haskell-count
+   | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+
+* Lean
+  This is an example of a proof assistant that I have not used before. The [[https://en.wikipedia.org/wiki/Lean_(proof_assistant)][wikipedia page]] gives a simple example of how some programming languages can be used to give formal specifications and to prove things. In the example that $p \land q \implies q \land p$.
+
+* Companion and Optional Readings
+
+* References
+[[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
+
+* Footnotes
+
+* COMMENT Local Variables
+# local variables
+# org-latex-pdf-process: '("latexmk -%latex -interaction=nonstopmode -output-directory=%o %f")
+# end
+
+
+
+

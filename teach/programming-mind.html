@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-03-14 Mon 10:29 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Minds Programming Minds</title>
+<meta name="author" content="Britt Anderson" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Minds Programming Minds</h1>
+
+<div id="outline-container-orge4fa92b" class="outline-2">
+<h2 id="orge4fa92b"><span class="section-number-2">1.</span> Outline</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+We know very little about how the minds work, but we do know that minds are at work in the construction of human artifacts. Artificial languages are one such product, and programming languages a particularly relevent subgenre for the effort to explain thinking via the exposition of formal rules and relations and the examination of the implications of such constructions by simulations. It is in a sense a recursion: a mind creates a programming language used by a mind to write a program to simulate the working of a mind in order to help understand and explain the mind to a mind.
+</p>
+
+<p>
+What then are the unique features of programming languages that might provide hints to methods and capabilities not heretofore exploited? When programming to get something done we appropriately emphasize practical ease and computational efficiencies, but getting something done is not the only purpose behind a computational simulation. It can also be to explicate, and for such purposes we may not want the shortest code, nor to default to the language with the most libraries or the compiler that yields the fastest executing binaries. We may care less about what it is our code produces and more about our code as product.
+</p>
+
+<p>
+The purpoes today then is to provide some concise examples of some of the language features alluded to in the beginning that we have not had a chance to take advantage of yet in our weekly rush to get things done.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge312597" class="outline-2">
+<h2 id="orge312597"><span class="section-number-2">2.</span> Lisp</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org1691b96" class="outline-3">
+<h3 id="org1691b96"><span class="section-number-3">2.1.</span> Code as Data; Code that Rewrites Itself (can also be called metaprogramming)</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Under this same heading is the notion of <b>macro</b> [<a href="#citeproc_bib_item_1">1</a>]. Try to do this in python.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-lisp">(<span style="color: #a020f0;">defvar</span> <span style="color: #a0522d;">a</span> 5)
+(<span style="color: #a020f0;">defvar</span> <span style="color: #a0522d;">b</span> 7)
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-lisp">(<span style="color: #a020f0;">defmacro</span> <span style="color: #0000ff;">set2</span> (var1 var2 value-for-both)
+       `(<span style="color: #a020f0;">progn</span>
+          (format t <span style="color: #8b2252;">"Old value for ~a was ~a and new value is ~a~%"</span> ',var1 ,var1 ,value-for-both)
+          (format t <span style="color: #8b2252;">"Old value for ~a was ~a and new value is ~a~%"</span> ',var2 ,var2 ,value-for-both)
+          (setq ,var1 ,value-for-both)
+          (setq ,var2 ,value-for-both))) 
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-lisp">(set2 a b 3)
+</pre>
+</div>
+
+<pre class="example">
+Old value for A was 5 and new value is 3
+Old value for B was 7 and new value is 3
+</pre>
+</div>
+
+<div id="outline-container-org65f0662" class="outline-4">
+<h4 id="org65f0662"><span class="section-number-4">2.1.1.</span> What does this have to do with the mind?</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+The example is a bit contrived, but in the distant past the morning star was known as Phosphorus and the evening star was known as Hesperus. However, we now know that they are the same thing: the planet Venus. In order to make the statement that
+</p>
+<blockquote>
+<p>
+The morning star used be be called Phosphorus and the evening star Hesperus, but we now know them both to be Venus.
+</p>
+</blockquote>
+
+<p>
+You have to be able to do the operation above. You need access to the symbolic name (here the X-star), what it used to refer to (here the Greek names), and set them to a common value having the same referent. I maintain you cannot program that in Python.
+</p>
+
+<p>
+For more on this issue of naming and reference you might want to read about <a href="https://plato.stanford.edu/archives/fall2014/entries/frege/">Frege</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-org2733feb" class="outline-4">
+<h4 id="org2733feb"><span class="section-number-4">2.1.2.</span> Question&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_discussion">class_discussion</span></span></h4>
+<div class="outline-text-4" id="text-2-1-2">
+<p>
+Assume I am right in my claim. Does that mean that Python is not a good language for writing code for mental models?
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcedf586" class="outline-3">
+<h3 id="orgcedf586"><span class="section-number-3">2.2.</span> Reprogramming a Running Instance</h3>
+<div class="outline-text-3" id="text-2-2">
+<pre class="example" id="org07494fc">
+;start slime
+(load "hack-running.lisp")
+</pre>
+
+<p>
+This is what is in that file. We should see the repeated application of our bad addition function. 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-lisp">(ql:quickload <span style="color: #8b2252;">"swank"</span>)
+
+(swank:create-server <span style="color: #483d8b;">:port</span> 4123)
+
+(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">bad-add</span> (a b)
+  (- a b))
+
+(<span style="color: #a020f0;">dotimes</span> (i 500)
+  (format t <span style="color: #8b2252;">"~&amp;~a + ~a is ~a"</span> 4 5 (bad-add 4 5))
+  (sleep 5))
+</pre>
+</div>
+
+<p>
+Now connect to the running instance with <code>slime-connect :port 4123</code> and rewrite the function as <code>(defun bad-add (a b) (+ a b))</code> and when toggling back over note that the function is now adding correctly. Can you do that with Julia? Python? 
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org38599ff" class="outline-2">
+<h2 id="org38599ff"><span class="section-number-2">3.</span> Haskell</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org194c07a" class="outline-3">
+<h3 id="org194c07a"><span class="section-number-3">3.1.</span> Lazy Evaluation By Default</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Can you write this in Python?
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell"><span style="color: #0000ff;">count</span> <span style="color: #a0522d;">=</span> [1 <span style="color: #a0522d;">..</span>]
+<span style="color: #0000ff;">take</span> 10 count
+</pre>
+</div>
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 1:</span> How high can you count?</caption>
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">2</td>
+<td class="org-right">3</td>
+<td class="org-right">4</td>
+<td class="org-right">5</td>
+<td class="org-right">6</td>
+<td class="org-right">7</td>
+<td class="org-right">8</td>
+<td class="org-right">9</td>
+<td class="org-right">10</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb5e5963" class="outline-2">
+<h2 id="orgb5e5963"><span class="section-number-2">4.</span> Lean</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+This is an example of a proof assistant that I have not used before. The <a href="https://en.wikipedia.org/wiki/Lean_(proof_assistant)">wikipedia page</a> gives a simple example of how some programming languages can be used to give formal specifications and to prove things. In the example that \(p \land q \implies q \land p\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7b23c11" class="outline-2">
+<h2 id="org7b23c11"><span class="section-number-2">5.</span> Companion and Optional Readings</h2>
+</div>
+
+<div id="outline-container-org739faee" class="outline-2">
+<h2 id="org739faee"><span class="section-number-2">6.</span> References</h2>
+<div class="outline-text-2" id="text-6">
+<style>.csl-left-margin{float: left; padding-right: 0em;}
+ .csl-right-inline{margin: 0 0 0 1em;}</style><div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>
+    <div class="csl-left-margin">1.</div><div class="csl-right-inline">D. Hoyte, <i>Let Over lambda</i> (Lulu. com, 2008).</div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: Dec 24, 2021</p>
+<p class="author">Author: Britt Anderson</p>
+<p class="date">Created: 2022-03-14 Mon 10:29</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
