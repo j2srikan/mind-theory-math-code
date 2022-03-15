@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-03-14 Mon 13:58 -->
+<!-- 2022-03-15 Tue 15:07 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Symbol Day</title>
@@ -220,8 +220,9 @@
 <h1 class="title">Symbol Day</h1>
 
 
-<div id="outline-container-org9843c5c" class="outline-2">
-<h2 id="org9843c5c"><span class="section-number-2">1.</span> Outline</h2>
+
+<div id="outline-container-org13b49c3" class="outline-2">
+<h2 id="org13b49c3"><span class="section-number-2">1.</span> Outline</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 A great failure of computational neuroscience has been to provide a
@@ -232,31 +233,259 @@ beaver</a> problem that thinking symbolically is key to thinking of cognition co
 </div>
 </div>
 
-<div id="outline-container-org77b54b9" class="outline-2">
-<h2 id="org77b54b9"><span class="section-number-2">2.</span> Vector Spaces</h2>
+<div id="outline-container-org6e67208" class="outline-2">
+<h2 id="org6e67208"><span class="section-number-2">2.</span> Vector Spaces</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org667b6cc" class="outline-3">
-<h3 id="org667b6cc"><span class="section-number-3">2.1.</span> Definition</h3>
+<div id="outline-container-orgf2410e3" class="outline-3">
+<h3 id="orgf2410e3"><span class="section-number-3">2.1.</span> Definition</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
-If you have a <i>field</i><sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> (call if \(F\)) and a bunch of things (let's call this bunch \(V\) ) \(\backepsilon\) for any two of the "things" the following holds: \[ \forall x \in F \text{ and } v,w \in V, ~x(v+w) = xv + xw \] then you have a vector space over a field. The \(v\) s and \(w\) s are the vectors and the \(x\) s are the <i>scalars</i>.
+If you have a <i>field</i><sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> (call if \(F\)) and a bunch of things (let's call this bunch \(V\) ) \(\backepsilon\) for any two of the "things" the following holds: \[ \forall x \in F \text{ and } v,w \in V, ~x(v+w) = xv + xw \] then you have a vector space over a field. The \(v\) s and \(w\) s are the vectors and the \(x\) s are the <i>scalars</i>. Note that this means a lot of things that you might not normally think of as a vector can in fact by such. For example, the real numbers form a vector space over the real numbers. While we usually think of matrices as made up of vectors, in fact a collection of matrices (e.g. all 2 x 2 matrices with real number elements) can comprise a vector space and the vectors of that space are the matrices themselves not their individual columns and rows (which are not elements of that space since they are not 2x2).  
 </p>
 </div>
 </div>
+
+<div id="outline-container-org72c7aba" class="outline-3">
+<h3 id="org72c7aba"><span class="section-number-3">2.2.</span> It Is Often Vector Spaces All The Way Down</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org978097f" class="outline-4">
+<h4 id="org978097f"><span class="section-number-4">2.2.1.</span> The Dual of Vector Space \(V\) over a Field \(F\)</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<p>
+This is often denoted as \(V^*\). Imagine that we have some function \(\phi\) that takes elments of \(V\) into some element of \(F\). Often that is written as \(\phi:~ V \rightarrow F\). It can be helpful to think of an element \(v \in V\) and then think of \(\phi(v) = f\) for some \(f \in F\). For the sort of vectors we often think about, a column of numbers, we can convert them to a scalar \(\in F\) by the scalar product.
+</p>
+
+<p>
+For two vectors of compatible sizes the scalar (sometimes dot) product is: \(v \cdot w = \sum_{i=1}^N v_i \times w_i\) where \(N\) is the number of components making up \(v\) and \(w\) and the subscript indexes each component.  If this \(w\) happens to work for every \(v \in V\) then it is essentially the same as \(\phi\). We can think of \(w\) as a function. If this operation preserves scalar multiplication and vector addition then this mapping is also called a <i>linear functional</i>. Note also that this means that for another vector like \(w\) (we will call it \(u\)), and some \(f \in F\) we have that \(f(u+w) = fu + fw\). The set of all such \(u's\) and \(v's\) makes up the <i>dual space</i>.  
+</p>
+
+<p>
+Note that the requirements that make something a linear functional are the same as the requirements we had for a vector space. Therefore, the dual of a vector space is a vector space. Since we can swap the order of addition and the dot product (commutativity) the dual of a dual space is a vector space too. And in fact \(V^{**} = V\). Vector spaces all the way down.
+</p>
 </div>
 
-<div id="outline-container-orgb173ddc" class="outline-2">
-<h2 id="orgb173ddc"><span class="section-number-2">3.</span> Companion and Optional Readings</h2>
-<div class="outline-text-2" id="text-3">
 <ol class="org-ol">
-<li>A review on neural circuits for symbolic processing [<a href="#citeproc_bib_item_2">2</a>]</li>
+<li><a id="org8dd04c8"></a>Question&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_discussion">class_discussion</span></span><br />
+<div class="outline-text-5" id="text-2-2-1-1">
+<p>
+What else does this remind you of that we have talked about?
+</p>
+</div>
+</li>
 </ol>
 </div>
 </div>
 
-<div id="outline-container-org0bfb482" class="outline-2">
-<h2 id="org0bfb482"><span class="section-number-2">4.</span> References</h2>
+<div id="outline-container-org4be59fe" class="outline-3">
+<h3 id="org4be59fe"><span class="section-number-3">2.3.</span> Vector Spaces Uses</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-org73bed79" class="outline-4">
+<h4 id="org73bed79"><span class="section-number-4">2.3.1.</span> Can random variables be a vector space?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_exercise">class_exercise</span></span></h4>
+<div class="outline-text-4" id="text-2-3-1">
+<p>
+We often think of very practical examples for random variables, but a running theme of the material has been <i>abstraction</i> and <i>formality</i>. Imagine that we have a large set of things that can happen. Call the individual events \(\omega 's\) and the entire collection of them \(\Omega\). Further, assume that \(\Omega\) is a topological space.
+</p>
+
+<pre class="example">
+Review: What does it mean to be a topological space?
+</pre>
+
+<p>
+Probability is concerned with topological spaces where there is also a <i>probability</i> measure that does the usual sensible things like making the empty set zero and the entire space have measure 1. A function that takes an \(\omega ~\in ~\Omega\) to a number is a random variable (call it \(X\); \(X(\omega) = y\)).
+To figure out the probability of \(y\) you gather the set \(\{\omega \in \Omega | X(\omega) = y\}\) and feed that to your measure.
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org20c8831"></a><a href="https://www.randomservices.org/random/expect/Spaces.html">Making a vector space of random variables</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_exercise">class_exercise</span></span><br />
+<div class="outline-text-5" id="text-2-3-1-1">
+<p>
+With that as background describe what you know or would need to do to elaborate how random variables form a vector space? Start with a simple example like a coin flip and then consider something more elaborate like all the \(\mathbb{R} 's\). Is this a good example of abstraction and representation?
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgf9f88e0" class="outline-3">
+<h3 id="orgf9f88e0"><span class="section-number-3">2.4.</span> Vector Symbolic Architectures<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup></h3>
+<div class="outline-text-3" id="text-2-4">
+</div>
+<div id="outline-container-orgc65976e" class="outline-4">
+<h4 id="orgc65976e"><span class="section-number-4">2.4.1.</span> The Key Features</h4>
+<div class="outline-text-4" id="text-2-4-1">
+<ol class="org-ol">
+<li>Information is represented by vectors in a very high dimensional space (also known as hypervectors).
+Comment: A consequence of this high dimensionality is that by chance a random vector is probably nearly orthogonal to every other vector and the notion of a nearest neighbor is pretty meaningless. Is this a problem for our application?</li>
+<li>Information is distributed across all the components of the vector.</li>
+<li>Similarity measures: we need to be able to compare vectors. A common choice is the dot (scalar) product.</li>
+<li>Seed vectors designed to represent the common, essential elements of the problem under consideration.</li>
+<li>Seed vectors are stored in a content addressable memory. <sup><a id="fnr.3" class="footref" href="#fn.3" role="doc-backlink">3</a></sup></li>
+<li>Two key operations sometimes called binding and bundling, but which we can call multiplication and addition given our vector space emphases.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org985b716" class="outline-4">
+<h4 id="org985b716"><span class="section-number-4">2.4.2.</span> A Simple Implementation - <a href="https://www.aaai.org/ocs/index.php/FSS/FSS10/paper/viewFile/2243/2691">Kanerva</a></h4>
+<div class="outline-text-4" id="text-2-4-2">
+<div class="org-src-container">
+<pre class="src src-lisp">(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">make-random-bipolar-vector</span> (<span style="color: #228b22;">&amp;key</span> (vec-len 100))
+  <span style="color: #8b2252;">"Makes a random list with elements of -1 and 1 with equal likelihood"</span>
+  (<span style="color: #a020f0;">let</span> ((outvec '()))
+    (<span style="color: #a020f0;">dotimes</span> (i vec-len outvec)
+      (push (- (* 2 (random 2)) 1) outvec))))
+
+(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">bundle-op</span> (x y)
+  <span style="color: #8b2252;">"Bundling operation for two values"</span>
+  (<span style="color: #a020f0;">let</span> ((xy (+ x y)))
+    (<span style="color: #a020f0;">cond</span> ((= 2 xy) 1)
+          ((= -2 xy) -1)
+          ((= 0 xy) (<span style="color: #a020f0;">if</span> ( &gt; (random 2) 0.5) 1 -1)))))
+
+(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">bundle-bipolar</span> (v1 v2)
+  <span style="color: #8b2252;">"Uses element-wise addition to bundle two vectors"</span>
+  (mapcar #'bundle-op v1 v2))
+
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">(defun unbundle-bipolar (v1 v2)</span>
+<span style="color: #b22222;">;;   </span><span style="color: #b22222;">"Uses element-wise subtraction to unbundle two vectors"</span>
+<span style="color: #b22222;">;;   </span><span style="color: #b22222;">(mapcar #'- v1 v2))</span>
+
+ (<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">bind-bipolar</span> (v1 v2)
+  <span style="color: #8b2252;">"Use element-wise multiplication to bind to bipolar vectors"</span>
+  (mapcar #'* v1 v2))
+
+(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">unbind-bipolar</span> (v1 v2)
+  <span style="color: #8b2252;">"Re-applys bind operation to unbind (self-inverse)."</span>
+  (bind-bipolar v1 v2))
+
+(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">cos-sim</span> (v1 v2)
+  (<span style="color: #a020f0;">let</span> ((vl (length v1)))
+    (acos (/ (apply #'+ (mapcar #'* v1 v2)) vl))))
+
+</pre>
+</div>
+</div>
+<ol class="org-ol">
+<li><a id="org765d543"></a>Questions&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_questions">class_questions</span></span><br />
+<div class="outline-text-5" id="text-2-4-2-1">
+<ol class="org-ol">
+<li>Why did I comment out the unbundle operation?</li>
+<li>Originally I just did element-wise addition for the bundle operation. Why is that a problem?</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org8f8735c" class="outline-4">
+<h4 id="org8f8735c"><span class="section-number-4">2.4.3.</span> What is the dollar of Mexico?</h4>
+<div class="outline-text-4" id="text-2-4-3">
+<div class="org-src-container">
+<pre class="src src-lisp" id="org3589862">(<span style="color: #a020f0;">defparameter</span> <span style="color: #a0522d;">*country*</span> (make-random-bipolar-vector))
+(<span style="color: #a020f0;">defparameter</span> <span style="color: #a0522d;">*capitol*</span> (make-random-bipolar-vector))
+(<span style="color: #a020f0;">defparameter</span> <span style="color: #a0522d;">*currency*</span> (make-random-bipolar-vector))
+(<span style="color: #a020f0;">defparameter</span> <span style="color: #a0522d;">*canada*</span> (make-random-bipolar-vector))
+(<span style="color: #a020f0;">defparameter</span> <span style="color: #a0522d;">*ottawa*</span> (make-random-bipolar-vector))
+(<span style="color: #a020f0;">defparameter</span> <span style="color: #a0522d;">*dollar*</span> (make-random-bipolar-vector))
+(<span style="color: #a020f0;">defparameter</span> <span style="color: #a0522d;">*mexico*</span> (make-random-bipolar-vector))
+(<span style="color: #a020f0;">defparameter</span> <span style="color: #a0522d;">*mexico-city*</span> (make-random-bipolar-vector))
+(<span style="color: #a020f0;">defparameter</span> <span style="color: #a0522d;">*peso*</span> (make-random-bipolar-vector))
+(<span style="color: #a020f0;">defparameter</span> <span style="color: #a0522d;">*seed-vec-hash*</span> (make-hash-table <span style="color: #483d8b;">:test</span> 'equal))
+(setf (gethash <span style="color: #8b2252;">"country"</span> *seed-vec-hash* ) *country*)
+(setf (gethash <span style="color: #8b2252;">"capitol"</span> *seed-vec-hash* ) *capitol*)
+(setf (gethash <span style="color: #8b2252;">"currency"</span> *seed-vec-hash* ) *currency*)
+(setf (gethash <span style="color: #8b2252;">"mexico"</span> *seed-vec-hash* ) *mexico*)
+(setf (gethash <span style="color: #8b2252;">"mexico-city"</span> *seed-vec-hash* ) *mexico-city*)
+(setf (gethash <span style="color: #8b2252;">"peso"</span> *seed-vec-hash* ) *peso*)
+(setf (gethash <span style="color: #8b2252;">"canada"</span> *seed-vec-hash* ) *canada*)
+(setf (gethash <span style="color: #8b2252;">"ottawa"</span> *seed-vec-hash* ) *ottawa*)
+(setf (gethash <span style="color: #8b2252;">"dollar"</span> *seed-vec-hash* ) *dollar*)
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-lisp" id="org779121c">   (<span style="color: #a020f0;">defparameter</span> <span style="color: #a0522d;">*cntry-can*</span> (bind-bipolar *country* *canada*))
+   (<span style="color: #a020f0;">defparameter</span> <span style="color: #a0522d;">*cntry-mex*</span> (bind-bipolar *country* *mexico*))
+   (<span style="color: #a020f0;">defparameter</span> <span style="color: #a0522d;">*cap-can*</span> (bind-bipolar *capitol* *ottawa*))
+   (<span style="color: #a020f0;">defparameter</span> <span style="color: #a0522d;">*cap-mex*</span> (bind-bipolar *capitol* *mexico-city*))
+   (<span style="color: #a020f0;">defparameter</span> <span style="color: #a0522d;">*curr-can*</span> (bind-bipolar *currency* *dollar*))
+   (<span style="color: #a020f0;">defparameter</span> <span style="color: #a0522d;">*curr-mex*</span> (bind-bipolar *currency* *peso*))
+<span style="color: #b22222;">;</span><span style="color: #b22222;">bundle up Canada</span>
+   (<span style="color: #a020f0;">defparameter</span> <span style="color: #a0522d;">*can-bundle*</span> (bundle-bipolar (bundle-bipolar *cntry-can* *cap-can*) *curr-can*))
+<span style="color: #b22222;">;</span><span style="color: #b22222;">bundle up Mexico  </span>
+   (<span style="color: #a020f0;">defparameter</span> <span style="color: #a0522d;">*mex-bundle*</span> (bundle-bipolar (bundle-bipolar *cntry-mex* *cap-mex*) *curr-mex*))
+<span style="color: #b22222;">;</span><span style="color: #b22222;">binding Canada and Mexico</span>
+(<span style="color: #a020f0;">defparameter</span> <span style="color: #a0522d;">*global-bindle*</span> (bind-bipolar *can-bundle* *mex-bundle*))
+</pre>
+</div>
+
+
+<div class="org-src-container">
+<pre class="src src-lisp">(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">what-is-xs-y?</span> (ht xs y)
+  (<span style="color: #a020f0;">let</span> ((test-bindle (unbind-bipolar y xs))
+        (sims '())
+        (best-match))
+    (maphash #'(<span style="color: #a020f0;">lambda</span> (k v) (push (list k (cos-sim v test-bindle)) sims)) ht)
+    (<span style="color: #a020f0;">dolist</span> (kv sims best-match)
+      (<span style="color: #a020f0;">cond</span> ((null best-match) (setq best-match kv))
+            ((&lt; (second kv) (second best-match)) (setq best-match kv))
+            (t best-match)))))
+</pre>
+</div>
+
+<p>
+And then we can get the answer to "What is Mexico's dollar?" It is <code>peso</code>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdf8690c" class="outline-4">
+<h4 id="orgdf8690c"><span class="section-number-4">2.4.4.</span> Why Does This Work?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_exercise">class_exercise</span></span></h4>
+<div class="outline-text-4" id="text-2-4-4">
+<p>
+Assume the following:
+</p>
+<ol class="org-ol">
+<li>The bind and unbind operations reverse themselves perfectly.</li>
+<li>All vectors are orthogonal to one another (or very nearly so).</li>
+</ol>
+
+<p>
+Using the \(+\) sign for bundling, the \(\times\) sign for binding and names for the vectors write out the global vector that binds the data for <i>Mexico</i> and <i>Canada</i> into one construct. Then show what happens when you apply the unbind operation for dollar to this construct.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org15c963a" class="outline-4">
+<h4 id="org15c963a"><span class="section-number-4">2.4.5.</span> Is the <i>right</i> way (or at least a plausible way) to think about neural and cognitive representations?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="class_discussion">class_discussion</span></span></h4>
+<div class="outline-text-4" id="text-2-4-5">
+<p>
+Some other questions?
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5a349ed" class="outline-2">
+<h2 id="org5a349ed"><span class="section-number-2">3.</span> Companion and Optional Readings</h2>
+<div class="outline-text-2" id="text-3">
+<ol class="org-ol">
+<li>A review on neural circuits for symbolic processing [<a href="#citeproc_bib_item_2">2</a>]</li>
+<li>Statistics and Geometry [<a href="#citeproc_bib_item_3">3</a>]</li>
+<li>A nice summary of Vector Symbolic Architectures with an explicit reference to Marr's levels [<a href="#citeproc_bib_item_4">4</a>].</li>
+<li>A <a href="https://github.com/TUC-ProAut/VSA_Toolbox">github repo</a> with matlab code for VSAs [<a href="#citeproc_bib_item_1">1</a>].
+<a href="https://www.tu-chemnitz.de/etit/proaut/workshops_tutorials/hdc_ki19/rsrc/vsa_tutorial.pdf">Slides</a> from the same group presenting a workshop.</li>
+<li>[<a href="#citeproc_bib_item_5">5</a>]</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org5421bf8" class="outline-2">
+<h2 id="org5421bf8"><span class="section-number-2">4.</span> References</h2>
 <div class="outline-text-2" id="text-4">
 <style>.csl-left-margin{float: left; padding-right: 0em;}
  .csl-right-inline{margin: 0 0 0 1em;}</style><div class="csl-bib-body">
@@ -266,6 +495,18 @@ If you have a <i>field</i><sup><a id="fnr.1" class="footref" href="#fn.1" role="
   <div class="csl-entry"><a id="citeproc_bib_item_2"></a>
     <div class="csl-left-margin">2.</div><div class="csl-right-inline">Q. Do &#38; M. E. Hasselmo, Neural circuits and symbolic processing. <i>Neurobiology of learning and memory</i>, <b>186</b> (2021) 107552. <a href="https://doi.org/10.1016/j.nlm.2021.107552">https://doi.org/10.1016/j.nlm.2021.107552</a>.</div>
   </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_3"></a>
+    <div class="csl-left-margin">3.</div><div class="csl-right-inline">P. W. Vos &#38; P. Marriott, Geometry in statistics. <i>Wires computational statistics</i>, <b>2</b> (2010) 686-694. <a href="https://doi.org/https://doi.org/10.1002/wics.128">https://doi.org/https://doi.org/10.1002/wics.128</a>.</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_4"></a>
+    <div class="csl-left-margin">4.</div><div class="csl-right-inline">D. Kleyko, M. Davies, E. P. Frady, P. Kanerva, S. J. Kent, B. A. Olshausen, E. Osipov, J. M. Rabaey, D. A. Rachkovskij, A. Rahimi, &#38; F. T. Sommer, <a href="http://arxiv.org/abs/2106.05268v1">Vector symbolic architectures as a computing framework for nanoscale hardware</a>. <i>Corr</i>, (2021).</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_5"></a>
+    <div class="csl-left-margin">5.</div><div class="csl-right-inline">M. Kelly &#38; R. West, From vectors to symbols to cognition: The symbolic and sub-symbolic aspects of vector-symbolic cognitive models. In, <i>Proceedings of the annual meeting of the cognitive science society</i> (2012).</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_6"></a>
+    <div class="csl-left-margin">6.</div><div class="csl-right-inline">P. Blouw, E. Solodkin, P. Thagard, &#38; C. Eliasmith, Concepts as semantic pointers: a framework and computational model. <i>Cognitive science</i>, <b>40</b> (2015) 1128-1162. <a href="https://doi.org/10.1111/cogs.12265">https://doi.org/10.1111/cogs.12265</a>.</div>
+  </div>
 </div>
 </div>
 </div>
@@ -274,7 +515,15 @@ If you have a <i>field</i><sup><a id="fnr.1" class="footref" href="#fn.1" role="
 <div id="text-footnotes">
 
 <div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
-The <b>R</b> eal numbers a <b>R</b> e a <i>field</i>, but <b>N</b> ot the <b>N</b> atural numbers. A <i>field</i> has two binary operations (often called addition and multiplication, but they don't have to be what they are used to from arithmetic). It is closed under these operations and each of them has an identity and an inverse. In addition the operations are associative, commutative, and distribute. 
+The <b>R</b> eal numbers a <b>R</b> e a <i>field</i>, but <b>N</b> ot the <b>N</b> atural numbers. A <i>field</i> has two binary operations (often called addition and multiplication, but they don't have to be what they we used to from arithmetic). It is closed under these operations and each of them has an identity and an inverse. In addition the operations are associative, commutative, and distribute. 
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+There are many places that one could take as the starting point for this. A typical one is the <a href="https://www.ijcai.org/Proceedings/91-1/Papers/006.pdf">work</a> of Tony Plate in the 1990s. A local representative is Chris Eliasmith and Spaun [<a href="#citeproc_bib_item_6">6</a>].
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="https://en.wikipedia.org/wiki/Hopfield_network">Hopfield networks</a> are a relatively easy to understand and implement architecture for an autoassociative memory.  
 </p></div></div>
 
 
@@ -283,7 +532,7 @@ The <b>R</b> eal numbers a <b>R</b> e a <i>field</i>, but <b>N</b> ot the <b>N</
 <div id="postamble" class="status">
 <p class="date">Date: Winter 2022</p>
 <p class="author">Author: Britt Anderson</p>
-<p class="date">Created: 2022-03-14 Mon 13:58</p>
+<p class="date">Created: 2022-03-15 Tue 15:07</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

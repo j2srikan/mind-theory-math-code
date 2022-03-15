@@ -4,6 +4,11 @@
 #+bibliography:/home/britt/gitRepos/masterBib/bayatt.bib
 #+csl-style: ../admin/cambridge-university-press-numeric.csl
 #+options: ^:nil toc:nil d:nil
+#+latex_class: article
+#+latex_class_options:
+#+latex_header: \usepackage{tcolorbox}
+#+latex_header_extra:
+
 
 
 * Outline
@@ -13,12 +18,165 @@ with its elaboration of Turing machines and our coding of the [[file:~/gitRepos/
 beaver]] problem that thinking symbolically is key to thinking of cognition computationally, and more fundamentally to the idea of computation itself. Computational neuroscience on the other hand is often more concerned with numerical estimation and optimization. One approach seeking to connect these approaches is *vector symbolic architectures*. This recent review mentions eleven of them [[cite:&schlegel21_compar_vector_symbol_archit]]. This approach to blending cognition, symbolic computation, and computational neuroscience relies on the idea of a /vector space/. As vectors have shown up in numerous course components (e.g. manifolds) it seemed reasonable to treat this more directly. 
 
 * Vector Spaces
-
 ** Definition
    If you have a /field/[fn:1] (call if $F$) and a bunch of things (let's call this bunch $V$ ) $\backepsilon$ for any two of the "things" the following holds: $$ \forall x \in F \text{ and } v,w \in V, ~x(v+w) = xv + xw $$ then you have a vector space over a field. The $v$ s and $w$ s are the vectors and the $x$ s are the /scalars/. Note that this means a lot of things that you might not normally think of as a vector can in fact by such. For example, the real numbers form a vector space over the real numbers. While we usually think of matrices as made up of vectors, in fact a collection of matrices (e.g. all 2 x 2 matrices with real number elements) can comprise a vector space and the vectors of that space are the matrices themselves not their individual columns and rows (which are not elements of that space since they are not 2x2).  
 
+** It Is Often Vector Spaces All The Way Down
+
+*** The Dual of Vector Space $V$ over a Field $F$
+:question:
+Two ideas I had for what it reminds me of: abstraction and recursion. The idea of a vector space giving rise to another vector space and another vector space and so on is recursive. The idea that what we think of as vectors may not be the stack of numbers we commonly conceive of is the idea behind abstraction. 
+:END:
+
+    This is often denoted as $V^*$. Imagine that we have some function $\phi$ that takes elments of $V$ into some element of $F$. Often that is written as $\phi:~ V \rightarrow F$. It can be helpful to think of an element $v \in V$ and then think of $\phi(v) = f$ for some $f \in F$. For the sort of vectors we often think about, a column of numbers, we can convert them to a scalar $\in F$ by the scalar product.
+
+For two vectors of compatible sizes the scalar (sometimes dot) product is: $v \cdot w = \sum_{i=1}^N v_i \times w_i$ where $N$ is the number of components making up $v$ and $w$ and the subscript indexes each component.  If this $w$ happens to work for every $v \in V$ then it is essentially the same as $\phi$. We can think of $w$ as a function. If this operation preserves scalar multiplication and vector addition then this mapping is also called a /linear functional/. Note also that this means that for another vector like $w$ (we will call it $u$), and some $f \in F$ we have that $f(u+w) = fu + fw$. The set of all such $u's$ and $v's$ makes up the /dual space/.  
+
+Note that the requirements that make something a linear functional are the same as the requirements we had for a vector space. Therefore, the dual of a vector space is a vector space. Since we can swap the order of addition and the dot product (commutativity) the dual of a dual space is a vector space too. And in fact $V^{**} = V$. Vector spaces all the way down.
+
+**** Question :class_discussion:
+What else does this remind you of that we have talked about?
+
+** Vector Spaces Uses
+
+*** Can random variables be a vector space? :class_exercise:
+    We often think of very practical examples for random variables, but a running theme of the material has been /abstraction/ and /formality/. Imagine that we have a large set of things that can happen. Call the individual events $\omega 's$ and the entire collection of them $\Omega$. Further, assume that $\Omega$ is a topological space.
+
+#+begin_src 
+  Review: What does it mean to be a topological space?
+#+end_src
+
+Probability is concerned with topological spaces where there is also a /probability/ measure that does the usual sensible things like making the empty set zero and the entire space have measure 1. A function that takes an $\omega ~\in ~\Omega$ to a number is a random variable (call it $X$; $X(\omega) = y$).
+To figure out the probability of $y$ you gather the set $\{\omega \in \Omega | X(\omega) = y\}$ and feed that to your measure.
+
+**** [[https://www.randomservices.org/random/expect/Spaces.html][Making a vector space of random variables]] :class_exercise: 
+:vector-space-random-variables:
+Consider a random variable as the $X$ indexed by the individual events. For example, for a coin $X = \left[X(\text{heads}),X(\text{tails})\right]$. Then with that you need to check the vector space assumptions. For the infinite dimensional case it is the same basic idea except the index is uncountably infinite.
+:END:
+
+With that as background describe what you know or would need to do to elaborate how random variables form a vector space? Start with a simple example like a coin flip and then consider something more elaborate like all the $\mathbb{R} 's$. Is this a good example of abstraction and representation?
+
+** Vector Symbolic Architectures[fn:2]
+
+*** The Key Features
+1. Information is represented by vectors in a very high dimensional space (also known as hypervectors).
+   Comment: A consequence of this high dimensionality is that by chance a random vector is probably nearly orthogonal to every other vector and the notion of a nearest neighbor is pretty meaningless. Is this a problem for our application?
+2. Information is distributed across all the components of the vector.
+3. Similarity measures: we need to be able to compare vectors. A common choice is the dot (scalar) product.
+4. Seed vectors designed to represent the common, essential elements of the problem under consideration.
+5. Seed vectors are stored in a content addressable memory. [fn:3]
+6. Two key operations sometimes called binding and bundling, but which we can call multiplication and addition given our vector space emphases.
+*** A Simple Implementation - [[https://www.aaai.org/ocs/index.php/FSS/FSS10/paper/viewFile/2243/2691][Kanerva]]
+#+begin_src lisp :results silent :exports code
+  (defun make-random-bipolar-vector (&key (vec-len 100))
+    "Makes a random list with elements of -1 and 1 with equal likelihood"
+    (let ((outvec '()))
+      (dotimes (i vec-len outvec)
+	(push (- (* 2 (random 2)) 1) outvec))))
+
+  (defun bundle-op (x y)
+    "Bundling operation for two values"
+    (let ((xy (+ x y)))
+      (cond ((= 2 xy) 1)
+	    ((= -2 xy) -1)
+	    ((= 0 xy) (if ( > (random 2) 0.5) 1 -1)))))
+
+  (defun bundle-bipolar (v1 v2)
+    "Uses element-wise addition to bundle two vectors"
+    (mapcar #'bundle-op v1 v2))
+
+  ;; (defun unbundle-bipolar (v1 v2)
+  ;;   "Uses element-wise subtraction to unbundle two vectors"
+  ;;   (mapcar #'- v1 v2))
+
+   (defun bind-bipolar (v1 v2)
+    "Use element-wise multiplication to bind to bipolar vectors"
+    (mapcar #'* v1 v2))
+
+  (defun unbind-bipolar (v1 v2)
+    "Re-applys bind operation to unbind (self-inverse)."
+    (bind-bipolar v1 v2))
+
+  (defun cos-sim (v1 v2)
+    (let ((vl (length v1)))
+      (acos (/ (apply #'+ (mapcar #'* v1 v2)) vl))))
+
+#+end_src
+**** Questions :class_questions:
+1. Why did I comment out the unbundle operation?
+2. Originally I just did element-wise addition for the bundle operation. Why is that a problem?
+*** What is the dollar of Mexico?
+   #+Name: Defining our *Seed* vectors
+   #+begin_src lisp :exports code :results silent
+     (defparameter *country* (make-random-bipolar-vector))
+     (defparameter *capitol* (make-random-bipolar-vector))
+     (defparameter *currency* (make-random-bipolar-vector))
+     (defparameter *canada* (make-random-bipolar-vector))
+     (defparameter *ottawa* (make-random-bipolar-vector))
+     (defparameter *dollar* (make-random-bipolar-vector))
+     (defparameter *mexico* (make-random-bipolar-vector))
+     (defparameter *mexico-city* (make-random-bipolar-vector))
+     (defparameter *peso* (make-random-bipolar-vector))
+     (defparameter *seed-vec-hash* (make-hash-table :test 'equal))
+     (setf (gethash "country" *seed-vec-hash* ) *country*)
+     (setf (gethash "capitol" *seed-vec-hash* ) *capitol*)
+     (setf (gethash "currency" *seed-vec-hash* ) *currency*)
+     (setf (gethash "mexico" *seed-vec-hash* ) *mexico*)
+     (setf (gethash "mexico-city" *seed-vec-hash* ) *mexico-city*)
+     (setf (gethash "peso" *seed-vec-hash* ) *peso*)
+     (setf (gethash "canada" *seed-vec-hash* ) *canada*)
+     (setf (gethash "ottawa" *seed-vec-hash* ) *ottawa*)
+     (setf (gethash "dollar" *seed-vec-hash* ) *dollar*)
+   #+end_src
+
+  #+Name: Binding and Bundling
+  #+begin_src lisp :results silent :exports code
+       (defparameter *cntry-can* (bind-bipolar *country* *canada*))
+       (defparameter *cntry-mex* (bind-bipolar *country* *mexico*))
+       (defparameter *cap-can* (bind-bipolar *capitol* *ottawa*))
+       (defparameter *cap-mex* (bind-bipolar *capitol* *mexico-city*))
+       (defparameter *curr-can* (bind-bipolar *currency* *dollar*))
+       (defparameter *curr-mex* (bind-bipolar *currency* *peso*))
+    ;bundle up Canada
+       (defparameter *can-bundle* (bundle-bipolar (bundle-bipolar *cntry-can* *cap-can*) *curr-can*))
+    ;bundle up Mexico  
+       (defparameter *mex-bundle* (bundle-bipolar (bundle-bipolar *cntry-mex* *cap-mex*) *curr-mex*))
+    ;binding Canada and Mexico
+    (defparameter *global-bindle* (bind-bipolar *can-bundle* *mex-bundle*))
+  #+end_src
+
+
+  #+begin_src lisp :results silent :exports both
+    (defun what-is-xs-y? (ht xs y)
+      (let ((test-bindle (unbind-bipolar y xs))
+	    (sims '())
+	    (best-match))
+	(maphash #'(lambda (k v) (push (list k (cos-sim v test-bindle)) sims)) ht)
+	(dolist (kv sims best-match)
+	  (cond ((null best-match) (setq best-match kv))
+		((< (second kv) (second best-match)) (setq best-match kv))
+		(t best-match)))))
+  #+end_src
+
+  And then we can get the answer to "What is Mexico's dollar?" It is src_lisp[:results output]{(format t "~a" (first (what-is-xs-y? *seed-vec-hash* *global-bindle* *dollar*)))} {{{results(=(peso 1.0003592)=)}}}.
+
+*** Why Does This Work? :class_exercise:
+Assume the following:
+1. The bind and unbind operations reverse themselves perfectly.
+2. All vectors are orthogonal to one another (or very nearly so).
+
+Using the $+$ sign for bundling, the $\times$ sign for binding and names for the vectors write out the global vector that binds the data for /Mexico/ and /Canada/ into one construct. Then show what happens when you apply the unbind operation for dollar to this construct.
+
+*** Is the /right/ way (or at least a plausible way) to think about neural and cognitive representations? :class_discussion:
+Some other questions?
+
 * Companion and Optional Readings
   1. A review on neural circuits for symbolic processing [[cite:&do21_neural_circuit_symbol_proces]]
+  2. Statistics and Geometry [[cite:&vos10_geomet_statis]]
+  3. A nice summary of Vector Symbolic Architectures with an explicit reference to Marr's levels [[cite:&kleyko21_vector_symbol_archit_as_comput]].
+  4. A [[https://github.com/TUC-ProAut/VSA_Toolbox][github repo]] with matlab code for VSAs [[cite:&schlegel21_compar_vector_symbol_archit]].
+     [[https://www.tu-chemnitz.de/etit/proaut/workshops_tutorials/hdc_ki19/rsrc/vsa_tutorial.pdf][Slides]] from the same group presenting a workshop.
+  5. [[cite:&kelly12_from]]
      
 * References
 [[bibliography:/home/britt/gitRepos/masterBib/bayatt.bib]]
@@ -31,4 +189,7 @@ beaver]] problem that thinking symbolically is key to thinking of cognition comp
 
 * Footnotes
 
-[fn:1] The *R* eal numbers a *R* e a /field/, but *N* ot the *N* atural numbers. A /field/ has two binary operations (often called addition and multiplication, but they don't have to be what they are used to from arithmetic). It is closed under these operations and each of them has an identity and an inverse. In addition the operations are associative, commutative, and distribute. 
+[fn:3] [[https://en.wikipedia.org/wiki/Hopfield_network][Hopfield networks]] are a relatively easy to understand and implement architecture for an autoassociative memory.  
+[fn:2] There are many places that one could take as the starting point for this. A typical one is the [[https://www.ijcai.org/Proceedings/91-1/Papers/006.pdf][work]] of Tony Plate in the 1990s. A local representative is Chris Eliasmith and Spaun [[cite:&blouw15_concep_as_seman_point]].
+
+[fn:1] The *R* eal numbers a *R* e a /field/, but *N* ot the *N* atural numbers. A /field/ has two binary operations (often called addition and multiplication, but they don't have to be what they we used to from arithmetic). It is closed under these operations and each of them has an identity and an inverse. In addition the operations are associative, commutative, and distribute. 
