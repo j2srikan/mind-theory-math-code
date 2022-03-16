@@ -53,7 +53,14 @@
 4. Review any old business or revisit any issue we wish to discuss again.
 5. Go through primarily the morris-lecar model that has been widely used for looking at dynamical issues of neuron firing models, but also connect it to the idea that anything exhibiting an interesting dynamics is amenable to the same approach. Also, many of the manifold ideas are able to be blended with the dynamical ones since the manifold is just "points" and a "space" and those points and spaces can be parameters of a model and phase spaces, for example.
 * Eleventh Module 
-  TBD
+1. Will have two main files for today:
+   1. [[file:teach/programming-mind.org]]
+   2. [[file:teach/symbol.org]]
+2. The goal is to make sure we re-visit the potential opportunities of particular programming paradigms that we may be missing because we are not expert in their use and are optimizing for efficiencies in getting something to work and not for maximizing explanatory insight or theoretical expressiveness.
+3. The second goal captured by the symbol module is to try and integrate some of our topics of computation, representation, and computational implementations along with a somewhat new topic of vector spaces. 
+4. We will review plans for final presentations and projects
+5. Confirm due dates for above and clarify expectations.
+6. Discuss whether we need room next week or not?
 * Twelth Module 
   I don't expect there will be an twelth module, but this will be decided with class. Given the hectic and chaotic nature of a term with both in person and remote components and students somewhat scattered, I think it may be useful to provide this class time for discussion, questions, and a chance to work on their material with their group partners. 
   1. Do people want to use the room?
